@@ -7,6 +7,7 @@
 <artifact id="StructureDefinition/Prescription" key="StructureDefinition-Prescription" name="A - Prescription"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
+<artifact id="StructureDefinition/Dispensation" key="StructureDefinition-Dispensation" name="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: XpanDH"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: XpanDH"/>
 <artifact id="StructureDefinition/Patient-eu-mpd" key="StructureDefinition-Patient-eu-mpd" name="Patient: XpanDH"/>
