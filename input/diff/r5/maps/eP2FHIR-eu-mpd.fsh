@@ -12,13 +12,14 @@ Usage: #definition
 * description = "eHN ePrescription Model to this guide Map"					
 * purpose = "It shows how the ePrescription data set defined by the EU eHN guidelines is mapped into this guide"					
 
-/* * sourceUri = Canonical(EprescriptionEhn)
+/* // R4 <== 
+* sourceUri = Canonical(EprescriptionEhn)
 * targetUri = Canonical(MedicationRequestEuMpd)
  */
 * sourceScopeUri = Canonical(EprescriptionEhn)
 * targetScopeUri = Canonical(MedicationRequestEuMpd)
 					
-/* 
+/* // R4 <== 
 * group[+].source = Canonical(EprescriptionEhn)					
 * group[=].target = Canonical(MedicationRequestEuMpd)	 
 */				
@@ -27,14 +28,15 @@ Usage: #definition
 * group[=].element[=].display = "A.1.1 Patient administrative data"					
 * group[=].element[=].target.code = #MedicationRequest.subject					
 * group[=].element[=].target.display = ""					
-// * group[=].element[=].target.equivalence = #equivalent					
+// R4 <==  * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.relationship = #equivalent		
 
 * group[=].element[+].code = #Prescription.authentication					
 * group[=].element[=].display = "A.1.2 Authentication of the prescription"					
 * group[=].element[=].target.code = #MedicationRequest					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+// R4 <== * group[=].element[=].target.relationship = #related-to
+* group[=].element[=].target.relationship = #related-to				
 					
 * group[=].element[+].code = #Prescription.authentication.identifier					
 * group[=].element[=].display = "A.1.2.1 Identifier of the Prescription"					
@@ -64,43 +66,43 @@ Usage: #definition
 * group[=].element[=].display = "A.1.3.1 Familyname"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.givenName					
 * group[=].element[=].display = "A.1.3.2 Given name"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.qualification					
 * group[=].element[=].display = "A.1.3.3 Professional qualifications"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.contact					
 * group[=].element[=].display = "A.1.3.4 Details for direct contact"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.workAddress					
 * group[=].element[=].display = "A.1.3.5 Work address"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.signature					
 * group[=].element[=].display = "A.1.3.6 Signature"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Not implemented in the current eP / eD service"					
 * group[=].element[+].code = #Prescription.prescriber.identifier					
 * group[=].element[=].display = "A.1.3.7  Health care provider identifier"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
 * group[=].element[+].code = #Prescription.product					
 * group[=].element[=].display = "A1.4 Identification of the prescribed product"					
@@ -112,13 +114,13 @@ Usage: #definition
 * group[=].element[=].display = "A.1.5 Prescription information"					
 * group[=].element[=].target.code = #MedicationRequest					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 * group[=].element[+].code = #Prescription.details.quantity					
 * group[=].element[=].display = "A.1.5.2 Quantity of prescribed product"					
 * group[=].element[=].target.code = #MedicationRequest.dispenseRequest.quantity					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 * group[=].element[+].code = #Prescription.details.doseRegimen					
 * group[=].element[=].display = "A.1.5.3 Dose regimen"					
@@ -136,7 +138,7 @@ Usage: #definition
 * group[=].element[=].display = "A.1.5.3.2 Frequency of intakes"					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction.timing					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "A combination of frequency, period and periodUnit.
 '3 times per day', 3 would be the frequency and '1 day' would be the period/periodUnit."					
 * group[=].element[+].code = #Prescription.details.route					
@@ -155,13 +157,13 @@ Usage: #definition
 * group[=].element[=].display = "A.1.5.6 Starting date of therapy "					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction.timing.duration					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 * group[=].element[+].code = #Prescription.details.directionsOfUse					
 * group[=].element[=].display = "A.1.5.7 Directions for use"					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 * group[=].element[+].code = #Prescription.details.expiryDate					
 * group[=].element[=].display = "A.1.5.8 Prescription expiry date"					
@@ -173,13 +175,13 @@ Usage: #definition
 * group[=].element[=].display = "A.1.5.9 Repeats"					
 * group[=].element[=].target.code = #MedicationRequest					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "TO BE DISCUSSED"					
 * group[=].element[+].code = #Prescription.details.reason					
 * group[=].element[=].display = "A.1.5.10 Reason for prescription"					
 * group[=].element[=].target.code = #MedicationRequest.reasonReference					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 * group[=].element[+].code = #Prescription.details.reason					
 * group[=].element[=].display = "A.1.5.10 Reason for prescription"					
@@ -243,7 +245,7 @@ Usage: #definition
 * group[=].element[=].display = "A.1.3.7  Health care provider identifier"					
 * group[=].element[=].target.code = #Practictioner.identifier					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.relationship = #relatedto					
+* group[=].element[=].target.relationship = #related-to					
 					
 //---END					
 //---END					

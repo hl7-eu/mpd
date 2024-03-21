@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/r5/mpd">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/Prescription" key="StructureDefinition-Prescription" name="A - Prescription"/>
+<artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
+<artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
+<artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: XpanDH"/>
+<artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: XpanDH"/>
+<artifact id="StructureDefinition/Patient-eu-mpd" key="StructureDefinition-Patient-eu-mpd" name="Patient: XpanDH"/>
+<artifact id="ConceptMap/eP2FHIR-eu-mpd" key="ConceptMap-eP2FHIR-eu-mpd" name="eHN Subject to this guide Map"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
+<page key="downloads" name="Downloads"/>
+<page key="index" name="Home"/>
+<page key="toc" name="Table of Contents"/>
+</specification>
