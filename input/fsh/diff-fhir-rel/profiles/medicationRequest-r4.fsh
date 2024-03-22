@@ -1,8 +1,8 @@
 Profile: MedicationRequestEuMpd
 Parent: MedicationRequest 
 Id: MedicationRequest-eu-mpd
-Title: "MedicationRequest: XpanDH"
-Description: "This profile defines how to represent MedicationRequest in FHIR for the purpose of the XpanDH project."
+Title: "MedicationRequest: MPD"
+Description: "This profile defines how to represent MedicationRequest in HL7 FHIR for the purpose of this guide."
 
 * insert MedicationRequestEpCommon
 * medicationReference 1..

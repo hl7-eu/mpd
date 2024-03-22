@@ -2,8 +2,8 @@ Profile: PatientEuMpd
 // Parent: $Patient-uv-ips 
 Parent: Patient
 Id: Patient-eu-mpd
-Title: "Patient: XpanDH"
-Description: "This profile defines how to represent Patient in FHIR for the purpose of the XpanDH project."
+Title: "Patient: MPD"
+Description: "This profile defines how to represent Patient in HL7 FHIR for the purpose of this guide."
 /* * extension contains $patient-nationality named nationality 0..*
 * extension[nationality] ^short = "Nationality" */
 

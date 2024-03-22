@@ -67,31 +67,31 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.givenName					
 * group[=].element[=].display = "A.1.3.2 Given name"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.qualification					
 * group[=].element[=].display = "A.1.3.3 Professional qualifications"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.contact					
 * group[=].element[=].display = "A.1.3.4 Details for direct contact"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.workAddress					
 * group[=].element[=].display = "A.1.3.5 Work address"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.prescriber.signature					
 * group[=].element[=].display = "A.1.3.6 Signature"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
@@ -103,7 +103,7 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
-* group[=].element[=].target.comment = "Details in the referred Practictioner resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner resource"					
 * group[=].element[+].code = #Prescription.product					
 * group[=].element[=].display = "A1.4 Identification of the prescribed product"					
 * group[=].element[=].target.code = #MedicationRequest.medicationReference					
@@ -209,41 +209,41 @@ Usage: #definition
 					
 					
 * group[+].source = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Prescription"					
-* group[=].target = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Practictioner-eu-mpd"					
+* group[=].target = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Practitioner-eu-mpd"					
 					
 * group[=].element[+].code = #Prescription.prescriber.familyName					
 * group[=].element[=].display = "A.1.3.1 Familyname"					
-* group[=].element[=].target.code = #Practictioner.name.given					
+* group[=].element[=].target.code = #Practitioner.name.given					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					
 					
 * group[=].element[+].code = #Prescription.prescriber.givenName					
 * group[=].element[=].display = "A.1.3.2 Given name"					
-* group[=].element[=].target.code = #Practictioner.name.family					
+* group[=].element[=].target.code = #Practitioner.name.family					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					
 					
 * group[=].element[+].code = #Prescription.prescriber.qualification					
 * group[=].element[=].display = "A.1.3.3 Professional qualifications"					
-* group[=].element[=].target.code = #Practictioner.qualification					
+* group[=].element[=].target.code = #Practitioner.qualification					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					
 					
 * group[=].element[+].code = #Prescription.prescriber.contact					
 * group[=].element[=].display = "A.1.3.4 Details for direct contact"					
-* group[=].element[=].target.code = #Practictioner.telecom					
+* group[=].element[=].target.code = #Practitioner.telecom					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					
 					
 * group[=].element[+].code = #Prescription.prescriber.workAddress					
 * group[=].element[=].display = "A.1.3.5 Work address"					
-* group[=].element[=].target.code = #Practictioner.address					
+* group[=].element[=].target.code = #Practitioner.address					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					
 * group[=].element[=].target.comment = "where use = 'work'"					
 * group[=].element[+].code = #Prescription.prescriber.identifier					
 * group[=].element[=].display = "A.1.3.7  Health care provider identifier"					
-* group[=].element[=].target.code = #Practictioner.identifier					
+* group[=].element[=].target.code = #Practitioner.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #related-to					
 					
