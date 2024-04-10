@@ -3,8 +3,8 @@
 // ADDED FOR THIS IG to be moved to an upper level
 
 Alias: $medicationrequest-intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
-
 Alias: $medication-definition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.definition
+Alias: $medication-totalVolume-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.totalVolume
 
 //------- Code Systems
 Alias: $loinc = http://loinc.org

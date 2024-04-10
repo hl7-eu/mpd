@@ -6,8 +6,13 @@ Id: Medication-eu-mpd
 Title: "Medication: MPD"
 Description: "This profile defines how to represent MedicationRequest in HL7 FHIR for the purpose of this guide."
 
-* extension contains $medication-definition-r5 named MedicationDefinitionR5 0..
-* extension[MedicationDefinitionR5].valueReference only Reference(MedicationKnowledge)
+/* * extension contains $medication-definition-r5 named MedicationDefinitionR5 0..
+* extension[MedicationDefinitionR5].valueReference only Reference(MedicationKnowledge) */
+
+
+* extension contains $medication-totalVolume-r5 named MedicationTotalVolumeR5 0..
+* extension[MedicationTotalVolumeR5]
+
 
 * insert ImposeProfile ( $Medication-uv-ips , 0)
 * insert MedicationEpCommon

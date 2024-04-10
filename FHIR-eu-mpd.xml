@@ -8,10 +8,18 @@
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
 <artifact id="StructureDefinition/Dispensation" key="StructureDefinition-Dispensation" name="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+<artifact id="StructureDefinition/Classification" key="StructureDefinition-Classification" name="Classification"/>
+<artifact id="StructureDefinition/ihe-ext-medication-classification" key="StructureDefinition-ihe-ext-medication-classification" name="Medication Classification"/>
+<artifact id="StructureDefinition/ihe-ext-medication-packsize" key="StructureDefinition-ihe-ext-medication-packsize" name="Medication Package Size"/>
+<artifact id="StructureDefinition/ihe-ext-medication-productname" key="StructureDefinition-ihe-ext-medication-productname" name="Medication Package Size"/>
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: MPD"/>
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
+<artifact id="StructureDefinition/ihe-ext-medicationrequest-totalamount" key="StructureDefinition-ihe-ext-medicationrequest-totalamount" name="MedicationRequest - Total Amount"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
+<artifact id="StructureDefinition/MedicinalProductDevice" key="StructureDefinition-MedicinalProductDevice" name="MedicinalProductDevice"/>
+<artifact id="StructureDefinition/MedicinalProductName" key="StructureDefinition-MedicinalProductName" name="MedicinalProductName"/>
 <artifact id="StructureDefinition/Patient-eu-mpd" key="StructureDefinition-Patient-eu-mpd" name="Patient: MPD"/>
+<artifact id="StructureDefinition/SizeOfMedicationItem" key="StructureDefinition-SizeOfMedicationItem" name="SizeOfMedicationItem"/>
 <artifact id="ConceptMap/eD2FHIR-eu-mpd" key="ConceptMap-eD2FHIR-eu-mpd" name="eHN Dispense to this guide Map"/>
 <artifact id="ConceptMap/medProd2FHIR-eu-mpd" key="ConceptMap-medProd2FHIR-eu-mpd" name="eHN Medicinal Product to this guide Map"/>
 <artifact id="ConceptMap/eP2FHIR-eu-mpd" key="ConceptMap-eP2FHIR-eu-mpd" name="eHN Subject to this guide Map"/>
