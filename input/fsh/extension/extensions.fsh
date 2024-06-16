@@ -33,7 +33,7 @@ Description: "Size of a manufactured item or unit of presentation. For example, 
 // Extension on Medication
 * value[x] only Quantity
 
-
+/*
 Extension: MedicationDevice
 Id:        ihe-ext-medication-device
 Title:     "Medication - Device"
@@ -46,7 +46,7 @@ Description: "Device, typically an administration device, included in the medici
 * extension[device] ^short = "Coded or referenced device"
 * extension[quantity].value[x] only Quantity
 * extension[quantity] ^short = "Number of defined devices in te package"
-
+*/
 
 Extension: MedicationRequestTotalAmount
 Id:        ihe-ext-medicationrequest-totalamount
