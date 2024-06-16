@@ -21,6 +21,8 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+*.fsh-bak
+*.xlk
 
 # java settings 
 ################
@@ -29,3 +31,4 @@ Thumbs.db
 .vscode/
 .idea/
 .idea/*
+.gitignore
