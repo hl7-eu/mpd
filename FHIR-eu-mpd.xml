@@ -8,7 +8,6 @@
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
 <artifact id="StructureDefinition/Dispensation" key="StructureDefinition-Dispensation" name="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
-<artifact id="StructureDefinition/Classification" key="StructureDefinition-Classification" name="Classification"/>
 <artifact id="StructureDefinition/ihe-ext-medication-classification" key="StructureDefinition-ihe-ext-medication-classification" name="Medication Classification"/>
 <artifact id="StructureDefinition/ihe-ext-medication-packsize" key="StructureDefinition-ihe-ext-medication-packsize" name="Medication Package Size"/>
 <artifact id="StructureDefinition/ihe-ext-medication-productname" key="StructureDefinition-ihe-ext-medication-productname" name="Medication Package Size"/>

@@ -1,9 +1,5 @@
 //These extensions and profiles are shared between IHE-MEOW and IHE-MPD profiles
 
-Extension: Classification
-Description: "Medication classification/category. Allows the product to be classified by various systems, e.g ATC, narcotic class, legal status of supply, etc."
-* value[x] only CodeableConcept
-
 Extension: MedicinalProductName
 Description: "Name of the medicinal product. Optionally the type of name (Full official name, prescribing name, invented name) and language of the name can be specified. The extension is a simplified approach of what is used in MedicinalProductDefinition resource."
 * extension contains

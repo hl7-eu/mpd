@@ -1,14 +1,12 @@
 RuleSet: MedicationEpCommon
 // * contained only MedicationKnowledge 
 * ^purpose = "This profile constrains the Medication resource for the purpose of the eP/eD proof of concept."
-* code from $eHDSIActiveIngredient (preferred)
-* code ^short = "Any kind of product code (including ATC)"
-// ADD ADDITIONAL VALUE SET
+* code ^short = "Any kind of product code that fully describes the prescribed product"
 
 * extension contains MedicinalProductName named productName 0..* // productName
 * extension[productName] ^short = "Name of the medicinal product. Names of different types (full name, short name, etc) and in different languages can be provided if relevant." 
 
-* extension contains Classification named classification 0..* // classification
+* extension contains MedicationClassification named classification 0..* // classification
 * extension[classification] ^short = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, etc"
 
 * extension contains SizeOfMedicationItem named sizeOfItem 0..1 // item.containedQuantity
