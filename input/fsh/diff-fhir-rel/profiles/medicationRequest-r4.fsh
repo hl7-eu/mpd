@@ -5,6 +5,7 @@ Title: "MedicationRequest: MPD"
 Description: "This profile defines how to represent MedicationRequest in HL7 FHIR for the purpose of this guide."
 
 * insert MedicationRequestEpCommon
-* medication.reference 1..
-* medication only CodeableReference(MedicationEuMpd)
-* reason ^short = "Reason or indication for this prescription"
+* medicationReference 1..
+* medicationReference only Reference(MedicationEuMpd)
+* reasonCode ^short = "Reason or indication for this prescription"
+* reasonReference ^short = "Condition or observation that supports this prescription"
