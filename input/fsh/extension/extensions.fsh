@@ -5,56 +5,58 @@ Description: "Medication classification/category. Allows the product to be class
 // Extension on Medication
 * ^context[+].type = #element
 * ^context[=].expression = "Medication"
-* value[x] only CodeableConcept  // 0 or more
+* value[x] only CodeableConcept 
 
 
 Extension: MedicationProductName
 Id:        ihe-ext-medication-productname
 Title:     "Medication - Product Name"
-Description: "Name of the medicinal product. Optionally the type of name (Full official name, prescribing name, invented name) and language of the name can be specified. The extension is a simplified approach of what is used in MedicinalProductDefinition resource."
+Description: "Name of the medicinal product. This is typically the name of a real product as registered. This element should not contain display names of virtual product concepts."
 // Extension on Medication
-* extension contains
-    name 1..1 and
-    nameType 0..1 and
-    language 0..1
-* extension[name].value[x] only string
-* extension[name] ^short = "Product name"
-* extension[nameType].value[x] only CodeableConcept
-* extension[nameType] ^short = "Type of product name (full name, common name, prescription name, etc)"
-* extension[language].value[x] only CodeableConcept
-* extension[language].valueCodeableConcept from AllLanguages
-* extension[language] ^short = "Language code of this name. A code with a combination of country and name can be used."
+* ^context[+].type = #element
+* ^context[=].expression = "Medication"
+* value[x] only string
+* valueString 1..1
 
 
 Extension: MedicationSizeOfItem
 Id:        ihe-ext-medication-sizeofitem
 Title:     "Medication - Size of Item"
 Description: "Size of a manufactured item or unit of presentation. For example, size of one vial in a package that may contain several vials."
-// Extension on Medication
-* value[x] only Quantity
+Context: Medication
 
-/*
-Extension: MedicationDevice
-Id:        ihe-ext-medication-device
-Title:     "Medication - Device"
-Description: "Device, typically an administration device, included in the medicinal product."
+* value[x] only Quantity
+* valueQuantity 1..1
+
+
+// Extension: MedicationDevice - separate for R4 and R5 due to CodeableReference
+
+
+Extension: MedicationCharacteristic
+Id:        ihe-ext-medication-characteristic
+Title:     "Medication - Characteristic"
+Description: "Any characteristic of the medicinal product prescribed or dispensed (for example, price, textual package description, special program information, etc)"
 // Extension on Medication
 * extension contains
-    device 1..1 and
-    quantity 1..1
-* extension[device].value[x] only CodeableReference(Device or DeviceDefinition)
-* extension[device] ^short = "Coded or referenced device"
-* extension[quantity].value[x] only Quantity
-* extension[quantity] ^short = "Number of defined devices in te package"
-*/
+    type 1..1 and
+    value 0..1
+* extension[type].value[x] only CodeableConcept
+* extension[type] ^short = "Code specifying the type of characteristic of medication"
+* extension[value] ^short = "Descriptive value of the characteristic"
 
-Extension: MedicationRequestTotalAmount
-Id:        ihe-ext-medicationrequest-totalamount
-Title:     "MedicationRequest - Total Amount"
-Description: "Total amount of product being requested."
-// Extension on MedicationRequest
+
+Extension: MedicationUnitOfPresentation
+Id:        ihe-ext-medication-unitofpresentation
+Title:     "Medication - Unit of presentation"
+Description: "Unit of presentation, typically describing the smallest countable package item (e.g tablet, vial, ampoule, etc). Unit of presentation is also often used in describing pack size and the denominator of strength. If the size of presentation unit is relevant, it should be described in sizeOfItem extension."
+// Extension on Medication
 * ^context[+].type = #element
-* ^context[=].expression = "MedicationRequest"
-* value[x] only Quantity  // 0 or more
+* ^context[=].expression = "Medication"
+* value[x] only CodeableConcept 
+* valueCodeableConcept 1..1
+
+
+//StrengthSubstance separate for R4 and R5 due to strength[x] element
+//StrengthType separate for R4 and R5 due to strength[x] element
 
 

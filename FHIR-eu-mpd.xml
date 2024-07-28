@@ -8,13 +8,16 @@
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
 <artifact id="StructureDefinition/Dispensation" key="StructureDefinition-Dispensation" name="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+<artifact id="StructureDefinition/ihe-ext-medication-characteristic" key="StructureDefinition-ihe-ext-medication-characteristic" name="Medication - Characteristic"/>
 <artifact id="StructureDefinition/ihe-ext-medication-classification" key="StructureDefinition-ihe-ext-medication-classification" name="Medication - Classification"/>
 <artifact id="StructureDefinition/ihe-ext-medication-device" key="StructureDefinition-ihe-ext-medication-device" name="Medication - Device"/>
 <artifact id="StructureDefinition/ihe-ext-medication-productname" key="StructureDefinition-ihe-ext-medication-productname" name="Medication - Product Name"/>
 <artifact id="StructureDefinition/ihe-ext-medication-sizeofitem" key="StructureDefinition-ihe-ext-medication-sizeofitem" name="Medication - Size of Item"/>
+<artifact id="StructureDefinition/ihe-ext-medication-strengthsubstance" key="StructureDefinition-ihe-ext-medication-strengthsubstance" name="Medication - Strength substance"/>
+<artifact id="StructureDefinition/ihe-ext-medication-strengthtype" key="StructureDefinition-ihe-ext-medication-strengthtype" name="Medication - Strength type"/>
+<artifact id="StructureDefinition/ihe-ext-medication-unitofpresentation" key="StructureDefinition-ihe-ext-medication-unitofpresentation" name="Medication - Unit of presentation"/>
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: MPD"/>
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
-<artifact id="StructureDefinition/ihe-ext-medicationrequest-totalamount" key="StructureDefinition-ihe-ext-medicationrequest-totalamount" name="MedicationRequest - Total Amount"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
 <artifact id="StructureDefinition/Patient-eu-mpd" key="StructureDefinition-Patient-eu-mpd" name="Patient: MPD"/>
 <artifact id="ConceptMap/eD2FHIR-eu-mpd" key="ConceptMap-eD2FHIR-eu-mpd" name="eHN Dispense to this guide Map"/>
