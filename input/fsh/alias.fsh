@@ -12,14 +12,21 @@ Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
 Alias: $icd11 = http://id.who.int/icd11/mms
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $Immunization-recommendation-status = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status
-Alias: $sct = http://snomed.info/sct
-Alias: $atc = http://www.whocc.no/atc
+//Alias: $sct = http://snomed.info/sct
+//Alias: $atc = http://www.whocc.no/atc
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $icd-10 = http://hl7.org/fhir/sid/icd-10
 Alias: $dug = http://registry.geodati.gov.it/dug
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $aic = https://www.aifa.gov.it/aic // temporary URL
 Alias: $jrc = https://covid-19-diagnostics.jrc.ec.europa.eu/devices
+Alias: $who-atc = http://www.whocc.no/atc // WHO ATC
+Alias: $edqm-standardterms = http://standardterms.edqm.eu // EDQM standard terms 
+Alias: $ucum = http://unitsofmeasure.org // UCUM http://hl7.org/fhir/ValueSet/ucum-units
+Alias: $snomed = http://snomed.info/sct // SNOMED CT
+Alias: $bcp47 = urn:ietf:bcp:47 // BCP47
+Alias: $sms = https://spor.ema.europa.eu/v2/SubstanceDefinition // EMA SPOR Substance Management System
+Alias: $ingredient-role = http://hl7.org/fhir/ingredient-role // Codes are from EMA SPOR
 
 // Value Sets
 Alias: $eHDSIReactionAllergy = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIReactionAllergy
@@ -40,9 +47,9 @@ Alias: $eHDSISocialHistory = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSISocialHi
 
 //----------- Profiles
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
-Alias: ips_lab_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
-Alias: ips_path_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips
-Alias: ips_rad_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips
+Alias: $ips_lab_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-uv-ips
+Alias: $ips_path_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-pathology-uv-ips
+Alias: $ips_rad_result = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
 Alias: $Medication-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips
