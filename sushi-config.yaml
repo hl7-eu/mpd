@@ -1,11 +1,11 @@
-id: hl7.fhir.eu.mpd
-canonical: http://hl7.eu/fhir/mpd # check if this may create issues
+id: hl7.fhir.eu.r5.mpd
+canonical: http://hl7.eu/fhir/r5/mpd # check if this may create issues
 name:  Hl7EuMedPrescriptionDispenseIg
 title: HL7 Europe Medication Prescription and Dispense
 description: This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context
 status: draft # draft | active | retired | unknown
 version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -16,14 +16,15 @@ publisher:
   # email: test@example.org
 copyright: >-
   Used by permission of HL7 Europe, all rights reserved Creative Commons License
+
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-   hl7.fhir.uv.ips: current
+   # hl7.fhir.uv.ips: current
    ihe.pharm.mpd: current
-   hl7.fhir.extensions.r5: 4.0.1
+   # hl7.fhir.extensions.r5: 4.0.1
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -81,8 +82,8 @@ pages:
 menu:
   Home: index.html
   Table of Contents: toc.html
-    # TO BE UPDATED
-  IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/
+  # TO BE UPDATED
+  IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/ 
   Background: background.html
   Artifacts: artifacts.html
   Downloads: downloads.html
