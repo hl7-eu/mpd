@@ -4,6 +4,15 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="01A-Cefuroxime1500GenericExplicit"/>
+<artifact id="Medication/01B-Cefuroxime1500GenericConcept" key="Medication-01B-Cefuroxime1500GenericConcept" name="01B-Cefuroxime1500GenericConcept"/>
+<artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="01C-Cefuroxime1500Branded"/>
+<artifact id="Medication/02A-ClotrimazoleCanifugCremolum" key="Medication-02A-ClotrimazoleCanifugCremolum" name="02A-ClotrimazoleCanifugCremolum"/>
+<artifact id="Medication/02A1-CanifugCremolumCreamItem" key="Medication-02A1-CanifugCremolumCreamItem" name="02A1-CanifugCremolumCreamItem"/>
+<artifact id="Medication/02A2-CanifugCremolumPessaryItem" key="Medication-02A2-CanifugCremolumPessaryItem" name="02A2-CanifugCremolumPessaryItem"/>
+<artifact id="Medication/03B-VitaminBComplexBranded" key="Medication-03B-VitaminBComplexBranded" name="03B-VitaminBComplexBranded"/>
+<artifact id="Medication/04-FirmagonBranded" key="Medication-04-FirmagonBranded" name="04-FirmagonBranded"/>
+<artifact id="Medication/05A-Tilidin-Branded" key="Medication-05A-Tilidin-Branded" name="05A-Tilidin-Branded"/>
 <artifact id="StructureDefinition/Prescription" key="StructureDefinition-Prescription" name="A - Prescription"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>

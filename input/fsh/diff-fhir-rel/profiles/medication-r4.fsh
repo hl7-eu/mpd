@@ -11,7 +11,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 // * extension[MedicationDefinitionR5].valueReference only Reference(MedicationKnowledge)
 
 
-* extension contains $medication-totalVolume-r5 named MedicationTotalVolumeR5 0..
+* extension contains $medication-totalVolume-r5 named totalVolume 0..
 * extension[MedicationTotalVolumeR5]
 
 

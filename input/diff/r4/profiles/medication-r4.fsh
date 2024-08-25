@@ -11,8 +11,8 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 // * extension[MedicationDefinitionR5].valueReference only Reference(MedicationKnowledge)
 
 
-* extension contains $medication-totalVolume-r5 named MedicationTotalVolumeR5 0..
-* extension[MedicationTotalVolumeR5]
+//* extension contains $medication-totalVolume-r5 named totalVolume 0..
+//* extension[MedicationTotalVolumeR5]
 
 
 * insert ImposeProfile ( $Medication-uv-ips , 0)
@@ -28,8 +28,8 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
     * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
     * extension contains MedicationStrengthType named strengthType 0..1
     * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
-* form from $eHDSIDoseForm (example)
-  * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
+//* form from $eHDSIDoseForm (example)
+//  * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
 
 
 Extension: MedicationDevice
