@@ -35,8 +35,16 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="authors" name="Authors and Contributors"/>
 <page key="background" name="Background"/>
+<page key="challenges" name="Challenges"/>
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>
+<page key="implementationnotes" name="Implementation Considerations"/>
+<page key="knownissues" name="Known Issues"/>
+<page key="logicalmodels" name="Logical Models"/>
+<page key="medicationconcepts" name="Medication Concepts"/>
+<page key="references" name="Source and Additional Information"/>
 <page key="toc" name="Table of Contents"/>
+<page key="terminology" name="Terminology Considerations"/>
 </specification>

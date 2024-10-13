@@ -41,6 +41,7 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
+
 pages:
   index.md:
     title: Home
@@ -48,10 +49,22 @@ pages:
     title: Background
   downloads.md:
     title: Downloads
-#  implementation.md:
-#    title: Implementation Considerations
- #  recommendations.md:
-#    title: Recommendations
+  implementationnotes.md:
+    title: Implementation Considerations
+  challenges.md:
+    title: Challenges
+  authors.md: 
+    title: Authors and Contributors
+  knownissues.md:
+    title: Known Issues
+  logicalmodels.md:
+    title: Logical Models
+  medicationconcepts.md:
+    title: Medication Concepts
+  references.md:
+    title: Source and Additional Information
+  terminology.md:
+    title: Terminology Considerations
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -78,14 +91,26 @@ pages:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 menu:
   Home: index.html
-  Table of Contents: toc.html
-    # TO BE UPDATED
+  Background: 
+    Background: background.html
+    Challenges: challenges.html
+    References: references.html
+  Technical Specifications:
+    Terminology: terminology.html
+    Medication Concepts: medicationconcepts.html
+    Logical Models: logicalmodels.html
+    Implementation Notes: implementationnotes.html
+    FHIR R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/fhir-r5/
+  About:
+    Authors and Contributors: authors.html
+    Known Issues: knownissues.html
+    Download: downloads.html
   IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/
-  Background: background.html
   Artifacts: artifacts.html
-  Downloads: downloads.html
+  Table of Contents: toc.html
   
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

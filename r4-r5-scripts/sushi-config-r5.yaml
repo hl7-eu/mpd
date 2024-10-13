@@ -79,14 +79,26 @@ pages:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
 menu:
   Home: index.html
-  Table of Contents: toc.html
-  # TO BE UPDATED
-  IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/ 
-  Background: background.html
+  Background: 
+    Background: background.html
+    Challenges: challenges.html
+    References: references.html
+  Technical Specifications:
+    Terminology: terminology.html
+    Medication Concepts: medicationconcepts.html
+    Logical Models: logicalmodels.html
+    Implementation Notes: implementationnotes.html
+    FHIR R4 IG: https://build.fhir.org/ig/hl7-eu/mpd
+  About:
+    Authors and Contributors: authors.html
+    Known Issues: knownissues.html
+    Download: downloads.html
+  IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/
   Artifacts: artifacts.html
-  Downloads: downloads.html
+  Table of Contents: toc.html
   
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
