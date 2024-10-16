@@ -49,4 +49,4 @@ The following diagrams provide a browseable overview of the profiles specified b
 
 ### Authors and Contributors
 
-Please refer to the [Authors and Contributors](contributors.html) page.
+Please refer to the [Authors and Contributors](authors.html) page.

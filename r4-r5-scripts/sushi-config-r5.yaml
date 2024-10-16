@@ -49,10 +49,22 @@ pages:
     title: Background
   downloads.md:
     title: Downloads
-#  implementation.md:
-#    title: Implementation Considerations
- #  recommendations.md:
-#    title: Recommendations
+  implementationnotes.md:
+    title: Implementation Considerations
+  challenges.md:
+    title: Challenges
+  authors.md: 
+    title: Authors and Contributors
+  knownissues.md:
+    title: Known Issues
+  logicalmodels.md:
+    title: Logical Models
+  medicationconcepts.md:
+    title: Medication Concepts
+  references.md:
+    title: Source and Additional Information
+  terminology.md:
+    title: Terminology Considerations
 #
 #
 # The parameters property represents IG.definition.parameter. Rather

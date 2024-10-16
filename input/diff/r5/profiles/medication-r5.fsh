@@ -21,7 +21,7 @@ Description: "This profile defines how to represent Medication data on ePrescrip
     * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
     * extension contains MedicationStrengthType named strengthType 0..1
     * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
-* doseForm from $eHDSIDoseForm (example) // doseForm; item.doseForm
+* doseForm MS // doseForm; item.doseForm
   * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
 * marketingAuthorizationHolder MS
 

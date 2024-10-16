@@ -1,3 +1,4 @@
+/*
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					eP2FHIR-eu-mpd.fsh
 // -------------------------------------------------------------------------------					
@@ -12,17 +13,17 @@ Usage: #definition
 * description = "eHN ePrescription Model to this guide Map"					
 * purpose = "It shows how the ePrescription data set defined by the EU eHN guidelines is mapped into this guide"					
 
-/* // R4 <== 
-* sourceUri = Canonical(EprescriptionEhn)
-* targetUri = Canonical(MedicationRequestEuMpd)
- */
+// R4 <== 
+// * sourceUri = Canonical(EprescriptionEhn)
+// * targetUri = Canonical(MedicationRequestEuMpd)
+
 * sourceScopeUri = Canonical(EprescriptionEhn)
 * targetScopeUri = Canonical(MedicationRequestEuMpd)
 					
-/* // R4 <== 
-* group[+].source = Canonical(EprescriptionEhn)					
-* group[=].target = Canonical(MedicationRequestEuMpd)	 
-*/				
+ // R4 <== 
+// * group[+].source = Canonical(EprescriptionEhn)					
+// * group[=].target = Canonical(MedicationRequestEuMpd)	 
+				
 * group[+]				
 * group[=].element[+].code = #Prescription.patient					
 * group[=].element[=].display = "A.1.1 Patient administrative data"					
@@ -203,10 +204,7 @@ Usage: #definition
 //---END					
 //---END					
 					
-					
-					
-					
-					
+							
 					
 * group[+].source = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Prescription"					
 * group[=].target = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Practitioner-eu-mpd"					
@@ -255,7 +253,7 @@ Usage: #definition
 //---END					
 //---END					
 					
-					
+*/					
 					
 					
 					

@@ -120,7 +120,7 @@ Description: "3B. Milgamma N, B-vitamin complex. Branded packaged product, defin
 Instance: 04-FirmagonBranded
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "04. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
+Description: "4A. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
 
 * identifier.value = "1400601"
 * identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
@@ -148,7 +148,7 @@ Description: "04. Firmagon. Branded packaged product, defined by attributes, inc
 Instance: 05A-Tilidin-Branded
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "05A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged product, defined by attributes. Unusual strength."
+Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged product, defined by attributes. Unusual strength."
 
 * identifier.value = "12345"
 //* identifier.system = "example"

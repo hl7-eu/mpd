@@ -5,6 +5,7 @@
 Alias: $medicationrequest-intent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias: $medication-definition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.definition
 Alias: $medication-totalVolume-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.totalVolume
+Alias: $medicationdispense-notperformedreason-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.notPerformedReason
 
 //------- Code Systems
 Alias: $loinc = http://loinc.org
@@ -27,6 +28,7 @@ Alias: $snomed = http://snomed.info/sct // SNOMED CT
 Alias: $bcp47 = urn:ietf:bcp:47 // BCP47
 Alias: $sms = https://spor.ema.europa.eu/v2/SubstanceDefinition // EMA SPOR Substance Management System
 Alias: $ingredient-role = http://hl7.org/fhir/ingredient-role // Codes are from EMA SPOR
+Alias: $timing = http://hl7.org/fhir/event-timing // FHIR Event Timing
 
 // Value Sets
 Alias: $eHDSIReactionAllergy = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIReactionAllergy

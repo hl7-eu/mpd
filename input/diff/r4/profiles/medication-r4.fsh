@@ -15,7 +15,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 //* extension[MedicationTotalVolumeR5]
 
 
-* insert ImposeProfile ( $Medication-uv-ips , 0)
+//* insert ImposeProfile ( $Medication-uv-ips , 0)
 * insert MedicationEpCommon
 
 * ingredient
