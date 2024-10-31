@@ -29,6 +29,7 @@ Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Brande
 * extension[productName].valueString = "Cefuroxime MIP 1500 mg, süste-/infusioonilahuse pulber"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
 * amount.numerator = 10 $edqm-standardterms#15060000 "Vial"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $snomed#48753004 "Cefuroxime sodium"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1500 $ucum#mg "milligram"
@@ -62,6 +63,7 @@ Description: "2A2. Clotrimazole cream (10mg/g, 1 tube of 20g) as part of Canifug
 
 * form = $edqm-standardterms#10901000 "Vaginal cream"
 * amount.numerator = 1 $edqm-standardterms#15058000 "Tube"
+* amount.denominator.value = 1
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15058000 "Tube"
 * extension[sizeOfItem].valueQuantity = 20 $ucum#g "gram"
 * ingredient.itemCodeableConcept = $snomed#387325003 "Clotrimazole"
@@ -76,6 +78,7 @@ Description: "2A1. Clotrimazole pessary (6 pessaries of 100mg) as part of Canifu
 
 * form = $edqm-standardterms#10909000 "Pessary"
 * amount.numerator = 6 $edqm-standardterms#15039000 "Pessary"
+* amount.denominator.value = 1
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15039000 "Pessary"
 * ingredient.itemCodeableConcept = $snomed#387325003 "Clotrimazole"
 * ingredient.isActive = true
@@ -96,6 +99,7 @@ Description: "3B. Milgamma N, B-vitamin complex. Branded packaged product, defin
 * extension[sizeOfItem].valueQuantity = 2 $ucum#mL "milliliter"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15002000 "Ampoule"
 * amount.numerator = 5 $edqm-standardterms#15002000 "Ampoule" // possibility to use UCUM {Ampoule} or extension for unit of presentation.
+* amount.denominator.value = 1
 
 * ingredient[0].itemCodeableConcept = $snomed#259659006 "Thiamine"
 * ingredient[=].isActive = true
@@ -131,6 +135,7 @@ Description: "4A. Firmagon. Branded packaged product, defined by attributes, inc
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
 
 * amount.numerator = 2 $edqm-standardterms#15060000 "Vial"
+* amount.denominator.value = 1
 * ingredient.itemCodeableConcept = $snomed#441864003 "Degarelix"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 120 $ucum#mg "milligram"
@@ -157,6 +162,7 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 * extension[productName].valueString = "Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15022000 "Drop"
 * amount.numerator = 10 $ucum#mL "milliliter"
+* amount.denominator.value = 1
 * ingredient[0].itemCodeableConcept = $snomed#373562008 "Tilidine"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator = 50 $ucum#mg "milligram"

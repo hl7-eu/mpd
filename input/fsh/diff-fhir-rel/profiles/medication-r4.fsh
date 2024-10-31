@@ -19,7 +19,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 * insert MedicationEpCommon
 
 * ingredient
-  * itemCodeableConcept from $eHDSISubstance (example)
+//  * itemCodeableConcept from $eHDSISubstance (example)
   * itemReference only Reference (MedicationEuMpd)
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""

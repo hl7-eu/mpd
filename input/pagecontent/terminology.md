@@ -16,7 +16,7 @@ MyHealth@EU data exchange for eP and eD is based on CDA and it is operational in
 
 The following table illustrates the differences between what is needed in cross-border services compared to what is used by the regulatory domain.  
 
-|Data element|Code system|Example code and display|  
+|**Data element**|**Code system**|**Example code and display**|  
 |Dose form|EDQM|10221000 Film-coated tablet|  
 |Route of administration|EDQM|20053000 Oral use|  
 |Packaging|EDQM|30009000 Box|  
@@ -28,7 +28,7 @@ The following table illustrates the differences between what is needed in cross-
    
 In EMA specifications for regulatory data exchange, similar concepts are used (same displays), but a different code system:   
 
-|Coded attribute|MyHealth@EU|EMA RMS|Display name|  
+|**Coded attribute**|**MyHealth@EU**|**EMA RMS**|**Display name**|  
 |Dose form|EDQM: 10221000|100000073665|Film-coated tablet|  
 |Route of administration|EDQM: 20053000|100000073619|Oral use|  
 |Packaging|EDQM: 30009000|100000073498|Box|  
@@ -50,7 +50,7 @@ In MyHealth@EU services, substances are allowed to be coded with ATC. However, A
 
 ### Dose form, route of administration, etc
 
-|Coded attribute|EDQM|EMA RMS|SNOMED CT|  
+|**Coded attribute**|**EDQM**|**EMA RMS**|**SNOMED CT**|  
 |Dose form|10221000 Film-coated tablet|100000073665 Film-coated tablet|1163573008 Film-coated oral tablet|  
 |Route of administration|20053000 Oral use|100000073619 Oral use|26643006 Oral route|  
 |Packaging|30009000 Box|100000073498 Box|(no equivalent)|  
@@ -91,9 +91,11 @@ In EMA RMS list, the same concepts are coded with RMS codes, and mapping from RM
 
 SNOMED CT also includes units of measurement with SNOMED CT codes.
 
-|Coded attribute|EDQM|EMA RMS|SNOMED CT|  
+|**Coded attribute**|**EDQM**|**EMA RMS**|**SNOMED CT**|  
 |Unit of presentation|15054000 Tablet|200000002152 Tablet|732936001 Tablet (unit of presentation) or 428673006 Tablet - unit of product usage|  
 |Unit of measurement|ug microgram(s)|100000110656 microgram(s)|258685003 mcg|
+{:.table-bordered .table-striped .thead-light}
+
 
 ### WHO ATC
 

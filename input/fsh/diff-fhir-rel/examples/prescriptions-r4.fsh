@@ -54,7 +54,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 //* identifier.system = "" 
 * groupIdentifier.value = "100"
 * status = #active
-* intent = #order
+* intent = #option
 * authoredOn = "2024-10-03"
 * requester = Reference(doctor1)
 * medicationCodeableConcept = $snomed#376255008 "Thalidomide 50 mg oral capsule"
@@ -81,7 +81,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 //* identifier.system = "" 
 * groupIdentifier.value = "100"
 * status = #active
-* intent = #order
+* intent = #option
 * authoredOn = "2024-10-03"
 * requester = Reference(doctor1)
 * medicationCodeableConcept = $snomed#326766003 "Melphalan 2 mg oral tablet"
@@ -107,7 +107,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 //* identifier.system = "" 
 * groupIdentifier.value = "100"
 * status = #active
-* intent = #order
+* intent = #option
 * authoredOn = "2024-10-03"
 * requester = Reference(doctor1)
 * medicationCodeableConcept = $snomed#374072009 "Prednisone 50 mg oral tablet"
@@ -251,7 +251,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * identifier.value = "300-1/2"
 * groupIdentifier.value = "300"
 * status = #active
-* intent = #order
+* intent = #option
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
 * medicationReference = Reference(02A2-CanifugCremolumPessaryItem)
@@ -277,7 +277,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * identifier.value = "300-2/2"
 * groupIdentifier.value = "300"
 * status = #active
-* intent = #order
+* intent = #option
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
 * medicationReference = Reference(02A1-CanifugCremolumCreamItem)

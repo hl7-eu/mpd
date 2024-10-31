@@ -43,7 +43,6 @@
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
 <artifact id="StructureDefinition/Patient-eu-mpd" key="StructureDefinition-Patient-eu-mpd" name="Patient: MPD"/>
 <artifact id="PractitionerRole/doctor1" key="PractitionerRole-doctor1" name="doctor1"/>
-<artifact id="ConceptMap/eP2FHIR-eu-mpd" key="ConceptMap-eP2FHIR-eu-mpd" name="eHN Subject to this guide Map"/>
 <artifact id="Organization/organization1" key="Organization-organization1" name="organization1"/>
 <artifact id="Organization/organization2" key="Organization-organization2" name="organization2"/>
 <artifact id="Patient/patient1" key="Patient-patient1" name="patient1"/>
