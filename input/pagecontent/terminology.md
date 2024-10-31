@@ -24,7 +24,7 @@ The following table illustrates the differences between what is needed in cross-
 |Unit of measurement|UCUM|ug microgram(s)|  
 |ATC classification|WHO ATC|G03AA12 drospirenone and ethinylestradiol|  
 |Active ingredient|EMA SMS (preferred), ATC (allowed)|100000092667 or J01DC02 cefuroxime|  
-  
+{:.table-bordered .table-striped .thead-light}  
    
 In EMA specifications for regulatory data exchange, similar concepts are used (same displays), but a different code system:   
 
@@ -37,6 +37,7 @@ In EMA specifications for regulatory data exchange, similar concepts are used (s
 |ATC|WHO ATC: G03AA12|100000095785|drospirenone and ethinylestradiol|  
 |Country codes|ISO: SE|100000000535|Kingdom of Sweden|  
 |Language codes|BCP-47: sv-SE|100000072288|Swedish|  
+{:.table-bordered .table-striped .thead-light}
 
 The table above is merely one example of different terminology needs. The code systems used in MyHealth@EU services are recommended by eHealth Network in guidelines for ePrescription and Patient Summary. On a national level, many more use cases and terminology options exist.
 
@@ -54,7 +55,7 @@ In MyHealth@EU services, substances are allowed to be coded with ATC. However, A
 |Route of administration|20053000 Oral use|100000073619 Oral use|26643006 Oral route|  
 |Packaging|30009000 Box|100000073498 Box|(no equivalent)|  
 |Unit of presentation|15054000 Tablet|200000002152 Tablet|732936001 Tablet (unit of presentation)|  
-
+{:.table-bordered .table-striped .thead-light}
 
 #### EMA SPOR RMS
 EMA SPOR Referentials Management Services (RMS) is the terminology service to support central data management for the European regulatory domain, combining external resources like EDQM, WHO ATC, and internal resources. It uses an internal numbering system for terminology and product lifecycle management purposes - this means recoding concepts from aforementioned code systems, and adding concepts when needed (for example, adding concepts to pharmaceutical form list, where no agreement on EDQM level could be reached). Mappings to source code systems are provided if they exist.  
