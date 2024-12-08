@@ -1,0 +1,100 @@
+@startuml
+
+'skinparam linetype ortho
+skinparam linetype polyline
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor TECHNOLOGY
+ HeaderBackgroundColor #7b8
+}
+
+skinparam class<<BU>> {
+ BorderColor #909050
+ BackgroundColor BUSINESS
+ HeaderBackgroundColor #dd4
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor #8bd
+}
+
+
+
+class "**Prescription**" as P<<BU>> {
+  --
+  |_ identifier = Pr1
+  |_ issued = 12.12.2024
+  |_ patient = Patient1
+  |_ prescriber = Prescriber1
+  |_ item
+    |_ itemIdentifier = MR1
+    |_ medication = Med1
+    |_ dosage = Dose1
+  |_ item
+    |_ itemIdentifier = MR2
+    |_ medication = Med2
+    |_ dosage = Dose2
+  --
+}
+
+
+class "**MedicationRequest 1**" as MR1<<MD>> {
+  --
+  |_ identifier = MR1
+  |_ groupIdentifier = Pr1
+  |_ intent = option
+  |_ subject = Patient1
+  |_ requester = Prescriber1
+  |_ authoredOn = 12.12.2024 
+  |_ medication = Med1
+  |_ dosageInstruction = Dose1
+  --
+}
+
+class "**MedicationRequest 2**" as MR2<<MD>> {
+  --
+  |_ identifier = MR2
+  |_ groupIdentifier = Pr1
+  |_ intent = option
+  |_ subject = Patient1
+  |_ requester = Prescriber1
+  |_ authoredOn = 12.12.2024
+  |_ medication = Med2
+  |_ dosageInstruction = Dose2
+  --
+}
+
+class "**RequestOrchestration**" as RO<<MD>> {
+  --
+  |_ identifier  
+  |_ groupIdentifier
+  |_ intent = order
+  |_ subject = Patient1
+  |_ author = Prescriber1
+  |_ authoredOn = 12.12.2024
+  |_ action
+    |_ resource MR1
+    |_ relatedAction MR2
+  |_ action
+    |_ resource MR2
+    |_ relatedAction MR1
+  --
+}
+
+
+P -d- RO: "            "  
+P -d- MR1:  "            "  
+P -d- MR2:  "            "  
+RO -l-> MR1: "reference"
+RO -r-> MR2: "reference"
+
+
+
+@enduml
