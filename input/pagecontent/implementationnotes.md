@@ -15,11 +15,12 @@ Considering the requirements above, the best match from the following approaches
 
 #### Option 1: No grouping 
 
-This option can only be used when the items on a prescription can be easily split and dispensed separately. The information about which prescription the items belong to is handled outside FHIR services. 
+This option can only be used when the items on a prescription can be easily split and dispensed separately. The information about which prescription the items belong to is handled outside FHIR services.  
 
 **Pros:**
 - Technically the easiest option to implement in FHIR.
-- Allows the same handling of data for single- and multiitem prescriptions.
+- Allows the same handling of data for single- and multiitem prescriptions.  
+
 **Cons:** 
 - Prescription identifier not present
 - Complexity of matching the items and prescriptions does not disappear, but is pushed to the prescription/dispensing systems.
@@ -28,23 +29,25 @@ This option can only be used when the items on a prescription can be easily spli
 #### Option 2: Using .groupIdentifier
 
 This option differs from the previous one by one important aspect: the data element .groupIdentifier is filled in with the prescription identifier. This allows linking of different prescription items also in FHIR services, but it does not provide any extra information about the prescription or interdependencies between different items on the same prescription. 
-
-**Pros:** 
+  
+**Pros:**  
 - Easy to implement
 - Allows very similar handling of data for single- and multiitem prescriptions
-- .groupIdentifier preserves prescription identifier.
-**Cons:**
+- .groupIdentifier preserves prescription identifier.  
+  
+**Cons:**  
 - No way to show interdependencies between individual items/requests
 - Status of the prescription has to be the same or calculable from individual prescription items
 
 #### Option 3: Using RequestOrchestration/RequestGroup
 
 This option is technically more complex to handle on the FHIR side, but it allows communicating the interdependencies of different items on a prescription. Every prescription item uses MedicationRequest resource just like in case of the first two options. However, an additional resource is populated to provide extra information about the semantics of grouping the items on the same prescription. RequestOrchestration (R5) or RequestGroup (R4) share the same .groupIdentifier as the MedicationRequests that are linked from it. However, note that RequestOrchestration/RequestGroup is not semantically the prescription, but only a part of it. Even with this approach, there is no set resource for the prescription object as such.
-
-**Pros:** 
+  
+**Pros:**  
 - Possible to define interdependencies between prescription items
-- Multiitem prescription is clearly defined and distinguishable from singleitem prescriptions
-**Cons:**
+- Multiitem prescription is clearly defined and distinguishable from singleitem prescriptions  
+
+**Cons:**  
 Multiitem prescription and singleitem prescription are handled differently. In a prescription system where multiitem prescriptions use RequestOrchestration, it is important to consider whether singleitem prescriptions should be using the same mechanism, even though it does not add anything to the semantics.
 
 When grouping MedicationRequests with a RequestOrchestration/RequestGroup:
