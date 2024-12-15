@@ -23,7 +23,8 @@ copyright: >-
 #
 dependencies:
    # hl7.fhir.uv.ips: current
-   ihe.pharm.mpd: current
+   ihe.pharm.mpd: current   
+   hl7.fhir.eu.base.r5: dev
    # hl7.fhir.extensions.r5: 4.0.1
 #   hl7.fhir.us.mcode:
 #     id: mcode

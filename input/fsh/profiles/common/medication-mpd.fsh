@@ -20,13 +20,13 @@ RuleSet: MedicationEpCommon
 * extension[unitOfPresentation] ^short = "Unit of presentation of the product (e.g. tablet, vial, ampoule, etc)"
 
 
-* identifier MS 
+* identifier // MS 
   * ^short = "Identifier for the medicinal product, its generic representation, or packaged product." //identifier
-* code MS 
+* code // MS 
   * ^short = "A terminology-based code for the product" // productCode
-* ingredient MS 
+* ingredient // MS 
   * ^short = "Ingredient or a part product. For combination packs, each ingredient can be a separate manufactured item with its own ingredients, dose form, and strength" // item
-  * isActive MS // item.ingredient.role
+  * isActive // MS // item.ingredient.role
 
 
 

@@ -23,14 +23,14 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * itemReference only Reference (MedicationEuMpd)
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
-  * strength MS // item.ingredient.strengthInfo (does not map exactly)
+  * strength // MS // item.ingredient.strengthInfo (does not map exactly)
     * extension contains MedicationStrengthSubstance named strengthSubstance 0..1 
     * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
     * extension contains MedicationStrengthType named strengthType 0..1
     * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
 //* form from $eHDSIDoseForm (example)
 //  * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
-
+/* 
 
 Extension: MedicationDevice
 Id:        ihe-ext-medication-device
@@ -60,4 +60,4 @@ Title: "Medication - Strength type"
 Description: "Strength type (e.g. concentration strength, presentation strength)"
 Context: Medication.ingredient.strength
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1
+* valueCodeableConcept 1..1 */

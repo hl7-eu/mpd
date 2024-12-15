@@ -6,7 +6,7 @@ RuleSet: MedicationRequestEpCommon
   * ^comment = "It is the prescription ID if the presciption includes only one prescribed item"
 * status ^short = "Current state of the order"
 //* intent = $medicationrequest-intent#order 
-* subject only Reference( PatientEuMpd )
+* subject only Reference( PatientEuCore )
 * authoredOn 1..
 * requester 1..
 * groupIdentifier // should we ask to valorize in all the cases ?

@@ -7,4 +7,4 @@ Description: "MedicationDispense profile for capturing dispensation information 
 
 * insert MedicationDispenseEpCommon
 * medication only CodeableReference(MedicationEuMpd)
-* notPerformedReason MS // statusReason, statusText (partial mapping to logical model!)
+* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)
