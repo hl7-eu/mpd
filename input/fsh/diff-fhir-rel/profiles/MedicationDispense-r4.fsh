@@ -7,4 +7,4 @@ Description: "This profile defines how to represent the supply and the associate
 * insert MedicationDispenseEpCommon
 
 * medicationReference only Reference(MedicationEuMpd)
-//* notPerformedReason MS // statusReason, statusText (partial mapping to logical model!)
+//* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)
