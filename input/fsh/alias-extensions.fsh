@@ -48,7 +48,7 @@ Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefiniti
 Alias: $specimen-feature-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
 Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-
+Alias: $medicationrequest-prescribedquantity = http://hl7.eu/fhir/StructureDefinition/prescribed-quantity
 
 Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-device
 Alias: $ihe-ext-medication-strengthsubstance = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthsubstance
@@ -58,6 +58,7 @@ Alias: $ihe-ext-medication-productname = http://profiles.ihe.net/PHARM/ihe.pharm
 Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-sizeofitem
 Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-characteristic
 Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-unitofpresentation
+
 
 //R4 extensions for preadopted elements from R5
 

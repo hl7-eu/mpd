@@ -22,6 +22,18 @@ RuleSet: MedicationRequestEpCommon
   * route ^short = "Route of administration"
   * text ^short = "Free text dosage instructions"
   * doseAndRate.doseQuantity ^short = "Amount of medication per dose"
+* dispenseRequest
+  * extension contains PrescribedQuantity named prescribedQuantity 0..1
+  * extension[prescribedQuantity] ^short = "Overall amount of product prescribed, independent from the number of repeats."
+  * extension[prescribedQuantity] ^definition = "When Medication resource implies a pack size, prescribedQuantity should convey number of packages. When the Medication does not imply an amount, overall amount could be in tablets or millilitres."
 
+// Remove after transferring to extensions IG
+Extension: PrescribedQuantity
+Id: prescribed-quantity
+Title: "Overall prescribed quantity"
+Description: "This extension applies to the MedicationRequest resource for marking the overall prescribed quantity (e.g. number of packages)."
+Context: MedicationRequest.dispenseRequest
 
+* ^url = "http://hl7.eu/fhir/StructureDefinition/prescribed-quantity"
+* value[x] only Quantity
 
