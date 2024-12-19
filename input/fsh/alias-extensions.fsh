@@ -59,3 +59,7 @@ Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/ihe.pharm.
 Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-characteristic
 Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-unitofpresentation
 
+//R4 extensions for preadopted elements from R5
+
+Alias: $medicationRequest-effectiveDosePeriod-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.effectiveDosePeriod
+

@@ -9,9 +9,8 @@ RuleSet: MedicationRequestEpCommon
 * subject only Reference( PatientEuCore )
 * authoredOn 1..
 * requester 1..
-* groupIdentifier // should we ask to valorize in all the cases ?
-  * ^short = "Prescription this is part of"
-  * ^comment = "Not needed if a presciption includes only one prescribed item"
+* groupIdentifier 
+  * ^short = "Prescription this is part of. Not needed if a presciption includes only one prescribed item."
 * dosageInstruction ^short = "How the medication should be taken."
   * timing ^short = "Administration schedule"
     * repeat
@@ -23,7 +22,6 @@ RuleSet: MedicationRequestEpCommon
   * route ^short = "Route of administration"
   * text ^short = "Free text dosage instructions"
   * doseAndRate.doseQuantity ^short = "Amount of medication per dose"
-* dispenseRequest 1..
-  * quantity 1..
-* substitution.allowedCodeableConcept 1..
+
+
 
