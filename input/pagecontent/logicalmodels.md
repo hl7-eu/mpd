@@ -34,7 +34,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationPrescription.prescriptionItem.indication|MedicationRequest.reason.concept|MedicationRequest.reasonCode|  
 |EHDSMedicationPrescription.prescriptionItem.indicationText|MedicationRequest.reason.concept.text|MedicationRequest.reasonCode.text|  
 |EHDSMedicationPrescription.prescriptionItem.prescriptionIntent|MedicationRequest.intent|MedicationRequest.intent|  
-|EHDSMedicationPrescription.prescriptionItem.treatmentPeriod|MedicationRequest.effectiveDosePeriod||  
+|EHDSMedicationPrescription.prescriptionItem.treatmentPeriod|MedicationRequest.effectiveDosePeriod|MedicationRequest.extension:effectiveDosePeriod|  
 |EHDSMedicationPrescription.prescriptionItem.quantityPrescribed|||  
 |EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.renderedDosageInstruction, MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
 |EHDSMedicationPrescription.prescriptionItem.preparationInstructions|MedicationRequest.dispenseRequest.dispenserInstruction||  
