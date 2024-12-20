@@ -31,20 +31,20 @@ Alias: $ingredient-role = http://hl7.org/fhir/ingredient-role // Codes are from 
 Alias: $timing = http://hl7.org/fhir/event-timing // FHIR Event Timing
 
 // Value Sets
-Alias: $eHDSIReactionAllergy = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIReactionAllergy
-Alias: $eHDSIActiveIngredient = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIActiveIngredient
-Alias: $eHDSIAllergenNoDrug = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIAllergenNoDrug
-Alias: $eHDSIAbsentOrUnknownAllergy = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIAbsentOrUnknownAllergy
-Alias: $eHDSIAbsentOrUnknownProblem = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIAbsentOrUnknownProblem
-Alias: $eHDSIIllnessandDisorder = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIIllnessandDisorder
-Alias: $eHDSIRareDisease = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIRareDisease
-Alias: $eHDSISeverity = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSISeverity
-Alias: $eHDSIVaccine = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIVaccine
-Alias: $eHDSIDoseForm = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIDoseForm
-Alias: $eHDSIMedicalDevice = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIMedicalDevice
-Alias: $eHDSISubstance = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSISubstance
-Alias: $eHDSIBloodGroup = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSIBloodGroup
-Alias: $eHDSISocialHistory = http://hl7.eu/fhir/ig/xpandh/ValueSet/eHDSISocialHistory
+Alias: $eHDSIReactionAllergy = http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy
+Alias: $eHDSIActiveIngredient = http://terminology.ehdsi.eu/ValueSet/eHDSIActiveIngredient
+Alias: $eHDSIAllergenNoDrug = http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug
+Alias: $eHDSIAbsentOrUnknownAllergy = http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownAllergy
+Alias: $eHDSIAbsentOrUnknownProblem = http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownProblem
+Alias: $eHDSIIllnessandDisorder = http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder
+Alias: $eHDSIRareDisease = http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease
+Alias: $eHDSISeverity = http://terminology.ehdsi.eu/ValueSet/eHDSISeverity
+Alias: $eHDSIVaccine = http://terminology.ehdsi.eu/ValueSet/eHDSIVaccine
+Alias: $eHDSIDoseForm = http://terminology.ehdsi.eu/ValueSet/eHDSIDoseForm
+Alias: $eHDSIMedicalDevice = http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice
+Alias: $eHDSISubstance = http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
+Alias: $eHDSIBloodGroup = http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup
+Alias: $eHDSISocialHistory = http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
 
 
 //----------- Profiles

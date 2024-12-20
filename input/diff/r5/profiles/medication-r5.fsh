@@ -14,6 +14,7 @@ Description: "This profile defines how to represent Medication data on ePrescrip
 //  * item from $eHDSISubstance (example)
   * item only CodeableReference (Substance or MedicationEuMpd)
     * ^short = "Substance (Substance resource or concept from terminology) or a medicinal product (Medication resource or concept from terminology). Medicinal product can be an ingredient in case of extemporal medications or combination packs (e.g Creme + 6 tablets)" 
+  * item from EHDSISubstance (example)
   * strength[x] ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength[x] ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
   * strength[x] // MS // item.ingredient.strengthInfo (does not map exactly)
