@@ -25,7 +25,7 @@ dependencies:
    # hl7.fhir.uv.ips: current
    ihe.pharm.mpd: current   
    hl7.fhir.eu.base.r5: current
-   hl7.fhir.eu.extensions: current  
+   # hl7.fhir.eu.extensions: current  
 
    # hl7.fhir.extensions.r5: 4.0.1
 #   hl7.fhir.us.mcode:
@@ -77,10 +77,10 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:
 #  produce-jekyll-data: true
-#  special-url:
-#    - https://spor.ema.europa.eu/v1/lists/100000000004
+  special-url:
+    - http://hl7.eu/fhir/StructureDefinition/prescribed-quantity
 
 
 #   excludettl: true

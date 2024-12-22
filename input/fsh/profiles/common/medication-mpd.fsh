@@ -1,5 +1,5 @@
 RuleSet: MedicationEpCommon
-// * contained only MedicationKnowledge 
+
 
 * extension contains MedicationProductName named productName 0..1 // productName
 * extension[productName] ^short = "Name of the medicinal product. Names of different types (full name, short name, etc) and in different languages can be provided if relevant." 

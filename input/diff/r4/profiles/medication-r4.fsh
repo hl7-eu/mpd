@@ -19,17 +19,23 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 * insert MedicationEpCommon
 
 * ingredient
-//  * itemCodeableConcept from $eHDSISubstance (example)
   * itemReference only Reference (MedicationEuMpd)
-  * itemCodeableConcept from $eHDSISubstance (example)
+  * itemCodeableConcept from $substanceIPS (example)
+    * ^binding.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+    * ^binding.extension[=].extension[0].url = "purpose"
+    * ^binding.extension[=].extension[=].valueCode = #candidate
+    * ^binding.extension[=].extension[+].url = "valueSet"
+    * ^binding.extension[=].extension[=].valueCanonical = $eHDSISubstance
+    * ^binding.extension[=].extension[+].url = "documentation"
+    * ^binding.extension[=].extension[=].valueMarkdown = "MyHealth@EU crossborder value set for substances. Based on EMA SPOR SMS."
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
   * strength // MS // item.ingredient.strengthInfo (does not map exactly)
-    * extension contains MedicationStrengthSubstance named strengthSubstance 0..1 
-    * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
+    * extension contains MedicationStrengthSubstance named basisOfStrengthSubstance 0..1 
+    * extension[basisOfStrengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
     * extension contains MedicationStrengthType named strengthType 0..1
     * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
-* form from $eHDSIDoseForm (preferred) 
+* form from $eHDSIDoseForm (example) 
 /** form ^binding.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * form ^binding.extension[=].extension[0].url = "purpose"
 * form ^binding.extension[=].extension[=].valueCode = #candidate

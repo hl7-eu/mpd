@@ -34,7 +34,7 @@ Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Brande
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1500 $ucum#mg "milligram"
 * ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strength.extension[strengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
+* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
 * manufacturer.display = "MIP Pharma GmbH" //We did not profile MAH data, shall we try better?
 
 Instance: 02A-ClotrimazoleCanifugCremolum
@@ -140,7 +140,7 @@ Description: "4A. Firmagon. Branded packaged product, defined by attributes, inc
 * ingredient.isActive = true
 * ingredient.strength.numerator = 120 $ucum#mg "milligram"
 * ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strength.extension[strengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
+* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
 * manufacturer.display = "Ferring Pharmaceuticals A/S"
  
 * extension[device].extension[device].valueCodeableConcept = $edqm-standardterms#30051000 "Pre-filled syringe" // solvent pre-filled syringe
@@ -167,13 +167,13 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator = 50 $ucum#mg "milligram"
 * ingredient[=].strength.denominator = 20 $edqm-standardterms#15022000 "Drop"
-* ingredient[=].strength.extension[strengthSubstance].valueCodeableConcept = $snomed#96186004 "Tilidine hydrochloride" 
+* ingredient[=].strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#96186004 "Tilidine hydrochloride" 
 
 * ingredient[+].itemCodeableConcept = $snomed#372890007 "Naloxone"
 * ingredient[=].isActive = true
 * ingredient[=].strength.numerator = 4 $ucum#mg "milligram"
 * ingredient[=].strength.denominator = 20 $edqm-standardterms#15022000 "Drop"
-* ingredient[=].strength.extension[strengthSubstance].valueCodeableConcept = $snomed#21518006 "Naloxone hydrochloride" 
+* ingredient[=].strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#21518006 "Naloxone hydrochloride" 
 
 * manufacturer.display = "Hexal AG" //We did not profile MAH data, shall we try better?
 

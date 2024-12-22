@@ -45,6 +45,9 @@ Alias: $eHDSIMedicalDevice = http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDe
 Alias: $eHDSISubstance = http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
 Alias: $eHDSIBloodGroup = http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup
 Alias: $eHDSISocialHistory = http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
+Alias: $atc = http://hl7.org/fhir/ValueSet/medicinal-product-classification
+Alias: $substanceSCT = http://hl7.org/fhir/ValueSet/substance-codes // Used in R5
+Alias: $substanceIPS = http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips // Use in R4. IHE R5 uses HL7 ValueSet from R5
 
 
 //----------- Profiles
