@@ -105,7 +105,7 @@ menu:
     Medication Concepts: medicationconcepts.html
     Logical Models: logicalmodels.html
     Implementation Notes: implementationnotes.html
-    FHIR R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/fhir-r5/
+    FHIR R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/
   About:
     Authors and Contributors: authors.html
     Known Issues: knownissues.html
