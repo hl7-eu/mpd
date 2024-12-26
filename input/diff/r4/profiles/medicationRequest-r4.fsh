@@ -8,7 +8,15 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 * insert MedicationRequestEpCommon
 * medication[x] only CodeableConcept or Reference(MedicationEuMpd)
 * reasonCode ^short = "Reason or indication for this prescription"
+* reasonCode ^binding.extension[0].extension[0].url = "purpose"
+* reasonCode ^binding.extension[=].extension[=].valueCode = #candidate
+* reasonCode ^binding.extension[=].extension[+].url = "valueSet"
+* reasonCode ^binding.extension[=].extension[=].valueCanonical = $eHDSIIllnessandDisorder
+* reasonCode ^binding.extension[=].extension[+].url = "documentation"
+* reasonCode ^binding.extension[=].extension[=].valueMarkdown = """MyHealth@EU crossborder value set for diagnoses. Based on WHO ICD 10."""
+
 * reasonReference ^short = "Condition or observation that supports this prescription"
+
 * extension contains $medicationRequest-effectiveDosePeriod-r5 named effectiveDosePeriod 0..1
 * extension[effectiveDosePeriod] ^short = "Period over which the medication should be taken."
 * extension[effectiveDosePeriod] ^definition = "Period over which the medication should be taken. Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions."

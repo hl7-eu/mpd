@@ -8,6 +8,9 @@ Description: "This profile defines how to represent Medication data on ePrescrip
 
 
 * insert MedicationEpCommon
+* extension contains MedicationDevice named device 0..* // device
+* extension[device] ^short = "Device, typically an administration device, included in the product."
+* extension[device].extension[device].valueCodeableReference from $eHDSIPackage (example)
 * totalVolume // MS // item.amount; packSize
   * ^short = "Total volume or number of package items inside a package. This element should not contain overall prescribed amount, but describe the product itself. In case of complex packages, this element could be left empty, and number of different items could be indicated in the nested Medications." //packSize (almost)
 * ingredient

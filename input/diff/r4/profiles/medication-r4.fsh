@@ -17,6 +17,9 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 //* insert ImposeProfile ( $Medication-uv-ips , 0)
 * insert MedicationEpCommon
+* extension contains MedicationDevice named device 0..* // device
+* extension[device] ^short = "Device, typically an administration device, included in the product."
+* extension[device].extension[device].valueCodeableConcept from $eHDSIPackage (example)
 
 * ingredient
   * itemReference only Reference (MedicationEuMpd)
