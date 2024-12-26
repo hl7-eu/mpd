@@ -44,6 +44,7 @@ Alias: $eHDSIDoseForm = http://terminology.ehdsi.eu/ValueSet/eHDSIDoseForm
 Alias: $eHDSIMedicalDevice = http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice
 Alias: $eHDSISubstance = http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
 Alias: $eHDSIBloodGroup = http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup
+Alias: $eHDSIPackage = http://terminology.ehdsi.eu/ValueSet/eHDSIPackage
 Alias: $eHDSISocialHistory = http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
 Alias: $atc = http://hl7.org/fhir/ValueSet/medicinal-product-classification
 Alias: $substanceSCT = http://hl7.org/fhir/ValueSet/substance-codes // Used in R5

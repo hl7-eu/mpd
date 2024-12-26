@@ -10,9 +10,6 @@ RuleSet: MedicationEpCommon
 * extension contains MedicationSizeOfItem named sizeOfItem 0..1 // item.containedQuantity
 * extension[sizeOfItem] ^short = "Size of one item (for example, in a pack of 5 vials, this would represent the size of 1 vial)"
 
-* extension contains MedicationDevice named device 0..* // device
-* extension[device] ^short = "Device, typically an administration device, included in the product."
-
 * extension contains MedicationCharacteristic named characteristic 0..* // characteristic
 * extension[characteristic] ^short = "Specifies other descriptive properties of the medication."
 
