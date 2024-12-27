@@ -67,8 +67,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedication.item.ingredient.substance|Medication.ingredient.item|Medication.ingredient.itemCodeableConcept|  
 |EHDSMedication.item.ingredient.strengthInfo|Medication.ingredient.strength[x]|Medication.ingredient.strength|  
 |EHDSMedication.item.ingredient.strengthInfo.strength|Medication.ingredient.strengthRatio|Medication.ingredient.strengthRatio|  
-|EHDSMedication.item.ingredient.strengthInfo.strengthType|Medication.ingredient.strength[x].extension:strengthType|Medication.ingredient.strength[x].extension:strengthType|  
-|EHDSMedication.item.ingredient.strengthInfo.strengthSubstance|Medication.ingredient.strength[x].extension:strengthSubstance|Medication.ingredient.strength[x].extension:strengthSubstance|  
+|EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|  
 |EHDSMedication.item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation|  
 |EHDSMedication.item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem|  
 |EHDSMedication.item.amount|Medication.totalVolume|Medication.amount|  

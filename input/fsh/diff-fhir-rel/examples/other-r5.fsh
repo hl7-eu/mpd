@@ -1,5 +1,5 @@
 Instance: patient1
-InstanceOf: PatientEuCore
+InstanceOf: PatientEu
 Usage: #example
 Description: "A patient: Thomas, born 1950"
 
@@ -10,7 +10,7 @@ Description: "A patient: Thomas, born 1950"
 * gender = #male
 
 Instance: patient2
-InstanceOf: PatientEuCore
+InstanceOf: PatientEu
 Usage: #example
 Description: "A patient: Emily, born 1990"
 
