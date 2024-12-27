@@ -39,9 +39,8 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.renderedDosageInstruction, MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
 |EHDSMedicationPrescription.prescriptionItem.preparationInstructions|MedicationRequest.dispenseRequest.dispenserInstruction||  
 |EHDSMedicationPrescription.prescriptionItem.substitution|MedicationRequest.substitution|MedicationRequest.substitution|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.allowed|MedicationRequest.substitution.allowedBoolean|MedicationRequest.substitution.allowedBoolean|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.type|MedicationRequest.substitution.allowedCodeableConcept|MedicationRequest.substitution.allowedCodeableConcept|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.typeReason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
+|EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
+|EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
 |EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
 |EHDSMedicationPrescription.prescriptionItem.statusReason|MedicationRequest.statusReason|MedicationRequest.statusReason|  
 |EHDSMedicationPrescription.prescriptionItem.statusReasonText|MedicationRequest.statusReason.text|MedicationRequest.statusReason.text|  
