@@ -6,10 +6,10 @@
 Instance: 100A-multiitem-prescription-with-orchestration
 InstanceOf: Bundle
 Usage: #example
-Description: "Multiitem prescription with RequestOrchestration (R4 RequestGroup). 42-day cycle treatment consisting of three medications that should start at the same time. Wrapped in a Bundle for better readability."
+Description: "Multiitem prescription with RequestGroup (R5 RequestOrchestration). 42-day cycle treatment consisting of three medications that should start at the same time. Wrapped in a Bundle for better readability."
 
 * type = #collection
-* entry[0].fullUrl = "https://example.com/RequestOrchestration/100B-RequestOrchestration"
+* entry[0].fullUrl = "https://example.com/RequestGroup/100B-RequestOrchestration"
 * entry[=].resource = 100B-RequestOrchestration
 
 * entry[+].fullUrl = "https://example.com/MedicationRequest/100C-3-medication-prescription-request1"
@@ -28,7 +28,7 @@ Description: "Multiitem prescription with RequestOrchestration (R4 RequestGroup)
 * entry[=].resource = patient1
 
 Instance: 100B-RequestOrchestration
-InstanceOf: RequestOrchestration
+InstanceOf: RequestGroup
 Usage: #example
 Description: "A grouper for the lines of a multiitem prescription. It should not be considered the prescription object as such."
 
@@ -36,7 +36,7 @@ Description: "A grouper for the lines of a multiitem prescription. It should not
 // groupIdentifier is the prescription identifier. All MedicationRequest instances should have the same groupIdentifier value.
 * groupIdentifier
   * value = "100"
-* subject = Reference(Patient/patient1)
+* subject = Reference(patient1)
 * status = #active
 * action[0].resource = Reference(100C-3-medication-prescription-request1)
 // related action concurrent-with-start
@@ -56,10 +56,10 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 * status = #active
 * intent = #option
 * authoredOn = "2024-10-03"
-* requester = Reference(PractitionerRole/doctor1)
-* medication.concept = $snomed#376255008 "Thalidomide 50 mg oral capsule"
-* subject = Reference(Patient/patient1)
-* reason.concept = $snomed#109989006 "Multiple myeloma"
+* requester = Reference(doctor1)
+* medicationCodeableConcept = $snomed#376255008 "Thalidomide 50 mg oral capsule"
+* subject = Reference(patient1)
+* reasonCode = $snomed#109989006 "Multiple myeloma"
 * dosageInstruction[0].doseAndRate.doseQuantity = 4 $snomed#732936001 "Tablet"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
@@ -83,10 +83,10 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 * status = #active
 * intent = #option
 * authoredOn = "2024-10-03"
-* requester = Reference(PractitionerRole/doctor1)
-* medication.concept = $snomed#326766003 "Melphalan 2 mg oral tablet"
-* subject = Reference(Patient/patient1)
-* reason.concept = $snomed#109989006 "Multiple myeloma"
+* requester = Reference(doctor1)
+* medicationCodeableConcept = $snomed#326766003 "Melphalan 2 mg oral tablet"
+* subject = Reference(patient1)
+* reasonCode = $snomed#109989006 "Multiple myeloma"
 * dosageInstruction[0].doseAndRate.doseQuantity = 4 $snomed#732936001 "Tablet"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
@@ -109,10 +109,10 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 * status = #active
 * intent = #option
 * authoredOn = "2024-10-03"
-* requester = Reference(PractitionerRole/doctor1)
-* medication.concept = $snomed#374072009 "Prednisone 50 mg oral tablet"
-* subject = Reference(Patient/patient1)
-* reason.concept = $snomed#109989006 "Multiple myeloma"
+* requester = Reference(doctor1)
+* medicationCodeableConcept = $snomed#374072009 "Prednisone 50 mg oral tablet"
+* subject = Reference(patient1)
+* reasonCode = $snomed#109989006 "Multiple myeloma"
 * dosageInstruction[0].doseAndRate.doseQuantity = 3 $snomed#732936001 "Tablet"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
@@ -158,9 +158,9 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * intent = #order
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
-* medication.concept = $snomed#324821004 "Valacyclovir (as valacyclovir hydrochloride) 500 mg oral tablet"
+* medicationCodeableConcept = $snomed#324821004 "Valacyclovir (as valacyclovir hydrochloride) 500 mg oral tablet"
 * subject = Reference(patient1)
-* reason.concept = $snomed#407451003 "Herpes simplex type 1 infection"
+* reasonCode = $snomed#407451003 "Herpes simplex type 1 infection"
 * dosageInstruction[0].doseAndRate.doseQuantity = 1 $snomed#732936001 "Tablet"
 * dosageInstruction[=].timing.repeat.frequency = 2
 * dosageInstruction[=].timing.repeat.period = 1
@@ -182,9 +182,9 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * intent = #order
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
-* medication.concept = $snomed#374647008 "Amoxicillin 875 mg oral tablet"
+* medicationCodeableConcept = $snomed#374647008 "Amoxicillin 875 mg oral tablet"
 * subject = Reference(patient1)
-* reason.concept = $snomed#88348008 "Maxillary sinusitis"
+* reasonCode = $snomed#88348008 "Maxillary sinusitis"
 * dosageInstruction[0].doseAndRate.doseQuantity = 1 $snomed#732936001 "Tablet"
 * dosageInstruction[=].timing.repeat.frequency = 2
 * dosageInstruction[=].timing.repeat.period = 1
@@ -206,7 +206,7 @@ Usage: #example
 Description: "Multiitem prescription with RequestOrchestration. 2 products dispensable as 1 multiitem product."
 
 * type = #collection
-* entry[0].fullUrl = "https://example.com/RequestOrchestration/300B-RequestOrchestration"
+* entry[0].fullUrl = "https://example.com/RequestGroup/300B-RequestOrchestration"
 * entry[=].resource = 300B-RequestOrchestration
 
 * entry[+].fullUrl = "https://example.com/MedicationRequest/300C-2-medication-prescription-request1"
@@ -228,7 +228,7 @@ Description: "Multiitem prescription with RequestOrchestration. 2 products dispe
 * entry[=].resource = 02A1-CanifugCremolumCreamItem
 
 Instance: 300B-RequestOrchestration
-InstanceOf: RequestOrchestration
+InstanceOf: RequestGroup
 Usage: #example
 Description: "A grouper for the lines of a multiitem prescription."
 
@@ -254,9 +254,9 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * intent = #option
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
-* medication.reference = Reference(02A2-CanifugCremolumPessaryItem)
+* medicationReference = Reference(02A2-CanifugCremolumPessaryItem)
 * subject = Reference(patient1)
-* reason.concept = $snomed#72934000 "Candidiasis of vagina"
+* reasonCode = $snomed#72934000 "Candidiasis of vagina"
 * dosageInstruction[0].doseAndRate.doseQuantity = 1 $snomed#733007009 "Pessary"
 * dosageInstruction[=].timing.repeat.frequency = 1
 * dosageInstruction[=].timing.repeat.period = 1
@@ -280,9 +280,9 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 * intent = #option
 * authoredOn = "2024-10-06"
 * requester = Reference(doctor1)
-* medication.reference = Reference(02A1-CanifugCremolumCreamItem)
+* medicationReference = Reference(02A1-CanifugCremolumCreamItem)
 * subject = Reference(patient1)
-* reason.concept = $snomed#72934000 "Candidiasis of vagina"
+* reasonCode = $snomed#72934000 "Candidiasis of vagina"
 * dosageInstruction[0].doseAndRate.doseQuantity = 1 $snomed#413568008 "Application - unit of product usage"
 * dosageInstruction[=].timing.repeat.frequency = 2
 * dosageInstruction[=].timing.repeat.period = 1
