@@ -71,7 +71,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedication.item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation|  
 |EHDSMedication.item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem|  
 |EHDSMedication.item.amount|Medication.totalVolume|Medication.amount|  
-|EHDSMedication.item.packageType|||  
+|EHDSMedication.item.packageType|Medication.extension:packageType|Medication.extension:packageType|  
 |EHDSMedication.device|Medication.extension:device|Medication.extension:device|  
 |EHDSMedication.device.deviceQuantity|Medication.extension:device.extension:quantity|Medication.extension:device.extension:quantity|  
 |EHDSMedication.device.device[x]|Medication.extension:device.extension:device|Medication.extension:device.extension:device|  
