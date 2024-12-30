@@ -70,7 +70,6 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "if location is used to identify the pharmacy"	
 
-// TODO: wrong mapping, in eHN it is the contact of the pharmacy
 * group[=].element[+].code = #Dispensation.contactDetails					
 * group[=].element[=].display = "B.1.6 Details of direct contact"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor.contact					
@@ -84,13 +83,11 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "if location is used to identify the pharmacy"	
 
-// TODO: check when multi-line prescription
 * group[=].element[+].code = #Dispensation.prescriptionIdentifier					
 * group[=].element[=].display = "B.1.7 Identifier of the prescription"					
 * group[=].element[=].target.code = #MedicationDispense.authorizingPrescription.identifier					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "TO BE CHECKED is this true for multi-items prescriptions ?"	
+* group[=].element[=].target.equivalence = #equivalent					
 
 * group[=].element[+].code = #Dispensation.medicinalProduct					
 * group[=].element[=].display = "B.1.8 Medicinal product"					

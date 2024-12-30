@@ -45,7 +45,6 @@ Usage: #definition
 
 * group[=].element[+].code = #Prescription.authentication.date					
 * group[=].element[=].display = "A.1.2.2 Issue date"
-// TODO: check if map is correct, authoredOn = "When request was initially authored", what about changes?				
 * group[=].element[=].target.code = #MedicationRequest.authoredOn					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent				
@@ -86,12 +85,9 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"	
-
 * group[=].element[+].code = #Prescription.prescriber.signature					
 * group[=].element[=].display = "A.1.3.6 Signature"					
-* group[=].element[=].target.code = #MedicationRequest.requester					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "Implementation specific"
 
 * group[=].element[+].code = #Prescription.prescriber.identifier					
@@ -113,10 +109,9 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 
-// TODO: check mapping, eHN "Total quantity or volume of the medicinal product that is prescribed to the specific patient." Not per dispense as in FHIR.
 * group[=].element[+].code = #Prescription.details.quantity					
 * group[=].element[=].display = "A.1.5.2 Quantity of prescribed product"					
-* group[=].element[=].target.code = #MedicationRequest.dispenseRequest.extension[prescribedQuantity].value				
+* group[=].element[=].target.code = #MedicationRequest.dispenseRequest.extension[prescribedQuantity]				
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
@@ -146,7 +141,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 
-// TODO: check mapping, period?? duration of consumption/administration event or duration of treatment
 * group[=].element[+].code = #Prescription.details.duration					
 * group[=].element[=].display = "A.1.5.5 Duration of treatment"					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction.timing.repeat.period
