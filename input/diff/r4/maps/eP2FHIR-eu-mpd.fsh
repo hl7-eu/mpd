@@ -6,7 +6,7 @@ InstanceOf: ConceptMap
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "eP2Fhir"					
-* title = "eHN Subject to this guide Map"					
+* title = "eHN ePrescription to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN ePrescription Model to this guide Map"					
@@ -207,7 +207,7 @@ Usage: #definition
 					
 					
 					
-					
+/*
 * group[+].source = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Prescription"					
 * group[=].target = "http://hl7.eu/fhir/ig/xpandh-mpd/StructureDefinition/Practitioner-eu-mpd"					
 					
@@ -256,6 +256,6 @@ Usage: #definition
 //---END					
 					
 					
-					
+*/										
 					
 					

@@ -6,7 +6,7 @@ InstanceOf: ConceptMap
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "eD2Fhir"					
-* title = "eHN Dispense to this guide Map"					
+* title = "eHN eDispense to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN eDispensation Model to this guide Map"					
