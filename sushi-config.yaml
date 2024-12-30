@@ -185,12 +185,15 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-# groups:
-#  eHNGuidelines:
-#    name:  eHN Laboratory Guidelines
-#    description: Logical model representing the eHN Laboratory Guidelines
-#    resources:
-#      - StructureDefinition/LabReport
+groups:
+ eHNGuidelines:
+   name:  eHN ePrecsription and eDispensation Guidelines
+   description: Logical model representing the eHealthNetwork ePrecsription and eDispensation Guidelines
+   resources:
+     - EprescriptionEhn
+     - EdispensationEhn
+     - MedProductEhn
+     - SubjectEpEhn
 
 
 #
