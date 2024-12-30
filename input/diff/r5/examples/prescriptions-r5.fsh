@@ -1,6 +1,4 @@
 // EXAMPLE 1: 3 medication requests 
-// How to say "start all three on the same day without specifying the date?"
-// How to distinguish if all three need to be dispensed at the same time or administered at the same time or started at the same time?
 
 
 Instance: 100A-multiitem-prescription-with-orchestration

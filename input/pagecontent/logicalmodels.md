@@ -39,9 +39,8 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.renderedDosageInstruction, MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
 |EHDSMedicationPrescription.prescriptionItem.preparationInstructions|MedicationRequest.dispenseRequest.dispenserInstruction||  
 |EHDSMedicationPrescription.prescriptionItem.substitution|MedicationRequest.substitution|MedicationRequest.substitution|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.allowed|MedicationRequest.substitution.allowedBoolean|MedicationRequest.substitution.allowedBoolean|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.type|MedicationRequest.substitution.allowedCodeableConcept|MedicationRequest.substitution.allowedCodeableConcept|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.typeReason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
+|EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
+|EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
 |EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
 |EHDSMedicationPrescription.prescriptionItem.statusReason|MedicationRequest.statusReason|MedicationRequest.statusReason|  
 |EHDSMedicationPrescription.prescriptionItem.statusReasonText|MedicationRequest.statusReason.text|MedicationRequest.statusReason.text|  
@@ -68,12 +67,11 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedication.item.ingredient.substance|Medication.ingredient.item|Medication.ingredient.itemCodeableConcept|  
 |EHDSMedication.item.ingredient.strengthInfo|Medication.ingredient.strength[x]|Medication.ingredient.strength|  
 |EHDSMedication.item.ingredient.strengthInfo.strength|Medication.ingredient.strengthRatio|Medication.ingredient.strengthRatio|  
-|EHDSMedication.item.ingredient.strengthInfo.strengthType|Medication.ingredient.strength[x].extension:strengthType|Medication.ingredient.strength[x].extension:strengthType|  
-|EHDSMedication.item.ingredient.strengthInfo.strengthSubstance|Medication.ingredient.strength[x].extension:strengthSubstance|Medication.ingredient.strength[x].extension:strengthSubstance|  
+|EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|  
 |EHDSMedication.item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation|  
 |EHDSMedication.item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem|  
 |EHDSMedication.item.amount|Medication.totalVolume|Medication.amount|  
-|EHDSMedication.item.packageType|||  
+|EHDSMedication.item.packageType|Medication.extension:packageType|Medication.extension:packageType|  
 |EHDSMedication.device|Medication.extension:device|Medication.extension:device|  
 |EHDSMedication.device.deviceQuantity|Medication.extension:device.extension:quantity|Medication.extension:device.extension:quantity|  
 |EHDSMedication.device.device[x]|Medication.extension:device.extension:device|Medication.extension:device.extension:device|  

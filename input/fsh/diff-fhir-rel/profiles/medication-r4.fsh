@@ -36,8 +36,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * strength // MS // item.ingredient.strengthInfo (does not map exactly)
     * extension contains MedicationStrengthSubstance named basisOfStrengthSubstance 0..1 
     * extension[basisOfStrengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
-    * extension contains MedicationStrengthType named strengthType 0..1
-    * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
+
 * form from $eHDSIDoseForm (example) 
 /** form ^binding.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * form ^binding.extension[=].extension[0].url = "purpose"
