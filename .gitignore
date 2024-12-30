@@ -4,7 +4,6 @@ temp
 template
 output
 fsh-generated
-input/fsh/diff-fhir-rel
 
 # Don't commit this because it's so large #
 ###########################################
@@ -32,5 +31,3 @@ Thumbs.db
 .vscode/
 .idea/
 .idea/*
-
-FHIR-eu-mpd.xml
