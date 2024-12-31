@@ -20,7 +20,7 @@ Description: "1B. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Generi
 Instance: 01C-Cefuroxime1500Branded
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Branded packaged product, defined by attributes."
+Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 vials per package). Branded packaged product, defined by attributes."
 
 * identifier.value = "1529962"
 * identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
@@ -35,7 +35,28 @@ Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Brande
 * ingredient.strength.numerator = 1500 $ucum#mg "milligram"
 * ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
 * ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
-* manufacturer.display = "MIP Pharma GmbH" //We did not profile MAH data, shall we try better?
+* manufacturer.display = "MIP Pharma GmbH"
+
+Instance: 01D-Cefuroxime750Branded
+InstanceOf: MedicationEuMpd
+Usage: #example
+Description: "1D. Cefuroxime 750mg powder for solution in a vial (5 vials per package). Branded packaged product, defined by attributes."
+
+* identifier.value = "1529928"
+* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* form = $edqm-standardterms#11205000 "Powder for solution for injection"
+* extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
+* extension[productName].valueString = "Cefuroxime MIP 750 mg, süstelahuse pulber"
+* extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
+* amount.numerator = 5 $edqm-standardterms#15060000 "Vial"
+* amount.denominator.value = 1
+* ingredient.itemCodeableConcept = $snomed#48753004 "Cefuroxime sodium"
+* ingredient.isActive = true
+* ingredient.strength.numerator = 750 $ucum#mg "milligram"
+* ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
+* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
+* manufacturer.display = "MIP Pharma GmbH"
+
 
 Instance: 02A-ClotrimazoleCanifugCremolum
 InstanceOf: MedicationEuMpd

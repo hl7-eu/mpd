@@ -7,12 +7,16 @@
 <artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="01A-Cefuroxime1500GenericExplicit"/>
 <artifact id="Medication/01B-Cefuroxime1500GenericConcept" key="Medication-01B-Cefuroxime1500GenericConcept" name="01B-Cefuroxime1500GenericConcept"/>
 <artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="01C-Cefuroxime1500Branded"/>
+<artifact id="Medication/01D-Cefuroxime750Branded" key="Medication-01D-Cefuroxime750Branded" name="01D-Cefuroxime750Branded"/>
 <artifact id="Medication/02A-ClotrimazoleCanifugCremolum" key="Medication-02A-ClotrimazoleCanifugCremolum" name="02A-ClotrimazoleCanifugCremolum"/>
 <artifact id="Medication/02A1-CanifugCremolumCreamItem" key="Medication-02A1-CanifugCremolumCreamItem" name="02A1-CanifugCremolumCreamItem"/>
 <artifact id="Medication/02A2-CanifugCremolumPessaryItem" key="Medication-02A2-CanifugCremolumPessaryItem" name="02A2-CanifugCremolumPessaryItem"/>
 <artifact id="Medication/03B-VitaminBComplexBranded" key="Medication-03B-VitaminBComplexBranded" name="03B-VitaminBComplexBranded"/>
 <artifact id="Medication/04-FirmagonBranded" key="Medication-04-FirmagonBranded" name="04-FirmagonBranded"/>
 <artifact id="Medication/05A-Tilidin-Branded" key="Medication-05A-Tilidin-Branded" name="05A-Tilidin-Branded"/>
+<artifact id="MedicationDispense/10-dispense-1" key="MedicationDispense-10-dispense-1" name="10-dispense-1"/>
+<artifact id="MedicationDispense/10-dispense-2" key="MedicationDispense-10-dispense-2" name="10-dispense-2"/>
+<artifact id="MedicationRequest/10-prescription-cefuroxime-singleline" key="MedicationRequest-10-prescription-cefuroxime-singleline" name="10-prescription-cefuroxime-singleline"/>
 <artifact id="Bundle/100A-multiitem-prescription-with-orchestration" key="Bundle-100A-multiitem-prescription-with-orchestration" name="100A-multiitem-prescription-with-orchestration"/>
 <artifact id="RequestOrchestration/100B-RequestOrchestration" key="RequestOrchestration-100B-RequestOrchestration" name="100B-RequestOrchestration"/>
 <artifact id="MedicationRequest/100C-3-medication-prescription-request1" key="MedicationRequest-100C-3-medication-prescription-request1" name="100C-3-medication-prescription-request1"/>
@@ -34,7 +38,11 @@
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
 <artifact id="StructureDefinition/prescribed-quantity" key="StructureDefinition-prescribed-quantity" name="Overall prescribed quantity"/>
+<artifact id="StructureDefinition/package-type" key="StructureDefinition-package-type" name="Package type"/>
 <artifact id="PractitionerRole/doctor1" key="PractitionerRole-doctor1" name="doctor1"/>
+<artifact id="ConceptMap/medProd2FHIR-eu-mpd" key="ConceptMap-medProd2FHIR-eu-mpd" name="eHN Medicinal Product to this guide Map"/>
+<artifact id="ConceptMap/eD2FHIR-eu-mpd" key="ConceptMap-eD2FHIR-eu-mpd" name="eHN eDispense to this guide Map"/>
+<artifact id="ConceptMap/eP2FHIR-eu-mpd" key="ConceptMap-eP2FHIR-eu-mpd" name="eHN ePrescription to this guide Map"/>
 <artifact id="Organization/organization1" key="Organization-organization1" name="organization1"/>
 <artifact id="Organization/organization2" key="Organization-organization2" name="organization2"/>
 <artifact id="Patient/patient1" key="Patient-patient1" name="patient1"/>

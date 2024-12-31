@@ -13,7 +13,12 @@ This field may contain only the year if the day and month are not available,
 e.g.: 2009 - Preferred system(s): ISO 8601 """		 		
 * identifier 0..1 Identifier "A.1.1.4 Personal identifier" """Country ID, unique to the patient in that country. Example: ID for a Portuguese patient, national healthcare patient ID. Multiple identifiers could be provided."""				
 * gender 0..1 CodeableConcept "A.1.1.5 Gender" """This field must contain a recognised valid value for 'administrative gender'. 
-If different, 'physiological sex' should be communicated elsewhere."""				
+If different, 'physiological sex' should be communicated elsewhere."""
+  * ^binding.description = "HL7 Administrative Gender"
+  * ^binding.strength = #preferred
+* nativeLanguage 0..* CodeableConcept "A.1.1.6 Native language"	"""The native language of the patient. This may be important for the information that is given to the patient regarding use of the prescribed product [N1228 ISO NP TS 17251]"""
+  * ^binding.description = "ISO 639"
+  * ^binding.strength = #preferred
 //--- END				
 //--- END				
 //--- END				

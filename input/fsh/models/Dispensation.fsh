@@ -12,7 +12,7 @@ Description:  """Dispensation information (provided by the dispensing pharmacy).
 * pharmacyAddress 0..1 Address "B.1.5 Address of the pharmacy" """Minimally, the country should be specified."""				
 * contactDetails 0..* ContactPoint "B.1.6 Details of direct contact" """Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy."""				
 * prescriptionIdentifier 0..* Identifier "B.1.7 Identifier of the prescription" """ As described in A.1.2."""				
-* medicinalProduct 0..* BackboneElement "B.1.8 Medicinal product" """Information about the dispensed product as described in A.1.4.
+* medicinalProduct 0..* Base "B.1.8 Medicinal product" """Information about the dispensed product as described in A.1.4.
 The cardinality of the data elements in the product description may differ between ePrescription and eDispensation."""				
 * dispensedQuantity 0..* Quantity "B.1.9 Dispensed quantity" """The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.
  - Preferred system(s): UCUM, EDQM"""				
