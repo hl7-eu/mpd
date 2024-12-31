@@ -65,17 +65,17 @@ Usage: #definition
 					
 * group[=].element[+].code = #MedicinalProduct.activeSubstance					
 * group[=].element[=].display = "A.1.4.4 Active substance(s)"					
-* group[=].element[=].target.code = #Medication.ingredient					
+* group[=].element[=].target.code = #Medication.ingredient.item					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where isActive = 'true'"
+* group[=].element[=].target.comment = "Where isActive = true."
 
 * group[=].element[+].code = #MedicinalProduct.strength					
 * group[=].element[=].display = "A.1.4.4.1 Strength of the active substance(s)"					
 * group[=].element[=].target.code = #Medication.ingredient.strength					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = """if the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension."""
+* group[=].element[=].target.comment = """When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension."""
 
 * group[=].element[+].code = #MedicinalProduct.classification					
 * group[=].element[=].display = "A.1.4.5 Product classification "					

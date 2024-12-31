@@ -1,14 +1,16 @@
-### Logical data models
+### Logical information models
 
-Logical data models or information models for EHDS are created by Xt-EHR project, and they are refined versions of eHN Guidelines data sets.  
-This specification aims to conform to those logical models, and provide the FHIR profiles for these models.  
+Logical data models or information models for EHDS are created by Xt-EHR project. These models are refined and enhanced versions of the [eHN Guidelines data sets](https://health.ec.europa.eu/system/files/2022-06/ehealth_health-data_electronic-exchange_eprescriptions-guidelines_en.pdf) published in 2022.
 
-Please see logical models related to this use case in [**Xt-EHR Implementation Guide**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/useCasePrescription.html).  
+This IG aims to conform to EHDS logical models, and provide the FHIR profiles based on these models. [The Artifacts page](artifacts.html) also provides eHN data sets as logical models. However, those data sets have not been originally published as machine-readable models and the derived logical models sometimes lack of precision and concreteness. EHDS logical information models use eHN data sets as a conceptual base, and provide non-ambiguous machine-readable models.
 
-Logical models in IHE MPD Implementation Guide may differ due to a wider a scope, but no breaking differences should occur.
+EHDS draft logical models for eP and eD use case can be seen in [**Xt-EHR Implementation Guide**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/useCasePrescription.html).  
 
 
 ### Mappings from EHDS models to FHIR profiles
+
+The following mappings are from EHDS logical models provided in [Xt-EHR IG](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/useCasePrescription.html).
+For mappings between eHN guidelines data sets and FHIR profiles, see [Artifacts page](artifacts.html).
 
 #### Prescription  
 
@@ -25,8 +27,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationPrescription.recorder|MedicationRequest.recorder|MedicationRequest.recorder|  
 |EHDSMedicationPrescription.recordingDate|MedicationRequest.eventhistory.recorded|MedicationRequest.eventhistory.recorded|  
 |EHDSMedicationPrescription.status|MedicationRequest.status|MedicationRequest.status|  
-|EHDSMedicationPrescription.statusReason|MedicationRequest.statusReason|MedicationRequest.statusReason|  
-|EHDSMedicationPrescription.statusReasonText|MedicationRequest.statusReason.text|MedicationRequest.statusReason.text|  
+|EHDSMedicationPrescription.statusReason[x]|MedicationRequest.statusReason or MedicationRequest.note.text|MedicationRequest.statusReason or MedicationRequest.note.text|   
 |EHDSMedicationPrescription.comment|MedicationRequest.note.text, RequestOrchestration.note.text|MedicationRequest.note.text, RequestOrchestration.note.text|  
 |EHDSMedicationPrescription.prescriptionItem|MedicationRequest|MedicationRequest|  
 |EHDSMedicationPrescription.prescriptionItem.identifier|MedicationRequest.identifier|MedicationRequest.identifier|  
@@ -42,8 +43,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
 |EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
 |EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
-|EHDSMedicationPrescription.prescriptionItem.statusReason|MedicationRequest.statusReason|MedicationRequest.statusReason|  
-|EHDSMedicationPrescription.prescriptionItem.statusReasonText|MedicationRequest.statusReason.text|MedicationRequest.statusReason.text|  
+|EHDSMedicationPrescription.prescriptionItem.statusReason[x]|MedicationRequest.statusReason or MedicationRequest.note.text|MedicationRequest.statusReason or MedicationRequest.note.text|  
 |EHDSMedicationPrescription.prescriptionItem.repeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|  
 |EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|  
 |EHDSMedicationPrescription.prescriptionItem.comment|MedicationRequest.note.text|MedicationRequest.note.text|  

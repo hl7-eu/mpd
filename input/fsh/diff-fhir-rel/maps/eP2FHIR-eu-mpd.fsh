@@ -60,42 +60,42 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 * group[=].element[+].code = #Prescription.prescriber.givenName					
 * group[=].element[=].display = "A.1.3.2 Given name"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 * group[=].element[+].code = #Prescription.prescriber.qualification					
 * group[=].element[=].display = "A.1.3.3 Professional qualifications"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 * group[=].element[+].code = #Prescription.prescriber.contact					
 * group[=].element[=].display = "A.1.3.4 Details for direct contact"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 * group[=].element[+].code = #Prescription.prescriber.workAddress					
 * group[=].element[=].display = "A.1.3.5 Work address"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"	
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"	
 * group[=].element[+].code = #Prescription.prescriber.signature					
 * group[=].element[=].display = "A.1.3.6 Signature"					
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "Implementation specific"
 
 * group[=].element[+].code = #Prescription.prescriber.identifier					
-* group[=].element[=].display = "A.1.3.7  Health care provider identifier"					
+* group[=].element[=].display = "A.1.3.7 Health care provider identifier"					
 * group[=].element[=].target.code = #MedicationRequest.requester					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"		
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"		
 
 * group[=].element[+].code = #Prescription.product					
 * group[=].element[=].display = "A1.4 Identification of the prescribed product"					
@@ -121,7 +121,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
-* group[=].element[+].code = #Prescription.details.doseRegimen.numOfIntakes					
+* group[=].element[+].code = #Prescription.details.doseRegimen.unitsPerIntake					
 * group[=].element[=].display = "A.1.5.3.1 Number of units per intake"					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction.doseAndRate.dose					
 * group[=].element[=].target.display = ""					
@@ -148,7 +148,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Prescription.details.startDate					
-* group[=].element[=].display = "A.1.5.6 Starting date of therapy "					
+* group[=].element[=].display = "A.1.5.6 Starting date of therapy"					
 * group[=].element[=].target.code = #MedicationRequest.dosageInstruction.timing.period					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					

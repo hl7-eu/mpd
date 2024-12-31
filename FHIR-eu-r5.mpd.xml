@@ -36,6 +36,9 @@
 <artifact id="StructureDefinition/prescribed-quantity" key="StructureDefinition-prescribed-quantity" name="Overall prescribed quantity"/>
 <artifact id="StructureDefinition/package-type" key="StructureDefinition-package-type" name="Package type"/>
 <artifact id="PractitionerRole/doctor1" key="PractitionerRole-doctor1" name="doctor1"/>
+<artifact id="ConceptMap/medProd2FHIR-eu-mpd" key="ConceptMap-medProd2FHIR-eu-mpd" name="eHN Medicinal Product to this guide Map"/>
+<artifact id="ConceptMap/eD2FHIR-eu-mpd" key="ConceptMap-eD2FHIR-eu-mpd" name="eHN eDispense to this guide Map"/>
+<artifact id="ConceptMap/eP2FHIR-eu-mpd" key="ConceptMap-eP2FHIR-eu-mpd" name="eHN ePrescription to this guide Map"/>
 <artifact id="Organization/organization1" key="Organization-organization1" name="organization1"/>
 <artifact id="Organization/organization2" key="Organization-organization2" name="organization2"/>
 <artifact id="Patient/patient1" key="Patient-patient1" name="patient1"/>

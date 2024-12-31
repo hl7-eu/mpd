@@ -22,66 +22,66 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationDispense.performer.actor					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 					
 * group[=].element[+].code = #Dispensation.dispenserFamilyName					
 * group[=].element[=].display = "B.1.2 Family name of the dispenser"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 
 * group[=].element[+].code = #Dispensation.dispenserGivenName					
 * group[=].element[=].display = "B.1.3 Given name of the dispenser"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor.practitioner.name.given					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole  resource"					
+* group[=].element[=].target.comment = "Details in the referred Practitioner or PractitionerRole resource"					
 
 * group[=].element[+].code = #Dispensation.pharmacyIdentifier					
 * group[=].element[=].display = "B.1.4 Identifier of the pharmacy"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if actor of type PractitionerRole (to be checked this assume that the pharamcy  is the org the dispenser is working for?)"					
+* group[=].element[=].target.comment = "When actor is of type PractitionerRole."					
 * group[=].element[+].code = #Dispensation.pharmacyIdentifier					
-* group[=].element[=].display = "B.1.4 Identifier of the pharmacy"					
+* group[=].element[=].display = "B.1.4 Identifier of the pharmacy."					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if actor of type Organziation (to be checked this assumes that the pharamcy  is the org dispensing)"	
+* group[=].element[=].target.comment = "When actor is of type Organization."	
 * group[=].element[+].code = #Dispensation.pharmacyIdentifier					
 * group[=].element[=].display = "B.1.4 Identifier of the pharmacy"					
 * group[=].element[=].target.code = #MedicationDispense.location.identifier
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if location is used to identify the pharmacy"	
+* group[=].element[=].target.comment = "When Location is used to identify the pharmacy."	
 
 * group[=].element[+].code = #Dispensation.pharmacyAddress					
 * group[=].element[=].display = "B.1.5 Address of the pharmacy"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor.address					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if actor of type Organziation (to be checked this assumes that the pharamcy  is the org dispensing)"	
+* group[=].element[=].target.comment = "When actor is of type Organization."	
 * group[=].element[+].code = #Dispensation.pharmacyAddress					
 * group[=].element[=].display = "B.1.5 Address of the pharmacy"					
 * group[=].element[=].target.code = #MedicationDispense.location.address				
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if location is used to identify the pharmacy"	
+* group[=].element[=].target.comment = "When Location is used to identify the pharmacy."	
 
 * group[=].element[+].code = #Dispensation.contactDetails					
 * group[=].element[=].display = "B.1.6 Details of direct contact"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor.contact					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if performer.actor is an organization"
+* group[=].element[=].target.comment = "When actor is of type Organization."
 * group[=].element[+].code = #Dispensation.contactDetails					
 * group[=].element[=].display = "B.1.6 Details of direct contact"					
 * group[=].element[=].target.code = #MedicationDispense.location.telecom	
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if location is used to identify the pharmacy"	
+* group[=].element[=].target.comment = "When Location is used to identify the pharmacy."	
 
 * group[=].element[+].code = #Dispensation.prescriptionIdentifier					
 * group[=].element[=].display = "B.1.7 Identifier of the prescription"					

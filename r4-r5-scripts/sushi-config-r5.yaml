@@ -81,6 +81,7 @@ parameters:
 #  produce-jekyll-data: true
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/prescribed-quantity
+    - http://hl7.eu/fhir/StructureDefinition/package-type
 
 
 #   excludettl: true
@@ -186,12 +187,29 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-# groups:
-#  eHNGuidelines:
-#    name:  eHN Laboratory Guidelines
-#    description: Logical model representing the eHN Laboratory Guidelines
-#    resources:
-#      - StructureDefinition/LabReport
+groups:
+ eHNGuidelines:
+   name: Data Sets from eHN Guidelines
+   description: eHealth Network Guidelines data sets represented as FHIR logical models. New, fully machine-readable logical information models are being created in Xt-EHR project. See more information about new EHDS logical models work on [Logical Models page](logicalmodels.html).
+   resources:
+     - EprescriptionEhn
+     - EdispensationEhn
+     - MedProductEhn
+     - SubjectEpEhn
+ FHIRProfiles:
+   name: FHIR Profiles
+   description: Profiles for ePrescription and eDispensation use case. Note that there is no single profile for ePrescription, but only for MedicationRequest, which translates to a single line on a prescription (read more in [Implementation Notes](implementationnotes.html)). Profiles for Patient, PractitionerRole, and Organization are published in HL7 Europe Base IG. 
+   resources: 
+    - MedicationRequestEuMpd
+    - MedicationDispenseEuMpd
+    - MedicationEuMpd
+ ModelMaps:
+  name: Mappings from eHN Data Sets
+  description: These concept maps represent a high-level mapping from eHN guidelines data sets and FHIR profiles in this IG. Please note that mappings from EHDS logical models are provided on [Logical models page](logicalmodels.html).
+  resources:
+    - eP2FHIR-eu-mpd
+    - eD2FHIR-eu-mpd
+    - medProd2FHIR-eu-mpd
 
 
 #
