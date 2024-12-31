@@ -13,12 +13,3 @@ Description: "This profile defines how to represent ePrescription or other medic
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for diagnoses. Based on WHO ICD 10.""" 
 
 
-// For R4, this extension is in Extensions IG.
-Extension: PrescribedQuantity
-Id: prescribed-quantity
-Title: "Overall prescribed quantity"
-Description: "This extension applies to the MedicationRequest resource for marking the overall prescribed quantity (e.g. number of packages)."
-Context: MedicationRequest.dispenseRequest
-
-* ^url = "http://hl7.eu/fhir/StructureDefinition/prescribed-quantity"
-* value[x] only Quantity	

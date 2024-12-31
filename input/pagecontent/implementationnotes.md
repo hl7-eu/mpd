@@ -1,3 +1,12 @@
+### Prescription - document or request approach
+
+Prescription has historically been a document that authorises one or multiple requests. In FHIR, there is no explicit resource for Prescription, and it is possible to focus on the document aspect or the request aspect. Some countries have preferred to keep the document view using Bundle with Composition. This IG does not encourage nor ban this approach, but there is no profile for document Bundle in the IG.  
+
+Examples in this IG use collection Bundle simply for making it easier to read for the humans. Many implementers use transaction Bundle for creating new prescriptions as it allows assigning server-side IDs more easily.  
+
+The choice of wrapping the request and its related resources in a Bundle or not, is entirely up to the implementers.  
+
+
 ### Multiitem prescriptions
 
 The recommended way of designing prescriptions in HL7 FHIR is to have one item per prescription - this is reflected in the MedicationRequest resource where Medication cardinality is 1..1.  
@@ -67,12 +76,14 @@ Please see examples 100A and 300A in the [Artifacts page](artifacts.html) for mo
 Read more about using RequestOrchestration/RequestGroup in FHIR workflow pages.
 
 
-### Managing statuses
 ### Prescription statuses and workflow
 
 MedicationRequest has a very limited set of statuses available for use. This is a deliberate design choice to improve interoperability across different settings.
 
-Prescription and dispensation systems often use additional or different statuses, and those statuses are not directly mappable to MedicationRequest.status. Some of these prescription statuses may actually be related to the dispense rather than the request, so the semantically correct place for some statuses would actually be MedicationDispense.status. In more complicated cases, especially when FHIR messaging is the basis of the workflow, Task resource should be used in addition to MedicationRequest and MedicationDispense.
+Prescription and dispensation systems often use additional or different statuses, and those statuses are not directly mappable to MedicationRequest.status. Some of these prescription statuses may actually be related to the dispense rather than the request, so the semantically correct place for some statuses would actually be MedicationDispense.status. 
+
+Some simple workflows may choose to make use of the .meta.tag 'actionable' to indicate whether the request is dispensable or simply for information. 
+For more sophisticated workflows, especially when FHIR messaging is the basis of the workflow, Task resource should be used in addition to MedicationRequest and MedicationDispense. For group request, an additional RequestOrchestration (R4 RequestGroup) resource should be used.
 
 Workflows are typically implementation-specific and the aim of this implementation guide is not to provide one solution for everyone. Practice of using prescription and dispensation statuses varies a lot across countries and use cases (e.g. hospital use vs community pharmacy). While it is important for each implementation to map their business statuses to FHIR MedicationRequest.status values, the usage of Task and building a workflow will not be restricted by this implementation guide.
 
@@ -84,8 +95,11 @@ HL7 guidance materials for designing request workflows:
 
 ### R4 vs R5 comparison
 
-Mapping from EHDS logical models to R4 and R5 are provided on [Logical Models page](logicalmodels.html).
+Mapping from EHDS logical models to R4 and R5 are provided on [Logical Models page](logicalmodels.html). The table format allows spotting differences between R4 and R5 versions.  
 
-Most notable differences are related to the addition of CodeableReference data type in R5.
+Most notable differences:  
+- Addition of CodeableReference data type in R5.  
+- RequestGroup resource in R4 has been renamed to RequestOrchestration in R5.  
+- In profiles, some example value sets differ between versions due to the value set being only available for R4.  (International Patient Summary) or only in R5 (IHE MPD extensions may use FHIR R5 core value sets).  
 
 

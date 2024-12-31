@@ -45,35 +45,3 @@ Description: "This profile defines how to represent Medication data on ePrescrip
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for dose forms. Based on EDQM Standard Terms.""" 
 * marketingAuthorizationHolder // MS
 
-/*
-Extension: MedicationDevice
-Id:        ihe-ext-medication-device
-Title:     "Medication - Device"
-Description: "Device, typically an administration device, included in the medicinal product."
-Context: Medication
-* extension contains
-    device 1..1 and
-    quantity 1..1
-* extension[device].value[x] only CodeableReference(Device or DeviceDefinition)
-* extension[device] ^short = "Coded or referenced device"
-* extension[quantity].value[x] only Quantity
-* extension[quantity] ^short = "Number of defined devices in te package"
-
-Extension: MedicationStrengthSubstance
-Id: ihe-ext-medication-strengthsubstance
-Title: "Medication - Strength substance"
-Description: "Substance for marking the basis of strength. When the precise active ingredient is a salt, the strength is often provided for the active moiety (basis of strength)."
-Context: Medication.ingredient.strength[x]
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-
-
-Extension: MedicationStrengthType
-Id: ihe-ext-medication-strengthtype
-Title: "Medication - Strength type"
-Description: "Strength type (e.g. concentration strength, presentation strength)"
-Context: Medication.ingredient.strength[x]
-* value[x] only CodeableConcept
-* valueCodeableConcept 1..1
-
-*/

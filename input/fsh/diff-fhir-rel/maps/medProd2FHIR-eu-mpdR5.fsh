@@ -76,7 +76,7 @@ Usage: #definition
 * group[=].element[=].target.comment = """When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension."""
 
 * group[=].element[+].code = #MedicinalProduct.classification					
-* group[=].element[=].display = "A.1.4.5 Product classification "					
+* group[=].element[=].display = "A.1.4.5 Product classification"					
 * group[=].element[=].target.code = #Medication.extension[classification]
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.relationship = #equivalent					

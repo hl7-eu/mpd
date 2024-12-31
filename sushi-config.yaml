@@ -80,7 +80,6 @@ pages:
 parameters:
 #  produce-jekyll-data: true
   special-url:
-    - http://hl7.eu/fhir/StructureDefinition/prescribed-quantity
     - http://hl7.eu/fhir/StructureDefinition/package-type
 
 
