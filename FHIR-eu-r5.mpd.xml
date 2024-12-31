@@ -37,7 +37,6 @@
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: MPD"/>
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
-<artifact id="StructureDefinition/prescribed-quantity" key="StructureDefinition-prescribed-quantity" name="Overall prescribed quantity"/>
 <artifact id="StructureDefinition/package-type" key="StructureDefinition-package-type" name="Package type"/>
 <artifact id="PractitionerRole/doctor1" key="PractitionerRole-doctor1" name="doctor1"/>
 <artifact id="ConceptMap/medProd2FHIR-eu-mpd" key="ConceptMap-medProd2FHIR-eu-mpd" name="eHN Medicinal Product to this guide Map"/>

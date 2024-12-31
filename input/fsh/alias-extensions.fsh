@@ -58,7 +58,7 @@ Alias: $ihe-ext-medication-productname = http://profiles.ihe.net/PHARM/ihe.pharm
 Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-sizeofitem
 Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-characteristic
 Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-unitofpresentation
-
+Alias: $ihe-ext-medicationrequest-prescribedquantity = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medicationrequest-prescribedQuantity
 
 //R4 extensions for preadopted elements from R5
 
