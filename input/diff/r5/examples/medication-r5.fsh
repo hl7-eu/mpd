@@ -136,10 +136,10 @@ Description: "3B. Milgamma N, B-vitamin complex. Branded packaged product, defin
 * ingredient[=].strengthRatio.numerator = 10 $ucum#mg "milligram"
 * ingredient[=].strengthRatio.denominator = 1 $ucum#mL "milliliter"
 
-Instance: 04-FirmagonBranded
+Instance: 04A-FirmagonBranded
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "04. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
+Description: "4A. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
 
 * identifier.value = "1400601"
 * identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
@@ -167,12 +167,13 @@ Description: "04. Firmagon. Branded packaged product, defined by attributes, inc
 Instance: 05A-Tilidin-Branded
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "05A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged product, defined by attributes. Unusual strength."
+Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged product, defined by attributes. Unusual strength."
 
 * identifier.value = "12345"
 //* identifier.system = "example"
 * doseForm = $edqm-standardterms#10101000 "Oral drops, solution"
 * extension[classification].valueCodeableConcept = $who-atc#N02AX51 "tilidine and naloxone"
+* extension[classification].valueCodeableConcept.coding.version = "2025"
 * extension[productName].valueString = "Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15022000 "Drop"
 * totalVolume = 10 $ucum#mL "milliliter"

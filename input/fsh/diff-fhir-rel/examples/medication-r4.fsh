@@ -142,7 +142,7 @@ Description: "3B. Milgamma N, B-vitamin complex. Branded packaged product, defin
 * ingredient[=].strength.numerator = 10 $ucum#mg "milligram"
 * ingredient[=].strength.denominator = 1 $ucum#mL "milliliter"
 
-Instance: 04-FirmagonBranded
+Instance: 04A-FirmagonBranded
 InstanceOf: MedicationEuMpd
 Usage: #example
 Description: "4A. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
@@ -180,6 +180,7 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 //* identifier.system = "example"
 * form = $edqm-standardterms#10101000 "Oral drops, solution"
 * extension[classification].valueCodeableConcept = $who-atc#N02AX51 "tilidine and naloxone"
+//* extension[classification].valueCodeableConcept.coding.version = "2025"
 * extension[productName].valueString = "Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15022000 "Drop"
 * amount.numerator = 10 $ucum#mL "milliliter"

@@ -2,15 +2,16 @@
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent **Medication Prescription and Dispense** data in the **European** Context, coherently with the [European eHN Guidelines](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en).
+Specify a set of rules to be applied to HL7 FHIR to define how to represent **Medication Prescription and Dispense** data in the **European** Context, coherently with the [European eHN Guidelines](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en).  
+This implementation guide is designed to be a flexible basis for national specifications as well as crossborder services. 
 
 
 ### Purpose
-The goal of this Implementation Guide is to define the European standard for Medication Prescriptions and Dispense reports to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (EEHRxF).
+The goal of this Implementation Guide is to define the European standard for Medication Prescriptions and Dispense data to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (EEHRxF).
 
 This project is the result of a cross SDO collaboration with IHE Pharmacy, realized in collaboration with several other European and national organizations and projects.
 
-The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
+The aspiration of this guide is that of being used as part of EEHRxF specifications, providing a base that can be adopted by European national guides as well as by MyHealth@EU for the EU cross-border services.
 
 ### Background
 
