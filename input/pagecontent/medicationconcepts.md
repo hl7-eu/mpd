@@ -1,6 +1,6 @@
 ### Medication concepts
 
-Medication as a concept (CodeableConcept from a terminology or FHIR resource) on a prescription can be anything from just substance to a certain pack size of a branded product. On a dispense, even physical package identifier can be captured. 
+Medication as a concept (CodeableConcept from a terminology or FHIR resource) on a prescription can be anything from just substance to a certain pack size of a branded product. Similarly, the level of package details varies greatly. On a dispense, physical package identifier can be captured. Closely linked is the concept of dosage and how it is represented on a prescription - some details about a prescribed product may be captured in dosaging information or in the details of the prescribed product.
 
 ### Medication and dosage
 
@@ -19,7 +19,7 @@ When a medication is prescribed it may be prescribed as a virtual product (for g
 
 Virtual products, just like real products, may be represented as a concept from a code system or a FHIR resource with filled-in attributes. In many countries real products and virtual products are interlinked, allowing a simpler selection and substitution. Internationally known code systems like RxNorm and SNOMED CT contain medication concepts on different levels, allowing moving up and down on granularity levels of the product.  
 
-ISO IDMP also represents medicinal product information on different levels. Medicinal Product, Packaged Product, Pharmaceutical Product, and Manufactured Item. Note, that ISO IDPM Pharmaceutical Product represents the administrable form of a specific real product (containing information about excipients), while PhPID (Pharmaceutical Product Identifier) is designed to represent a more abstract classification for products.  
+ISO IDMP also represents medicinal product information on different levels. Medicinal Product, Packaged Product, Pharmaceutical Product, and Manufactured Item. Note, that ISO IDPM Pharmaceutical Product represents the administrable form of a specific real product (containing information about excipients), while PhPID (Pharmaceutical Product Identifier) is designed to represent a more abstract classification for products. HL7 FHIR resources for implementing ISO IDMP are provided in [MedicationDefinition module](https://www.hl7.org/fhir/R5/medication-definition-module.html).   
 
 ### Medicinal product dictionaries
 

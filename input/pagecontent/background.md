@@ -1,7 +1,7 @@
 
 ### Crossborder initiative: from epSOS to MyHealth@EU
 
-The history of European collaboration in the health space is long, and even precedes the epSOS project (2008-2014). The epSOS project worked on the development, the piloting and the evaluation of the first cross-border eHealth service.
+The history of European collaboration in the health space is long, and even precedes the epSOS project (2008-2014). The epSOS project worked on the development, piloting and evaluation of the first cross-border eHealth services.
 
 This long journey resulted in the first operational cross-border services for Patient Summary and ePrescription based on the HL7 CDA R2.0 standard in 2019 (see [here](https://art-decor.ehdsi.eu/art-decor/decor-templates--epsos-) for the current MyHealth@EU CDA-based specifications). The service was initially activated in a few countries and progressively extended on a voluntary basis. These services are maintained by [MyHealth@EU](https://health.ec.europa.eu/ehealth-digital-health-and-care/electronic-cross-border-health-services_en), formerly known as eHDSI (CEF).
 

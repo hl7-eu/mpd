@@ -7,18 +7,18 @@ Examples in this IG use collection Bundle simply for making it easier to read fo
 The choice of wrapping the request and its related resources in a Bundle or not, is entirely up to the implementers.  
 
 
-### Multiitem prescriptions
+### Multi-item prescriptions
 
-The recommended way of designing prescriptions in HL7 FHIR is to have one item per prescription - this is reflected in the MedicationRequest resource where Medication cardinality is 1..1.  
+The recommended way of designing prescriptions in HL7 FHIR is to have one item per prescription - this is reflected in the MedicationRequest resource where Medication cardinality is 1..1. Currently, European crossborder prescription's CDA implementation is also allowing only one medication per presciption, expecting the country of origin to split the multi-item prescription into several crossborder prescriptions and track the dispensations accordingly. However, real life national prescription systems are often designed differently from this logic - in many countries a prescription may contain more than one medication item. 
 
-Real life prescription systems are often designed differently from this logic - in many countries a prescription may contain more than one medication item. There is no single mechanism for handling multiitem prescriptions, and in order to choose the optimal solution, one must consider the business requirements and reasons behind the multiitem prescription:  
+There is no single mechanism in HL7 FHIR for handling multi-item prescriptions, and in order to choose the optimal solution, one must consider the business requirements and reasons behind the multi-item prescription:  
 - Is it used merely as a grouping mechanism without deeper semantics?
 - Are there technical reasons why multiple items must be transported as one group?
 - Are the items on prescription related to eachother through the dosaging scheme? 
 - Must the items be dispensed as one transaction?
 - Are there pricing or reimbursement rules that are dependent on grouping?
 - How does a status of a prescription relate to the statuses of individual requests?
-- What are the consequences of adding or removing prescription items: can a singleitem prescription become a multiitem prescription and vice versa?
+- What are the consequences of adding or removing prescription items: can a single-item prescription become a multi-item prescription and vice versa?
 
 Considering the requirements above, the best match from the following approaches can be chosen.
 
@@ -28,7 +28,7 @@ This option can only be used when the items on a prescription can be easily spli
 
 **Pros:**
 - Technically the easiest option to implement in FHIR.
-- Allows the same handling of data for single- and multiitem prescriptions.  
+- Allows the same handling of data for single- and multi-item prescriptions.  
 
 **Cons:** 
 - Prescription identifier not present
@@ -41,7 +41,7 @@ This option differs from the previous one by one important aspect: the data elem
   
 **Pros:**  
 - Easy to implement
-- Allows very similar handling of data for single- and multiitem prescriptions
+- Allows very similar handling of data for single- and multi-item prescriptions
 - .groupIdentifier preserves prescription identifier.  
   
 **Cons:**  
@@ -54,10 +54,10 @@ This option is technically more complex to handle on the FHIR side, but it allow
   
 **Pros:**  
 - Possible to define interdependencies between prescription items
-- Multiitem prescription is clearly defined and distinguishable from singleitem prescriptions  
+- Multiitem prescription is clearly defined and distinguishable from single-item prescriptions  
 
 **Cons:**  
-Multiitem prescription and singleitem prescription are handled differently. In a prescription system where multiitem prescriptions use RequestOrchestration, it is important to consider whether singleitem prescriptions should be using the same mechanism, even though it does not add anything to the semantics.
+Multiitem prescription and single-item prescription are handled differently. In a prescription system where multi-item prescriptions use RequestOrchestration, it is important to consider whether single-item prescriptions should be using the same mechanism, even though it does not add anything to the semantics.
 
 When grouping MedicationRequests with a RequestOrchestration/RequestGroup:
 - MedicationRequest.intent value must be ‘option’. This is a signal to the receiver, that the request must be handled as part of a bigger request group.  
@@ -65,13 +65,15 @@ When grouping MedicationRequests with a RequestOrchestration/RequestGroup:
 - Prescription identifier should be the value of .groupIdentifier.  
 - MedicationRequests, if they originate from the same prescription, should have the same patient and authoring metadata.  
 
+The following diagram explains splitting custom multi-item prescription (yellow) into HL7FHIR resources (green).  
+
 <figure>
   {% include multiitem-prescription.svg %}
   <!-- <figcaption>Multiitem prescription example</figcaption> -->
 </figure>
 <br clear="all"/>
 
-Please see examples 100A and 300A in the [Artifacts page](artifacts.html) for more information about how to create a multiitem prescription using RequestOrchestration, and example 200A for information about how to create a multiitem prescription without an additional grouping/organising resource. All examples in this IG use Bundle as a wrapper for multiitem prescription, however this is just for the convenience, and not a normative part of this IG. Implementers can choose whether to use Bundle or which type of Bundle to use.
+Please see examples [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) and [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) in the [Artifacts page](artifacts.html) for more information about how to create a multi-item prescription using RequestOrchestration, and example [**200A**](Bundle-200A-multiitem-prescription-without-orchestration.html) for information about how to create a multi-item prescription without an additional grouping/organising resource. All examples in this IG use Bundle as a wrapper for multi-item prescription, however this is just for the convenience, and not a normative part of this IG. Implementers can choose whether to use Bundle or which type of Bundle to use.
 
 Read more about using RequestOrchestration/RequestGroup in FHIR workflow pages.
 

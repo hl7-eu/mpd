@@ -31,7 +31,7 @@ Description: "Medication dispense fulfilling the second part of the order: 3 pac
 Instance: 300D-dispense-for-2-requests
 InstanceOf: MedicationDispenseEuMpd
 Usage: #example
-Description: "Medication dispense dispensing one combination product for two prescribed products (multiitem prescription)"
+Description: "Medication dispense dispensing one combination product for two prescribed products (multiitem prescription)."
 
 * status = #completed
 * medication.reference = Reference(02A-ClotrimazoleCanifugCremolum)

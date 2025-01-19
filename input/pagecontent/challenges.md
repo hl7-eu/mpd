@@ -13,6 +13,8 @@ Optionally, country B may transform the data into their national format in order
 
 Operating the service and maintaining mappings and translations is the responsibility of the National Contact Point (NCP).
 
+Crossborder data exchange relies heavily on structured data and common value sets. A national prescription may include just a product code for the prescribed product, but for crossborder use, this prescription needs to be enriched with detailed structured information about the prescribed product. Same crossborder requirement for explicit, detailed, structured representation of concepts extends also to dosage, especially when coded route/method is to take part in dispensed product selection.  
+
 ### Leveraging ISO IDMP  
 
 European Medicines Agency has implemented ISO IDMP (FHIR R5) for marketing authorisation applications and registered product data. Therefore, many national medicines agencies are implementing ISO IDMP compatible systems or mapping layers to conform to the IDMP data model used by EMA and marketing authorisation holders. Also, [electronic product information](https://www.hl7.org/fhir/uv/emedicinal-product-info/) projects use ISO IDMP data model through FHIR R5 MedicationDefinition resources.   
@@ -21,7 +23,7 @@ At the same time, eHealth services are motivated to use a similar data model in 
 
 All data elements in Medication profile are optional, allowing each implementation to implement the granularity needed for their use case. While national systems often rely on a common medicinal product dictionary and may just exchange medication codes, crossborder services expect the medication information to be described on attribute level. Also, many national specifications prefer to include medication attributes in addition to the code in order to simplify the process on the receiver side. 
 
-### FHIR versions
+### HL7 FHIR versions
 European countries who already have a FHIR implementation, are using mostly R4, but some are also using R5. European Medicines Agency and national medicines agencies use R5 for ISO IDMP compatible data. Many countries don't have any FHIR implementations yet.  
 
 Considering the context, this FHIR Implentation Guide is created in R4 and R5 in parallel. Both IG versions contain the same content, but differences in FHIR core specification result in slightly different profiles, extensions, and examples. However, functionally the two specifications are the same, and should be perfectly compatible. Please report any discrepancies you may find.
