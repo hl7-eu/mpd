@@ -8,3 +8,5 @@ The link 'StructureDefinition-PersonName.sch' for "Schematron" cannot be resolve
 The link 'StructureDefinition-conformance-cen-ips-examples.html' for "Examples" cannot be resolved
 The link 'StructureDefinition-conformance-cen-ips-examples.html' for "Examples" cannot be resolved
 
+Reference must be to a ValueSet, but found a StructureDefinition instead
+

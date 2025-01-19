@@ -1,4 +1,4 @@
-// Remove after syncing R5 extensions.
+/* Remove after syncing R5 extensions.
 Extension: PackageType
 Id: package-type
 Title: "Package type"
@@ -9,7 +9,7 @@ Context: Medication
 * value[x] only CodeableConcept
 * valueCodeableConcept from $eHDSIPackage (example)	
 * valueCodeableConcept ^short = "Type of container, e.g pre-filled syringe, unit-dose blister, sachet, etc."
-
+*/
 
 
 Profile: MedicationEuMpd

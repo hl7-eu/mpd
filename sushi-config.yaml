@@ -25,7 +25,7 @@ dependencies:
    # hl7.fhir.uv.ips: current
    ihe.pharm.mpd: current   
    hl7.fhir.eu.base.r5: dev
-   # hl7.fhir.eu.extensions: current  
+   hl7.fhir.eu.extensions.r5: current  
 
    # hl7.fhir.extensions.r5: 4.0.1
 #   hl7.fhir.us.mcode:
@@ -101,11 +101,13 @@ menu:
     Background: background.html
     Challenges: challenges.html
     References: references.html
-  Technical Specifications:
+  Functional Specifications:
     Terminology: terminology.html
     Medication Concepts: medicationconcepts.html
     Logical Models: logicalmodels.html
+  Implementation:
     Implementation Notes: implementationnotes.html
+    Artifacts: artifacts.html
     FHIR R4 IG: https://build.fhir.org/ig/hl7-eu/mpd
   About:
     Authors and Contributors: authors.html
@@ -189,7 +191,7 @@ menu:
 groups:
  eHNGuidelines:
    name: Data Sets from eHN Guidelines
-   description: eHealth Network Guidelines data sets represented as FHIR logical models. New, fully machine-readable logical information models are being created in Xt-EHR project. See more information about new EHDS logical models work on [Logical Models page](logicalmodels.html).
+   description: eHealth Network Guidelines data sets represented as FHIR logical models. Please note, that eHN data sets do not have explicit information about cardinality and data types. New, fully machine-readable logical information models are being created in Xt-EHR project. See more information about new EHDS logical models work on [Logical Models page](logicalmodels.html).
    resources:
      - EprescriptionEhn
      - EdispensationEhn
@@ -197,7 +199,7 @@ groups:
      - SubjectEpEhn
  FHIRProfiles:
    name: FHIR Profiles
-   description: Profiles for ePrescription and eDispensation use case. Note that there is no single profile for ePrescription, but only for MedicationRequest, which translates to a single line on a prescription (read more in [Implementation Notes](implementationnotes.html)). Profiles for Patient, PractitionerRole, and Organization are published in HL7 Europe Base IG. 
+   description: Profiles for ePrescription and eDispensation use case. Note that there is no single profile for ePrescription, but only for MedicationRequest, which translates to a single line on a prescription (read more in [Implementation Notes](implementationnotes.html)). Profiles for Patient, PractitionerRole, and Organization are published in HL7 Europe Base IG. All profiles are based on [EHDS logical information models](logicalmodels.html) that are being developed by Xt-EHR project.
    resources: 
     - MedicationRequestEuMpd
     - MedicationDispenseEuMpd
