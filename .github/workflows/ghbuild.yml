@@ -94,7 +94,7 @@ jobs:
       # Additional step to upload qa.json as an artifact
       - name: Upload qa.json artifact
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: qa-json-artifact
           path: ./output/qa.json  # Adjust the path based on where qa.json is located
