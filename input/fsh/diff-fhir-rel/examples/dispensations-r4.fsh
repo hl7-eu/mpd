@@ -43,3 +43,17 @@ Description: "Medication dispense dispensing one combination product for two pre
 * authorizingPrescription[+].identifier.value = "300-2/2"
 * quantity = 1 $ucum#1
 * whenHandedOver = "2024-10-06T19:54:00Z"
+
+Instance: refused-dispense
+InstanceOf: MedicationDispenseEuMpd
+Usage: #example
+Description: "Refusal of medication dispense"
+
+* status = #declined
+* medicationCodeableConcept.extension.url = $data-absent-reason
+* medicationCodeableConcept.extension.valueCode = #not-performed
+* subject = Reference(patient1)
+* performer[0].actor = Reference(pharmacist1)
+* authorizingPrescription[0] = Reference(10-prescription-cefuroxime-singleline)
+* quantity = 0 $ucum#1 // 1 pack containing 10 vials
+* whenHandedOver = "2024-12-06T19:54:00Z" // also data-absent-reason?
