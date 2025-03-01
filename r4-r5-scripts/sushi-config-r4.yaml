@@ -47,26 +47,42 @@ dependencies:
 pages:
   index.md:
     title: Home
-  background.md:
-    title: Background
-  downloads.md:
-    title: Downloads
-  implementationnotes.md:
-    title: Implementation Considerations
-  challenges.md:
-    title: Challenges
   authors.md: 
     title: Authors and Contributors
+  background.md:
+    title: Background
+  challenges.md:
+    title: Challenges
+  copyright.md:
+    title: Copyright
+  crossversionanalysis.md:
+    title: Cross-version Analysis
+  downloads.md:
+    title: Downloads
+  dependencies.md:
+    title: Dependencies
+  designchoices.md:
+    title: Design Choices
+  examples.md:
+    title: Examples
+  implementationnotes.md:
+    title: Implementation Considerations
   knownissues.md:
     title: Known Issues
   logicalmodels.md:
     title: Logical Models
   medicationconcepts.md:
     title: Medication Concepts
+  profiles.md:
+    title: Mapping to Profiles
   references.md:
     title: Source and Additional Information
+  scope.md:
+    title: Scope and Content
   terminology.md:
     title: Terminology Considerations
+  usecases.md:
+    title: Use Cases
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -96,25 +112,32 @@ pages:
 
 menu:
   Home: index.html
-  Background: 
+  Introduction: 
+    Scope and Content: scope.html
     Background: background.html
     Challenges: challenges.html
     References: references.html
-  Functional Specifications:
-    Terminology: terminology.html
-    Medication Concepts: medicationconcepts.html
+  Functional:
+    Use cases: usecases.html
     Logical Models: logicalmodels.html
+#   Workflow 
+    Terminology Considerations: terminology.html
+    Medication Concepts: medicationconcepts.html
   Implementation:
+    Mapping to Profiles: profiles.html
+    Examples: examples.html
     Implementation Notes: implementationnotes.html
-    Artifacts: artifacts.html
-    FHIR R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/
+    IHE MPD IG: https://build.fhir.org/ig/IHE/pharm-mpd/   
   About:
     Authors and Contributors: authors.html
     Known Issues: knownissues.html
     Download: downloads.html
-  IHE MPD: https://build.fhir.org/ig/IHE/pharm-mpd/
+    Dependencies: dependencies.html
+    Copyright: copyright.html
+    Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
-  Table of Contents: toc.html
+  R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/
+
   
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

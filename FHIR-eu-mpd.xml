@@ -14,9 +14,6 @@
 <artifact id="Medication/03B-VitaminBComplexBranded" key="Medication-03B-VitaminBComplexBranded" name="03B-VitaminBComplexBranded"/>
 <artifact id="Medication/04A-FirmagonBranded" key="Medication-04A-FirmagonBranded" name="04A-FirmagonBranded"/>
 <artifact id="Medication/05A-Tilidin-Branded" key="Medication-05A-Tilidin-Branded" name="05A-Tilidin-Branded"/>
-<artifact id="MedicationDispense/10-dispense-1" key="MedicationDispense-10-dispense-1" name="10-dispense-1"/>
-<artifact id="MedicationDispense/10-dispense-2" key="MedicationDispense-10-dispense-2" name="10-dispense-2"/>
-<artifact id="MedicationRequest/10-prescription-cefuroxime-singleline" key="MedicationRequest-10-prescription-cefuroxime-singleline" name="10-prescription-cefuroxime-singleline"/>
 <artifact id="Bundle/100A-multiitem-prescription-with-orchestration" key="Bundle-100A-multiitem-prescription-with-orchestration" name="100A-multiitem-prescription-with-orchestration"/>
 <artifact id="RequestGroup/100B-RequestOrchestration" key="RequestGroup-100B-RequestOrchestration" name="100B-RequestOrchestration"/>
 <artifact id="MedicationRequest/100C-3-medication-prescription-request1" key="MedicationRequest-100C-3-medication-prescription-request1" name="100C-3-medication-prescription-request1"/>
@@ -30,6 +27,10 @@
 <artifact id="MedicationRequest/300C-2-medication-prescription-request1" key="MedicationRequest-300C-2-medication-prescription-request1" name="300C-2-medication-prescription-request1"/>
 <artifact id="MedicationRequest/300C-2-medication-prescription-request2" key="MedicationRequest-300C-2-medication-prescription-request2" name="300C-2-medication-prescription-request2"/>
 <artifact id="MedicationDispense/300D-dispense-for-2-requests" key="MedicationDispense-300D-dispense-for-2-requests" name="300D-dispense-for-2-requests"/>
+<artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="400C-prescription-cefuroxime-singleline"/>
+<artifact id="MedicationDispense/400D-dispense-1" key="MedicationDispense-400D-dispense-1" name="400D-dispense-1"/>
+<artifact id="MedicationDispense/400D-dispense-2" key="MedicationDispense-400D-dispense-2" name="400D-dispense-2"/>
+<artifact id="MedicationDispense/400E-refused-dispense" key="MedicationDispense-400E-refused-dispense" name="400E-refused-dispense"/>
 <artifact id="StructureDefinition/Prescription" key="StructureDefinition-Prescription" name="A - Prescription"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
@@ -54,13 +55,21 @@
 <page key="authors" name="Authors and Contributors"/>
 <page key="background" name="Background"/>
 <page key="challenges" name="Challenges"/>
+<page key="copyright" name="Copyright"/>
+<page key="crossversionanalysis" name="Cross-version Analysis"/>
+<page key="dependencies" name="Dependencies"/>
+<page key="designchoices" name="Design Choices"/>
 <page key="downloads" name="Downloads"/>
+<page key="examples" name="Examples"/>
 <page key="index" name="Home"/>
 <page key="implementationnotes" name="Implementation Considerations"/>
 <page key="knownissues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>
+<page key="profiles" name="Mapping to Profiles"/>
 <page key="medicationconcepts" name="Medication Concepts"/>
+<page key="scope" name="Scope and Content"/>
 <page key="references" name="Source and Additional Information"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology Considerations"/>
+<page key="usecases" name="Use Cases"/>
 </specification>

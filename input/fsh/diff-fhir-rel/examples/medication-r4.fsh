@@ -80,7 +80,7 @@ Description: "2A. Clotrimazole cream 10mg/g and 6 pessaries 100g. Branded packag
 Instance: 02A1-CanifugCremolumCreamItem
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "2A2. Clotrimazole cream (10mg/g, 1 tube of 20g) as part of Canifug Cremolum product (ISO IDMP manufactured item)"
+Description: "2A1. Clotrimazole cream (10mg/g, 1 tube of 20g) as part of Canifug Cremolum product (ISO IDMP manufactured item)"
 
 * form = $edqm-standardterms#10901000 "Vaginal cream"
 * amount.numerator = 1 $edqm-standardterms#15058000 "Tube"
@@ -95,7 +95,7 @@ Description: "2A2. Clotrimazole cream (10mg/g, 1 tube of 20g) as part of Canifug
 Instance: 02A2-CanifugCremolumPessaryItem
 InstanceOf: MedicationEuMpd
 Usage: #example
-Description: "2A1. Clotrimazole pessary (6 pessaries of 100mg) as part of Canifug Cremolum product (ISO IDMP manufactured item)"
+Description: "2A2. Clotrimazole pessary (6 pessaries of 100mg) as part of Canifug Cremolum product (ISO IDMP manufactured item)"
 
 * form = $edqm-standardterms#10909000 "Pessary"
 * amount.numerator = 6 $edqm-standardterms#15039000 "Pessary"
