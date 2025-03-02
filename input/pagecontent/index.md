@@ -2,9 +2,12 @@
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent **Medication Prescription and Dispense** data in the **European** Context, coherently with the [European eHN Guidelines](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en).  
+The scope of this implementation guide is **Medication Prescription and Dispense** in the **European** Context.
+It is coherent with the [European eHN Guidelines](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) and preparatory EHDS work.
+
 This implementation guide is designed to be a flexible basis for national specifications as well as crossborder services. 
 
+Additional information can be found in the [Scope and Content](scope.html) section.
 
 ### Purpose
 The goal of this Implementation Guide is to define the European standard for Medication Prescriptions and Dispense data to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (EEHRxF).
@@ -23,31 +26,6 @@ Medication Prescription and Dispense FHIR implementation guide is an open collab
 - [**xShare**](https://xshare-project.eu): implementing EEHRxF in various adoption sites
 
 The working group also includes participants from MyHealth@EU, HL7 Pharmacy, EPIC, UNICOM, plus a variety of interested individuals from over 20 countries.   
+Please refer to the [Authors and Contributors](authors.html) page for additional information.
 
-Please see [meeting minutes](https://confluence.hl7.org/display/HEU/Medication+Prescription+and+Dispense%2C+Edition+1) for additional information.  
 
-<!-- ### Navigating the profiles
-
-The following diagrams provide a browseable overview of the profiles specified by this guide (not all the relationships have been reported).
-
-< TO BE COMPLETED >
--->
-### Dependencies
-
-{% include dependency-table.xhtml %}
-
-### Cross Version Analysis
-
-{% include cross-version-analysis.xhtml %}
-
-### Global Profiles
-
-{% include globals-table.xhtml %}
-
-### IP statements
-
-{% include ip-statements.xhtml %}
-
-### Authors and Contributors
-
-Please refer to the [Authors and Contributors](authors.html) page.

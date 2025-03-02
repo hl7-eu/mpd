@@ -1,8 +1,8 @@
 // SINGLE LINE PRESCRIPTIONS - only one medication per prescription.
-Instance: 10-prescription-cefuroxime-singleline
+Instance: 400C-prescription-cefuroxime-singleline
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."
+Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."
 
 * meta.tag = #actionable
 * identifier.value = "10-123EP"  // prescription line identifier if exists
@@ -45,7 +45,7 @@ Description: "A prescription/request with one medication and changing dosaging. 
 Instance: 100A-multiitem-prescription-with-orchestration
 InstanceOf: Bundle
 Usage: #example
-Description: "Multiitem prescription with RequestGroup (R5 RequestOrchestration). 42-day cycle treatment consisting of three medications that should start at the same time. Wrapped in a Bundle for better readability."
+Description: "100A. Multiitem prescription with RequestGroup (R5 RequestOrchestration). 42-day cycle treatment consisting of three medications that should start at the same time. Wrapped in a Bundle for better readability."
 
 * type = #collection
 * entry[0].fullUrl = "https://example.com/RequestGroup/100B-RequestOrchestration"
@@ -69,7 +69,7 @@ Description: "Multiitem prescription with RequestGroup (R5 RequestOrchestration)
 Instance: 100B-RequestOrchestration
 InstanceOf: RequestGroup
 Usage: #example
-Description: "A grouper for the lines of a multiitem prescription. It should not be considered the prescription object as such."
+Description: "100B. A grouper for the lines of a multiitem prescription. It should not be considered the prescription object as such."
 
 // No identifier, because it's not an actual business object. 
 // groupIdentifier is the prescription identifier. All MedicationRequest instances should have the same groupIdentifier value.
@@ -87,7 +87,7 @@ Description: "A grouper for the lines of a multiitem prescription. It should not
 Instance: 100C-3-medication-prescription-request1
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Thalidomide 50mgx4 once a day before bed for 42 days."
+Description: "100C-1. A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Thalidomide 50mgx4 once a day before bed for 42 days."
 
 * identifier.value = "100-1/3"
 //* identifier.system = "" 
@@ -114,7 +114,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 Instance: 100C-3-medication-prescription-request2
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Melphalan 2mgx4 once a day for 4 days in the beginning of cycle."
+Description: "100C-2. A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Melphalan 2mgx4 once a day for 4 days in the beginning of cycle."
 
 * identifier.value = "100-2/3"
 //* identifier.system = "" 
@@ -140,7 +140,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 Instance: 100C-3-medication-prescription-request3
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Prednisone 50mgx3 once a day for 4 days in the beginning of cycle."
+Description: "100C-3. A prescription item (MedicationRequest) that is a part of a three-item-prescription (42-day treatment cycle). Generic. Prednisone 50mgx3 once a day for 4 days in the beginning of cycle."
 
 * identifier.value = "100-3/3"
 //* identifier.system = "" 
@@ -170,7 +170,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a three-
 Instance: 200A-multiitem-prescription-without-orchestration
 InstanceOf: Bundle
 Usage: #example
-Description: "Multiitem prescription where items on the same prescription are not interdependent. Kept together by the same groupIdentifier."
+Description: "200A. Multiitem prescription where items on the same prescription are not interdependent. Kept together by the same groupIdentifier."
 
 * type = #collection
 * entry[0].fullUrl = "https://example.com/MedicationRequest/200C-2-medication-prescription-request1"
@@ -189,7 +189,7 @@ Description: "Multiitem prescription where items on the same prescription are no
 Instance: 200C-2-medication-prescription-request1
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a two-item-prescription. "
+Description: "200C-1. A prescription item (MedicationRequest) that is a part of a two-item-prescription. "
 
 * identifier.value = "200-1/2"  // prescription line identifier if exists
 * groupIdentifier.value = "200" // prescription number
@@ -213,7 +213,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 Instance: 200C-2-medication-prescription-request2
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a two-item-prescription. "
+Description: "200C-2. A prescription item (MedicationRequest) that is a part of a two-item-prescription. "
 
 * identifier.value = "200-2/2"  // prescription line identifier if exists
 * groupIdentifier.value = "200" // prescription number
@@ -242,7 +242,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 Instance: 300A-multiitem-prescription-with-orchestration
 InstanceOf: Bundle
 Usage: #example
-Description: "Multiitem prescription with RequestOrchestration. 2 products dispensable as 1 multiitem product."
+Description: "300A. Multiitem prescription with RequestOrchestration. 2 products dispensable as 1 multiitem product."
 
 * type = #collection
 * entry[0].fullUrl = "https://example.com/RequestGroup/300B-RequestOrchestration"
@@ -269,7 +269,7 @@ Description: "Multiitem prescription with RequestOrchestration. 2 products dispe
 Instance: 300B-RequestOrchestration
 InstanceOf: RequestGroup
 Usage: #example
-Description: "A grouper for the lines of a multiitem prescription."
+Description: "300B. A grouper for the lines of a multiitem prescription."
 
 // No identifier, because it's not an actual business object. 
 // groupIdentifier is the prescription identifier. All MedicationRequest instances should have the same groupIdentifier value.
@@ -285,7 +285,7 @@ Description: "A grouper for the lines of a multiitem prescription."
 Instance: 300C-2-medication-prescription-request1
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a two-item-prescription. Clotrimazole pessaries."
+Description: "300C-1. A prescription item (MedicationRequest) that is a part of a two-item-prescription. Clotrimazole pessaries."
 
 * identifier.value = "300-1/2"
 * groupIdentifier.value = "300"
@@ -311,7 +311,7 @@ Description: "A prescription item (MedicationRequest) that is a part of a two-it
 Instance: 300C-2-medication-prescription-request2
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "A prescription item (MedicationRequest) that is a part of a two-item-prescription. Clotrimazole cream."
+Description: "300C-2. A prescription item (MedicationRequest) that is a part of a two-item-prescription. Clotrimazole cream."
 
 * identifier.value = "300-2/2"
 * groupIdentifier.value = "300"
