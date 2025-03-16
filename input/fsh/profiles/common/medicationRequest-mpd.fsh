@@ -1,6 +1,7 @@
 RuleSet: MedicationRequestEpCommon
 
-
+* extension contains OffLabelUse named offLabelUse 0..1 
+* extension[offLabelUse] ^short = "Indicates that the prescriber has knowingly prescribed the medication for an indication, age group, dosage, or route of administration that is not approved by the regulatory agencies and is not mentioned in the prescribing information for the product." 
 * identifier 
   * ^short = "Prescription/prescribed item ID"
   * ^comment = "It is the prescription ID if the presciption includes only one prescribed item"
