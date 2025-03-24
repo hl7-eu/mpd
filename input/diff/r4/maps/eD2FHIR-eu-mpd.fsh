@@ -11,10 +11,10 @@ Usage: #definition
 * experimental = true					
 * description = "eHN eDispensation Model to this guide Map"					
 * purpose = "It shows how the eDispensation data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = Canonical (EdispensationEhn)
-* targetUri = Canonical (MedicationDispenseEuMpd)
+//* sourceUri = Canonical (EdispensationEhn)
+//* targetUri = Canonical (MedicationDispenseEuMpd)
 					
-* group[+].source = Canonical (EdispensationEhn)
+* group[+].source = Canonical(EdispensationEhn)
 * group[=].target = Canonical(MedicationDispenseEuMpd)
 					
 * group[=].element[+].code = #Dispensation.dispenserIdentifier					

@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Medicinal Product Model to this guide Map"					
 * purpose = "It shows how the Medicinal Product data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = Canonical(MedProductEhn)						
-* targetUri = Canonical(MedicationEuMpd)					
+//* sourceUri = Canonical(MedProductEhn)						
+//* targetUri = Canonical(MedicationEuMpd)					
 					
 * group[+].source = Canonical(EprescriptionEhn)					
 * group[=].target = Canonical(MedicationEuMpd)					

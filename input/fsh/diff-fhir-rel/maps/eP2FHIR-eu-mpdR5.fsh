@@ -14,7 +14,9 @@ Usage: #definition
 * sourceScopeUri = Canonical(EprescriptionEhn)
 * targetScopeUri = Canonical(MedicationRequestEuMpd)
 					
-* group[+]					
+//* group[+].source = Canonical(EprescriptionEhn)
+//* group[=].target = Canonical(MedicationRequestEuMpd)		
+* group[+]	
 * group[=].element[+].code = #Prescription.patient					
 * group[=].element[=].display = "A.1.1 Patient administrative data"					
 * group[=].element[=].target.code = #MedicationRequest.subject					

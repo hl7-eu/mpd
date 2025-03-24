@@ -47,6 +47,8 @@
 <artifact id="Patient/patient1" key="Patient-patient1" name="patient1"/>
 <artifact id="Patient/patient2" key="Patient-patient2" name="patient2"/>
 <artifact id="PractitionerRole/pharmacist1" key="PractitionerRole-pharmacist1" name="pharmacist1"/>
+<artifact id="Practitioner/practitioner1" key="Practitioner-practitioner1" name="practitioner1"/>
+<artifact id="Practitioner/practitioner2" key="Practitioner-practitioner2" name="practitioner2"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

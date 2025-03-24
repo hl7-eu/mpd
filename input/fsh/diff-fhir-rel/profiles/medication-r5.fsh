@@ -19,7 +19,7 @@ Id: Medication-eu-mpd
 Title: "Medication: MPD"
 Description: "This profile defines how to represent Medication data on ePrescription and eDispensation"
 
-
+* insert ImposeProfile ( $Medication-ihe , 0)
 * insert MedicationEpCommon
 * extension contains MedicationDevice named device 0..* // device
 * extension[device] ^short = "Device, typically an administration device, included in the product."

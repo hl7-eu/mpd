@@ -4,7 +4,7 @@ Id: MedicationDispense-eu-mpd
 Title: "MedicationDispense: MPD"
 Description: "MedicationDispense profile for capturing dispensation information based on a medication prescription."
 
-
+* insert ImposeProfile ( $MedicationDispense-ihe , 0)
 * insert MedicationDispenseEpCommon
 * medication only CodeableReference(MedicationEuMpd)
 * medication.extension contains $data-absent-reason named medication-absent-reason 0..1
