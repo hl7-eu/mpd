@@ -68,3 +68,7 @@ Alias: $Procedure-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Proced
 Alias: $Device-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
+
+Alias: $Medication-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedication
+Alias: $MedicationRequest-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationPrescription
+Alias: $MedicationDispense-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispensation

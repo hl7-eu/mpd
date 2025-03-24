@@ -13,8 +13,10 @@ Usage: #definition
 * purpose = "It shows how the Medicinal Product data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceScopeUri = Canonical(MedProductEhn)						
 * targetScopeUri = Canonical(MedicationEuMpd)					
-					
-* group[+]
+
+* group[+]						
+//* group[+].source = Canonical(MedProductEhn)
+//* group[=].target = Canonical(MedicationEuMpd)
 * group[=].element[+].code = #MedicinalProduct.name					
 * group[=].element[=].display = "A.1.4.1 Name of the medicinal product"					
 * group[=].element[=].target.code = #Medication.extension[productName]					

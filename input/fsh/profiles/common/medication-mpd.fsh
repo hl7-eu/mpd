@@ -16,7 +16,7 @@ RuleSet: MedicationEpCommon
 * extension contains MedicationUnitOfPresentation named unitOfPresentation 0..1 // item.unitOfPresentation
 * extension[unitOfPresentation] ^short = "Unit of presentation of the product (e.g. tablet, vial, ampoule, etc)"
 
-* extension contains PackageType named packageType 0..1
+* extension contains MedicationPackageType named packageType 0..1
 * extension[packageType] ^short = "Type of container. This information is more relevant in cases when the packaging has an impact on administration of the product (e.g. pre-filled syringe)"
 
 * identifier // MS 

@@ -14,7 +14,9 @@ Usage: #definition
 * sourceScopeUri = Canonical(EdispensationEhn)
 * targetScopeUri = Canonical(MedicationDispenseEuMpd)
 					
-* group[+]				
+//* group[+].source = Canonical(EdispensationEhn)
+//* group[=].target = Canonical(MedicationDispenseEuMpd)	
+* group[+]		
 * group[=].element[+].code = #Dispensation.dispenserIdentifier					
 * group[=].element[=].display = "B.1.1 Identifier of the dispenser"					
 * group[=].element[=].target.code = #MedicationDispense.performer.actor					
