@@ -22,7 +22,7 @@ Medication Prescription and Dispense FHIR implementation guide is an open collab
 - **IHE**: authoring the global MPD profile
 - **HL7 Europe**: providing platform for EHDS-related collaboration (partner of XpanDH project)
 - [**XpanDH**](https://xpandh-project.iscte-iul.pt): working on proof of concept on European exchange format (EEHRxF) on FHIR (WP 2)
-- [**Xt-EHR**](https://www.xt-ehr.eu): preparing future EHDS implementation acts (WP 6, Task 6.2 "ePrescription and eDispensation")
+- [**Xt-EHR**](https://www.xt-ehr.eu): preparing future EHDS implementing acts (WP 6, Task 6.2 "ePrescription and eDispensation")
 - [**xShare**](https://xshare-project.eu): implementing EEHRxF in various adoption sites
 
 The working group also includes participants from MyHealth@EU, HL7 Pharmacy, EPIC, UNICOM, plus a variety of interested individuals from over 20 countries.   

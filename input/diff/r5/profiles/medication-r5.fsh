@@ -21,7 +21,7 @@ Description: "This profile defines how to represent Medication data on ePrescrip
 
 * insert ImposeProfile ( $Medication-ihe , 0)
 * insert MedicationEpCommon
-* extension contains MedicationDevice named device 0..* // device
+* extension contains $ihe-ext-medication-device named device 0..* // device
 * extension[device] ^short = "Device, typically an administration device, included in the product."
 * extension[device].extension[device].valueCodeableReference from $eHDSIPackage (example)
 * totalVolume // MS // item.amount; packSize
@@ -36,7 +36,7 @@ Description: "This profile defines how to represent Medication data on ePrescrip
   * strength[x] ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength[x] ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
   * strength[x] // MS // item.ingredient.strengthInfo (does not map exactly)
-    * extension contains MedicationStrengthSubstance named basisOfStrengthSubstance 0..1 
+    * extension contains $ihe-ext-medication-strengthsubstance named basisOfStrengthSubstance 0..1 
     * extension[basisOfStrengthSubstance] ^short = "Basis of strength substance - substance for which the strength is provided (this could be different from the precise active ingredient)."
 * doseForm // MS // doseForm; item.doseForm
   * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm

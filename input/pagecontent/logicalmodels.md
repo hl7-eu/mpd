@@ -17,35 +17,36 @@ For mappings between eHN guidelines data sets and FHIR profiles, see [Artifacts 
 EHDS Medication Prescription model allows multiple items prescribed on one prescription. In such case, EHDS.MedicationPrescription.identifier maps to MedicationRequest.groupIdentifier, and RequestOrchestration/RequestGroup may be the target of some of the prescription elements. Please read [implementation notes](implementationnotes.html) for more information.  
   
 |**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedicationPrescription.identifier|MedicationRequest.identifier|MedicationRequest.identifier|  
-|EHDSMedicationPrescription.prescriber|MedicationRequest.requester|MedicationRequest.requester|  
-|EHDSMedicationPrescription.issueDate|MedicationRequest.authoredOn|MedicationRequest.authoredOn|  
-|EHDSMedicationPrescription.patient|MedicationRequest.subject|MedicationRequest.subject|  
-|EHDSMedicationPrescription.category|MedicationRequest.category|MedicationRequest.category|  
-|EHDSMedicationPrescription.validFrom|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationRequest.dispenseRequest.validityPeriod.start|  
-|EHDSMedicationPrescription.validUntil|MedicationRequest.dispenseRequest.validityPeriod.end|MedicationRequest.dispenseRequest.validityPeriod.end|  
-|EHDSMedicationPrescription.recorder|MedicationRequest.recorder|MedicationRequest.recorder|  
-|EHDSMedicationPrescription.recordingDate|MedicationRequest.eventhistory.recorded|MedicationRequest.eventhistory.recorded|  
-|EHDSMedicationPrescription.status|MedicationRequest.status|MedicationRequest.status|  
-|EHDSMedicationPrescription.statusReason[x]|MedicationRequest.statusReason or MedicationRequest.note.text|MedicationRequest.statusReason or MedicationRequest.note.text|   
-|EHDSMedicationPrescription.comment|MedicationRequest.note.text, RequestOrchestration.note.text|MedicationRequest.note.text, RequestOrchestration.note.text|  
+|EHDSMedicationPrescription.header.identifier|MedicationRequest.identifier or .groupIdentifier|MedicationRequest.identifier or .groupIdentifier|  
+|EHDSMedicationPrescription.header.authorship.author|MedicationRequest.requester|MedicationRequest.requester|  
+|EHDSMedicationPrescription.header.authorship.datetime|MedicationRequest.authoredOn|MedicationRequest.authoredOn|  
+|EHDSMedicationPrescription.header.subject|MedicationRequest.subject|MedicationRequest.subject|  
+|EHDSMedicationPrescription.header.validFrom|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationRequest.dispenseRequest.validityPeriod.start|  
+|EHDSMedicationPrescription.header.validUntil|MedicationRequest.dispenseRequest.validityPeriod.end|MedicationRequest.dispenseRequest.validityPeriod.end|  
+|EHDSMedicationPrescription.header.recorder|MedicationRequest.recorder|MedicationRequest.recorder|  
+|EHDSMedicationPrescription.header.recordingDate|MedicationRequest.eventhistory.recorded|MedicationRequest.eventhistory.recorded|  
+|EHDSMedicationPrescription.header.status|MedicationRequest.status or RequestOrchestration.status (for multi-item)|MedicationRequest.status or RequestGroup.status (for multi-item)|  
+|EHDSMedicationPrescription.header.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|   
+|EHDSMedicationPrescription.comment|MedicationRequest.note.text, RequestOrchestration.note.text|MedicationRequest.note.text, RequestGroup.note.text|  
 |EHDSMedicationPrescription.prescriptionItem|MedicationRequest|MedicationRequest|  
 |EHDSMedicationPrescription.prescriptionItem.identifier|MedicationRequest.identifier|MedicationRequest.identifier|  
+|EHDSMedicationPrescription.prescriptionItem.category|MedicationRequest.category|MedicationRequest.category|  
+|EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
+|EHDSMedicationPrescription.prescriptionItem.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|  
 |EHDSMedicationPrescription.prescriptionItem.medication|MedicationRequest.medication|MedicationRequest.medication[x]|  
-|EHDSMedicationPrescription.prescriptionItem.indication|MedicationRequest.reason.concept|MedicationRequest.reasonCode|  
+|EHDSMedicationPrescription.prescriptionItem.indication[x]|MedicationRequest.reason|MedicationRequest.reasonCode or .reasonReference|  
 |EHDSMedicationPrescription.prescriptionItem.indicationText|MedicationRequest.reason.concept.text|MedicationRequest.reasonCode.text|  
 |EHDSMedicationPrescription.prescriptionItem.prescriptionIntent|MedicationRequest.intent|MedicationRequest.intent|  
 |EHDSMedicationPrescription.prescriptionItem.treatmentPeriod|MedicationRequest.effectiveDosePeriod|MedicationRequest.extension:effectiveDosePeriod|  
 |EHDSMedicationPrescription.prescriptionItem.quantityPrescribed|MedicationRequest.dispenseRequest.extension: prescribedQuantity|MedicationRequest.dispenseRequest.extension: prescribedQuantity|  
-|EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.renderedDosageInstruction, MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
+|EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
 |EHDSMedicationPrescription.prescriptionItem.preparationInstructions|MedicationRequest.dispenseRequest.dispenserInstruction||  
 |EHDSMedicationPrescription.prescriptionItem.substitution|MedicationRequest.substitution|MedicationRequest.substitution|  
 |EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
 |EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
-|EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
-|EHDSMedicationPrescription.prescriptionItem.statusReason[x]|MedicationRequest.statusReason or MedicationRequest.note.text|MedicationRequest.statusReason or MedicationRequest.note.text|  
 |EHDSMedicationPrescription.prescriptionItem.repeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|  
 |EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|  
+|EHDSMedicationPrescription.prescriptionItem.offLabel|MedicationRequest.extension:offLabelUse|MedicationRequest.extension:offLabelUse|  
 |EHDSMedicationPrescription.prescriptionItem.comment|MedicationRequest.note.text|MedicationRequest.note.text|  
 {:.table-bordered .table-striped .thead-light}
 
@@ -56,11 +57,9 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedication.classification|Medication.extension:classification|Medication.extension:classification|  
 |EHDSMedication.productName|Medication.extension:productName|Medication.extension:productName|  
 |EHDSMedication.marketingAuthorisationHolder|Medication.marketingAuthorizationHolder|Medication.manufacturer|  
-|EHDSMedication.marketingAuthorisationHolder.organizationName|Organization.name|Organization.name|  
-|EHDSMedication.marketingAuthorisationHolder.organizationIdentifier|Organization.identifier|Organization.identifier|  
 |EHDSMedication.doseForm|Medication.doseForm|Medication.form|  
 |EHDSMedication.packSize|Medication.totalVolume|Medication.amount|  
-|EHDSMedication.item|Medication.ingredient.item|Medication.ingredient.item[x]|  
+|EHDSMedication.item|Medication.ingredient.item.reference(Medication)|Medication.ingredient.itemReference(Medication)|  
 |EHDSMedication.item.doseForm|Medication.doseForm|Medication.form|  
 |EHDSMedication.item.ingredient|||  
 |EHDSMedication.item.ingredient.isActive|Medication.ingredient.isActive|Medication.ingredient.isActive|  
@@ -73,11 +72,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedication.item.amount|Medication.totalVolume|Medication.amount|  
 |EHDSMedication.item.packageType|Medication.extension:packageType|Medication.extension:packageType|  
 |EHDSMedication.device|Medication.extension:device|Medication.extension:device|  
-|EHDSMedication.device.deviceQuantity|Medication.extension:device.extension:quantity|Medication.extension:device.extension:quantity|  
-|EHDSMedication.device.device[x]|Medication.extension:device.extension:device|Medication.extension:device.extension:device|  
 |EHDSMedication.characteristic|Medication.extension:characteristic|Medication.extension:characteristic|  
-|EHDSMedication.characteristic.type|Medication.extension:characteristic.extension:type|Medication.extension:characteristic.extension:type|  
-|EHDSMedication.characteristic.value|Medication.extension:characteristic.extension:value|Medication.extension:characteristic.extension:value|  
 |EHDSMedication.batch|Medication.batch|Medication.batch|  
 |EHDSMedication.batch.lotNumber|Medication.batch.lotNumber|Medication.batch.lotNumber|  
 |EHDSMedication.batch.expirationDate|Medication.batch.expirationDate|Medication.batch.expirationDate|  
@@ -132,10 +127,14 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 #### Medication Dispense  
   
 |**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedicationDispense.identifier|MedicationDispense.identifier|MedicationDispense.identifier|  
-|EHDSMedicationDispense.patient|MedicationDispense.subject|MedicationDispense.subject|  
+|EHDSMedicationDispense.header.identifier|MedicationDispense.identifier|MedicationDispense.identifier|  
+|EHDSMedicationDispense.header.status|MedicationDispense.status|MedicationDispense.status|  
+|EHDSMedicationDispense.header.statusReason[x]|MedicationDispense.notPerformedReason|MedicationDispense.statusReason|  
+|EHDSMedicationDispense.header.subject|MedicationDispense.subject|MedicationDispense.subject|  
+|EHDSMedicationDispense.header.authorship.author|MedicationDispense.performer.actor|MedicationDispense.performer.actor|  
+|EHDSMedicationDispense.header.authorship.datetime|MedicationDispense.whenHandedOver or .recorded|MedicationDispense.whenHandedOver|
 |EHDSMedicationDispense.receiver[x]|MedicationDispense.receiver|MedicationDispense.receiver|  
-|EHDSMedicationDispense.dispenser[x]|MedicationDispense.performer.actor|MedicationDispense.performer.actor|  
+|EHDSMedicationDispense.dispenseLocation|MedicationDispense.location|MedicationDispense.location|  
 |EHDSMedicationDispense.relatedRequest|MedicationDispense.authorizingPrescription|MedicationDispense.authorizingPrescription|  
 |EHDSMedicationDispense.medication|MedicationDispense.medication|MedicationDispense.medication[x]|  
 |EHDSMedicationDispense.dispensedQuantity|MedicationDispense.quantity|MedicationDispense.quantity|  
@@ -144,9 +143,18 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSMedicationDispense.substitution.substitutionOccurred|MedicationDispense.substitution.wasSubstituted|MedicationDispense.substitution.wasSubstituted|  
 |EHDSMedicationDispense.substitution.substitutionType|MedicationDispense.substitution.type|MedicationDispense.substitution.type|  
 |EHDSMedicationDispense.substitution.substitutionReason|MedicationDispense.substitution.reason|MedicationDispense.substitution.reason|  
-|EHDSMedicationDispense.status|MedicationDispense.status|MedicationDispense.status|  
-|EHDSMedicationDispense.statusReason|MedicationDispense.notPerformedReason|MedicationDispense.statusReason|  
-|EHDSMedicationDispense.statusReasonText|MedicationDispense.notPerformedReason.text|MedicationDispense.statusReason.text|  
 |EHDSMedicationDispense.dosageInstructions|MedicationDispense.dosageInstruction|MedicationDispense.dosageInstruction|  
+|EHDSMedicationDispense.comment|MedicationDispense.note|MedicationDispense.note|   
+{:.table-bordered .table-striped .thead-light}
+
+#### Dispense Decline  
+
+|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
+|EHDSMedicationDispense.header.identifier|MedicationDispense.identifier|MedicationDispense.identifier|  
+|EHDSMedicationDispense.header.status|MedicationDispense.status|MedicationDispense.status|  
+|EHDSMedicationDispense.header.statusReason[x]|MedicationDispense.notPerformedReason|MedicationDispense.statusReason|  
+|EHDSMedicationDispense.header.subject|MedicationDispense.subject|MedicationDispense.subject|  
+|EHDSMedicationDispense.header.authorship.author|MedicationDispense.performer.actor|MedicationDispense.performer.actor|  
+|EHDSMedicationDispense.header.authorship.datetime|MedicationDispense.whenHandedOver or .recorded|MedicationDispense.whenHandedOver|  
 |EHDSMedicationDispense.comment|MedicationDispense.note|MedicationDispense.note|   
 {:.table-bordered .table-striped .thead-light}
