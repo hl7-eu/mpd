@@ -1,0 +1,79 @@
+[
+  {
+    "id" : "eD2FHIR-eu-mpd",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/r5/mpd/ConceptMap/eD2FHIR-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "eD2Fhir"
+  },
+  {
+    "id" : "eP2FHIR-eu-mpd",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/r5/mpd/ConceptMap/eP2FHIR-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "eP2Fhir"
+  },
+  {
+    "id" : "medProd2FHIR-eu-mpd",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/r5/mpd/ConceptMap/medProd2FHIR-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "MedProd2Fhir"
+  },
+  {
+    "id" : "hl7.fhir.eu.r5.mpd",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.eu/fhir/r5/mpd/ImplementationGuide/hl7.fhir.eu.r5.mpd",
+    "version" : "0.1.0",
+    "name" : "Hl7EuMedPrescriptionDispenseIg"
+  },
+  {
+    "id" : "Dispensation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Dispensation",
+    "version" : "0.1.0",
+    "name" : "EdispensationEhn"
+  },
+  {
+    "id" : "Medication-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Medication-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "MedicationEuMpd"
+  },
+  {
+    "id" : "MedicationDispense-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationDispense-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "MedicationDispenseEuMpd"
+  },
+  {
+    "id" : "MedicationRequest-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationRequest-eu-mpd",
+    "version" : "0.1.0",
+    "name" : "MedicationRequestEuMpd"
+  },
+  {
+    "id" : "MedicinalProduct",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicinalProduct",
+    "version" : "0.1.0",
+    "name" : "MedProductEhn"
+  },
+  {
+    "id" : "Prescription",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Prescription",
+    "version" : "0.1.0",
+    "name" : "EprescriptionEhn"
+  },
+  {
+    "id" : "Subject",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Subject",
+    "version" : "0.1.0",
+    "name" : "SubjectEpEhn"
+  }
+]
