@@ -12,4 +12,3 @@ RuleSet: MedicationDispenseEpCommon
 * whenHandedOver 1..1 // MS // timeOfDispensation 1
 * substitution.wasSubstituted // MS // substitutionOccurred
 * status // MS // status 1
-//* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)

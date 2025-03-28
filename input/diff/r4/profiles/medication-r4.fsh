@@ -17,7 +17,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 //* insert ImposeProfile ( $Medication-uv-ips , 0)
 * insert MedicationEpCommon
-* extension contains MedicationDevice named device 0..* // device
+* extension contains $ihe-ext-medication-device named device 0..* // device
 * extension[device] ^short = "Device, typically an administration device, included in the product."
 * extension[device].extension[device].valueCodeableConcept from $eHDSIPackage (example)
 
@@ -34,7 +34,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
   * strength // MS // item.ingredient.strengthInfo (does not map exactly)
-    * extension contains MedicationStrengthSubstance named basisOfStrengthSubstance 0..1 
+    * extension contains $ihe-ext-medication-strengthsubstance named basisOfStrengthSubstance 0..1 
     * extension[basisOfStrengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
 
 * form from $eHDSIDoseForm (example) 
