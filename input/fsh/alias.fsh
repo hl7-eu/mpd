@@ -29,6 +29,7 @@ Alias: $bcp47 = urn:ietf:bcp:47 // BCP47
 Alias: $sms = https://spor.ema.europa.eu/v2/SubstanceDefinition // EMA SPOR Substance Management System
 Alias: $ingredient-role = http://hl7.org/fhir/ingredient-role // Codes are from EMA SPOR
 Alias: $timing = http://hl7.org/fhir/event-timing // FHIR Event Timing
+Alias: $common-tags = http://terminology.hl7.org/CodeSystem/common-tags // FHIR Common Tags
 
 // Value Sets
 Alias: $eHDSIReactionAllergy = http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy
