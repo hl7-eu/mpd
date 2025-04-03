@@ -1,0 +1,62 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "ConditionProblemDiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.161",
+        "2.16.840.1.113883.4.642.2.72",
+        "2.16.840.1.113883.4.642.3.152"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.161",
+        "2.16.840.1.113883.4.642.2.72",
+        "2.16.840.1.113883.4.642.3.152"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-eu-mpd.html" : "MedicationRequest: MPD"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTFormCodes",
+      "title" : "SNOMED CT Form Codes",
+      "description" : "This value set includes all dose form codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.359",
+        "2.16.840.1.113883.4.642.2.198",
+        "2.16.840.1.113883.4.642.3.374"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.359",
+        "2.16.840.1.113883.4.642.2.198",
+        "2.16.840.1.113883.4.642.3.374"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-Medication-eu-mpd.html" : "Medication: MPD"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-codes",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTSubstanceCodes",
+      "title" : "SNOMED CT Substance Codes",
+      "description" : "This value set includes all substance codes from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3023"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3023"],
+      "uses" : {
+      },
+      "StructureDefinition-Medication-eu-mpd.html" : "Medication: MPD"
+    }
+  ]
+}
