@@ -1,3 +1,4 @@
+/*
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					eD2FHIR-eu-mpd.fsh
 // -------------------------------------------------------------------------------					
@@ -113,9 +114,5 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
+				
+*/

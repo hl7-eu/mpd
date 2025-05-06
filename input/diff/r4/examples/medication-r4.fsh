@@ -23,7 +23,7 @@ Usage: #example
 Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 vials per package). Branded packaged product, defined by attributes."
 
 * identifier.value = "1529962"
-* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#50053000 "Powder for solution for injection or infusion"
 * extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
 * extension[productName].valueString = "Cefuroxime MIP 1500 mg, süste-/infusioonilahuse pulber"
@@ -43,7 +43,7 @@ Usage: #example
 Description: "1D. Cefuroxime 750mg powder for solution in a vial (5 vials per package). Branded packaged product, defined by attributes."
 
 * identifier.value = "1529928"
-* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#11205000 "Powder for solution for injection"
 * extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
 * extension[productName].valueString = "Cefuroxime MIP 750 mg, süstelahuse pulber"
@@ -64,7 +64,7 @@ Usage: #example
 Description: "2A. Clotrimazole cream 10mg/g and 6 pessaries 100g. Branded packaged product, consisting of different medication items. Defined by attributes."
 
 * identifier.value = "1033692"
-* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#14001000 "Cream + pessary"
 * extension[classification].valueCodeableConcept = $who-atc#G01AF02 "clotrimazole"
 * extension[productName].valueString = "Canifug Cremolum"
@@ -113,7 +113,7 @@ Usage: #example
 Description: "3B. Milgamma N, B-vitamin complex. Branded packaged product, defined by attributes."
 
 * identifier.value = "1029776"
-* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#13047000 "Solution for suspension for injection"
 * extension[classification].valueCodeableConcept = $who-atc#A11DB "Vitamin B1 in combination with vitamin B6 and/or vitamin B12"
 * extension[productName].valueString = "MILGAMMA N"
@@ -148,7 +148,7 @@ Usage: #example
 Description: "4A. Firmagon. Branded packaged product, defined by attributes, includes administration devices."
 
 * identifier.value = "1400601"
-* identifier.system = "https://www.ravimiregister.ee" // not official FHIR identifier URL
+* identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#11207000 "Powder and solvent for solution for injection"
 * extension[classification].valueCodeableConcept = $who-atc#L02BX02 "degarelix"
 * extension[productName].valueString = "FIRMAGON"

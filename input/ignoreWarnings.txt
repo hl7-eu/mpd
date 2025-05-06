@@ -10,3 +10,5 @@ The link 'StructureDefinition-conformance-cen-ips-examples.html' for "Examples" 
 
 Reference must be to a ValueSet, but found a StructureDefinition instead
 
+URL value 'https://www.ravimiregister.ee' does not resolve
+URL value 'http://standardterms.edqm.eu' does not resolve
