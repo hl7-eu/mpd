@@ -4,7 +4,7 @@ InstanceOf: MedicationRequestEuMpd
 Usage: #example
 Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."
 
-* meta.tag = #actionable
+* meta.tag = $common-tags#actionable
 * identifier.value = "10-123EP"  // prescription line identifier if exists
 * status = #active
 * intent = #order

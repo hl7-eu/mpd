@@ -33,17 +33,13 @@ Referred to by ""pharmaceutical formulation"" in implementing directive 2012/52/
 * packageType 0..* CodeableConcept "A.1.4.8 Package type" """Type of the container, Examples: bottle, blister, box"""				
   * ^binding.description = "EDQM"
   * ^binding.strength = #preferred					
-* PackageSize 0..* Quantity "A.1.4.9 Pack size" """Typically, the pack size is the number of unit of presentations in the package. 
+* packageSize 0..* Quantity "A.1.4.9 Pack size" """Typically, the pack size is the number of unit of presentations in the package. 
 It could also be presented using units of measurement (ml, g). In some cases, there is a need to refine the package size that it describes the amounts of different manufactured items in more than one inner packages. However, the overall amount of a prescribed product must be calculable from the pack size description.
  - Preferred system(s): UCUM; EDQM"""
   * ^binding.description = "UCUM, EDQM"
   * ^binding.strength = #preferred					
 //--- END				
-//--- END				
-//--- END				
-//--- END				
-//--- END				
-//--- END				
+	
 				
 				
 				

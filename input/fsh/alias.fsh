@@ -71,5 +71,5 @@ Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinit
 Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
 
 Alias: $Medication-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedication
-Alias: $MedicationRequest-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationPrescription
-Alias: $MedicationDispense-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispensation
+Alias: $MedicationRequest-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder
+Alias: $MedicationDispense-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispense

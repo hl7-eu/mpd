@@ -1,3 +1,4 @@
+/*
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					medProd2FHIR-eu-mpd.fsh
 // -------------------------------------------------------------------------------					
@@ -116,7 +117,8 @@ Usage: #definition
 * group[=].element[=].target.relationship = #related-to					
 * group[=].element[=].target.comment = "See also. Medication.extension[sizeOfItem]"					
 //---END					
-				
+
+*/			
 					
 					
 					

@@ -23,8 +23,8 @@ copyright: >-
 #
 dependencies:
    # hl7.fhir.uv.ips: current
-   ihe.pharm.mpd: current   
-   hl7.fhir.eu.base.r5: dev
+   ihe.pharm.mpd: current  
+   hl7.fhir.eu.base-r5: current
    hl7.fhir.eu.extensions.r5: current  
 
    # hl7.fhir.extensions.r5: 4.0.1
@@ -226,13 +226,13 @@ groups:
     - MedicationRequestEuMpd
     - MedicationDispenseEuMpd
     - MedicationEuMpd
- ModelMaps:
-  name: Mappings from eHN Data Sets
-  description: These concept maps represent a high-level mapping from eHN guidelines data sets and FHIR profiles in this IG. Please note that mappings from EHDS logical models are provided on [Logical models page](logicalmodels.html).
-  resources:
-    - eP2FHIR-eu-mpd
-    - eD2FHIR-eu-mpd
-    - medProd2FHIR-eu-mpd
+# ModelMaps:
+#  name: Mappings from eHN Data Sets
+#  description: These concept maps represent a high-level mapping from eHN guidelines data sets and FHIR profiles in this IG. Please note that mappings from EHDS logical models are provided on [Logical models page](logicalmodels.html).
+#  resources:
+#    - eP2FHIR-eu-mpd
+#    - eD2FHIR-eu-mpd
+#    - medProd2FHIR-eu-mpd
 
 
 #
