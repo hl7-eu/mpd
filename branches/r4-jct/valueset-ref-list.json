@@ -1,0 +1,30 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/Problem/DiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.161"],
+      "sources" : ["2.16.840.1.113883.4.642.3.161"],
+      "uses" : {
+      },
+      "StructureDefinition-MedicationRequest-eu-mpd.html" : "MedicationRequest: MPD"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "MedicineActiveSubstancesUvIps",
+      "title" : "Medicine Active Substances - IPS",
+      "description" : "IPS Medicine active substance codes value set.  This value set includes codes from SNOMED CT®: all descendants of 410942007 \\|Drug or medicament (substance)\\|\n\nSNOMED CT® ECL definition:\\\n< 410942007 \\|Drug or medicament (substance)\\|\\\n\nFuture implementations should consider ISO 11238 Health informatics -- Identification of medicinal products -- Data elements and structures for the unique identification and exchange of regulated information on substances.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Medication-eu-mpd.html" : "Medication: MPD"
+    }
+  ]
+}

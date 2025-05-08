@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="eP2FHIR-eu-mpd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap eP2FHIR-eu-mpd</b></p><a name="eP2FHIR-eu-mpd"> </a><a name="hceP2FHIR-eu-mpd"> </a><a name="eP2FHIR-eu-mpd-en-US"> </a><p>Mapping from <a href="StructureDefinition-Prescription.html">A - Prescription</a> to <a href="StructureDefinition-MedicationRequest-eu-mpd.html">MedicationRequest: MPD</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Prescription.patient (A.1.1 Patient administrative data)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.subject</td><td/></tr><tr><td>Prescription.authentication.identifier (A.1.2.1 Identifier of the Prescription)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.identifier</td><td>if a prescription includes only one prescribed item</td></tr><tr><td>Prescription.authentication.identifier (A.1.2.1 Identifier of the Prescription)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.groupIdentifier</td><td>if a prescription includes more then one prescribed item</td></tr><tr><td>Prescription.authentication.date (A.1.2.2 Issue date)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.authoredOn</td><td/></tr><tr><td>Prescription.prescriber (A.1.3 Identification of the prescribing health professional)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.requester</td><td/></tr><tr><td>Prescription.prescriber.familyName (A.1.3.1 Familyname)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.prescriber.givenName (A.1.3.2 Given name)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.prescriber.qualification (A.1.3.3 Professional qualifications)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.prescriber.contact (A.1.3.4 Details for direct contact)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.prescriber.workAddress (A.1.3.5 Work address)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.prescriber.signature (A.1.3.6 Signature)</td><td colspan="3" style="background-color: #efefef">(not mapped)</td></tr><tr><td>Prescription.prescriber.identifier (A.1.3.7 Health care provider identifier)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.requester</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Prescription.product (A1.4 Identification of the prescribed product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.medication</td><td/></tr><tr><td>Prescription.details (A.1.5 Prescription information)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest</td><td/></tr><tr><td>Prescription.details.quantity (A.1.5.2 Quantity of prescribed product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.dispenseRequest.extension[prescribedQuantity]</td><td/></tr><tr><td>Prescription.details.doseRegimen (A.1.5.3 Dose regimen)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.dosageInstruction</td><td/></tr><tr><td>Prescription.details.doseRegimen.unitsPerIntake (A.1.5.3.1 Number of units per intake)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.dosageInstruction.doseAndRate.dose</td><td/></tr><tr><td>Prescription.details.doseRegimen.frequencyOfIntakes (A.1.5.3.2 Frequency of intakes)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.dosageInstruction.timing</td><td>A combination of frequency, period and periodUnit.
+'3 times per day', 3 would be the frequency and '1 day' would be the period/periodUnit.</td></tr><tr><td>Prescription.details.route (A.1.5.4 Route of administration)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.dosageInstruction.route</td><td/></tr><tr><td>Prescription.details.duration (A.1.5.5 Duration of treatment)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.dosageInstruction.timing.repeat.period</td><td/></tr><tr><td>Prescription.details.startDate (A.1.5.6 Starting date of therapy)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.dosageInstruction.timing.period</td><td/></tr><tr><td>Prescription.details.directionsOfUse (A.1.5.7 Directions for use)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.dosageInstruction</td><td/></tr><tr><td>Prescription.details.expiryDate (A.1.5.8 Prescription expiry date)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.dispenseRequest.validityPeriod.end</td><td/></tr><tr><td>Prescription.details.repeats (A.1.5.9 Repeats)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.dispenseRequest.numberOfRepeatsAllowed</td><td/></tr><tr><td>Prescription.details.reason (A.1.5.10 Reason for prescription)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to" title="related-to">is related to</a></td><td>MedicationRequest.reason</td><td/></tr><tr><td>Prescription.details.substitution (A.1.5.11 Substitution)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>MedicationRequest.substitution</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/r5/mpd/ConceptMap/eP2FHIR-eu-mpd"/>
+  <version value="0.1.0"/>
+  <name value="eP2Fhir"/>
+  <title value="eHN ePrescription to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-04-03T13:37:03+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="eHN ePrescription Model to this guide Map"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how the ePrescription data set defined by the EU eHN guidelines is mapped into this guide"/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceScopeUri value="http://hl7.eu/fhir/r5/mpd/StructureDefinition/Prescription"/>
+  <targetScopeUri value="http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationRequest-eu-mpd"/>
+  <group>
+    <element>
+      <code value="Prescription.patient"/>
+      <display value="A.1.1 Patient administrative data"/>
+      <target>
+        <code value="MedicationRequest.subject"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.authentication.identifier"/>
+      <display value="A.1.2.1 Identifier of the Prescription"/>
+      <target>
+        <code value="MedicationRequest.identifier"/>
+        <relationship value="equivalent"/>
+        <comment value="if a prescription includes only one prescribed item"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.authentication.identifier"/>
+      <display value="A.1.2.1 Identifier of the Prescription"/>
+      <target>
+        <code value="MedicationRequest.groupIdentifier"/>
+        <relationship value="equivalent"/>
+        <comment value="if a prescription includes more then one prescribed item"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.authentication.date"/>
+      <display value="A.1.2.2 Issue date"/>
+      <target>
+        <code value="MedicationRequest.authoredOn"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber"/>
+      <display value="A.1.3 Identification of the prescribing health professional"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.familyName"/>
+      <display value="A.1.3.1 Familyname"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.givenName"/>
+      <display value="A.1.3.2 Given name"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.qualification"/>
+      <display value="A.1.3.3 Professional qualifications"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.contact"/>
+      <display value="A.1.3.4 Details for direct contact"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.workAddress"/>
+      <display value="A.1.3.5 Work address"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.signature"/>
+      <display value="A.1.3.6 Signature"/>
+      <noMap value="true"/>
+    </element>
+    <element>
+      <code value="Prescription.prescriber.identifier"/>
+      <display value="A.1.3.7 Health care provider identifier"/>
+      <target>
+        <code value="MedicationRequest.requester"/>
+        <relationship value="related-to"/>
+        <comment value="Details in the referred Practitioner or PractitionerRole resource"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.product"/>
+      <display value="A1.4 Identification of the prescribed product"/>
+      <target>
+        <code value="MedicationRequest.medication"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details"/>
+      <display value="A.1.5 Prescription information"/>
+      <target>
+        <code value="MedicationRequest"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.quantity"/>
+      <display value="A.1.5.2 Quantity of prescribed product"/>
+      <target>
+        <code value="MedicationRequest.dispenseRequest.extension[prescribedQuantity]"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.doseRegimen"/>
+      <display value="A.1.5.3 Dose regimen"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.doseRegimen.unitsPerIntake"/>
+      <display value="A.1.5.3.1 Number of units per intake"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction.doseAndRate.dose"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.doseRegimen.frequencyOfIntakes"/>
+      <display value="A.1.5.3.2 Frequency of intakes"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction.timing"/>
+        <relationship value="related-to"/>
+        <comment value="A combination of frequency, period and periodUnit.&#xA;'3 times per day', 3 would be the frequency and '1 day' would be the period/periodUnit."/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.route"/>
+      <display value="A.1.5.4 Route of administration"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction.route"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.duration"/>
+      <display value="A.1.5.5 Duration of treatment"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction.timing.repeat.period"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.startDate"/>
+      <display value="A.1.5.6 Starting date of therapy"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction.timing.period"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.directionsOfUse"/>
+      <display value="A.1.5.7 Directions for use"/>
+      <target>
+        <code value="MedicationRequest.dosageInstruction"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.expiryDate"/>
+      <display value="A.1.5.8 Prescription expiry date"/>
+      <target>
+        <code value="MedicationRequest.dispenseRequest.validityPeriod.end"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.repeats"/>
+      <display value="A.1.5.9 Repeats"/>
+      <target>
+        <code value="MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.reason"/>
+      <display value="A.1.5.10 Reason for prescription"/>
+      <target>
+        <code value="MedicationRequest.reason"/>
+        <relationship value="related-to"/>
+      </target>
+    </element>
+    <element>
+      <code value="Prescription.details.substitution"/>
+      <display value="A.1.5.11 Substitution"/>
+      <target>
+        <code value="MedicationRequest.substitution"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

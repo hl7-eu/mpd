@@ -1,0 +1,93 @@
+{
+  "package": "hl7.fhir.eu.r5.mpd",
+  "version": "0.1.0",
+  "fhirVersion": "5.0.0",
+  "jurisdiction": "150",
+  "extensions": [],
+  "profiles": {
+    "Medication": [
+      {
+        "url": "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Medication-eu-mpd",
+        "title": "Medication: MPD"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationDispense-eu-mpd",
+        "title": "MedicationDispense: MPD"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationRequest-eu-mpd",
+        "title": "MedicationRequest: MPD"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.eu/fhir/StructureDefinition/medication-package-type": [
+      "Medication"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "MedicationDispense.medication"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-characteristic": [
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-classification": [
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-device": [
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-productname": [
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-sizeofitem": [
+      "Bundle.entry.resource",
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance": [
+      "Medication.ingredient.strengthRatio",
+      "Medication.ingredient.strength[x]"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-unitofpresentation": [
+      "Bundle.entry.resource",
+      "Medication"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medicationrequest-prescribedQuantity": [
+      "MedicationRequest.dispenseRequest"
+    ],
+    "http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-offLabel": [
+      "MedicationRequest"
+    ]
+  }
+}

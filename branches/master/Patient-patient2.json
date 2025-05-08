@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Patient",
+  "id" : "patient2",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient patient2</b></p><a name=\"patient2\"> </a><a name=\"hcpatient2\"> </a><a name=\"patient2-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/hl7-eu/base-r5/StructureDefinition-patient-eu-core.html\">Patient (EU core)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Emily Engine  Female, DoB: 1990-10-28 ( 12345)</p><hr/></div>"
+  },
+  "identifier" : [{
+    "value" : "12345"
+  }],
+  "name" : [{
+    "family" : "Engine",
+    "given" : ["Emily"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1990-10-28"
+}
