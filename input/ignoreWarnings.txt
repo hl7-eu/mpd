@@ -29,4 +29,5 @@ The link 'RatioRange.html' for "RatioRange" cannot be resolved
 The link 'Availability.html' for "Availability" cannot be resolved
 The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
 
-Unknown code 'N02AX51' in the CodeSystem
+Unknown code 'N02AX51' in the CodeSystem*
+The extension http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance is not allowed to be used at this point (allowed = e:Medication.ingredient.strength[x]; this element is [Medication.ingredient.strength, Ratio])
