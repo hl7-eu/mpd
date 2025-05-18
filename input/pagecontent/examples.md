@@ -5,8 +5,8 @@ All examples in the [**Artifacts**](artifacts.html) page are equipped with numbe
 There are multiple ways to express medication information on a prescription or dispense. Overview of different granularities of medication information can be found in the [Medication Concepts](medicationconcepts.html) page.
 
 #### Generic/virtual products
-- **1A** - generic product defined by attributes (powder in a vial)  
-- **1B** - generic product defined by a codesystem concept  
+- [**1A**](Medication-01A-Cefuroxime1500GenericExplicit.html) - generic product defined by attributes (powder in a vial)  
+- [**1B**](Medication-01B-Cefuroxime1500GenericConcept.html) - generic product defined by a codesystem concept  
 
 These two approaches are not mutually exclusive - it is perfectly acceptable to reference a codesystem concept or an identifier and fill in the attributes describing the product, as well.  
 
