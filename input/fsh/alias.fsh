@@ -70,6 +70,6 @@ Alias: $Device-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
 
-Alias: $Medication-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedication
-Alias: $MedicationRequest-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder
-Alias: $MedicationDispense-ihe = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispense
+Alias: $Medication-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedication
+Alias: $MedicationRequest-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder
+Alias: $MedicationDispense-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispense

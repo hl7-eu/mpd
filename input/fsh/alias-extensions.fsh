@@ -50,16 +50,16 @@ Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/e
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 Alias: $medicationrequest-prescribedquantity = http://hl7.eu/fhir/StructureDefinition/prescribed-quantity
 
-Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-device
-Alias: $ihe-ext-medication-strengthsubstance = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance
-Alias: $ihe-ext-medication-strengthtype = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthtype
-Alias: $ihe-ext-medication-classification = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-classification
-Alias: $ihe-ext-medication-productname = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-productname
-Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-sizeofitem
-Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-characteristic
-Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-unitofpresentation
-Alias: $ihe-ext-medicationrequest-prescribedquantity = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medicationrequest-prescribedQuantity
-Alias: $ihe-ext-medicationrequest-offlabeluse = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-offLabel
+Alias: $ihe-ext-medication-device = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-device
+Alias: $ihe-ext-medication-strengthsubstance = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance
+Alias: $ihe-ext-medication-strengthtype = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthtype
+Alias: $ihe-ext-medication-classification = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-classification
+Alias: $ihe-ext-medication-productname = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-productname
+Alias: $ihe-ext-medication-sizeofitem = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-sizeofitem
+Alias: $ihe-ext-medication-characteristic = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-characteristic
+Alias: $ihe-ext-medication-unitofpresentation = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-unitofpresentation
+Alias: $ihe-ext-medicationrequest-prescribedquantity = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medicationrequest-prescribedQuantity
+Alias: $ihe-ext-medicationrequest-offlabeluse = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-offLabel
 
 //R4 extensions for preadopted elements from R5
 
