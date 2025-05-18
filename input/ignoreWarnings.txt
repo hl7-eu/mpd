@@ -12,3 +12,21 @@ Reference must be to a ValueSet, but found a StructureDefinition instead
 
 URL value 'https://www.ravimiregister.ee' does not resolve
 URL value 'http://standardterms.edqm.eu' does not resolve
+
+The reference integer64 could not be resolved
+The reference CodeableReference could not be resolved
+The reference RatioRange could not be resolved
+The reference Availability could not be resolved
+The reference ExtendedContactDetail could not be resolved
+The link 'integer64.html' for "integer64" cannot be resolved
+The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+The link 'RatioRange.html' for "RatioRange" cannot be resolved
+The link 'Availability.html' for "Availability" cannot be resolved
+The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
+The link 'integer64.html' for "integer64" cannot be resolved
+The link 'CodeableReference.html' for "CodeableReference" cannot be resolved
+The link 'RatioRange.html' for "RatioRange" cannot be resolved
+The link 'Availability.html' for "Availability" cannot be resolved
+The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
+
+Unknown code 'N02AX51' in the CodeSystem
