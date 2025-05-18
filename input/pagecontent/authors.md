@@ -7,7 +7,7 @@ HL7 Europe's Medication Prescription and Dispense FHIR Implementation Guide is a
 - **MyHealth@EU solution provider** has provided their insight into EU crossborder data exchange. eP and eD are operational crossborder services in Europe, and even though they use HL7 CDA for the moment, the participation of the solution provider guarantees that the FHIR specification will be adoptable and adaptable for crossborder use case.  
 - **HL7 Pharmacy** provides guidance on how Medication module resources are meant to be used, but also processes the implementers' feedback from the group. The working group has filed multiple change requests to FHIR core specification. These change requests are mostly processed by HL7 Pharmacy.  
 - **HL7 Europe** provides a project-agnostic platform for collaborative work and carries out the technical and administrative tasks regarding HL7 Europe's IGs. The MPD IGs also have a dependency on HL7 Europe's Base Profiles IG, which is authored by another similar working group.  
-- **The most awesome community of volunteers**, including EHR vendors, data exchange regulators, implementers, and other enthusiastic people from all over Europe and even beyond.  
+- **Community of volunteers**, including EHR vendors, data exchange regulators, implementers, and other enthusiastic people from all over Europe and even beyond.  
 
 HL7 Europe / IHE MPD FHIR IG working group had over 100 participants from over 20 countries. While HL7 Europe's focus was on EHDS requirements, IHE worked on a global specification. This collaboration facilitated combining our knowledge, including countries outside EU, and saving participants' time. 
   

@@ -23,6 +23,9 @@ At the same time, eHealth services are motivated to use a similar data model in 
 
 All data elements in Medication profile are optional, allowing each implementation to implement the granularity needed for their use case. While national systems often rely on a common medicinal product dictionary and may just exchange medication codes, crossborder services expect the medication information to be described on attribute level. Also, many national specifications prefer to include medication attributes in addition to the code in order to simplify the process on the receiver side. 
 
+ISO IDPM identifiers and EMA PMS identifier can be used for identifying a medication for prescriptions or dispenses. PhPID is more likely to be used only for prescriptions. The prerequisite for using these identifiers is their availability in the implementing prescribing-dispensing ecosystem.  
+
+
 ### HL7 FHIR versions
 European countries who already have a FHIR implementation, are using mostly R4, but some are also using R5. European Medicines Agency and national medicines agencies use R5 for ISO IDMP compatible data. Many countries don't have any FHIR implementations yet.  
 

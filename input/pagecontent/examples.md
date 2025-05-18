@@ -5,20 +5,20 @@ All examples in the [**Artifacts**](artifacts.html) page are equipped with numbe
 There are multiple ways to express medication information on a prescription or dispense. Overview of different granularities of medication information can be found in the [Medication Concepts](medicationconcepts.html) page.
 
 #### Generic/virtual products
-- **1A** - generic product defined by attributes (powder in a vial)  
-- **1B** - generic product defined by a codesystem concept  
+- [**1A**](Medication-01A-Cefuroxime1500GenericExplicit.html) - generic product defined by attributes (powder in a vial)  
+- [**1B**](Medication-01B-Cefuroxime1500GenericConcept.html) - generic product defined by a codesystem concept  
 
 These two approaches are not mutually exclusive - it is perfectly acceptable to reference a codesystem concept or an identifier and fill in the attributes describing the product, as well.  
 
 #### Branded products
-- **1C** and **1C** - branded package (powder in a vial)  
-- **3B** - branded package (solution in ampoules, multiple active ingredients)  
-- **4A** - branded package (powder and solvent in vials, multiple devices)  
-- **5A** - branded package (drops, multiple active ingredients with strength given for 20 drops)  
+- [**1C**](Medication-01C-Cefuroxime1500Branded.html) and [**1D**](Medication-01D-Cefuroxime750Branded.html) - branded package (powder in a vial)  
+- [**3B**](Medication-03B-VitaminBComplexBranded.html) - branded package (solution in ampoules, multiple active ingredients)  
+- [**4A**](Medication-04A-FirmagonBranded.html) - branded package (powder and solvent in vials, multiple devices)  
+- [**5A**](Medication-05A-Tilidin-Branded.html) - branded package (drops, multiple active ingredients with strength given for 20 drops)  
 
 #### Combination packs (multiple products or devices in one packaging)
-- **2A** - combination pack including a 20g tube of creme (2A1) and 6 pessaries (2A2)  
-- **4A** - package includes multiple administration devices  
+- [**2A**](Medication-02A-ClotrimazoleCanifugCremolum.html) - combination pack including a 20g tube of creme (2A1) and 6 pessaries (2A2)  
+- [**4A**](Medication-04A-FirmagonBranded.html) - package includes multiple administration devices  
  
 
 ### Prescription examples
@@ -28,20 +28,20 @@ This implementation guide does not consider a prescription or dispense a HL7 FHI
 Be aware, that MedicationRequest may sometimes be used as a request NOT to give/prescribe a certain medication to a patient, and MedicationDispense can be used for declining a dispense. Do-not-perform-requests are out of scope for this implementation guide, declining a dispense is presented in the examples.  
 
 #### Single-line prescriptions
-- **400C** - single-line prescription, allowing multiple dispenses  
+- [**400C**](MedicationRequest-400C-prescription-cefuroxime-singleline.html) - single-line prescription, allowing multiple dispenses, uses 'actionable' tag.  
 
 #### Multi-line prescriptions
 
 Following examples are all formulated using a Bundle of type 'collection'. This is just for the sake of representing the example in this IG - using Bundle is not normative in this guide.
 
-- **100A** - prescription with RequestGroup/RequestOrchestration representing a 42-day-cycle where three treatments must start at the same time  
-- **300A** - prescription with RequestGroup/RequestOrchestration for twp products that may be dispensed as one combination product or two separate products  
-- **200A** - prescription where prescription items are only connected by the .groupIdentifier value  
+- [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup/RequestOrchestration representing a 42-day-cycle where three treatments must start at the same time  
+- [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup/RequestOrchestration for two products that may be dispensed as one combination product or two separate products  
+- [**200A**](Bundle-200A-multiitem-prescription-without-orchestration.html) - prescription where prescription items are only connected by the .groupIdentifier value  
 
 Please find more information about multi-item prescription in the [implementation notes](implementationnotes.html) page.  
 
 ### Dispense examples
 
-- **400D-1** and **400D-2** - two dispenses for the same prescription (400C)  
-- **300D** - one dispense fulfilling two requests. Please note that this may not be supported by all implementations  
-- **400E** - declining dispense  
+- [**400D-1**](MedicationDispense-400D-dispense-1.html) and [**400D-2**](MedicationDispense-400D-dispense-2.html) - two dispenses for the same prescription (400C)  
+- [**300D**](MedicationDispense-300D-dispense-for-2-requests.html) - one dispense fulfilling two requests. Please note that this may not be supported by all implementations.  
+- [**400E**](MedicationDispense-400E-refused-dispense.html) - declining a dispense  
