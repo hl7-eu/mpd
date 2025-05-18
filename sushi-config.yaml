@@ -24,9 +24,9 @@ dependencies:
    hl7.fhir.uv.ips: current
   # ihe.pharm.mpd: current
    hl7.fhir.extensions.r5: 4.0.1
-   hl7.fhir.eu.extensions: current
-   hl7.fhir.eu.base: current
-   ihe.pharm.mpd: current
+   hl7.fhir.eu.extensions: 0.1.1-ballot
+   hl7.fhir.eu.base: 0.1.0-ballot
+   ihe.pharm.mpd.r4: 1.0.0-comment
 #   hl7.fhir.eu.base.r5: current
 #   hl7.fhir.eu.extensions.r5: current  
 #   hl7.fhir.us.mcode:
