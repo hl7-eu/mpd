@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.org/fhir/sid/icd-10,2.1.1,retired,"2.16.840.1.113883.6.3",Icd10,ICD-10,"International Classification of Diseases revision 10 (ICD 10)","ValueSet/eHDSIIllnessandDisorder-8.1.0"

@@ -1,0 +1,24 @@
+Hl7EuMedPrescriptionDispenseIg
+=========================================
+
+Generic: line 0, col 0, Warning - The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole (INVALID)
+Generic: line 0, col 0, Error - There is no jira specification file defined with the expected name of FHIR-eu-r5.mpd in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication. (INFORMATIONAL)
+Generic: line 0, col 0, Warning - The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.r5.mpd.json: line 1, col 1247, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.r5.mpd.json: line 1, col 2584, Error - The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/') (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.r5.mpd.json: line 1, col 2584, Warning - The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/MedicationRequest-400C-prescription-cefuroxime-singleline.json: line 104, col 12, Info - This element does not match any known slice defined in the profile http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationRequest-eu-mpd|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/MedicationRequest-400C-prescription-cefuroxime-singleline.json: line 104, col 12, Info - This element does not match any known slice defined in the profile https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/StructureDefinition-Dispensation.json: line 1, col 25457, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-Medication-eu-mpd.json: line 1, col 50728, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-Medication-eu-mpd.json: line 0, col 0, Warning - The definition for the element 'Medication.ingredient.strength[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/medication-ingredientstrength' which is experimental, but this structure is not labeled as experimental (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationDispense-eu-mpd.json: line 1, col 18223, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationDispense-eu-mpd.json: line 1, col 63989, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json: line 1, col 56854, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json: line 0, col 0, Warning - The definition for the element 'MedicationRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicinalProduct.json: line 1, col 30240, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-Prescription.json: line 1, col 55205, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-Subject.json: line 1, col 17391, Info - Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (BUSINESSRULE)
+
+err = 2, warn = 5, info = 11
+IG Publisher Version: 1.8.26
