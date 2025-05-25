@@ -26,14 +26,14 @@ Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Brande
 * identifier.system = "http://example.org/NationalMedicationRegister" 
 * doseForm = $edqm-standardterms#50053000 "Powder for solution for injection or infusion"
 * extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
-* extension[productName].valueString = "Cefuroxime MIP 1500 mg, süste-/infusioonilahuse pulber"
+* extension[productName].valueString = "Cefuroxime MIP 1500 mg, powder for solution for injection or infusion"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
 * totalVolume = 10 $edqm-standardterms#15060000 "Vial"
-* ingredient.item.concept = $snomed#48753004 "Cefuroxime sodium"
+* ingredient.item.concept = $snomed#372833007 "Cefuroxime"
 * ingredient.isActive = true
 * ingredient.strengthRatio.numerator = 1500 $ucum#mg "milligram"
 * ingredient.strengthRatio.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strengthRatio.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
+//* ingredient.strengthRatio.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
 * marketingAuthorizationHolder.display = "MIP Pharma GmbH" //We did not profile MAH data, shall we try better?
 
 Instance: 01D-Cefuroxime750Branded
@@ -154,7 +154,7 @@ Description: "4A. Firmagon. Branded packaged product, defined by attributes, inc
 * ingredient.isActive = true
 * ingredient.strengthRatio.numerator = 120 $ucum#mg "milligram"
 * ingredient.strengthRatio.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strengthRatio.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
+// * ingredient.strengthRatio.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
 * marketingAuthorizationHolder.display = "Ferring Pharmaceuticals A/S"
  
 * extension[device].extension[device].valueCodeableConcept = $edqm-standardterms#30051000 "Pre-filled syringe" // solvent pre-filled syringe

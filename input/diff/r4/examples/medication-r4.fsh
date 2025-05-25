@@ -26,15 +26,15 @@ Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 via
 * identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#50053000 "Powder for solution for injection or infusion"
 * extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
-* extension[productName].valueString = "Cefuroxime MIP 1500 mg, süste-/infusioonilahuse pulber"
+* extension[productName].valueString = "Cefuroxime MIP 1500 mg, powder for solution for injection or infusion"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
 * amount.numerator = 10 $edqm-standardterms#15060000 "Vial"
 * amount.denominator.value = 1
-* ingredient.itemCodeableConcept = $snomed#48753004 "Cefuroxime sodium"
+* ingredient.itemCodeableConcept = $snomed#372833007 "Cefuroxime"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 1500 $ucum#mg "milligram"
 * ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
+//* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#372833007 "Cefuroxime" 
 * manufacturer.display = "MIP Pharma GmbH"
 
 Instance: 01D-Cefuroxime750Branded
@@ -46,7 +46,7 @@ Description: "1D. Cefuroxime 750mg powder for solution in a vial (5 vials per pa
 * identifier.system = "http://example.org/NationalMedicationRegister" 
 * form = $edqm-standardterms#11205000 "Powder for solution for injection"
 * extension[classification].valueCodeableConcept = $who-atc#J01DC02 "cefuroxime"
-* extension[productName].valueString = "Cefuroxime MIP 750 mg, süstelahuse pulber"
+* extension[productName].valueString = "Cefuroxime MIP 750 mg, powder for solution for injection"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15060000 "Vial"
 * amount.numerator = 5 $edqm-standardterms#15060000 "Vial"
 * amount.denominator.value = 1
@@ -161,7 +161,7 @@ Description: "4A. Firmagon. Branded packaged product, defined by attributes, inc
 * ingredient.isActive = true
 * ingredient.strength.numerator = 120 $ucum#mg "milligram"
 * ingredient.strength.denominator = 1 $edqm-standardterms#15060000 "Vial"
-* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
+//* ingredient.strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#441864003 "Degarelix"
 * manufacturer.display = "Ferring Pharmaceuticals A/S"
  
 * extension[device].extension[device].valueCodeableConcept = $edqm-standardterms#30051000 "Pre-filled syringe" // solvent pre-filled syringe
@@ -198,6 +198,6 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 * ingredient[=].strength.denominator = 20 $edqm-standardterms#15022000 "Drop"
 * ingredient[=].strength.extension[basisOfStrengthSubstance].valueCodeableConcept = $snomed#21518006 "Naloxone hydrochloride" 
 
-* manufacturer.display = "Hexal AG" //We did not profile MAH data, shall we try better?
+* manufacturer.display = "Hexal AG" //We have not profiled MAH data
 
 //Lösung (20 Tropfen = 4 Hübe) enthalten 51,45 mg Tilidinhydrochlorid-Hemihydrat (entsprechend 50 mg Tilidinhydrochlorid) und 4,40 mg Naloxonhydrochlorid-Dihydrat (entsprechend 4 mg Naloxonhydrochlorid).
