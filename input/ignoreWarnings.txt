@@ -7,12 +7,12 @@ The link 'StructureDefinition-LabelConcept.sch' for "Schematron" cannot be resol
 The link 'StructureDefinition-PersonName.sch' for "Schematron" cannot be resolved
 The link 'StructureDefinition-conformance-cen-ips-examples.html' for "Examples" cannot be resolved
 The link 'StructureDefinition-conformance-cen-ips-examples.html' for "Examples" cannot be resolved
-
 Reference must be to a ValueSet, but found a StructureDefinition instead
 
-URL value 'https://www.ravimiregister.ee' does not resolve
+# Links do not resolve
 URL value 'http://standardterms.edqm.eu' does not resolve
 
+# R4/R5 differences
 The reference integer64 could not be resolved
 The reference CodeableReference could not be resolved
 The reference RatioRange could not be resolved
@@ -29,5 +29,12 @@ The link 'RatioRange.html' for "RatioRange" cannot be resolved
 The link 'Availability.html' for "Availability" cannot be resolved
 The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
 
-Unknown code 'N02AX51' in the CodeSystem*
-The extension http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance is not allowed to be used at this point (allowed = e:Medication.ingredient.strength[x]; this element is [Medication.ingredient.strength, Ratio])
+# Version not defined
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'.%
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'%
+
+# ValueSet issues in core spec
+Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0%
+The definition for the element 'MedicationRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
+The definition for the element 'Medication.ingredient.strength[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/medication-ingredientstrength' which is experimental, but this structure is not labeled as experimental

@@ -1,4 +1,4 @@
-HL7 Europe's Medication Prescription and Dispense FHIR Implementation Guide is a result of cross-project, cross-SDO and volunteer community collaboration.  
+HL7 Europe's Medication Prescription and Dispense FHIR Implementation Guide is a result of cross-project, cross-SDO and volunteer community collaboration. The working group included over 100 participants from over 20 countries.    
 
 **Major contributors and their roles**:  
 - **IHE Pharmacy** started their MPD IG (FHIR R5) for IHE profile before HL7 Europe's initiative, and a lot of their work was used as the starting point for the European IG. As IHE IG has a global scope, HL7 Europe's MPD IG uses their extensions for R5.  
@@ -9,7 +9,6 @@ HL7 Europe's Medication Prescription and Dispense FHIR Implementation Guide is a
 - **HL7 Europe** provides a project-agnostic platform for collaborative work and carries out the technical and administrative tasks regarding HL7 Europe's IGs. The MPD IGs also have a dependency on HL7 Europe's Base Profiles IG, which is authored by another similar working group.  
 - **Community of volunteers**, including EHR vendors, data exchange regulators, implementers, and other enthusiastic people from all over Europe and even beyond.  
 
-HL7 Europe / IHE MPD FHIR IG working group had over 100 participants from over 20 countries. While HL7 Europe's focus was on EHDS requirements, IHE worked on a global specification. This collaboration facilitated combining our knowledge, including countries outside EU, and saving participants' time. 
   
    
    

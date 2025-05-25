@@ -6,7 +6,7 @@ Occasionally, a value set has been defined for R4 or R5 only, and the bindings i
 
 ### QA errors due to R4/R5 differences
 
-HL7 Europe's MPD R5 uses extensions from IHE MPD implementation guide. IHE MPD does not have an explicit R4 version of the guide but it has an automatically created R4 package of their R5 implementation guide. As this functionality is still new, many QA errors point to differences between R4 and R5 without causing a functional problem. As the tooling evolves, these errors should disappear. 
+HL7 Europe's MPD uses extensions from IHE MPD implementation guide. IHE MPD does not have an explicit R4 version of the guide but it has an automatically created R4 package of their R5 implementation guide. As this functionality is still new, some QA errors in R4 version of this guide point to differences between R4 and R5 without causing a functional problem. The root issue has been solved in the tooling as well as IHE MPD's newer builds, but as the dependency is to an older version of IHE MPD guide, some errors remain visible until the next version of IHE MPD. 
 
 ### Ambiguous mappings for some elements  
 #### Medicinal product name  

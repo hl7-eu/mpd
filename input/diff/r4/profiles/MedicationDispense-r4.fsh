@@ -10,4 +10,7 @@ Description: "This profile defines how to represent the supply and the associate
 * medicationCodeableConcept.extension contains $data-absent-reason named medication-absent-reason 0..1
 * medicationCodeableConcept.extension[medication-absent-reason] ^short = "Reason for not providing the medication."
 * medicationCodeableConcept.extension[medication-absent-reason] ^definition = "Reason for not providing the medication."
+
+* extension contains $medicationdispense-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
+* extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
 //* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)

@@ -6,6 +6,8 @@ Alias: $medicationrequest-intent = http://hl7.org/fhir/CodeSystem/medicationrequ
 Alias: $medication-definition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.definition
 Alias: $medication-totalVolume-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Medication.totalVolume
 Alias: $medicationdispense-notperformedreason-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.notPerformedReason
+Alias: $medicationrequest-rendereddosageinstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationRequest.renderedDosageInstruction
+Alias: $medicationdispense-rendereddosageinstruction-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationDispense.renderedDosageInstruction
 
 //------- Code Systems
 Alias: $loinc = http://loinc.org

@@ -21,3 +21,6 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 * extension contains $medicationRequest-effectiveDosePeriod-r5 named effectiveDosePeriod 0..1
 * extension[effectiveDosePeriod] ^short = "Period over which the medication should be taken."
 * extension[effectiveDosePeriod] ^definition = "Period over which the medication should be taken. Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions."
+
+* extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
+* extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
