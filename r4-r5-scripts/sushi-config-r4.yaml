@@ -129,7 +129,7 @@ menu:
     Mapping to Profiles: profiles.html
     Examples: examples.html
     Implementation Notes: implementationnotes.html
-    IHE MPD IG: https://build.fhir.org/ig/IHE/pharm-mpd/   
+    IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/   
   About:
     Authors and Contributors: authors.html
     Known Issues: knownissues.html
@@ -138,7 +138,7 @@ menu:
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
-  R5 IG: https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/
+  R5 IG: https://hl7.eu/fhir/mpd-r5
 
   
 
