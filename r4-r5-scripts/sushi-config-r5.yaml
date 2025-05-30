@@ -1,13 +1,13 @@
-id: hl7.fhir.eu.r5.mpd
-canonical: http://hl7.eu/fhir/r5/mpd # check if this may create issues
+id: hl7.fhir.eu.mpd-r5
+canonical: http://hl7.eu/fhir/mpd-r5 # check if this may create issues
 name:  Hl7EuMedPrescriptionDispenseIg
 title: HL7 Europe Medication Prescription and Dispense
 description: This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.1.0-ballot
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
