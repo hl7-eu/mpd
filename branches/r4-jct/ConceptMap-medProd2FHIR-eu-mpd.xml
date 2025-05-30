@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="medProd2FHIR-eu-mpd"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap medProd2FHIR-eu-mpd</b></p><a name="medProd2FHIR-eu-mpd"> </a><a name="hcmedProd2FHIR-eu-mpd"> </a><a name="medProd2FHIR-eu-mpd-en-US"> </a><p>Mapping from (not specified) to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Prescription.html">A - Prescription</a> to <a href="StructureDefinition-Medication-eu-mpd.html">Medication: MPD</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.extension[productName]</td><td/></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.code.text</td><td/></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.code.coding.display</td><td/></tr><tr><td>MedicinalProduct.mpid (A.1.4.2 Identifier of the medicinal product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.identifier</td><td/></tr><tr><td>MedicinalProduct.phpid (A.1.4.2.1 Identifier(s) of the pharmaceutical product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.extension[classification]</td><td/></tr><tr><td>MedicinalProduct.phpid (A.1.4.2.1 Identifier(s) of the pharmaceutical product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.code.coding</td><td/></tr><tr><td>MedicinalProduct.pcid (A.1.4.2.2 Identifier(s) of the packaged medicinal product)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.identifier</td><td/></tr><tr><td>MedicinalProduct.marketingAuthHolder (A.1.4.3 Marketing authorisation holder)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.manufacturer</td><td/></tr><tr><td>MedicinalProduct.activeSubstance (A.1.4.4 Active substance(s))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.ingredient.item</td><td>Where isActive = true.</td></tr><tr><td>MedicinalProduct.strength (A.1.4.4.1 Strength of the active substance(s))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.ingredient.strength</td><td>When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension.</td></tr><tr><td>MedicinalProduct.classification (A.1.4.5 Product classification)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.extension[classification]</td><td/></tr><tr><td>MedicinalProduct.doseForm (A.1.4.6 Pharmaceutical dose form(s))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.form</td><td/></tr><tr><td>MedicinalProduct.unitOfPresentation (A.1.4.7 Unit of presentation(s))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.extension[unitOfPresentation]</td><td/></tr><tr><td>MedicinalProduct.unitOfPresentation (A.1.4.7 Unit of presentation(s))</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>Medication.ingredient.strength.denominator.code</td><td>if it is the presentation strength</td></tr><tr><td>MedicinalProduct.packageType (A.1.4.8 Package type)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.extension[packageType]</td><td/></tr><tr><td>MedicinalProduct.packageSize (A.1.4.9 Pack size)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#relatedto" title="relatedto">is related to</a></td><td>Medication.amount</td><td>See also. Medication.extension[sizeOfItem]</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/mpd/ConceptMap/medProd2FHIR-eu-mpd"/>
+  <version value="0.1.0"/>
+  <name value="MedProd2Fhir"/>
+  <title value="eHN Medicinal Product to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-03-26T17:00:15+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="eHN Medicinal Product Model to this guide Map"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how the Medicinal Product data set defined by the EU eHN guidelines is mapped into this guide"/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <group>
+    <source value="http://hl7.eu/fhir/mpd/StructureDefinition/Prescription"/>
+    <target value="http://hl7.eu/fhir/mpd/StructureDefinition/Medication-eu-mpd"/>
+    <element>
+      <code value="MedicinalProduct.name"/>
+      <display value="A.1.4.1 Name of the medicinal product"/>
+      <target>
+        <code value="Medication.extension[productName]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.name"/>
+      <display value="A.1.4.1 Name of the medicinal product"/>
+      <target>
+        <code value="Medication.code.text"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.name"/>
+      <display value="A.1.4.1 Name of the medicinal product"/>
+      <target>
+        <code value="Medication.code.coding.display"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.mpid"/>
+      <display value="A.1.4.2 Identifier of the medicinal product"/>
+      <target>
+        <code value="Medication.identifier"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.phpid"/>
+      <display value="A.1.4.2.1 Identifier(s) of the pharmaceutical product"/>
+      <target>
+        <code value="Medication.extension[classification]"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.phpid"/>
+      <display value="A.1.4.2.1 Identifier(s) of the pharmaceutical product"/>
+      <target>
+        <code value="Medication.code.coding"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.pcid"/>
+      <display value="A.1.4.2.2 Identifier(s) of the packaged medicinal product"/>
+      <target>
+        <code value="Medication.identifier"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.marketingAuthHolder"/>
+      <display value="A.1.4.3 Marketing authorisation holder"/>
+      <target>
+        <code value="Medication.manufacturer"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.activeSubstance"/>
+      <display value="A.1.4.4 Active substance(s)"/>
+      <target>
+        <code value="Medication.ingredient.item"/>
+        <equivalence value="equivalent"/>
+        <comment value="Where isActive = true."/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.strength"/>
+      <display value="A.1.4.4.1 Strength of the active substance(s)"/>
+      <target>
+        <code value="Medication.ingredient.strength"/>
+        <equivalence value="equivalent"/>
+        <comment value="When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension."/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.classification"/>
+      <display value="A.1.4.5 Product classification"/>
+      <target>
+        <code value="Medication.extension[classification]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.doseForm"/>
+      <display value="A.1.4.6 Pharmaceutical dose form(s)"/>
+      <target>
+        <code value="Medication.form"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.unitOfPresentation"/>
+      <display value="A.1.4.7 Unit of presentation(s)"/>
+      <target>
+        <code value="Medication.extension[unitOfPresentation]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.unitOfPresentation"/>
+      <display value="A.1.4.7 Unit of presentation(s)"/>
+      <target>
+        <code value="Medication.ingredient.strength.denominator.code"/>
+        <equivalence value="equivalent"/>
+        <comment value="if it is the presentation strength"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.packageType"/>
+      <display value="A.1.4.8 Package type"/>
+      <target>
+        <code value="Medication.extension[packageType]"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="MedicinalProduct.packageSize"/>
+      <display value="A.1.4.9 Pack size"/>
+      <target>
+        <code value="Medication.amount"/>
+        <equivalence value="relatedto"/>
+        <comment value="See also. Medication.extension[sizeOfItem]"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
