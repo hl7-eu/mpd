@@ -38,3 +38,16 @@ There are multiple different potential matches for the url 'http://terminology.h
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0%
 The definition for the element 'MedicationRequest.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'Medication.ingredient.strength[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/medication-ingredientstrength' which is experimental, but this structure is not labeled as experimental
+
+
+# known non-matching slice
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/mpd/StructureDefinition/MedicationRequest-eu-mpd%
+
+# Confirmed SNOMED CT edition 
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+
+# See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
+The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource
+The canonical URL https://profiles.ihe.net/PHARM/MPD doesn't point to an actual ImplementationGuide resource
+The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
