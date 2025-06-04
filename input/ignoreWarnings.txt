@@ -30,9 +30,10 @@ The link 'Availability.html' for "Availability" cannot be resolved
 The link 'ExtendedContactDetail.html' for "ExtendedContactDetail" cannot be resolved
 
 # Version not defined
-There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.%
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'.%
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType'%
 
 # ValueSet issues in core spec
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0%
@@ -51,3 +52,13 @@ The URL should refer directly to the ImplementationGuide resource (e.g. include 
 The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource
 The canonical URL https://profiles.ihe.net/PHARM/MPD doesn't point to an actual ImplementationGuide resource
 The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+
+# not used key for Additioanl Bindings
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+
+# Deprecated extension
+
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# not embedded HTML tag
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
