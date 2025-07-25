@@ -1,0 +1,25 @@
+Hl7EuMedPrescriptionDispenseIg
+=========================================
+
+/work/fsh-generated/resources/Bundle-300A-multiitem-prescription-with-orchestration.json: line 292, col 53, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Bundle-300A-multiitem-prescription-with-orchestration.json: line 321, col 57, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Bundle-300A-multiitem-prescription-with-orchestration.json: line 375, col 53, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd.json: line 1, col 2205, Error - The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/') (BUSINESSRULE)
+/work/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd.json: line 1, col 2484, Error - The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/') (BUSINESSRULE)
+/work/fsh-generated/resources/Medication-01A-Cefuroxime1500GenericExplicit.json: line 54, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-01C-Cefuroxime1500Branded.json: line 58, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-01C-Cefuroxime1500Branded.json: line 87, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-01D-Cefuroxime750Branded.json: line 100, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-01D-Cefuroxime750Branded.json: line 65, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-02A1-CanifugCremolumCreamItem.json: line 45, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-02A2-CanifugCremolumPessaryItem.json: line 36, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-02A2-CanifugCremolumPessaryItem.json: line 65, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-03B-VitaminBComplexBranded.json: line 67, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-04A-FirmagonBranded.json: line 113, col 47, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-04A-FirmagonBranded.json: line 142, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-05A-Tilidin-Branded.json: line 65, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/Medication-05A-Tilidin-Branded.json: line 105, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+/work/fsh-generated/resources/MedicationRequest-400C-prescription-cefuroxime-singleline.json: line 22, col 51, Warning - No definition could be found for URL value 'http://standardterms.edqm.eu' (INVALID)
+
+err = 2, warn = 17, info = 0
+IG Publisher Version: 2.0.11

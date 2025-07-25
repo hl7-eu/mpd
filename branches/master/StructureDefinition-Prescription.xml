@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Prescription"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition Prescription</b></p><a name="Prescription"> </a><a name="hcPrescription"> </a><a name="Prescription-en-US"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription" title="Prescription. Several Sections of the eHN guideline.">Prescription</a><a name="Prescription"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A - Prescription</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.patient" title="Patient administrative data">patient</a><a name="Prescription.patient"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-Subject.html">Subject</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1 Patient administrative data<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.authentication" title="Authentication of the prescription">authentication</a><a name="Prescription.authentication"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.2 Authentication of the prescription<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.authentication.identifier" title="A unique string generated by an EPS (Electronic Prescribing System) to 
+uniquely identify a prescription; this unique code is needed for traceability. 
+It might be used to register whether a prescription, and/or the maximum 
+number of repeats, has already been dispensed. The identifier can consist of 
+a root and an extension [ISO 21090:2011].">identifier</a><a name="Prescription.authentication.identifier"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.2.1 Identifier of the Prescription<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.authentication.issueDate" title="The date and optionally the time the prescription was issued.">issueDate</a><a name="Prescription.authentication.issueDate"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.2.2 Issue date<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber" title="Identification of the prescribing health professional">prescriber</a><a name="Prescription.prescriber"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3 Identification of the prescribing health professional</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.familyName" title="The family name/surname/last name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies.">familyName</a><a name="Prescription.prescriber.familyName"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.1 Familyname<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.givenName" title="The given name/ first name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies.">givenName</a><a name="Prescription.prescriber.givenName"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.2 Given name<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.qualification" title="The professional title of the prescribing health professional, which may be used to prove the authority of the prescriber.">qualification</a><a name="Prescription.prescriber.qualification"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.3 Professional qualifications<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.contact" title="Details for direct contact could be an email address and/or phone/fax number of the prescriber in order for the dispenser and/or patient to contact  the prescriber. This might be necessary if problems arise with dosage, allergies, reimbursement etc.">contact</a><a name="Prescription.prescriber.contact"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.4 Details for direct contact<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.workAddress" title="This is the address of the hospital or the practice, etc. where the health professional normally works, meets patients and prescribes medication. Minimally, the country should be specified.">workAddress</a><a name="Prescription.prescriber.workAddress"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.5 Work address<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.signature" title="Digital signature or token as proof of the authenticity of the prescriber.">signature</a><a name="Prescription.prescriber.signature"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.6 Signature<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.prescriber.identifier" title="A unique number or code issued for the purpose of identifying a health care provider [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the prescriber and to check whether a medicinal product was prescribed by the right person according to the law of the prescribing country.">identifier</a><a name="Prescription.prescriber.identifier"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.3.7  Health care provider identifier<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.product" title="Identification of the prescribed product">product</a><a name="Prescription.product"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-MedicinalProduct.html">MedicinalProduct</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A1.4 Identification of the prescribed product</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details" title="Prescription information">details</a><a name="Prescription.details"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5 Prescription information</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.quantity" title="Total quantity or volume of the medicinal product that is prescribed to the specific patient. It can be provided as number of packages, given that the pack size is sufficiently described, or it can be the overall amount in appropriate units of measure (UCUM) or units of presentation (EDQM) (ml, g, tablets, vials).
+Depending on national legislation, this quantity may or may not be dispensed in one dispensation.">quantity</a><a name="Prescription.details.quantity"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.2 Quantity of prescribed product<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">UCUM, EDQM</span><br class="binding"/><br class="binding"/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.doseRegimen" title="The regimen governing the dose quantity per single administration, the dose frequency, and/or speed of administration (in the event of intravenous administration).
+Note: this information may be used by the dispenser to calculate the quantity to be dispensed.">doseRegimen</a><a name="Prescription.details.doseRegimen"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.3 Dose regimen<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.doseRegimen.unitsPerIntake" title="The number of units per intake that the patient is taking. 
+Example: 1 tablet">unitsPerIntake</a><a name="Prescription.details.doseRegimen.unitsPerIntake"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.3.1 Number of units per intake<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">UCUM, EDQM</span><br class="binding"/><br class="binding"/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.doseRegimen.frequencyOfIntakes" title="Frequency of intakes per hour/day/week/month. 
+Example: every 24 hours. Preferred codesystems UCUM, HL7 TimingEvent">frequencyOfIntakes</a><a name="Prescription.details.doseRegimen.frequencyOfIntakes"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.3.2 Frequency of intakes<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.route" title="The route of administration as prescribed. 
+Example: oral intake">route</a><a name="Prescription.details.route"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.4 Route of administration<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">EDQM</span><br class="binding"/><br class="binding"/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.duration" title="The duration of the treatment as indicated by the Prescriber. Example: 14 days. 
+Can be left blank for long-term therapies.">duration</a><a name="Prescription.details.duration"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.5 Duration of treatment<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">UCUM</span><br class="binding"/><br class="binding"/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.startDate" title="The time and date on which it is agreed that therapy will start. 
+ - Preferred system(s): ISO 8601">startDate</a><a name="Prescription.details.startDate"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.6 Starting date of therapy<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.directionsOfUse" title="Information about the directions for use of the prescribed medicinal product (such as ?with food? or ?before a meal?) and any cautionary advice for correct use of the prescribed medicinal product by the patient.">directionsOfUse</a><a name="Prescription.details.directionsOfUse"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.7 Directions for use<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">HL7 TimingEvent</span><br class="binding"/><br class="binding"/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.expiryDate" title="This might be dependent on local or national policy or legislation, in accordance with the treatment plan or because the therapeutic need for the prescribed medicine has expired.">expiryDate</a><a name="Prescription.details.expiryDate"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.8 Prescription expiry date<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.repeats" title="In some countries, when medicinal products are dispensed for the first time, 
+the patient may only receive medication for a short period of time. When a 
+patient starts taking medication for a chronic illness, the prescriber can issue a prescription for a longer period that is now separated by repeats. In addition, the maximum quantity (A.1.4.3) of the prescribed product that may be dispensed in one dispensation may be stated here.
+Decision on dispensability is made in the country of prescription.">repeats</a><a name="Prescription.details.repeats"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.9 Repeats<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.reason" title="The reason why the medicine is being prescribed, including the option to mention that the medicinal product is being prescribed for ?off label? use. 
+The reason for the prescription gives the dispenser the opportunity to review the prescription for medication safety issues.
+Note: in some countries it is obligatory to state the reason for prescription on the prescription itself for some or all medicinal products.">reason</a><a name="Prescription.details.reason"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.10 Reason for prescription<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Prescription-definitions.html#Prescription.details.substitution" title="Substitution handling can be recorded to indicate whether and to what extent substitution is allowed by the prescriber.">substitution</a><a name="Prescription.details.substitution"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.5.11 Substitution<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/mpd/StructureDefinition/Prescription"/>
+  <version value="0.1.0-ballot"/>
+  <name value="EprescriptionEhn"/>
+  <title value="A - Prescription"/>
+  <status value="draft"/>
+  <date value="2025-05-30T09:37:37+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Prescription. Several Sections of the eHN guideline."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://hl7.eu/fhir/mpd/StructureDefinition/Prescription"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="Prescription">
+      <path value="Prescription"/>
+      <short value="A - Prescription"/>
+      <definition value="Prescription. Several Sections of the eHN guideline."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="Prescription.patient">
+      <path value="Prescription.patient"/>
+      <short value="A.1.1 Patient administrative data"/>
+      <definition value="Patient administrative data"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.patient"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://hl7.eu/fhir/mpd/StructureDefinition/Subject"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication">
+      <path value="Prescription.authentication"/>
+      <short value="A.1.2 Authentication of the prescription"/>
+      <definition value="Authentication of the prescription"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.authentication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication.identifier">
+      <path value="Prescription.authentication.identifier"/>
+      <short value="A.1.2.1 Identifier of the Prescription"/>
+      <definition value="A unique string generated by an EPS (Electronic Prescribing System) to &#xA;uniquely identify a prescription; this unique code is needed for traceability. &#xA;It might be used to register whether a prescription, and/or the maximum &#xA;number of repeats, has already been dispensed. The identifier can consist of &#xA;a root and an extension [ISO 21090:2011]."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.authentication.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication.issueDate">
+      <path value="Prescription.authentication.issueDate"/>
+      <short value="A.1.2.2 Issue date"/>
+      <definition value="The date and optionally the time the prescription was issued."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.authentication.issueDate"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber">
+      <path value="Prescription.prescriber"/>
+      <short value="A.1.3 Identification of the prescribing health professional"/>
+      <definition value="Identification of the prescribing health professional"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Prescription.prescriber"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.familyName">
+      <path value="Prescription.prescriber.familyName"/>
+      <short value="A.1.3.1 Familyname"/>
+      <definition value="The family name/surname/last name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.familyName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.givenName">
+      <path value="Prescription.prescriber.givenName"/>
+      <short value="A.1.3.2 Given name"/>
+      <definition value="The given name/ first name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.givenName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.qualification">
+      <path value="Prescription.prescriber.qualification"/>
+      <short value="A.1.3.3 Professional qualifications"/>
+      <definition value="The professional title of the prescribing health professional, which may be used to prove the authority of the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.qualification"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.contact">
+      <path value="Prescription.prescriber.contact"/>
+      <short value="A.1.3.4 Details for direct contact"/>
+      <definition value="Details for direct contact could be an email address and/or phone/fax number of the prescriber in order for the dispenser and/or patient to contact  the prescriber. This might be necessary if problems arise with dosage, allergies, reimbursement etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.contact"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.workAddress">
+      <path value="Prescription.prescriber.workAddress"/>
+      <short value="A.1.3.5 Work address"/>
+      <definition value="This is the address of the hospital or the practice, etc. where the health professional normally works, meets patients and prescribes medication. Minimally, the country should be specified."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.workAddress"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Address"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.signature">
+      <path value="Prescription.prescriber.signature"/>
+      <short value="A.1.3.6 Signature"/>
+      <definition value="Digital signature or token as proof of the authenticity of the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.signature"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Signature"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.identifier">
+      <path value="Prescription.prescriber.identifier"/>
+      <short value="A.1.3.7  Health care provider identifier"/>
+      <definition value="A unique number or code issued for the purpose of identifying a health care provider [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the prescriber and to check whether a medicinal product was prescribed by the right person according to the law of the prescribing country."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.prescriber.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Prescription.product">
+      <path value="Prescription.product"/>
+      <short value="A1.4 Identification of the prescribed product"/>
+      <definition value="Identification of the prescribed product"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Prescription.product"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct"/>
+      </type>
+    </element>
+    <element id="Prescription.details">
+      <path value="Prescription.details"/>
+      <short value="A.1.5 Prescription information"/>
+      <definition value="Prescription information"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Prescription.details"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.quantity">
+      <path value="Prescription.details.quantity"/>
+      <short value="A.1.5.2 Quantity of prescribed product"/>
+      <definition value="Total quantity or volume of the medicinal product that is prescribed to the specific patient. It can be provided as number of packages, given that the pack size is sufficiently described, or it can be the overall amount in appropriate units of measure (UCUM) or units of presentation (EDQM) (ml, g, tablets, vials).&#xA;Depending on national legislation, this quantity may or may not be dispensed in one dispensation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.quantity"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.doseRegimen">
+      <path value="Prescription.details.doseRegimen"/>
+      <short value="A.1.5.3 Dose regimen"/>
+      <definition value="The regimen governing the dose quantity per single administration, the dose frequency, and/or speed of administration (in the event of intravenous administration).&#xA;Note: this information may be used by the dispenser to calculate the quantity to be dispensed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.doseRegimen"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.doseRegimen.unitsPerIntake">
+      <path value="Prescription.details.doseRegimen.unitsPerIntake"/>
+      <short value="A.1.5.3.1 Number of units per intake"/>
+      <definition value="The number of units per intake that the patient is taking. &#xA;Example: 1 tablet"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.doseRegimen.unitsPerIntake"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.doseRegimen.frequencyOfIntakes">
+      <path value="Prescription.details.doseRegimen.frequencyOfIntakes"/>
+      <short value="A.1.5.3.2 Frequency of intakes"/>
+      <definition value="Frequency of intakes per hour/day/week/month. &#xA;Example: every 24 hours. Preferred codesystems UCUM, HL7 TimingEvent"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.doseRegimen.frequencyOfIntakes"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.route">
+      <path value="Prescription.details.route"/>
+      <short value="A.1.5.4 Route of administration"/>
+      <definition value="The route of administration as prescribed. &#xA;Example: oral intake"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.route"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.duration">
+      <path value="Prescription.details.duration"/>
+      <short value="A.1.5.5 Duration of treatment"/>
+      <definition value="The duration of the treatment as indicated by the Prescriber. Example: 14 days. &#xA;Can be left blank for long-term therapies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.duration"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.startDate">
+      <path value="Prescription.details.startDate"/>
+      <short value="A.1.5.6 Starting date of therapy"/>
+      <definition value="The time and date on which it is agreed that therapy will start. &#xA; - Preferred system(s): ISO 8601"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.startDate"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.details.directionsOfUse">
+      <path value="Prescription.details.directionsOfUse"/>
+      <short value="A.1.5.7 Directions for use"/>
+      <definition value="Information about the directions for use of the prescribed medicinal product (such as ?with food? or ?before a meal?) and any cautionary advice for correct use of the prescribed medicinal product by the patient."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.directionsOfUse"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="HL7 TimingEvent"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.expiryDate">
+      <path value="Prescription.details.expiryDate"/>
+      <short value="A.1.5.8 Prescription expiry date"/>
+      <definition value="This might be dependent on local or national policy or legislation, in accordance with the treatment plan or because the therapeutic need for the prescribed medicine has expired."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.expiryDate"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.details.repeats">
+      <path value="Prescription.details.repeats"/>
+      <short value="A.1.5.9 Repeats"/>
+      <definition value="In some countries, when medicinal products are dispensed for the first time, &#xA;the patient may only receive medication for a short period of time. When a &#xA;patient starts taking medication for a chronic illness, the prescriber can issue a prescription for a longer period that is now separated by repeats. In addition, the maximum quantity (A.1.4.3) of the prescribed product that may be dispensed in one dispensation may be stated here.&#xA;Decision on dispensability is made in the country of prescription."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.repeats"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element id="Prescription.details.reason">
+      <path value="Prescription.details.reason"/>
+      <short value="A.1.5.10 Reason for prescription"/>
+      <definition value="The reason why the medicine is being prescribed, including the option to mention that the medicinal product is being prescribed for ?off label? use. &#xA;The reason for the prescription gives the dispenser the opportunity to review the prescription for medication safety issues.&#xA;Note: in some countries it is obligatory to state the reason for prescription on the prescription itself for some or all medicinal products."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.reason"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Prescription.details.substitution">
+      <path value="Prescription.details.substitution"/>
+      <short value="A.1.5.11 Substitution"/>
+      <definition value="Substitution handling can be recorded to indicate whether and to what extent substitution is allowed by the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Prescription.details.substitution"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Prescription">
+      <path value="Prescription"/>
+      <short value="A - Prescription"/>
+      <definition value="Prescription. Several Sections of the eHN guideline."/>
+    </element>
+    <element id="Prescription.patient">
+      <path value="Prescription.patient"/>
+      <short value="A.1.1 Patient administrative data"/>
+      <definition value="Patient administrative data"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="http://hl7.eu/fhir/mpd/StructureDefinition/Subject"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication">
+      <path value="Prescription.authentication"/>
+      <short value="A.1.2 Authentication of the prescription"/>
+      <definition value="Authentication of the prescription"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication.identifier">
+      <path value="Prescription.authentication.identifier"/>
+      <short value="A.1.2.1 Identifier of the Prescription"/>
+      <definition value="A unique string generated by an EPS (Electronic Prescribing System) to &#xA;uniquely identify a prescription; this unique code is needed for traceability. &#xA;It might be used to register whether a prescription, and/or the maximum &#xA;number of repeats, has already been dispensed. The identifier can consist of &#xA;a root and an extension [ISO 21090:2011]."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Prescription.authentication.issueDate">
+      <path value="Prescription.authentication.issueDate"/>
+      <short value="A.1.2.2 Issue date"/>
+      <definition value="The date and optionally the time the prescription was issued."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber">
+      <path value="Prescription.prescriber"/>
+      <short value="A.1.3 Identification of the prescribing health professional"/>
+      <definition value="Identification of the prescribing health professional"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.familyName">
+      <path value="Prescription.prescriber.familyName"/>
+      <short value="A.1.3.1 Familyname"/>
+      <definition value="The family name/surname/last name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.givenName">
+      <path value="Prescription.prescriber.givenName"/>
+      <short value="A.1.3.2 Given name"/>
+      <definition value="The given name/ first name of the prescriber. This enables the prescriber to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.qualification">
+      <path value="Prescription.prescriber.qualification"/>
+      <short value="A.1.3.3 Professional qualifications"/>
+      <definition value="The professional title of the prescribing health professional, which may be used to prove the authority of the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.contact">
+      <path value="Prescription.prescriber.contact"/>
+      <short value="A.1.3.4 Details for direct contact"/>
+      <definition value="Details for direct contact could be an email address and/or phone/fax number of the prescriber in order for the dispenser and/or patient to contact  the prescriber. This might be necessary if problems arise with dosage, allergies, reimbursement etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.workAddress">
+      <path value="Prescription.prescriber.workAddress"/>
+      <short value="A.1.3.5 Work address"/>
+      <definition value="This is the address of the hospital or the practice, etc. where the health professional normally works, meets patients and prescribes medication. Minimally, the country should be specified."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Address"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.signature">
+      <path value="Prescription.prescriber.signature"/>
+      <short value="A.1.3.6 Signature"/>
+      <definition value="Digital signature or token as proof of the authenticity of the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Signature"/>
+      </type>
+    </element>
+    <element id="Prescription.prescriber.identifier">
+      <path value="Prescription.prescriber.identifier"/>
+      <short value="A.1.3.7  Health care provider identifier"/>
+      <definition value="A unique number or code issued for the purpose of identifying a health care provider [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the prescriber and to check whether a medicinal product was prescribed by the right person according to the law of the prescribing country."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Prescription.product">
+      <path value="Prescription.product"/>
+      <short value="A1.4 Identification of the prescribed product"/>
+      <definition value="Identification of the prescribed product"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct"/>
+      </type>
+    </element>
+    <element id="Prescription.details">
+      <path value="Prescription.details"/>
+      <short value="A.1.5 Prescription information"/>
+      <definition value="Prescription information"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.quantity">
+      <path value="Prescription.details.quantity"/>
+      <short value="A.1.5.2 Quantity of prescribed product"/>
+      <definition value="Total quantity or volume of the medicinal product that is prescribed to the specific patient. It can be provided as number of packages, given that the pack size is sufficiently described, or it can be the overall amount in appropriate units of measure (UCUM) or units of presentation (EDQM) (ml, g, tablets, vials).&#xA;Depending on national legislation, this quantity may or may not be dispensed in one dispensation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.doseRegimen">
+      <path value="Prescription.details.doseRegimen"/>
+      <short value="A.1.5.3 Dose regimen"/>
+      <definition value="The regimen governing the dose quantity per single administration, the dose frequency, and/or speed of administration (in the event of intravenous administration).&#xA;Note: this information may be used by the dispenser to calculate the quantity to be dispensed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.doseRegimen.unitsPerIntake">
+      <path value="Prescription.details.doseRegimen.unitsPerIntake"/>
+      <short value="A.1.5.3.1 Number of units per intake"/>
+      <definition value="The number of units per intake that the patient is taking. &#xA;Example: 1 tablet"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.doseRegimen.frequencyOfIntakes">
+      <path value="Prescription.details.doseRegimen.frequencyOfIntakes"/>
+      <short value="A.1.5.3.2 Frequency of intakes"/>
+      <definition value="Frequency of intakes per hour/day/week/month. &#xA;Example: every 24 hours. Preferred codesystems UCUM, HL7 TimingEvent"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Prescription.details.route">
+      <path value="Prescription.details.route"/>
+      <short value="A.1.5.4 Route of administration"/>
+      <definition value="The route of administration as prescribed. &#xA;Example: oral intake"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.duration">
+      <path value="Prescription.details.duration"/>
+      <short value="A.1.5.5 Duration of treatment"/>
+      <definition value="The duration of the treatment as indicated by the Prescriber. Example: 14 days. &#xA;Can be left blank for long-term therapies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.startDate">
+      <path value="Prescription.details.startDate"/>
+      <short value="A.1.5.6 Starting date of therapy"/>
+      <definition value="The time and date on which it is agreed that therapy will start. &#xA; - Preferred system(s): ISO 8601"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.details.directionsOfUse">
+      <path value="Prescription.details.directionsOfUse"/>
+      <short value="A.1.5.7 Directions for use"/>
+      <definition value="Information about the directions for use of the prescribed medicinal product (such as ?with food? or ?before a meal?) and any cautionary advice for correct use of the prescribed medicinal product by the patient."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="HL7 TimingEvent"/>
+      </binding>
+    </element>
+    <element id="Prescription.details.expiryDate">
+      <path value="Prescription.details.expiryDate"/>
+      <short value="A.1.5.8 Prescription expiry date"/>
+      <definition value="This might be dependent on local or national policy or legislation, in accordance with the treatment plan or because the therapeutic need for the prescribed medicine has expired."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Prescription.details.repeats">
+      <path value="Prescription.details.repeats"/>
+      <short value="A.1.5.9 Repeats"/>
+      <definition value="In some countries, when medicinal products are dispensed for the first time, &#xA;the patient may only receive medication for a short period of time. When a &#xA;patient starts taking medication for a chronic illness, the prescriber can issue a prescription for a longer period that is now separated by repeats. In addition, the maximum quantity (A.1.4.3) of the prescribed product that may be dispensed in one dispensation may be stated here.&#xA;Decision on dispensability is made in the country of prescription."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element id="Prescription.details.reason">
+      <path value="Prescription.details.reason"/>
+      <short value="A.1.5.10 Reason for prescription"/>
+      <definition value="The reason why the medicine is being prescribed, including the option to mention that the medicinal product is being prescribed for ?off label? use. &#xA;The reason for the prescription gives the dispenser the opportunity to review the prescription for medication safety issues.&#xA;Note: in some countries it is obligatory to state the reason for prescription on the prescription itself for some or all medicinal products."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+    <element id="Prescription.details.substitution">
+      <path value="Prescription.details.substitution"/>
+      <short value="A.1.5.11 Substitution"/>
+      <definition value="Substitution handling can be recorded to indicate whether and to what extent substitution is allowed by the prescriber."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
