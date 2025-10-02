@@ -60,7 +60,7 @@ Description: "Device, typically an administration device, included in the medici
 * extension[device].value[x] only CodeableConcept or Reference(Device or DeviceDefinition)
 * extension[device] ^short = "Coded or referenced device"
 * extension[quantity].value[x] only Quantity
-* extension[quantity] ^short = "Number of defined devices in te package"
+* extension[quantity] ^short = "Number of defined devices in the package"
 
 Extension: MedicationStrengthSubstance
 Id: ihe-ext-medication-strengthsubstance
