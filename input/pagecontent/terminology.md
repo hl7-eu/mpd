@@ -9,7 +9,7 @@ Medicines agencies are following European Medicines Agency's guideline for imple
 
 ### Crossborder terminology
 
-MyHealth@EU data exchange for eP and eD is based on CDA and it is operational in an increasing number of countries, allowing patients to buy their prescription drugs from another country's pharmacy. Prescription created in country A is translated to country B language to make it understandable for the country B pharmacist. Dispensation information travels back to country A and is at least partly stored in the country A prescrption/dispensation system. This data flow with automatic translation of coded elements is possible thanks to central terminology services - this includes:  
+MyHealth@EU data exchange for eP and eD is based on CDA and it is operational in an increasing number of countries, allowing patients to buy their prescription drugs from another country's pharmacy. Prescription created in country A is translated to country B language to make it understandable for the country B pharmacist. Dispensation information travels back to country A and is at least partly stored in the country A prescription/dispensation system. This data flow with automatic translation of coded elements is possible thanks to central terminology services - this includes:  
 - central value sets (Master ValueSet Catalogue) in English,  
 - mappings from national country A value sets to central value sets,  
 - translation of central value sets to all country B languages.  

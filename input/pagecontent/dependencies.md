@@ -1,8 +1,8 @@
 ### Dependencies
 
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 
 ### Global Profiles
 
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
