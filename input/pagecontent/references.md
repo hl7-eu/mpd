@@ -4,7 +4,7 @@
 - [eHealth Network Guideline on ePrescription and eDispensation of Authorised Medicinal Products](https://health.ec.europa.eu/document/download/b744f30b-a05e-4b9c-9630-ad96ebd0b2f0_en?filename=ehn_guidelines_eprescriptions_en.pdf)
 - [IHE Medication Prescription and Dispense profile](https://profiles.ihe.net/PHARM/MPD/)
 - ISO/DIS 17523 "Health informatics - Requirements for electronic prescriptions"
-- MyHealth@EU [requirements catalogue](https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue) and [CDA specification](https://art-decor.ehdsi.eu/publication)
+- MyHealth@EU [requirements catalogue, requires EU login](https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue) and [CDA specification](https://art-decor.ehdsi.eu/publication/)
 
 ### Medication and terminology specifications
 

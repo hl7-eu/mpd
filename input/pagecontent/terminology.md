@@ -14,7 +14,9 @@ MyHealth@EU data exchange for eP and eD is based on CDA and it is operational in
 - mappings from national country A value sets to central value sets,  
 - translation of central value sets to all country B languages.  
 
-The following tables illustrate the differences between what is needed in cross-border services (top) compared to what is used by the regulatory domain (bottom).  
+The following two tables illustrate the differences between what is used in cross-border services and by the regulatory domain.  
+
+Table 1: Code systems used in MyHealth@EU services  
 
 |**Data element**|**Code system**|**Example code and display**|  
 |Dose form|EDQM|10221000 Film-coated tablet|  
@@ -27,6 +29,8 @@ The following tables illustrate the differences between what is needed in cross-
 {:.table-bordered .table-striped .thead-light}  
    
 In EMA specifications for regulatory data exchange, similar concepts are used (same displays), but a different code system:   
+
+Table 2: Comparison of code systems used in MyHealth@EU and EMA services  
 
 |**Coded attribute**|**MyHealth@EU**|**EMA RMS**|**Display name**|  
 |Dose form|EDQM: 10221000|100000073665|Film-coated tablet|  
