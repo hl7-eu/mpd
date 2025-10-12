@@ -122,6 +122,6 @@ This specification encourages using ATC as a classification in the data element 
 
 National or proprietary codesystems are used in most countries, and they are likely to keep their importance in the national infrastructure, at least in processes that need to handle legacy data. Transition to new code systems requires mapping and/or double Coding in FHIR resources.  
   
-It is also worth mentioning, that there also national flavours of international codesystems used in countries, for example, Estonian ATC is enriched so, that it provides codes for all combinations of ingredients, extending the code system where official ATC stops at a grouper concept. Also, in many countries, EDQM terms has been used for dose forms for a long time, but with local codes, not official EDQM codes.  
+It is also worth mentioning, that there are also national flavours of international codesystems used in countries, for example, Estonian ATC is enriched so, that it provides codes for all combinations of ingredients, extending the code system where official ATC stops at a grouper concept. Also, in many countries, EDQM terms has been used for dose forms for a long time, but with local codes, not official EDQM codes.  
   
 These local variations may be deeply rooted in clinical systems (including decision support mechanisms) and discontinuing them may be a slow or unnecessary process. Therefore, significant changes in code systems on a national level should be analysed carefully.
