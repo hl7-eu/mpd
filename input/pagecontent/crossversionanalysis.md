@@ -12,4 +12,4 @@ Most notable differences:
 
 ### Cross Version Analysis
 
-{% include cross-version-analysis-en.xhtml %}
+{% lang-fragment cross-version-analysis.xhtml %}
