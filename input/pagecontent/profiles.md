@@ -85,7 +85,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSDosaging.timing.code|Dosage.timing.code|Dosage.timing.code|  
 |EHDSDosaging.timing.repeat|Dosage.timing.repeat|Dosage.timing.repeat|  
 |EHDSDosaging.timing.repeat.bounds|Dosage.timing.repeat.bounds[x]|Dosage.timing.repeat.bounds[x]|   
-|EHDSDosaging.timing.repeat.bounds.duration|Dosage.timing.repeat.boundsQuantity|Dosage.timing.repeat.boundsDuration|  
+|EHDSDosaging.timing.repeat.bounds.duration|Dosage.timing.repeat.boundsDuration|Dosage.timing.repeat.boundsDuration|  
 |EHDSDosaging.timing.repeat.bounds.range|Dosage.timing.repeat.boundsRange|Dosage.timing.repeat.boundsRange|  
 |EHDSDosaging.timing.repeat.bounds.period|Dosage.timing.repeat.boundsPeriod|Dosage.timing.repeat.boundsPeriod|  
 |EHDSDosaging.timing.repeat.count|||  
@@ -93,7 +93,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |EHDSDosaging.timing.repeat.count.countMax|Dosage.timing.repeat.countMax|Dosage.timing.repeat.countMax|  
 |EHDSDosaging.timing.repeat.duration|||  
 |EHDSDosaging.timing.repeat.duration.duration|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit|  
-|EHDSDosaging.timing.repeat.duration.durationMax|Dosage.timing.repeat.durationMax|Dosage.timing.repeat.durationMax  + Dosage.timing.repeat.durationUnit|  
+|EHDSDosaging.timing.repeat.duration.durationMax|Dosage.timing.repeat.durationMax + Dosage.timing.repeat.durationUnit|Dosage.timing.repeat.durationMax  + Dosage.timing.repeat.durationUnit|  
 |EHDSDosaging.timing.repeat.frequency|||  
 |EHDSDosaging.timing.repeat.frequency.numberOfTimes|Dosage.timing.repeat.frequency|Dosage.timing.repeat.frequency|  
 |EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes|Dosage.timing.repeat.frequencyMax|Dosage.timing.repeat.frequencyMax|  
