@@ -1,0 +1,170 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/r5/mpd/ConceptMap/medProd2FHIR-eu-mpd> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medProd2FHIR-eu-mpd"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap medProd2FHIR-eu-mpd</b></p><a name=\"medProd2FHIR-eu-mpd\"> </a><a name=\"hcmedProd2FHIR-eu-mpd\"> </a><a name=\"medProd2FHIR-eu-mpd-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-MedicinalProduct.html\">A1.4 Identification of the prescribed product</a> to <a href=\"StructureDefinition-Medication-eu-mpd.html\">Medication: MPD</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.extension[productName]</td><td/></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.code.text</td><td/></tr><tr><td>MedicinalProduct.name (A.1.4.1 Name of the medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.code.coding.display</td><td/></tr><tr><td>MedicinalProduct.mpid (A.1.4.2 Identifier of the medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.identifier</td><td/></tr><tr><td>MedicinalProduct.phpid (A.1.4.2.1 Identifier(s) of the pharmaceutical product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.extension[classification]</td><td/></tr><tr><td>MedicinalProduct.phpid (A.1.4.2.1 Identifier(s) of the pharmaceutical product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.code.coding</td><td/></tr><tr><td>MedicinalProduct.pcid (A.1.4.2.2 Identifier(s) of the packaged medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.identifier</td><td/></tr><tr><td>MedicinalProduct.marketingAuthHolder (A.1.4.3 Marketing authorisation holder)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.marketingAuthorizationHolder</td><td/></tr><tr><td>MedicinalProduct.activeSubstance (A.1.4.4 Active substance(s))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.ingredient.item</td><td>Where isActive = true.</td></tr><tr><td>MedicinalProduct.strength (A.1.4.4.1 Strength of the active substance(s))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.ingredient.strength</td><td>When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension.</td></tr><tr><td>MedicinalProduct.classification (A.1.4.5 Product classification)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.extension[classification]</td><td/></tr><tr><td>MedicinalProduct.doseForm (A.1.4.6 Pharmaceutical dose form(s))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.doseForm</td><td/></tr><tr><td>MedicinalProduct.unitOfPresentation (A.1.4.7 Unit of presentation(s))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.extension[unitOfPresentation]</td><td/></tr><tr><td>MedicinalProduct.unitOfPresentation (A.1.4.7 Unit of presentation(s))</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Medication.ingredient.strength.denominator.code</td><td>if it is the presentation strength</td></tr><tr><td>MedicinalProduct.packageType (A.1.4.8 Package type)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.extension[packageType]</td><td/></tr><tr><td>MedicinalProduct.packageSize (A.1.4.9 Pack size)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>Medication.totalVolume</td><td>See also. Medication.extension[sizeOfItem]</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/r5/mpd/ConceptMap/medProd2FHIR-eu-mpd"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "MedProd2Fhir"] ; # 
+  fhir:title [ fhir:v "eHN Medicinal Product to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-04-03T13:37:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Medicinal Product Model to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the Medicinal Product data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicinalProduct"^^xsd:anyURI
+  ] ; # 
+  fhir:targetScope [
+     a fhir:uri ;
+     fhir:v "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Medication-eu-mpd"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "MedicinalProduct.name" ] ;
+       fhir:display [ fhir:v "A.1.4.1 Name of the medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.extension[productName]" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.name" ] ;
+       fhir:display [ fhir:v "A.1.4.1 Name of the medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.code.text" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.name" ] ;
+       fhir:display [ fhir:v "A.1.4.1 Name of the medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.code.coding.display" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.mpid" ] ;
+       fhir:display [ fhir:v "A.1.4.2 Identifier of the medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.identifier" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.phpid" ] ;
+       fhir:display [ fhir:v "A.1.4.2.1 Identifier(s) of the pharmaceutical product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.extension[classification]" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.phpid" ] ;
+       fhir:display [ fhir:v "A.1.4.2.1 Identifier(s) of the pharmaceutical product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.code.coding" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.pcid" ] ;
+       fhir:display [ fhir:v "A.1.4.2.2 Identifier(s) of the packaged medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.identifier" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.marketingAuthHolder" ] ;
+       fhir:display [ fhir:v "A.1.4.3 Marketing authorisation holder" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.marketingAuthorizationHolder" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.activeSubstance" ] ;
+       fhir:display [ fhir:v "A.1.4.4 Active substance(s)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.ingredient.item" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Where isActive = true." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.strength" ] ;
+       fhir:display [ fhir:v "A.1.4.4.1 Strength of the active substance(s)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.ingredient.strength" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "When the basis of strength substance is different from Medication.ingredient, then the basis of strength subspatnce is provided using an extension." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.classification" ] ;
+       fhir:display [ fhir:v "A.1.4.5 Product classification" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.extension[classification]" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.doseForm" ] ;
+       fhir:display [ fhir:v "A.1.4.6 Pharmaceutical dose form(s)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.doseForm" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.unitOfPresentation" ] ;
+       fhir:display [ fhir:v "A.1.4.7 Unit of presentation(s)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.extension[unitOfPresentation]" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.unitOfPresentation" ] ;
+       fhir:display [ fhir:v "A.1.4.7 Unit of presentation(s)" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.ingredient.strength.denominator.code" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "if it is the presentation strength" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.packageType" ] ;
+       fhir:display [ fhir:v "A.1.4.8 Package type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.extension[packageType]" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "MedicinalProduct.packageSize" ] ;
+       fhir:display [ fhir:v "A.1.4.9 Pack size" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Medication.totalVolume" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "See also. Medication.extension[sizeOfItem]" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

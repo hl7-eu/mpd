@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Subject"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition Subject</b></p><a name="Subject"> </a><a name="hcSubject"> </a><a name="Subject-en-US"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject" title="Patient. Sections A1.1 of the eHN guideline.">Subject</a><a name="Subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1 Patient administrative data</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.familyName" title="The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present.">familyName</a><a name="Subject.familyName"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.1 Familyname/surname<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.givenName" title="The given name/first name of the patient (also known as forename or first 
+name) [ISO TS 22220:2011]. This field can contain more than one element.">givenName</a><a name="Subject.givenName"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.2 Given name<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.dateOfBirth" title="The date of birth of the patient [ISO TS 22220:2011].
+This field may contain only the year if the day and month are not available, 
+e.g.: 2009 - Preferred system(s): ISO 8601 ">dateOfBirth</a><a name="Subject.dateOfBirth"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.3 Date of birth</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.identifier" title="Country ID, unique to the patient in that country. Example: ID for a Portuguese patient, national healthcare patient ID. Multiple identifiers could be provided.">identifier</a><a name="Subject.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.4 Personal identifier</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.gender" title="This field must contain a recognised valid value for 'administrative gender'. 
+If different, 'physiological sex' should be communicated elsewhere.">gender</a><a name="Subject.gender"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.5 Gender<br/><span style="font-weight:bold">Binding Description (No ValueSet): </span> (<a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">preferred</a>): HL7 Administrative Gender<br/><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Subject-definitions.html#Subject.nativeLanguage" title="The native language of the patient. This may be important for the information that is given to the patient regarding use of the prescribed product [N1228 ISO NP TS 17251]">nativeLanguage</a><a name="Subject.nativeLanguage"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.1.6 Native language<br/><span style="font-weight:bold">Binding Description (No ValueSet): </span> (<a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.">preferred</a>): ISO 639<br/><br/><br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/mpd/StructureDefinition/Subject"/>
+  <version value="0.1.0"/>
+  <name value="SubjectEpEhn"/>
+  <title value="A.1.1 Patient administrative data"/>
+  <status value="draft"/>
+  <date value="2025-03-26T17:00:15+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Patient. Sections A1.1 of the eHN guideline."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://hl7.eu/fhir/mpd/StructureDefinition/Subject"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="Subject">
+      <path value="Subject"/>
+      <short value="A.1.1 Patient administrative data"/>
+      <definition value="Patient. Sections A1.1 of the eHN guideline."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="Subject.familyName">
+      <path value="Subject.familyName"/>
+      <short value="A.1.1.1 Familyname/surname"/>
+      <definition value="The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Subject.familyName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Subject.givenName">
+      <path value="Subject.givenName"/>
+      <short value="A.1.1.2 Given name"/>
+      <definition value="The given name/first name of the patient (also known as forename or first &#xA;name) [ISO TS 22220:2011]. This field can contain more than one element."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Subject.givenName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Subject.dateOfBirth">
+      <path value="Subject.dateOfBirth"/>
+      <short value="A.1.1.3 Date of birth"/>
+      <definition value="The date of birth of the patient [ISO TS 22220:2011].&#xA;This field may contain only the year if the day and month are not available, &#xA;e.g.: 2009 - Preferred system(s): ISO 8601"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Subject.dateOfBirth"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Subject.identifier">
+      <path value="Subject.identifier"/>
+      <short value="A.1.1.4 Personal identifier"/>
+      <definition value="Country ID, unique to the patient in that country. Example: ID for a Portuguese patient, national healthcare patient ID. Multiple identifiers could be provided."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Subject.identifier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Subject.gender">
+      <path value="Subject.gender"/>
+      <short value="A.1.1.5 Gender"/>
+      <definition value="This field must contain a recognised valid value for 'administrative gender'. &#xA;If different, 'physiological sex' should be communicated elsewhere."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Subject.gender"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="HL7 Administrative Gender"/>
+      </binding>
+    </element>
+    <element id="Subject.nativeLanguage">
+      <path value="Subject.nativeLanguage"/>
+      <short value="A.1.1.6 Native language"/>
+      <definition value="The native language of the patient. This may be important for the information that is given to the patient regarding use of the prescribed product [N1228 ISO NP TS 17251]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Subject.nativeLanguage"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="ISO 639"/>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Subject">
+      <path value="Subject"/>
+      <short value="A.1.1 Patient administrative data"/>
+      <definition value="Patient. Sections A1.1 of the eHN guideline."/>
+    </element>
+    <element id="Subject.familyName">
+      <path value="Subject.familyName"/>
+      <short value="A.1.1.1 Familyname/surname"/>
+      <definition value="The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Subject.givenName">
+      <path value="Subject.givenName"/>
+      <short value="A.1.1.2 Given name"/>
+      <definition value="The given name/first name of the patient (also known as forename or first &#xA;name) [ISO TS 22220:2011]. This field can contain more than one element."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Subject.dateOfBirth">
+      <path value="Subject.dateOfBirth"/>
+      <short value="A.1.1.3 Date of birth"/>
+      <definition value="The date of birth of the patient [ISO TS 22220:2011].&#xA;This field may contain only the year if the day and month are not available, &#xA;e.g.: 2009 - Preferred system(s): ISO 8601 "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Subject.identifier">
+      <path value="Subject.identifier"/>
+      <short value="A.1.1.4 Personal identifier"/>
+      <definition value="Country ID, unique to the patient in that country. Example: ID for a Portuguese patient, national healthcare patient ID. Multiple identifiers could be provided."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Subject.gender">
+      <path value="Subject.gender"/>
+      <short value="A.1.1.5 Gender"/>
+      <definition value="This field must contain a recognised valid value for 'administrative gender'. &#xA;If different, 'physiological sex' should be communicated elsewhere."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="HL7 Administrative Gender"/>
+      </binding>
+    </element>
+    <element id="Subject.nativeLanguage">
+      <path value="Subject.nativeLanguage"/>
+      <short value="A.1.1.6 Native language"/>
+      <definition value="The native language of the patient. This may be important for the information that is given to the patient regarding use of the prescribed product [N1228 ISO NP TS 17251]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="ISO 639"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="MedicinalProduct"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition MedicinalProduct</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct" title="Identification of the prescribed product. Section A1.4 of the eHN guideline">MedicinalProduct</a><a name="MedicinalProduct"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A1.4 Identification of the prescribed product</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.name" title="Brand name of the authorised medicinal product.
+It has to be noted, that according to Implementing Directive 2012/52/EU additional requirements may apply.
+[not applicable for generic prescriptions]">name</a><a name="MedicinalProduct.name"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.1 Name of the medicinal product<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.mpid" title="Identifier of a medicinal product refers to the product inside the package, not the packaged item as such. It could be MPID according to ISO 11615, EMA PMS ID and/or a national identifier.
+[not applicable for generic prescriptions]">mpid</a><a name="MedicinalProduct.mpid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.2 Identifier of the medicinal product<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.phpid" title="Identifier of a pharmaceutical product refers to unique PhPID according to ISO 11616. This could be a part of a description of a specific medicinal product or an attribute of a generic prescription.
+[not applicable for generic prescriptions]">phpid</a><a name="MedicinalProduct.phpid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.2.1 Identifier(s) of the pharmaceutical product<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.pcid" title="Identifier of a packaged medicinal product refers to a specific pack size of a specific product. It could be PCID according to ISO 11615 and/or its national equivalent.
+[not applicable for generic prescriptions]">pcid</a><a name="MedicinalProduct.pcid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.2.2 Identifier(s) of the packaged medicinal product<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.marketingAuthHolder" title="Organisation that holds the marketing authorisation of the prescribed product.
+[not applicable for generic prescriptions]">marketingAuthHolder</a><a name="MedicinalProduct.marketingAuthHolder"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/organization.html">Organization</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.3 Marketing authorisation holder</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.activeSubstance" title="All active substances according to ISO 11238. Referred to by &quot;&quot;common name&quot;&quot; in implementing directive 2012/52/EU.">activeSubstance</a><a name="MedicinalProduct.activeSubstance"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.4 Active substance(s)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">EMA SMS</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.strength" title="Presentation and/or concentration strength of the active substances. In addition, reference strength could be provided (Article 1 of Directive 2001/83/EC). Preferred codesystem UCUM and EDQM.">strength</a><a name="MedicinalProduct.strength"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.4.1 Strength of the active substance(s)<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.classification" title="WHO ATC code of the product">classification</a><a name="MedicinalProduct.classification"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.5 Product classification<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">ATC</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.doseForm" title="Dose form of a product could be either authorised dose form (includes EDQM combination pack dose forms), administrable dose form or manufactured item dose form. It must be made clear which type of dose forms are provided. For example, for the same product several different dose forms can be provided: ?powder and solvent for solution for injection? as authorised dose form, ?solution for injection? as administrable dose form, and ?powder? and ?solvent? as the dose forms for the manufactured items in the inner packaging.
+Referred to by &quot;&quot;pharmaceutical formulation&quot;&quot; in implementing directive 2012/52/EU.">doseForm</a><a name="MedicinalProduct.doseForm"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.6 Pharmaceutical dose form(s)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">EDQM</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.unitOfPresentation" title="Unit of presentation is used as a unit when describing the strength, but according to ISO IDMP it is also a separate attribute of the pharmaceutical product and manufactured item.">unitOfPresentation</a><a name="MedicinalProduct.unitOfPresentation"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.7 Unit of presentation(s)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">EDQM</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.packageType" title="Type of the container, Examples: bottle, blister, box">packageType</a><a name="MedicinalProduct.packageType"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.8 Package type<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">EDQM</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-MedicinalProduct-definitions.html#MedicinalProduct.packageSize" title="Typically, the pack size is the number of unit of presentations in the package. 
+It could also be presented using units of measurement (ml, g). In some cases, there is a need to refine the package size that it describes the amounts of different manufactured items in more than one inner packages. However, the overall amount of a prescribed product must be calculable from the pack size description.
+ - Preferred system(s): UCUM; EDQM">packageSize</a><a name="MedicinalProduct.packageSize"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A.1.4.9 Pack size<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding Description: </span><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#preferred" title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." class="binding">preferred</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">UCUM, EDQM</span><br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct"/>
+  <version value="0.1.0-ci-build"/>
+  <name value="MedProductEhn"/>
+  <title value="A1.4 Identification of the prescribed product"/>
+  <status value="draft"/>
+  <date value="2025-10-13T13:36:09+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Identification of the prescribed product. Section A1.4 of the eHN guideline"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="MedicinalProduct">
+      <path value="MedicinalProduct"/>
+      <short value="A1.4 Identification of the prescribed product"/>
+      <definition value="Identification of the prescribed product. Section A1.4 of the eHN guideline"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="MedicinalProduct.name">
+      <path value="MedicinalProduct.name"/>
+      <short value="A.1.4.1 Name of the medicinal product"/>
+      <definition value="Brand name of the authorised medicinal product.&#xA;It has to be noted, that according to Implementing Directive 2012/52/EU additional requirements may apply.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.name"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.mpid">
+      <path value="MedicinalProduct.mpid"/>
+      <short value="A.1.4.2 Identifier of the medicinal product"/>
+      <definition value="Identifier of a medicinal product refers to the product inside the package, not the packaged item as such. It could be MPID according to ISO 11615, EMA PMS ID and/or a national identifier.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.mpid"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.phpid">
+      <path value="MedicinalProduct.phpid"/>
+      <short value="A.1.4.2.1 Identifier(s) of the pharmaceutical product"/>
+      <definition value="Identifier of a pharmaceutical product refers to unique PhPID according to ISO 11616. This could be a part of a description of a specific medicinal product or an attribute of a generic prescription.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.phpid"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.pcid">
+      <path value="MedicinalProduct.pcid"/>
+      <short value="A.1.4.2.2 Identifier(s) of the packaged medicinal product"/>
+      <definition value="Identifier of a packaged medicinal product refers to a specific pack size of a specific product. It could be PCID according to ISO 11615 and/or its national equivalent.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.pcid"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.marketingAuthHolder">
+      <path value="MedicinalProduct.marketingAuthHolder"/>
+      <short value="A.1.4.3 Marketing authorisation holder"/>
+      <definition value="Organisation that holds the marketing authorisation of the prescribed product.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="MedicinalProduct.marketingAuthHolder"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Organization"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.activeSubstance">
+      <path value="MedicinalProduct.activeSubstance"/>
+      <short value="A.1.4.4 Active substance(s)"/>
+      <definition value="All active substances according to ISO 11238. Referred to by &quot;&quot;common name&quot;&quot; in implementing directive 2012/52/EU."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.activeSubstance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EMA SMS"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.strength">
+      <path value="MedicinalProduct.strength"/>
+      <short value="A.1.4.4.1 Strength of the active substance(s)"/>
+      <definition value="Presentation and/or concentration strength of the active substances. In addition, reference strength could be provided (Article 1 of Directive 2001/83/EC). Preferred codesystem UCUM and EDQM."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.strength"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Ratio"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.classification">
+      <path value="MedicinalProduct.classification"/>
+      <short value="A.1.4.5 Product classification"/>
+      <definition value="WHO ATC code of the product"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.classification"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="ATC"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.doseForm">
+      <path value="MedicinalProduct.doseForm"/>
+      <short value="A.1.4.6 Pharmaceutical dose form(s)"/>
+      <definition value="Dose form of a product could be either authorised dose form (includes EDQM combination pack dose forms), administrable dose form or manufactured item dose form. It must be made clear which type of dose forms are provided. For example, for the same product several different dose forms can be provided: ?powder and solvent for solution for injection? as authorised dose form, ?solution for injection? as administrable dose form, and ?powder? and ?solvent? as the dose forms for the manufactured items in the inner packaging.&#xA;Referred to by &quot;&quot;pharmaceutical formulation&quot;&quot; in implementing directive 2012/52/EU."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.doseForm"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.unitOfPresentation">
+      <path value="MedicinalProduct.unitOfPresentation"/>
+      <short value="A.1.4.7 Unit of presentation(s)"/>
+      <definition value="Unit of presentation is used as a unit when describing the strength, but according to ISO IDMP it is also a separate attribute of the pharmaceutical product and manufactured item."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.unitOfPresentation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.packageType">
+      <path value="MedicinalProduct.packageType"/>
+      <short value="A.1.4.8 Package type"/>
+      <definition value="Type of the container, Examples: bottle, blister, box"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.packageType"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.packageSize">
+      <path value="MedicinalProduct.packageSize"/>
+      <short value="A.1.4.9 Pack size"/>
+      <definition value="Typically, the pack size is the number of unit of presentations in the package. &#xA;It could also be presented using units of measurement (ml, g). In some cases, there is a need to refine the package size that it describes the amounts of different manufactured items in more than one inner packages. However, the overall amount of a prescribed product must be calculable from the pack size description.&#xA; - Preferred system(s): UCUM; EDQM"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="MedicinalProduct.packageSize"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="MedicinalProduct">
+      <path value="MedicinalProduct"/>
+      <short value="A1.4 Identification of the prescribed product"/>
+      <definition value="Identification of the prescribed product. Section A1.4 of the eHN guideline"/>
+    </element>
+    <element id="MedicinalProduct.name">
+      <path value="MedicinalProduct.name"/>
+      <short value="A.1.4.1 Name of the medicinal product"/>
+      <definition value="Brand name of the authorised medicinal product.&#xA;It has to be noted, that according to Implementing Directive 2012/52/EU additional requirements may apply.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.mpid">
+      <path value="MedicinalProduct.mpid"/>
+      <short value="A.1.4.2 Identifier of the medicinal product"/>
+      <definition value="Identifier of a medicinal product refers to the product inside the package, not the packaged item as such. It could be MPID according to ISO 11615, EMA PMS ID and/or a national identifier.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.phpid">
+      <path value="MedicinalProduct.phpid"/>
+      <short value="A.1.4.2.1 Identifier(s) of the pharmaceutical product"/>
+      <definition value="Identifier of a pharmaceutical product refers to unique PhPID according to ISO 11616. This could be a part of a description of a specific medicinal product or an attribute of a generic prescription.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.pcid">
+      <path value="MedicinalProduct.pcid"/>
+      <short value="A.1.4.2.2 Identifier(s) of the packaged medicinal product"/>
+      <definition value="Identifier of a packaged medicinal product refers to a specific pack size of a specific product. It could be PCID according to ISO 11615 and/or its national equivalent.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.marketingAuthHolder">
+      <path value="MedicinalProduct.marketingAuthHolder"/>
+      <short value="A.1.4.3 Marketing authorisation holder"/>
+      <definition value="Organisation that holds the marketing authorisation of the prescribed product.&#xA;[not applicable for generic prescriptions]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Organization"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.activeSubstance">
+      <path value="MedicinalProduct.activeSubstance"/>
+      <short value="A.1.4.4 Active substance(s)"/>
+      <definition value="All active substances according to ISO 11238. Referred to by &quot;&quot;common name&quot;&quot; in implementing directive 2012/52/EU."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EMA SMS"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.strength">
+      <path value="MedicinalProduct.strength"/>
+      <short value="A.1.4.4.1 Strength of the active substance(s)"/>
+      <definition value="Presentation and/or concentration strength of the active substances. In addition, reference strength could be provided (Article 1 of Directive 2001/83/EC). Preferred codesystem UCUM and EDQM."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+    </element>
+    <element id="MedicinalProduct.classification">
+      <path value="MedicinalProduct.classification"/>
+      <short value="A.1.4.5 Product classification"/>
+      <definition value="WHO ATC code of the product"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="ATC"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.doseForm">
+      <path value="MedicinalProduct.doseForm"/>
+      <short value="A.1.4.6 Pharmaceutical dose form(s)"/>
+      <definition value="Dose form of a product could be either authorised dose form (includes EDQM combination pack dose forms), administrable dose form or manufactured item dose form. It must be made clear which type of dose forms are provided. For example, for the same product several different dose forms can be provided: ?powder and solvent for solution for injection? as authorised dose form, ?solution for injection? as administrable dose form, and ?powder? and ?solvent? as the dose forms for the manufactured items in the inner packaging.&#xA;Referred to by &quot;&quot;pharmaceutical formulation&quot;&quot; in implementing directive 2012/52/EU."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.unitOfPresentation">
+      <path value="MedicinalProduct.unitOfPresentation"/>
+      <short value="A.1.4.7 Unit of presentation(s)"/>
+      <definition value="Unit of presentation is used as a unit when describing the strength, but according to ISO IDMP it is also a separate attribute of the pharmaceutical product and manufactured item."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.packageType">
+      <path value="MedicinalProduct.packageType"/>
+      <short value="A.1.4.8 Package type"/>
+      <definition value="Type of the container, Examples: bottle, blister, box"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="EDQM"/>
+      </binding>
+    </element>
+    <element id="MedicinalProduct.packageSize">
+      <path value="MedicinalProduct.packageSize"/>
+      <short value="A.1.4.9 Pack size"/>
+      <definition value="Typically, the pack size is the number of unit of presentations in the package. &#xA;It could also be presented using units of measurement (ml, g). In some cases, there is a need to refine the package size that it describes the amounts of different manufactured items in more than one inner packages. However, the overall amount of a prescribed product must be calculable from the pack size description.&#xA; - Preferred system(s): UCUM; EDQM"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <description value="UCUM, EDQM"/>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

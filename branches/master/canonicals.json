@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "hl7.fhir.eu.mpd",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.eu/fhir/mpd/ImplementationGuide/hl7.fhir.eu.mpd",
+    "version" : "0.1.0-ballot",
+    "name" : "Hl7EuMedPrescriptionDispenseIg"
+  },
+  {
+    "id" : "Dispensation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/Dispensation",
+    "version" : "0.1.0-ballot",
+    "name" : "EdispensationEhn"
+  },
+  {
+    "id" : "Medication-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/Medication-eu-mpd",
+    "version" : "0.1.0-ballot",
+    "name" : "MedicationEuMpd"
+  },
+  {
+    "id" : "MedicationDispense-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/MedicationDispense-eu-mpd",
+    "version" : "0.1.0-ballot",
+    "name" : "MedicationDispenseEuMpd"
+  },
+  {
+    "id" : "MedicationRequest-eu-mpd",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/MedicationRequest-eu-mpd",
+    "version" : "0.1.0-ballot",
+    "name" : "MedicationRequestEuMpd"
+  },
+  {
+    "id" : "MedicinalProduct",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct",
+    "version" : "0.1.0-ballot",
+    "name" : "MedProductEhn"
+  },
+  {
+    "id" : "Prescription",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/Prescription",
+    "version" : "0.1.0-ballot",
+    "name" : "EprescriptionEhn"
+  },
+  {
+    "id" : "Subject",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/mpd/StructureDefinition/Subject",
+    "version" : "0.1.0-ballot",
+    "name" : "SubjectEpEhn"
+  }
+]

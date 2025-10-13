@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Implementation Considerations - HL7 Europe Medication Prescription and Dispense v0.1.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Medication Prescription and Dispense</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ci-build - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope and Content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use cases</a>
+      </li>
+      <li>
+        <a href="logicalmodels.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology Considerations</a>
+      </li>
+      <li>
+        <a href="medicationconcepts.html">Medication Concepts</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Mapping to Profiles</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+      <li>
+        <a href="implementationnotes.html">Implementation Notes</a>
+      </li>
+      <li>
+        <a href="https://profiles.ihe.net/PHARM/MPD/">IHE MPD IG</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authors.html">Authors and Contributors</a>
+      </li>
+      <li>
+        <a href="knownissues.html">Known Issues</a>
+      </li>
+      <li>
+        <a href="downloads.html">Download</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="copyright.html">Copyright</a>
+      </li>
+      <li>
+        <a href="crossversionanalysis.html">Cross-version Analysis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://hl7.eu/fhir/mpd-r5">R5 IG</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Implementation Considerations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Medication Prescription and Dispense, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ci-build  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/hl7-eu/mpd/tree/master'>https://github.com/hl7-eu/mpd/tree/master</a> and changes regularly. See the <a href='http://hl7.eu/fhir/mpd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Implementation Considerations</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#prescription---document-or-request-approach" id="markdown-toc-prescription---document-or-request-approach">Prescription - document or request approach</a></li>
+  <li><a href="#multi-item-prescriptions" id="markdown-toc-multi-item-prescriptions">Multi-item prescriptions</a></li>
+  <li><a href="#prescription-statuses-and-workflow" id="markdown-toc-prescription-statuses-and-workflow">Prescription statuses and workflow</a></li>
+</ul>
+
+</div>
+<h3 id="prescription---document-or-request-approach">Prescription - document or request approach</h3>
+
+<p>Prescription has historically been a document that authorises one or multiple requests. In FHIR, there is no explicit resource for Prescription, and it is possible to focus on the document aspect or the request aspect. Some countries have preferred to keep the document view using Bundle with Composition. This IG does not encourage nor ban this approach, but there is no profile for document Bundle in the IG.</p>
+
+<p>Examples in this IG use collection Bundle simply for making it easier to read for the humans. Many implementers use transaction Bundle for creating new prescriptions as it allows assigning server-side IDs more easily.</p>
+
+<p>The choice of wrapping the request and its related resources in a Bundle or not, is entirely up to the implementers.</p>
+
+<h3 id="multi-item-prescriptions">Multi-item prescriptions</h3>
+
+<p>The recommended way of designing prescriptions in HL7 FHIR is to have one item per prescription - this is reflected in the MedicationRequest resource where Medication cardinality is 1..1. Currently, European crossborder prescription's CDA implementation is also allowing only one medication per presciption, expecting the country of origin to split the multi-item prescription into several crossborder prescriptions and track the dispensations accordingly. However, real life national prescription systems are often designed differently from this logic - in many countries a prescription may contain more than one medication item.</p>
+
+<p>There is no single mechanism in HL7 FHIR for handling multi-item prescriptions, and in order to choose the optimal solution, one must consider the business requirements and reasons behind the multi-item prescription:</p>
+<ul>
+  <li>Is it used merely as a grouping mechanism without deeper semantics?</li>
+  <li>Are there technical reasons why multiple items must be transported as one group?</li>
+  <li>Are the items on prescription related to eachother through the dosaging scheme?</li>
+  <li>Must the items be dispensed as one transaction?</li>
+  <li>Are there pricing or reimbursement rules that are dependent on grouping?</li>
+  <li>How does a status of a prescription relate to the statuses of individual requests?</li>
+  <li>What are the consequences of adding or removing prescription items: can a single-item prescription become a multi-item prescription and vice versa?</li>
+</ul>
+
+<p>Considering the requirements above, the best match from the following approaches can be chosen.</p>
+
+<h4 id="option-1-no-grouping">Option 1: No grouping</h4>
+
+<p>This option can only be used when the items on a prescription can be easily split and dispensed separately. The information about which prescription the items belong to is handled outside FHIR services.</p>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Technically the easiest option to implement in FHIR.</li>
+  <li>Allows the same handling of data for single- and multi-item prescriptions.</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>Prescription identifier not present</li>
+  <li>Complexity of matching the items and prescriptions does not disappear, but is pushed to the prescription/dispensing systems.</li>
+  <li>Only applicable when individual items have no interdependencies.</li>
+</ul>
+
+<h4 id="option-2-using-groupidentifier">Option 2: Using .groupIdentifier</h4>
+
+<p>This option differs from the previous one by one important aspect: the data element .groupIdentifier is filled in with the prescription identifier. This allows linking of different prescription items also in FHIR services, but it does not provide any extra information about the prescription or interdependencies between different items on the same prescription.</p>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Easy to implement</li>
+  <li>Allows very similar handling of data for single- and multi-item prescriptions</li>
+  <li>.groupIdentifier preserves prescription identifier.</li>
+</ul>
+
+<p><strong>Cons:</strong></p>
+<ul>
+  <li>No way to show interdependencies between individual items/requests</li>
+  <li>Status of the prescription has to be the same or calculable from individual prescription items</li>
+</ul>
+
+<h4 id="option-3-using-requestorchestrationrequestgroup">Option 3: Using RequestOrchestration/RequestGroup</h4>
+
+<p>This option is technically more complex to handle on the FHIR side, but it allows communicating the interdependencies of different items on a prescription. Every prescription item uses MedicationRequest resource just like in case of the first two options. However, an additional resource is populated to provide extra information about the semantics of grouping the items on the same prescription. RequestOrchestration (R5) or RequestGroup (R4) share the same .groupIdentifier as the MedicationRequests that are linked from it. However, note that RequestOrchestration/RequestGroup is not semantically the prescription, but only a part of it. Even with this approach, there is no set resource for the prescription object as such.</p>
+
+<p><strong>Pros:</strong></p>
+<ul>
+  <li>Possible to define interdependencies between prescription items</li>
+  <li>Multiitem prescription is clearly defined and distinguishable from single-item prescriptions</li>
+</ul>
+
+<p><strong>Cons:</strong><br />
+Multiitem prescription and single-item prescription are handled differently. In a prescription system where multi-item prescriptions use RequestOrchestration, it is important to consider whether single-item prescriptions should be using the same mechanism, even though it does not add anything to the semantics.</p>
+
+<p>When grouping MedicationRequests with a RequestOrchestration/RequestGroup:</p>
+<ul>
+  <li>MedicationRequest.intent value must be ‘option’. This is a signal to the receiver, that the request must be handled as part of a bigger request group.</li>
+  <li>The element binding MedicationRequest and RequestOrchestration/RequestGroup together is .groupIdentifier. By sharing the same .groupIdentifier value, they indicate being a part of the same prescription document.</li>
+  <li>Prescription identifier should be the value of .groupIdentifier.</li>
+  <li>MedicationRequests, if they originate from the same prescription, should have the same patient and authoring metadata.</li>
+</ul>
+
+<p>The following diagram explains splitting custom multi-item prescription (yellow) into HL7FHIR resources (green).</p>
+
+<figure>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="590px" preserveAspectRatio="none" style="width:844px;height:590px;background:#FFFFFF;" version="1.1" viewBox="0 0 844 590" width="844px" zoomAndPan="magnify"><defs /><g><!--class P--><g class="entity" data-entity="P" data-source-line="29" data-uid="ent0002" id="entity_P"><rect fill="#FFFFCC" height="249.8594" rx="2.5" ry="2.5" style="stroke:#909050;stroke-width:0.5;" width="193.8408" x="325.5" y="7" /><rect fill="#DDDD44" height="26.2969" rx="2.5" ry="2.5" style="stroke:#DDDD44;stroke-width:0.5;" width="193.8408" x="325.5" y="7" /><rect fill="#DDDD44" height="2.5" style="stroke:#DDDD44;stroke-width:0.5;" width="193.8408" x="325.5" y="30.7969" /><rect fill="none" height="249.8594" rx="2.5" ry="2.5" style="stroke:#909050;stroke-width:0.5;" width="193.8408" x="325.5" y="7" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="96.0928" x="374.374" y="24.9951">Prescription</text><line style="stroke:#909050;stroke-width:0.5;" x1="326.5" x2="518.3408" y1="33.2969" y2="33.2969" /><line style="stroke:#909050;stroke-width:1;" x1="326.5" x2="518.3408" y1="41.2969" y2="41.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106.5654" x="347.9502" y="64.292">identifier = Pr1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145.6396" x="347.9502" y="80.5889">issued = 12.12.2024</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.7344" x="347.9502" y="96.8857">patient = Patient1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171.3906" x="347.9502" y="113.1826">prescriber = Prescriber1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.6299" x="347.9502" y="129.4795">item</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146.043" x="355.9502" y="145.7764">itemIdentifier = MR1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.2383" x="355.9502" y="162.0732">medication = Med1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.6162" x="355.9502" y="178.3701">dosage = Dose1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31.6299" x="347.9502" y="194.667">item</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146.043" x="355.9502" y="210.9639">itemIdentifier = MR2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.2383" x="355.9502" y="227.2607">medication = Med2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115.6162" x="355.9502" y="243.5576">dosage = Dose2</text><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="58.4453" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="59.4453" y2="59.4453" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="51.2969" y2="59.4453" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="74.7422" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="75.7422" y2="75.7422" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="59.4453" y2="75.7422" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="91.0391" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="92.0391" y2="92.0391" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="75.7422" y2="92.0391" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="107.3359" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="108.3359" y2="108.3359" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="92.0391" y2="108.3359" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="123.6328" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="124.6328" y2="124.6328" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="108.3359" y2="124.6328" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="139.9297" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="140.9297" y2="140.9297" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="124.6328" y2="140.9297" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="156.2266" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="157.2266" y2="157.2266" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="140.9297" y2="157.2266" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="172.5234" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="173.5234" y2="173.5234" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="157.2266" y2="173.5234" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="340.5" y="188.8203" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="341.5" y1="189.8203" y2="189.8203" /><line style="stroke:#000000;stroke-width:1;" x1="333.5" x2="333.5" y1="124.6328" y2="189.8203" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="205.1172" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="206.1172" y2="206.1172" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="189.8203" y2="206.1172" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="221.4141" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="222.4141" y2="222.4141" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="206.1172" y2="222.4141" /><rect fill="#FFFFCC" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="348.5" y="237.7109" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="349.5" y1="238.7109" y2="238.7109" /><line style="stroke:#000000;stroke-width:1;" x1="341.5" x2="341.5" y1="222.4141" y2="238.7109" /><line style="stroke:#909050;stroke-width:1;" x1="326.5" x2="518.3408" y1="248.8594" y2="248.8594" /></g><!--class MR1--><g class="entity" data-entity="MR1" data-source-line="47" data-uid="ent0003" id="entity_MR1"><rect fill="#C9FFC9" height="184.6719" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="212.9951" x="7" y="366.5" /><rect fill="#77BB88" height="26.2969" rx="2.5" ry="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="212.9951" x="7" y="366.5" /><rect fill="#77BB88" height="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="212.9951" x="7" y="390.2969" /><rect fill="none" height="184.6719" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="212.9951" x="7" y="366.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="166.4688" x="30.2632" y="384.4951">MedicationRequest 1</text><line style="stroke:#2F4F4F;stroke-width:0.5;" x1="8" x2="218.9951" y1="392.7969" y2="392.7969" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="8" x2="218.9951" y1="400.7969" y2="400.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.1738" x="29.4502" y="423.792">identifier = MR1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.7725" x="29.4502" y="440.0889">groupIdentifier = Pr1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106.1279" x="29.4502" y="456.3857">intent = option</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.6572" x="29.4502" y="472.6826">subject = Patient1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168.1367" x="29.4502" y="488.9795">requester = Prescriber1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184.3174" x="29.4502" y="505.2764">authoredOn = 12.12.2024</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.2383" x="29.4502" y="521.5732">medication = Med1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.5449" x="29.4502" y="537.8701">dosageInstruction = Dose1</text><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="417.9453" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="418.9453" y2="418.9453" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="410.7969" y2="418.9453" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="434.2422" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="435.2422" y2="435.2422" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="418.9453" y2="435.2422" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="450.5391" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="451.5391" y2="451.5391" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="435.2422" y2="451.5391" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="466.8359" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="467.8359" y2="467.8359" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="451.5391" y2="467.8359" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="483.1328" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="484.1328" y2="484.1328" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="467.8359" y2="484.1328" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="499.4297" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="500.4297" y2="500.4297" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="484.1328" y2="500.4297" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="515.7266" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="516.7266" y2="516.7266" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="500.4297" y2="516.7266" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="22" y="532.0234" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="23" y1="533.0234" y2="533.0234" /><line style="stroke:#000000;stroke-width:1;" x1="15" x2="15" y1="516.7266" y2="533.0234" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="8" x2="218.9951" y1="543.1719" y2="543.1719" /></g><!--class MR2--><g class="entity" data-entity="MR2" data-source-line="60" data-uid="ent0004" id="entity_MR2"><rect fill="#C9FFC9" height="184.6719" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="212.9951" x="625" y="366.5" /><rect fill="#77BB88" height="26.2969" rx="2.5" ry="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="212.9951" x="625" y="366.5" /><rect fill="#77BB88" height="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="212.9951" x="625" y="390.2969" /><rect fill="none" height="184.6719" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="212.9951" x="625" y="366.5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="166.4688" x="648.2632" y="384.4951">MedicationRequest 2</text><line style="stroke:#2F4F4F;stroke-width:0.5;" x1="626" x2="836.9951" y1="392.7969" y2="392.7969" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="626" x2="836.9951" y1="400.7969" y2="400.7969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.1738" x="647.4502" y="423.792">identifier = MR2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147.7725" x="647.4502" y="440.0889">groupIdentifier = Pr1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106.1279" x="647.4502" y="456.3857">intent = option</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.6572" x="647.4502" y="472.6826">subject = Patient1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168.1367" x="647.4502" y="488.9795">requester = Prescriber1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184.3174" x="647.4502" y="505.2764">authoredOn = 12.12.2024</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137.2383" x="647.4502" y="521.5732">medication = Med2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.5449" x="647.4502" y="537.8701">dosageInstruction = Dose2</text><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="417.9453" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="418.9453" y2="418.9453" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="410.7969" y2="418.9453" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="434.2422" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="435.2422" y2="435.2422" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="418.9453" y2="435.2422" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="450.5391" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="451.5391" y2="451.5391" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="435.2422" y2="451.5391" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="466.8359" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="467.8359" y2="467.8359" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="451.5391" y2="467.8359" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="483.1328" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="484.1328" y2="484.1328" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="467.8359" y2="484.1328" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="499.4297" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="500.4297" y2="500.4297" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="484.1328" y2="500.4297" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="515.7266" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="516.7266" y2="516.7266" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="500.4297" y2="516.7266" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="640" y="532.0234" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="641" y1="533.0234" y2="533.0234" /><line style="stroke:#000000;stroke-width:1;" x1="633" x2="633" y1="516.7266" y2="533.0234" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="626" x2="836.9951" y1="543.1719" y2="543.1719" /></g><!--class RO--><g class="entity" data-entity="RO" data-source-line="73" data-uid="ent0005" id="entity_RO"><rect fill="#C9FFC9" height="249.8594" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="206.7676" x="319" y="334" /><rect fill="#77BB88" height="26.2969" rx="2.5" ry="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="206.7676" x="319" y="334" /><rect fill="#77BB88" height="2.5" style="stroke:#77BB88;stroke-width:0.5;" width="206.7676" x="319" y="357.7969" /><rect fill="none" height="249.8594" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="206.7676" x="319" y="334" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="173.8037" x="335.4819" y="351.9951">RequestOrchestration</text><line style="stroke:#2F4F4F;stroke-width:0.5;" x1="320" x2="524.7676" y1="360.2969" y2="360.2969" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="320" x2="524.7676" y1="368.2969" y2="368.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62.8291" x="341.4502" y="391.292">identifier</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.0361" x="341.4502" y="407.5889">groupIdentifier</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99.4355" x="341.4502" y="423.8857">intent = order</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.6572" x="341.4502" y="440.1826">subject = Patient1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146.3779" x="341.4502" y="456.4795">author = Prescriber1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184.3174" x="341.4502" y="472.7764">authoredOn = 12.12.2024</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.0938" x="341.4502" y="489.0732">action</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96.332" x="349.4502" y="505.3701">resource MR1</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.083" x="349.4502" y="521.667">relatedAction MR2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.0938" x="341.4502" y="537.9639">action</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96.332" x="349.4502" y="554.2607">resource MR2</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129.083" x="349.4502" y="570.5576">relatedAction MR1</text><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="385.4453" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="386.4453" y2="386.4453" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="378.2969" y2="386.4453" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="401.7422" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="402.7422" y2="402.7422" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="386.4453" y2="402.7422" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="418.0391" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="419.0391" y2="419.0391" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="402.7422" y2="419.0391" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="434.3359" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="435.3359" y2="435.3359" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="419.0391" y2="435.3359" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="450.6328" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="451.6328" y2="451.6328" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="435.3359" y2="451.6328" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="466.9297" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="467.9297" y2="467.9297" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="451.6328" y2="467.9297" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="483.2266" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="484.2266" y2="484.2266" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="467.9297" y2="484.2266" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="342" y="499.5234" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="343" y1="500.5234" y2="500.5234" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="335" y1="484.2266" y2="500.5234" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="342" y="515.8203" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="343" y1="516.8203" y2="516.8203" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="335" y1="500.5234" y2="516.8203" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="334" y="532.1172" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="335" y1="533.1172" y2="533.1172" /><line style="stroke:#000000;stroke-width:1;" x1="327" x2="327" y1="484.2266" y2="533.1172" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="342" y="548.4141" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="343" y1="549.4141" y2="549.4141" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="335" y1="533.1172" y2="549.4141" /><rect fill="#C9FFC9" height="2" style="stroke:#000000;stroke-width:1;" width="2" x="342" y="564.7109" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="343" y1="565.7109" y2="565.7109" /><line style="stroke:#000000;stroke-width:1;" x1="335" x2="335" y1="549.4141" y2="565.7109" /><line style="stroke:#2F4F4F;stroke-width:1;" x1="320" x2="524.7676" y1="575.8594" y2="575.8594" /></g><!--link P to RO--><g class="link" data-entity-1="P" data-entity-2="RO" data-source-line="91" data-uid="lnk6" id="link_P_RO"><path codeLine="91" d="M422.5,257.26 C422.5,282.35 422.5,308.72 422.5,333.81" fill="none" id="P-RO" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49.5879" x="423.5" y="300.0669">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text></g><!--link P to MR1--><g class="link" data-entity-1="P" data-entity-2="MR1" data-source-line="92" data-uid="lnk7" id="link_P_MR1"><path codeLine="92" d="M325.15,235.39 C285.26,277.34 239.45,325.52 200.68,366.31" fill="none" id="P-MR1" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49.5879" x="269.5" y="300.0669">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text></g><!--link P to MR2--><g class="link" data-entity-1="P" data-entity-2="MR2" data-source-line="93" data-uid="lnk8" id="link_P_MR2"><path codeLine="93" d="M519.85,235.39 C559.74,277.34 605.55,325.52 644.32,366.31" fill="none" id="P-MR2" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49.5879" x="577.5" y="300.0669">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text></g><!--reverse link MR1 to RO--><g class="link" data-entity-1="MR1" data-entity-2="RO" data-source-line="94" data-uid="lnk10" id="link_MR1_RO"><path codeLine="94" d="M226.27,459 C258.2,459 287.13,459 318.85,459" fill="none" id="MR1-backto-RO" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="220.27,459,229.27,463,225.27,459,229.27,455,220.27,459" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.645" x="238.5" y="452.0669">reference</text></g><!--link RO to MR2--><g class="link" data-entity-1="RO" data-entity-2="MR2" data-source-line="95" data-uid="lnk11" id="link_RO_MR2"><path codeLine="95" d="M526.25,459 C557.99,459 586.93,459 618.86,459" fill="none" id="RO-to-MR2" style="stroke:#181818;stroke-width:1;" /><polygon fill="#181818" points="624.86,459,615.86,455,619.86,459,615.86,463,624.86,459" style="stroke:#181818;stroke-width:1;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.645" x="544.5" y="452.0669">reference</text></g></g></svg>
+  <!-- <figcaption>Multiitem prescription example</figcaption> -->
+</figure>
+<p><br clear="all" /></p>
+
+<p>Please see examples <a href="Bundle-100A-multiitem-prescription-with-orchestration.html"><strong>100A</strong></a> and <a href="Bundle-300A-multiitem-prescription-with-orchestration.html"><strong>300A</strong></a> in the <a href="artifacts.html">Artifacts page</a> for more information about how to create a multi-item prescription using RequestOrchestration, and example <a href="Bundle-200A-multiitem-prescription-without-orchestration.html"><strong>200A</strong></a> for information about how to create a multi-item prescription without an additional grouping/organising resource. All examples in this IG use Bundle as a wrapper for multi-item prescription, however this is just for the convenience, and not a normative part of this IG. Implementers can choose whether to use Bundle or which type of Bundle to use.</p>
+
+<p>Read more about using RequestOrchestration/RequestGroup in FHIR workflow pages.</p>
+
+<h3 id="prescription-statuses-and-workflow">Prescription statuses and workflow</h3>
+
+<p>MedicationRequest has a very limited set of statuses available for use. This is a deliberate design choice to improve interoperability across different settings.</p>
+
+<p>Prescription and dispensation systems often use additional or different statuses, and those statuses are not directly mappable to MedicationRequest.status. Some of these prescription statuses may actually be related to the dispense rather than the request, so the semantically correct place for some statuses would actually be MedicationDispense.status.</p>
+
+<p>Some simple workflows may choose to make use of the .meta.tag 'actionable' to indicate whether the request is dispensable or simply for information. 
+For more sophisticated workflows, especially when FHIR messaging is the basis of the workflow, Task resource should be used in addition to MedicationRequest and MedicationDispense. For group request, an additional RequestOrchestration (R4 RequestGroup) resource should be used.</p>
+
+<p>Workflows are typically implementation-specific and the aim of this implementation guide is not to provide one solution for everyone. Practice of using prescription and dispensation statuses varies a lot across countries and use cases (e.g. hospital use vs community pharmacy). While it is important for each implementation to map their business statuses to FHIR MedicationRequest.status values, the usage of Task and building a workflow will not be restricted by this implementation guide.</p>
+
+<p>HL7 guidance materials for designing request workflows:</p>
+<ul>
+  <li><a href="https://hl7.org/fhir/workflow.html">Workflow</a></li>
+  <li><a href="https://hl7.org/fhir/workflow-module.html">Workflow module</a></li>
+  <li><a href="https://confluence.hl7.org/pages/viewpage.action?pageId=248715046">Additional explanations - WIP</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.mpd#0.1.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 13, 2025 13:37+0000">2025-10-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/mpd/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

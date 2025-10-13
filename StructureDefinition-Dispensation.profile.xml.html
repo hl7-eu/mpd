@@ -1,0 +1,780 @@
+<!-- get modelType -->
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>B.1 Dispensation information (provided by the dispensing pharmacy) - XML Representation - HL7 Europe Medication Prescription and Dispense v0.1.0-ci-build</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"20.4"}
+    h3,h4,h5,h6{--heading-prefix:"20.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Medication Prescription and Dispense</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ci-build - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope and Content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use cases</a>
+      </li>
+      <li>
+        <a href="logicalmodels.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology Considerations</a>
+      </li>
+      <li>
+        <a href="medicationconcepts.html">Medication Concepts</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Mapping to Profiles</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+      <li>
+        <a href="implementationnotes.html">Implementation Notes</a>
+      </li>
+      <li>
+        <a href="https://profiles.ihe.net/PHARM/MPD/">IHE MPD IG</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authors.html">Authors and Contributors</a>
+      </li>
+      <li>
+        <a href="knownissues.html">Known Issues</a>
+      </li>
+      <li>
+        <a href="downloads.html">Download</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="copyright.html">Copyright</a>
+      </li>
+      <li>
+        <a href="crossversionanalysis.html">Cross-version Analysis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://hl7.eu/fhir/mpd-r5">R5 IG</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>B.1 Dispensation information (provided by the dispensing pharmacy)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Medication Prescription and Dispense, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ci-build  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/hl7-eu/mpd/tree/master'>https://github.com/hl7-eu/mpd/tree/master</a> and changes regularly. See the <a href='http://hl7.eu/fhir/mpd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-Dispensation.html">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-Dispensation-definitions.html">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-Dispensation-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-Dispensation.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-Dispensation.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+<a name="root"> </a>
+<h2 id="root">Logical Model: EdispensationEhn - XML Profile</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2025-10-13
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>XML representation of the Dispensation logical model.</p>
+
+<p><a href="StructureDefinition-Dispensation.xml" no-download="true">Raw xml</a> | <a href="StructureDefinition-Dispensation.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition">StructureDefinition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition Dispensation&lt;/b&gt;&lt;/p&gt;&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;&quot;&gt;&lt;tr style=&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top&quot;&gt;&lt;th style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;The logical name of the element&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Information about the use of the element&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Minimum and Maximum # of times the element can appear in the instance&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Reference to the type of the element&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Additional information about the element&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=&quot;float: right&quot;&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_element.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Element&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation&quot; title=&quot;Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines&quot;&gt;Dispensation&lt;/a&gt;&lt;a name=&quot;Dispensation&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;0&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;..&lt;/span&gt;&lt;span style=&quot;opacity: 0.5&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://build.fhir.org/types.html#Base&quot;&gt;Base&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1 Dispensation information (provided by the dispensing pharmacy)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserIdentifier&quot; title=&quot;A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country.&quot;&gt;dispenserIdentifier&lt;/a&gt;&lt;a name=&quot;Dispensation.dispenserIdentifier&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.1 Identifier of the dispenser&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_primitive.png&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Primitive Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserFamilyName&quot; title=&quot;The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;&gt;dispenserFamilyName&lt;/a&gt;&lt;a name=&quot;Dispensation.dispenserFamilyName&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#string&quot;&gt;string&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.2 Family name of the dispenser&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_primitive.png&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Primitive Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserGivenName&quot; title=&quot;The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;&gt;dispenserGivenName&lt;/a&gt;&lt;a name=&quot;Dispensation.dispenserGivenName&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#string&quot;&gt;string&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.3 Given name of the dispenser&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.pharmacyIdentifier&quot; title=&quot;A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy.&quot;&gt;pharmacyIdentifier&lt;/a&gt;&lt;a name=&quot;Dispensation.pharmacyIdentifier&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.4 Identifier of the pharmacy&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.pharmacyAddress&quot; title=&quot;Minimally, the country should be specified.&quot;&gt;pharmacyAddress&lt;/a&gt;&lt;a name=&quot;Dispensation.pharmacyAddress&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..1&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#Address&quot;&gt;Address&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.5 Address of the pharmacy&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.contactDetails&quot; title=&quot;Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy.&quot;&gt;contactDetails&lt;/a&gt;&lt;a name=&quot;Dispensation.contactDetails&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#ContactPoint&quot;&gt;ContactPoint&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.6 Details of direct contact&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.prescriptionIdentifier&quot; title=&quot;As described in A.1.2.&quot;&gt;prescriptionIdentifier&lt;/a&gt;&lt;a name=&quot;Dispensation.prescriptionIdentifier&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#Identifier&quot;&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.7 Identifier of the prescription&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.medicinalProduct&quot; title=&quot;Information about the dispensed product as described in A.1.4.
+The cardinality of the data elements in the product description may differ between ePrescription and eDispensation.&quot;&gt;medicinalProduct&lt;/a&gt;&lt;a name=&quot;Dispensation.medicinalProduct&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;Base&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.8 Medicinal product&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.dispensedQuantity&quot; title=&quot;The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.
+ - Preferred system(s): UCUM, EDQM&quot;&gt;dispensedQuantity&lt;/a&gt;&lt;a name=&quot;Dispensation.dispensedQuantity&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#Quantity&quot;&gt;Quantity&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.9 Dispensed quantity&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_primitive.png&quot; alt=&quot;.&quot; style=&quot;background-color: white; background-color: inherit&quot; title=&quot;Primitive Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.dispensationDate&quot; title=&quot;The date and optionally the time of dispensation.
+ - Preferred system(s): ISO 8601&quot;&gt;dispensationDate&lt;/a&gt;&lt;a name=&quot;Dispensation.dispensationDate&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#dateTime&quot;&gt;dateTime&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.10 Dispensation date&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr style=&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7&quot;&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)&quot; class=&quot;hierarchy&quot;&gt;&lt;img src=&quot;tbl_spacer.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;tbl_vjoin_end.png&quot; alt=&quot;.&quot; style=&quot;background-color: inherit&quot; class=&quot;hierarchy&quot;/&gt;&lt;img src=&quot;icon_datatype.gif&quot; alt=&quot;.&quot; style=&quot;background-color: #F7F7F7; background-color: inherit&quot; title=&quot;Data Type&quot; class=&quot;hierarchy&quot;/&gt; &lt;a href=&quot;StructureDefinition-Dispensation-definitions.html#Dispensation.substitution&quot; title=&quot;Information whether and why the substitution took place&quot;&gt;substitution&lt;/a&gt;&lt;a name=&quot;Dispensation.substitution&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;/&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;0..*&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px&quot; class=&quot;hierarchy&quot;&gt;B.1.11 Substitution&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;hierarchy&quot;&gt;&lt;br/&gt;&lt;a href=&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views&quot; title=&quot;Legend for this format&quot;&gt;&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC&quot; alt=&quot;doco&quot; style=&quot;background-color: inherit&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">text</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.eu/fhir/mpd/StructureDefinition/Dispensation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0-ci-build&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EdispensationEhn&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>
+         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1 Dispensation information (provided by the dispensing pharmacy)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-10-13T13:36:09+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 Europe&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 Europe&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://hl7.eu&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;150&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Europe&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.copyright">copyright</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Used by permission of HL7 Europe, all rights reserved Creative Commons License&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;4.0.1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.kind">kind</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;logical&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.abstract">abstract</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.eu/fhir/mpd/StructureDefinition/Dispensation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/StructureDefinition/Base&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.derivation">derivation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;specialization&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;4.0.1&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.extension">extension</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1 Dispensation information (provided by the dispensing pharmacy)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Base&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.1 Identifier of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserIdentifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserFamilyName&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserFamilyName&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.2 Family name of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserFamilyName&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserGivenName&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserGivenName&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.3 Given name of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserGivenName&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.pharmacyIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.4 Identifier of the pharmacy&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyIdentifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.pharmacyAddress&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyAddress&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.5 Address of the pharmacy&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Minimally, the country should be specified.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyAddress&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Address&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.contactDetails&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.contactDetails&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.6 Details of direct contact&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.contactDetails&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;ContactPoint&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.prescriptionIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.prescriptionIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.7 Identifier of the prescription&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;As described in A.1.2.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.prescriptionIdentifier&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.medicinalProduct&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.medicinalProduct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.8 Medicinal product&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Information about the dispensed product as described in A.1.4.
+The cardinality of the data elements in the product description may differ between ePrescription and eDispensation.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.medicinalProduct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Base&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispensedQuantity&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensedQuantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.9 Dispensed quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.
+ - Preferred system(s): UCUM, EDQM&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensedQuantity&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Quantity&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispensationDate&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensationDate&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.10 Dispensation date&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The date and optionally the time of dispensation.
+ - Preferred system(s): ISO 8601&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensationDate&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;dateTime&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.substitution&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.substitution&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.11 Substitution&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Information whether and why the substitution took place&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.substitution&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential">differential</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1 Dispensation information (provided by the dispensing pharmacy)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.1 Identifier of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserFamilyName&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserFamilyName&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.2 Family name of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispenserGivenName&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispenserGivenName&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.3 Given name of the dispenser&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;string&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.pharmacyIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.4 Identifier of the pharmacy&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.pharmacyAddress&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.pharmacyAddress&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.5 Address of the pharmacy&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Minimally, the country should be specified.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Address&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.contactDetails&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.contactDetails&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.6 Details of direct contact&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;ContactPoint&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.prescriptionIdentifier&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.prescriptionIdentifier&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.7 Identifier of the prescription&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;As described in A.1.2.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Identifier&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.medicinalProduct&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.medicinalProduct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.8 Medicinal product&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Information about the dispensed product as described in A.1.4.
+The cardinality of the data elements in the product description may differ between ePrescription and eDispensation.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Base&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispensedQuantity&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensedQuantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.9 Dispensed quantity&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.
+ - Preferred system(s): UCUM, EDQM&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;Quantity&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.dispensationDate&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.dispensationDate&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.10 Dispensation date&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The date and optionally the time of dispensation.
+ - Preferred system(s): ISO 8601&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;dateTime&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">id</a>=&quot;Dispensation.substitution&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dispensation.substitution&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;B.1.11 Substitution&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Information whether and why the substitution took place&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;CodeableConcept&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential">differential</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition">StructureDefinition</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.mpd#0.1.0-ci-build based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 13, 2025 13:37+0000">2025-10-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/mpd/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

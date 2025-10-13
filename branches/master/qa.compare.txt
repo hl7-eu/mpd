@@ -1,0 +1,145 @@
+Hl7EuMedPrescriptionDispenseIg : Validation Results
+=========================================
+
+err = 3, warn = 45, info = 2
+$--
+Generated $--. FHIR version $-- for hl7.fhir.eu.mpd#$-- (canonical = http://hl7.eu/fhir/mpd)
+ Build Errors : 1 / 0 / 0
+ /github/workspace/fsh-generated/resources/Bundle-100A-multiitem-prescription-with-orchestration : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-200A-multiitem-prescription-without-orchestration : 0 / 0 / 6
+ /github/workspace/fsh-generated/resources/Bundle-300A-multiitem-prescription-with-orchestration : 0 / 7 / 13
+ /github/workspace/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/Medication-01A-Cefuroxime1500GenericExplicit : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Medication-01B-Cefuroxime1500GenericConcept : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Medication-01C-Cefuroxime1500Branded : 0 / 4 / 1
+ /github/workspace/fsh-generated/resources/Medication-01D-Cefuroxime750Branded : 0 / 4 / 1
+ /github/workspace/fsh-generated/resources/Medication-02A-ClotrimazoleCanifugCremolum : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/Medication-02A1-CanifugCremolumCreamItem : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/Medication-02A2-CanifugCremolumPessaryItem : 0 / 4 / 1
+ /github/workspace/fsh-generated/resources/Medication-03B-VitaminBComplexBranded : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/Medication-04A-FirmagonBranded : 0 / 6 / 1
+ /github/workspace/fsh-generated/resources/Medication-05A-Tilidin-Branded : 0 / 4 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-300D-dispense-for-2-requests : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-400D-dispense-1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-400D-dispense-2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-400E-refused-dispense : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request3 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-200C-2-medication-prescription-request1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-200C-2-medication-prescription-request2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-300C-2-medication-prescription-request1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-300C-2-medication-prescription-request2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-400C-prescription-cefuroxime-singleline : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/Organization-organization1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-organization2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-patient1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-patient2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-practitioner1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-practitioner2 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/PractitionerRole-doctor1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/PractitionerRole-pharmacist1 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/RequestGroup-100B-RequestOrchestration : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/RequestGroup-300B-RequestOrchestration : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Dispensation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Medication-eu-mpd : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-MedicationDispense-eu-mpd : 0 / 5 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd : 0 / 4 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-MedicinalProduct : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Prescription : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-Subject : 0 / 0 / 1
+</table>
+== n/a ==
+ERROR: There is no jira specification file defined with the expected name of FHIR-eu-mpd in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
+== fsh-generated/resources/Bundle-100A-multiitem-prescription-with-orchestration.json ==
+== fsh-generated/resources/Bundle-200A-multiitem-prescription-without-orchestration.json ==
+== fsh-generated/resources/Bundle-300A-multiitem-prescription-with-orchestration.json ==
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[5].resource/*Medication/02A2-CanifugCremolumPessaryItem*/.extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[5].resource/*Medication/02A2-CanifugCremolumPessaryItem*/.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[5].resource/*Medication/02A2-CanifugCremolumPessaryItem*/.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[5].resource/*Medication/02A2-CanifugCremolumPessaryItem*/.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[6].resource/*Medication/02A1-CanifugCremolumCreamItem*/.extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[6].resource/*Medication/02A1-CanifugCremolumCreamItem*/.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Bundle/300A-multiitem-prescription-with-orchestration: Bundle.entry[6].resource/*Medication/02A1-CanifugCremolumCreamItem*/.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd.json ==
+ERROR: ImplementationGuide/hl7.fhir.eu.mpd: ImplementationGuide.dependsOn[2]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+ERROR: ImplementationGuide/hl7.fhir.eu.mpd: ImplementationGuide.dependsOn[4]: The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+== fsh-generated/resources/Medication-01A-Cefuroxime1500GenericExplicit.json ==
+WARNING: Medication/01A-Cefuroxime1500GenericExplicit: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01A-Cefuroxime1500GenericExplicit: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-01B-Cefuroxime1500GenericConcept.json ==
+== fsh-generated/resources/Medication-01C-Cefuroxime1500Branded.json ==
+WARNING: Medication/01C-Cefuroxime1500Branded: Medication.extension[2].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01C-Cefuroxime1500Branded: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01C-Cefuroxime1500Branded: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01C-Cefuroxime1500Branded: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-01D-Cefuroxime750Branded.json ==
+WARNING: Medication/01D-Cefuroxime750Branded: Medication.extension[2].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01D-Cefuroxime750Branded: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01D-Cefuroxime750Branded: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/01D-Cefuroxime750Branded: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-02A-ClotrimazoleCanifugCremolum.json ==
+WARNING: Medication/02A-ClotrimazoleCanifugCremolum: Medication.extension[2].extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A-ClotrimazoleCanifugCremolum: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-02A1-CanifugCremolumCreamItem.json ==
+WARNING: Medication/02A1-CanifugCremolumCreamItem: Medication.extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A1-CanifugCremolumCreamItem: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A1-CanifugCremolumCreamItem: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-02A2-CanifugCremolumPessaryItem.json ==
+WARNING: Medication/02A2-CanifugCremolumPessaryItem: Medication.extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A2-CanifugCremolumPessaryItem: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A2-CanifugCremolumPessaryItem: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/02A2-CanifugCremolumPessaryItem: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-03B-VitaminBComplexBranded.json ==
+WARNING: Medication/03B-VitaminBComplexBranded: Medication.extension[3].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/03B-VitaminBComplexBranded: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/03B-VitaminBComplexBranded: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-04A-FirmagonBranded.json ==
+WARNING: Medication/04A-FirmagonBranded: Medication.extension[3].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/04A-FirmagonBranded: Medication.extension[4].extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/04A-FirmagonBranded: Medication.extension[5].extension[0].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/04A-FirmagonBranded: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/04A-FirmagonBranded: Medication.amount.numerator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/04A-FirmagonBranded: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Medication-05A-Tilidin-Branded.json ==
+WARNING: Medication/05A-Tilidin-Branded: Medication.extension[2].value.ofType(CodeableConcept).coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/05A-Tilidin-Branded: Medication.form.coding[0].system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/05A-Tilidin-Branded: Medication.ingredient[0].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+WARNING: Medication/05A-Tilidin-Branded: Medication.ingredient[1].strength.denominator.system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/MedicationDispense-300D-dispense-for-2-requests.json ==
+== fsh-generated/resources/MedicationDispense-400D-dispense-1.json ==
+== fsh-generated/resources/MedicationDispense-400D-dispense-2.json ==
+== fsh-generated/resources/MedicationDispense-400E-refused-dispense.json ==
+== fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request1.json ==
+== fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request2.json ==
+== fsh-generated/resources/MedicationRequest-100C-3-medication-prescription-request3.json ==
+== fsh-generated/resources/MedicationRequest-200C-2-medication-prescription-request1.json ==
+== fsh-generated/resources/MedicationRequest-200C-2-medication-prescription-request2.json ==
+== fsh-generated/resources/MedicationRequest-300C-2-medication-prescription-request1.json ==
+== fsh-generated/resources/MedicationRequest-300C-2-medication-prescription-request2.json ==
+== fsh-generated/resources/MedicationRequest-400C-prescription-cefuroxime-singleline.json ==
+WARNING: MedicationRequest/400C-prescription-cefuroxime-singleline: MedicationRequest.dispenseRequest.extension[0].value.ofType(Quantity).system: No definition could be found for URL value 'http://standardterms.edqm.eu'
+== fsh-generated/resources/Organization-organization1.json ==
+== fsh-generated/resources/Organization-organization2.json ==
+== fsh-generated/resources/Patient-patient1.json ==
+== fsh-generated/resources/Patient-patient2.json ==
+== fsh-generated/resources/Practitioner-practitioner1.json ==
+== fsh-generated/resources/Practitioner-practitioner2.json ==
+== fsh-generated/resources/PractitionerRole-doctor1.json ==
+== fsh-generated/resources/PractitionerRole-pharmacist1.json ==
+== fsh-generated/resources/RequestGroup-100B-RequestOrchestration.json ==
+== fsh-generated/resources/RequestGroup-300B-RequestOrchestration.json ==
+== fsh-generated/resources/StructureDefinition-Dispensation.json ==
+== fsh-generated/resources/StructureDefinition-Medication-eu-mpd.json ==
+INFORMATION: StructureDefinition/Medication-eu-mpd: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+WARNING: StructureDefinition/Medication-eu-mpd: StructureDefinition.snapshot.element[42].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+WARNING: StructureDefinition/Medication-eu-mpd: StructureDefinition.differential.element[17].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+== fsh-generated/resources/StructureDefinition-MedicationDispense-eu-mpd.json ==
+WARNING: StructureDefinition/MedicationDispense-eu-mpd: StructureDefinition.snapshot.element[34].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0, 3.0.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType' to 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType|3.0.0'
+INFORMATION: StructureDefinition/MedicationDispense-eu-mpd: StructureDefinition.snapshot.element[36].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+== fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json ==
+WARNING: StructureDefinition/MedicationRequest-eu-mpd: StructureDefinition.snapshot.element[29].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+WARNING: StructureDefinition/MedicationRequest-eu-mpd: StructureDefinition.differential.element[10].binding.extension[0]: Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+== fsh-generated/resources/StructureDefinition-MedicinalProduct.json ==
+== fsh-generated/resources/StructureDefinition-Prescription.json ==
+== fsh-generated/resources/StructureDefinition-Subject.json ==

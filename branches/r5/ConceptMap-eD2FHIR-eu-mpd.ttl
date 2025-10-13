@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/r5/mpd/ConceptMap/eD2FHIR-eu-mpd> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eD2FHIR-eu-mpd"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap eD2FHIR-eu-mpd</b></p><a name=\"eD2FHIR-eu-mpd\"> </a><a name=\"hceD2FHIR-eu-mpd\"> </a><a name=\"eD2FHIR-eu-mpd-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Dispensation.html\">B.1 Dispensation information (provided by the dispensing pharmacy)</a> to <a href=\"StructureDefinition-MedicationDispense-eu-mpd.html\">MedicationDispense: MPD</a></p><br/><p><b>Group 1 </b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Dispensation.dispenserIdentifier (B.1.1 Identifier of the dispenser)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationDispense.performer.actor</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Dispensation.dispenserFamilyName (B.1.2 Family name of the dispenser)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.performer.actor</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Dispensation.dispenserGivenName (B.1.3 Given name of the dispenser)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationDispense.performer.actor.practitioner.name.given</td><td>Details in the referred Practitioner or PractitionerRole resource</td></tr><tr><td>Dispensation.pharmacyIdentifier (B.1.4 Identifier of the pharmacy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.performer.actor</td><td>When actor is of type PractitionerRole.</td></tr><tr><td>Dispensation.pharmacyIdentifier (B.1.4 Identifier of the pharmacy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.performer.actor</td><td>When actor is of type Organization.</td></tr><tr><td>Dispensation.pharmacyIdentifier (B.1.4 Identifier of the pharmacy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.location.identifier</td><td>When Location is used to identify the pharmacy.</td></tr><tr><td>Dispensation.pharmacyAddress (B.1.5 Address of the pharmacy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.performer.actor.address</td><td>When actor is of type Organization.</td></tr><tr><td>Dispensation.pharmacyAddress (B.1.5 Address of the pharmacy)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.location.address</td><td>When Location is used to identify the pharmacy.</td></tr><tr><td>Dispensation.contactDetails (B.1.6 Details of direct contact)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.performer.actor.contact</td><td>When actor is of type Organization.</td></tr><tr><td>Dispensation.contactDetails (B.1.6 Details of direct contact)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.location.telecom</td><td>When Location is used to identify the pharmacy.</td></tr><tr><td>Dispensation.prescriptionIdentifier (B.1.7 Identifier of the prescription)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationDispense.authorizingPrescription.identifier</td><td/></tr><tr><td>Dispensation.medicinalProduct (B.1.8 Medicinal product)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.medication</td><td/></tr><tr><td>Dispensation.dispensedQuantity (B.1.9 Dispensed quantity)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationDispense.quantity</td><td/></tr><tr><td>Dispensation.dispensationDate (B.1.10 Dispensation date)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>MedicationDispense.whenHandedOver</td><td/></tr><tr><td>Dispensation.substitution (B.1.11 Substitution)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#related-to\" title=\"related-to\">is related to</a></td><td>MedicationDispense.substitution</td><td/></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/r5/mpd/ConceptMap/eD2FHIR-eu-mpd"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "eD2Fhir"] ; # 
+  fhir:title [ fhir:v "eHN eDispense to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-04-03T13:37:03+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN eDispensation Model to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the eDispensation data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:sourceScope [
+     a fhir:uri ;
+     fhir:v "http://hl7.eu/fhir/r5/mpd/StructureDefinition/Dispensation"^^xsd:anyURI
+  ] ; # 
+  fhir:targetScope [
+     a fhir:uri ;
+     fhir:v "http://hl7.eu/fhir/r5/mpd/StructureDefinition/MedicationDispense-eu-mpd"^^xsd:anyURI
+  ] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "Dispensation.dispenserIdentifier" ] ;
+       fhir:display [ fhir:v "B.1.1 Identifier of the dispenser" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Details in the referred Practitioner or PractitionerRole resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.dispenserFamilyName" ] ;
+       fhir:display [ fhir:v "B.1.2 Family name of the dispenser" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "Details in the referred Practitioner or PractitionerRole resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.dispenserGivenName" ] ;
+       fhir:display [ fhir:v "B.1.3 Given name of the dispenser" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor.practitioner.name.given" ] ;
+         fhir:relationship [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "Details in the referred Practitioner or PractitionerRole resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.pharmacyIdentifier" ] ;
+       fhir:display [ fhir:v "B.1.4 Identifier of the pharmacy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When actor is of type PractitionerRole." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.pharmacyIdentifier" ] ;
+       fhir:display [ fhir:v "B.1.4 Identifier of the pharmacy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When actor is of type Organization." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.pharmacyIdentifier" ] ;
+       fhir:display [ fhir:v "B.1.4 Identifier of the pharmacy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.location.identifier" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When Location is used to identify the pharmacy." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.pharmacyAddress" ] ;
+       fhir:display [ fhir:v "B.1.5 Address of the pharmacy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor.address" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When actor is of type Organization." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.pharmacyAddress" ] ;
+       fhir:display [ fhir:v "B.1.5 Address of the pharmacy" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.location.address" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When Location is used to identify the pharmacy." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.contactDetails" ] ;
+       fhir:display [ fhir:v "B.1.6 Details of direct contact" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.performer.actor.contact" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When actor is of type Organization." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.contactDetails" ] ;
+       fhir:display [ fhir:v "B.1.6 Details of direct contact" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.location.telecom" ] ;
+         fhir:relationship [ fhir:v "related-to" ] ;
+         fhir:comment [ fhir:v "When Location is used to identify the pharmacy." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.prescriptionIdentifier" ] ;
+       fhir:display [ fhir:v "B.1.7 Identifier of the prescription" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.authorizingPrescription.identifier" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.medicinalProduct" ] ;
+       fhir:display [ fhir:v "B.1.8 Medicinal product" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.medication" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.dispensedQuantity" ] ;
+       fhir:display [ fhir:v "B.1.9 Dispensed quantity" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.quantity" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.dispensationDate" ] ;
+       fhir:display [ fhir:v "B.1.10 Dispensation date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.whenHandedOver" ] ;
+         fhir:relationship [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Dispensation.substitution" ] ;
+       fhir:display [ fhir:v "B.1.11 Substitution" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "MedicationDispense.substitution" ] ;
+         fhir:relationship [ fhir:v "related-to" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

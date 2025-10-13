@@ -1,0 +1,19 @@
+{
+  "url" : "http://hl7.eu/fhir/mpd/ImplementationGuide/hl7.fhir.eu.mpd",
+  "name" : "Hl7EuMedPrescriptionDispenseIg",
+  "title" : "HL7 Europe Medication Prescription and Dispense",
+  "description" : "This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context",
+  "status" : "draft",
+  "package-id" : "hl7.fhir.eu.mpd",
+  "ig-ver" : "0.1.0",
+  "date" : "Sun, 18 May, 2025 18:00:53 +0000",
+  "dateISO8601" : "2025-05-18T18:00:53+00:00",
+  "errs" : 7,
+  "warnings" : 19,
+  "hints" : 3,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 40,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1622684352
+}

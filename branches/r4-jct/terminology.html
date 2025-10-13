@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Terminology Considerations - HL7 Europe Medication Prescription and Dispense v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Medication Prescription and Dispense</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  Europe
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope and Content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use cases</a>
+      </li>
+      <li>
+        <a href="logicalmodels.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology Considerations</a>
+      </li>
+      <li>
+        <a href="medicationconcepts.html">Medication Concepts</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Mapping to Profiles</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+      <li>
+        <a href="implementationnotes.html">Implementation Notes</a>
+      </li>
+      <li>
+        <a href="https://build.fhir.org/ig/IHE/pharm-mpd/">IHE MPD IG</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authors.html">Authors and Contributors</a>
+      </li>
+      <li>
+        <a href="knownissues.html">Known Issues</a>
+      </li>
+      <li>
+        <a href="downloads.html">Download</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="copyright.html">Copyright</a>
+      </li>
+      <li>
+        <a href="crossversionanalysis.html">Cross-version Analysis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://build.fhir.org/ig/hl7-eu/mpd/branches/r5/">R5 IG</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Terminology Considerations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Medication Prescription and Dispense, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/mpd/tree/33/merge">https://github.com/hl7-eu/mpd/tree/33/merge</a> and changes regularly. See the <a href="http://hl7.eu/fhir/mpd/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Terminology Considerations</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#crossborder-terminology" id="markdown-toc-crossborder-terminology">Crossborder terminology</a></li>
+  <li><a href="#substances-active-ingredients" id="markdown-toc-substances-active-ingredients">Substances (active ingredients)</a></li>
+  <li><a href="#dose-form-route-of-administration-etc" id="markdown-toc-dose-form-route-of-administration-etc">Dose form, route of administration, etc</a></li>
+  <li><a href="#units" id="markdown-toc-units">Units</a></li>
+  <li><a href="#who-atc" id="markdown-toc-who-atc">WHO ATC</a></li>
+  <li><a href="#national-codesystems" id="markdown-toc-national-codesystems">National codesystems</a></li>
+</ul>
+
+</div>
+<p>The implementation guide does not aim to impose common terminology for all European systems. Using international code systems, especially those that are used in MyHealth@EU specifications, may help in making crossborder implementation more straightforward, but for most countries it is easier to provide mappings than switch to new code systems in their national prescribing systems.</p>
+
+<p>eHealth Network guideline lists preferred code systems for prescription and dispense: ATC, EDQM, EMA SMS, UCUM. Using these code systems is mandatory in MyHealth@EU crossborder eP/eD specification.</p>
+
+<p>In a clinical setting, SNOMED CT is often preferred, and multiple countries are creating/maintaining SNOMED CT national drug extensions to provide medication concepts as a terminology.</p>
+
+<p>Medicines agencies are following European Medicines Agency's guideline for implementing ISO IDMP. ISO IDMP as a set of standards does not include terminologies, but European IDMP implementation guides imposes EMA SPOR terminology: SMS (Substance Management Servise) for substances, and RMS (Referentials Management Service) for a number of other common coded attributes. Many countries use national codes for publishing product data in national catalogues/registries, but on a regulatory level, mappings to EMA SPOR are inevitable to allow data exchange with EMA and marketing authorisation holders.</p>
+
+<h3 id="crossborder-terminology">Crossborder terminology</h3>
+
+<p>MyHealth@EU data exchange for eP and eD is based on CDA and it is operational in an increasing number of countries, allowing patients to buy their prescription drugs from another country's pharmacy. Prescription created in country A is translated to country B language to make it understandable for the country B pharmacist. Dispensation information travels back to country A and is at least partly stored in the country A prescrption/dispensation system. This data flow with automatic translation of coded elements is possible thanks to central terminology services - this includes:</p>
+<ul>
+  <li>central value sets (Master ValueSet Catalogue) in English,</li>
+  <li>mappings from national country A value sets to central value sets,</li>
+  <li>translation of central value sets to all country B languages.</li>
+</ul>
+
+<p>The following tables illustrate the differences between what is needed in cross-border services (top) compared to what is used by the regulatory domain (bottom).</p>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Data element</strong></td>
+      <td><strong>Code system</strong></td>
+      <td><strong>Example code and display</strong></td>
+    </tr>
+    <tr>
+      <td>Dose form</td>
+      <td>EDQM</td>
+      <td>10221000 Film-coated tablet</td>
+    </tr>
+    <tr>
+      <td>Route of administration</td>
+      <td>EDQM</td>
+      <td>20053000 Oral use</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>EDQM</td>
+      <td>30009000 Box</td>
+    </tr>
+    <tr>
+      <td>Unit of presentation</td>
+      <td>EDQM</td>
+      <td>15054000 Tablet</td>
+    </tr>
+    <tr>
+      <td>Unit of measurement</td>
+      <td>UCUM</td>
+      <td>ug microgram(s)</td>
+    </tr>
+    <tr>
+      <td>ATC classification</td>
+      <td>WHO ATC</td>
+      <td>G03AA12 drospirenone and ethinylestradiol</td>
+    </tr>
+    <tr>
+      <td>Active ingredient</td>
+      <td>EMA SMS (preferred), ATC (allowed)</td>
+      <td>100000092667 or J01DC02 cefuroxime</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In EMA specifications for regulatory data exchange, similar concepts are used (same displays), but a different code system:</p>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Coded attribute</strong></td>
+      <td><strong>MyHealth@EU</strong></td>
+      <td><strong>EMA RMS</strong></td>
+      <td><strong>Display name</strong></td>
+    </tr>
+    <tr>
+      <td>Dose form</td>
+      <td>EDQM: 10221000</td>
+      <td>100000073665</td>
+      <td>Film-coated tablet</td>
+    </tr>
+    <tr>
+      <td>Route of administration</td>
+      <td>EDQM: 20053000</td>
+      <td>100000073619</td>
+      <td>Oral use</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>EDQM: 30009000</td>
+      <td>100000073498</td>
+      <td>Box</td>
+    </tr>
+    <tr>
+      <td>Unit of presentation</td>
+      <td>EDQM: 15054000</td>
+      <td>200000002152</td>
+      <td>Tablet</td>
+    </tr>
+    <tr>
+      <td>Unit of measurement</td>
+      <td>UCUM: ug</td>
+      <td>100000110656</td>
+      <td>microgram(s)</td>
+    </tr>
+    <tr>
+      <td>ATC</td>
+      <td>WHO ATC: G03AA12</td>
+      <td>100000095785</td>
+      <td>drospirenone and ethinylestradiol</td>
+    </tr>
+    <tr>
+      <td>Country codes</td>
+      <td>ISO: SE</td>
+      <td>100000000535</td>
+      <td>Kingdom of Sweden</td>
+    </tr>
+    <tr>
+      <td>Language codes</td>
+      <td>BCP-47: sv-SE</td>
+      <td>100000072288</td>
+      <td>Swedish</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The tables above is merely one example of different terminology needs. The code systems used in MyHealth@EU services are recommended by eHealth Network in guidelines for ePrescription and Patient Summary. On a national level, many more use cases and terminology options exist.</p>
+
+<h3 id="substances-active-ingredients">Substances (active ingredients)</h3>
+<p>EMA SPOR Substance Management Services (SMS) provides a list of coded substances - active ingredients (salts as well as moieties) and excipients. It is used in EMA SPOR services, recommended in eHealth Network guidelines, and implemented in MyHealth@EU cross-border services.</p>
+
+<p>On a national level, local code systems or SNOMED CT are also often used. There is no official mapping between SNOMED CT and EMA SMS, but as they both use official INN names assigned by WHO, mapping by name is quite helpful.</p>
+
+<p>In MyHealth@EU services, substances are allowed to be coded with ATC. However, ATC is a classification of products, not a code system for ingredients. Therefore, ATC cannot be considered the preferred option for coding active ingredients. ATC does not include excipients or modifications like salts.</p>
+
+<h3 id="dose-form-route-of-administration-etc">Dose form, route of administration, etc</h3>
+
+<p>Dose form, unit of presentation, package type and route of administration are all semantically different concepts, that have overlapping elements or defining relationships with eachother. A unit of presentation may be "tablet" and overlap with the dose form "tablet", or it may be "vial" possibly overlapping with package type "vial". Many dose forms include route of administration or package type information in the name. Depending on the code systems used, the need for the following concepts may vary.</p>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Coded attribute</strong></td>
+      <td><strong>EDQM</strong></td>
+      <td><strong>EMA RMS</strong></td>
+      <td><strong>SNOMED CT</strong></td>
+    </tr>
+    <tr>
+      <td>Dose form</td>
+      <td>10221000 Film-coated tablet</td>
+      <td>100000073665 Film-coated tablet</td>
+      <td>1163573008 Film-coated oral tablet</td>
+    </tr>
+    <tr>
+      <td>Route of administration</td>
+      <td>20053000 Oral use</td>
+      <td>100000073619 Oral use</td>
+      <td>26643006 Oral route</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>30009000 Box</td>
+      <td>100000073498 Box</td>
+      <td>(no equivalent)</td>
+    </tr>
+    <tr>
+      <td>Unit of presentation</td>
+      <td>15054000 Tablet</td>
+      <td>200000002152 Tablet</td>
+      <td>732936001 Tablet (unit of presentation)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Dose forms have been harmonised between EDQM Standard Terms and SNOMED CT, and the mappings exists.<br />
+EDQM Standard Terms, EMA RMS and SNOMED CT all provide a useful addition to lists of terms by adding attributes to dose forms. Each dose form is equipped with the following attributes:</p>
+<ul>
+  <li>basic dose form (e.g., cream, tablet),</li>
+  <li>state of matter (e.g., solid, gas),</li>
+  <li>transformation (e.g., dissolve, disperse),</li>
+  <li>release characteristics (e.g., conventional release, prolonged release),</li>
+  <li>intended site (e.g., oral, dental),</li>
+  <li>administration method (e.g., swallow, inject).</li>
+</ul>
+
+<p>Dose form attributes can be used for creating decision logic in ePrescription systems and other clinical processes. They can also be helpful for mapping dose forms between different code systems.</p>
+
+<h4 id="ema-spor-rms-and-edqm-standard-terms">EMA SPOR RMS and EDQM Standard Terms</h4>
+<p>EMA SPOR Referentials Management Services (RMS) is the terminology service to support central data management for the European regulatory domain, combining external resources like EDQM, WHO ATC, and internal resources. It uses an internal numbering system for terminology and product lifecycle management purposes - this means recoding concepts from aforementioned code systems, and adding concepts when needed (for example, adding concepts to pharmaceutical form list, where no agreement on EDQM level could be reached). Mappings to source code systems are provided if they exist.</p>
+
+<p>EDQM Standard Terms are a code system of about 900 terms in 35 languages. These terms are used in European marketing authorisation applications, labelling, reporting, etc. It is designed to support regulatory processes but has been also adopted by eHealth community in Europe. eHealth Network guidelines for ePrescription and Patient Summary, recommend EDQM terms for capturing medicinal product data concerning dose form, route of administration, unit of presentation, and package types.</p>
+
+<p>There are 16 EMA RMS lists originating from EDQM Standard Terms. These lists are considered one code system when expressed in EDQM codes, but 16 different code systems when expressed in RMS codes. This discrepancy may be confusing for implementers but is unlikely to cause significant technical errors.</p>
+
+<p>EMA states that they may add concepts to these RMS lists, when the concepts are pre-accepted by EDQM but not yet valid in the source code system. Just like with ATC, adding concepts that are not yet active in the source system, may lead to mapping and validation errors in downstream systems. If EDQM codes have a role in your national infrastructure (including cross-border services), additional codings may be added to product data to ensure the mapping is present in the data and validated by the NCA.</p>
+
+<h4 id="snomed-ct">SNOMED CT</h4>
+
+<p>SNOMED CT can be used for coding single data elements, like dose form or route of administration, or provide a full product as a concept with a sufficient data model to describe the product. 
+SNOMED International maintains a mapping of dose forms for EDQM and SNOMED CT. The scope of this mapping is the list of pharmaceutical dose forms in EDQM, excluding combined dose forms, combined terms and combination packages.</p>
+
+<p>The international version of SNOMED CT only includes generic medication information, most granular level of which is ‘clinical drug’, best mapped to manufactured item concept in IDMP.<br />
+More information about how SNOMED CT maps to IDMP, and how regulatory data can be expressed and distributed using SNOMED CT concept model and terminology can be found in SNOMED International guidance materials for understanding international medicinal product model and drug model for national extensions.</p>
+
+<h3 id="units">Units</h3>
+
+<p>There are several types of units used on prescriptions:</p>
+<ul>
+  <li>units of measurement for independent physical units (e.g., milligram, gram, millilitre, hour, etc);</li>
+  <li>units of presentation for smallest countable items in a medicinal product package (e.g., tablet, vial, bottle);</li>
+  <li>units of product usage (dosaging) for marking the dosage (possibly a subset of the two above with vague additions, such as "application", "table spoon", etc).</li>
+</ul>
+
+<p>Unified Code for Units of Measure (UCUM) is widely used for units in eHealth and beyond - not only for medicinal product information, but also in laboratory results and other measurements. In eHealth services UCUM notations are generally used as codes for units of measurement, which is the preferred codesystem for units in HL7 FHIR. When UCUM is used for units of presentation/usage, code "1" may be used to indicate any countable item. Brackets notation like "{tablet}" is allowed but not encouraged in HL7 FHIR.</p>
+
+<p>In EMA RMS list, the same concepts are coded with RMS codes, and mapping from RMS units to UCUM is provided if it exists. RMS does not declare UCUM to be the source codesystem for units of measure, leaving at possibility of deviating from it.</p>
+
+<p>SNOMED CT also includes units of measurement with SNOMED CT codes.</p>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Coded attribute</strong></td>
+      <td><strong>EDQM</strong></td>
+      <td><strong>EMA RMS</strong></td>
+      <td><strong>SNOMED CT</strong></td>
+    </tr>
+    <tr>
+      <td>Unit of presentation</td>
+      <td>15054000 Tablet</td>
+      <td>200000002152 Tablet</td>
+      <td>732936001 Tablet (unit of presentation) or 428673006 Tablet - unit of product usage</td>
+    </tr>
+    <tr>
+      <td>Unit of measurement</td>
+      <td>ug microgram(s)</td>
+      <td>100000110656 microgram(s)</td>
+      <td>258685003 mcg</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Units of presentation and units of usage are overlapping, but unit of presentation is more common for packaging information, while units of usage may be more focused on dosaging information. Unit of presentation as an independent data element is a characteristic of a product, and an extension for this data is available in the Medication profile in this IG. Units of usage are not provided as an element or a value set in this IG, and unit of presentation is used instead.</p>
+
+<h3 id="who-atc">WHO ATC</h3>
+
+<p>Anatomical Therapeutic Chemical Classification System (ATC) has been known and used since 1976. ATC is widely used in prescription systems, clinical decision support systems, and even on physical pharmacy shelves.</p>
+
+<p>In EMA RMS, WHO ATC has been recoded with RMS codes. The list owner is considered WHO, and EMA is allowed to add concepts that are pre-accepted for use in the source system but will come into effect in the future. For example, concept L01FX25 ‘mosunetuzumab’ was recoded as 200000033781 ‘mosunetuzumab’ in RMS and marked with a status ‘Current’ in November 2023. In WHO ATC this concept was not valid before 01.01.2024. It is important to be aware of the versions and their effective dates when using ATC. In addition to the problem mentioned, it has been noticed in crossborder ePrescription service, that countries may adopt the new version of ATC at different times. Many countries publish ATC with a national URL, even when the content is unaltered. In some countries, additional codes have been added to ATC for various reasons, and automatic 1:1 mapping with other countries' ATC concepts may not be achievable.</p>
+
+<p>This specification encourages using ATC as a classification in the data element classification. ATC is not the best candidate for medication or substance codes, as it is limited in scope and granularity.</p>
+
+<h3 id="national-codesystems">National codesystems</h3>
+
+<p>National or proprietary codesystems are used in most countries, and they are likely to keep their importance in the national infrastructure, at least in processes that need to handle legacy data. Transition to new code systems requires mapping and/or double Coding in FHIR resources.</p>
+
+<p>It is also worth mentioning, that there also national flavours of international codesystems used in countries, for example, Estonian ATC is enriched so, that it provides codes for all combinations of ingredients, extending the code system where official ATC stops at a grouper concept. Also, in many countries, EDQM terms has been used for dose forms for a long time, but with local codes, not official EDQM codes.</p>
+
+<p>These local variations may be deeply rooted in clinical systems (including decision support mechanisms) and discontinuing them may be a slow or unnecessary process. Therefore, significant changes in code systems on a national level should be analysed carefully.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.mpd#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 26, 2025 17:01+0000">2025-03-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/mpd/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

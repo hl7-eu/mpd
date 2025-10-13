@@ -1,0 +1,35 @@
+{
+  "resourceType" : "MedicationDispense",
+  "id" : "400E-refused-dispense",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/mpd/StructureDefinition/MedicationDispense-eu-mpd"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationDispense 400E-refused-dispense</b></p><a name=\"400E-refused-dispense\"> </a><a name=\"hc400E-refused-dispense\"> </a><a name=\"400E-refused-dispense-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedicationDispense-eu-mpd.html\">MedicationDispense: MPD</a></p></div><p><b>status</b>: Declined</p><p><b>medication</b>: <span title=\"Codes:\"></span></p><p><b>subject</b>: <a href=\"Patient-patient1.html\">Thomas Engine  Male, DoB: 1950-09-15 ( 12345)</a></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-pharmacist1.html\">PractitionerRole Pharmacist</a></td></tr></table><p><b>authorizingPrescription</b>: <a href=\"MedicationRequest-400C-prescription-cefuroxime-singleline.html\">MedicationRequest: identifier = 10-123EP; status = active; intent = order; medication[x] = -&gt;Medication: extension = cefuroxime; form = Powder for solution for injection or infusion; authoredOn = 2024-12-06; reasonCode = Bronchopneumonia caused by bacteria (disorder)</a></p><p><b>quantity</b>: 0 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>whenHandedOver</b>: 2024-12-06 19:54:00+0000</p></div>"
+  },
+  "status" : "declined",
+  "medicationCodeableConcept" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+      "valueCode" : "not-performed"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient1"
+  },
+  "performer" : [{
+    "actor" : {
+      "reference" : "PractitionerRole/pharmacist1"
+    }
+  }],
+  "authorizingPrescription" : [{
+    "reference" : "MedicationRequest/400C-prescription-cefuroxime-singleline"
+  }],
+  "quantity" : {
+    "value" : 0,
+    "system" : "http://unitsofmeasure.org",
+    "code" : "1"
+  },
+  "whenHandedOver" : "2024-12-06T19:54:00Z"
+}

@@ -1,0 +1,12 @@
+Hl7EuMedPrescriptionDispenseIg
+=========================================
+
+/work/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd.json: line 1, col 2207, Error - The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/') (BUSINESSRULE)
+/work/fsh-generated/resources/ImplementationGuide-hl7.fhir.eu.mpd.json: line 1, col 2486, Error - The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/') (BUSINESSRULE)
+/work/fsh-generated/resources/StructureDefinition-Medication-eu-mpd.json: line 1, col 108875, Warning - Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' (INVARIANT)
+/work/fsh-generated/resources/StructureDefinition-Medication-eu-mpd.json: line 1, col 128244, Warning - Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' (INVARIANT)
+/work/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json: line 1, col 111595, Warning - Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' (INVARIANT)
+/work/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json: line 1, col 216665, Warning - Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' (INVARIANT)
+
+err = 2, warn = 4, info = 0
+IG Publisher Version: 2.0.20

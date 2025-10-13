@@ -1,0 +1,26 @@
+{
+  "resourceType" : "RequestOrchestration",
+  "id" : "300B-RequestOrchestration",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RequestOrchestration 300B-RequestOrchestration</b></p><a name=\"300B-RequestOrchestration\"> </a><a name=\"hc300B-RequestOrchestration\"> </a><a name=\"300B-RequestOrchestration-en-US\"> </a><p><b>groupIdentifier</b>: 300</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href=\"Patient-patient1.html\">Thomas Engine  Male, DoB: 1950-09-15 ( 12345)</a></p><blockquote><p><b>action</b></p><p><b>resource</b>: <a href=\"MedicationRequest-300C-2-medication-prescription-request1.html\">MedicationRequest: identifier = 300-1/2; groupIdentifier = 300; status = active; intent = option; authoredOn = 2024-10-06</a></p></blockquote><blockquote><p><b>action</b></p><p><b>resource</b>: <a href=\"MedicationRequest-300C-2-medication-prescription-request2.html\">MedicationRequest: identifier = 300-2/2; groupIdentifier = 300; status = active; intent = option; authoredOn = 2024-10-06</a></p></blockquote></div>"
+  },
+  "groupIdentifier" : {
+    "value" : "300"
+  },
+  "status" : "active",
+  "intent" : "order",
+  "subject" : {
+    "reference" : "Patient/patient1"
+  },
+  "action" : [{
+    "resource" : {
+      "reference" : "MedicationRequest/300C-2-medication-prescription-request1"
+    }
+  },
+  {
+    "resource" : {
+      "reference" : "MedicationRequest/300C-2-medication-prescription-request2"
+    }
+  }]
+}

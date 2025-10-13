@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="05A-Tilidin-Branded"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/mpd/StructureDefinition/Medication-eu-mpd"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication 05A-Tilidin-Branded</b></p><a name="05A-Tilidin-Branded"> </a><a name="hc05A-Tilidin-Branded"> </a><a name="05A-Tilidin-Branded-en-US"> </a><p><b>Medication - Classification</b>: <span title="Codes:{http://www.whocc.no/atc N02AX51}">tilidine and naloxone</span></p><p><b>Medication - Product Name</b>: Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung</p><p><b>Medication - Unit of presentation</b>: <span title="Codes:{http://standardterms.edqm.eu 15022000}">Drop</span></p><p><b>identifier</b>: 12345</p><p><b>manufacturer</b>: Hexal AG</p><p><b>form</b>: <span title="Codes:{http://standardterms.edqm.eu 10101000}">Oral drops, solution</span></p><p><b>amount</b>: 10 milliliter<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemL = 'mL')</span>/1</p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:{http://snomed.info/sct 373562008}">Tilidine</span></p><p><b>isActive</b>: true</p><p><b>strength</b>: 50 milligram<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/20 Drop<span style="background: LightGoldenRodYellow"> (Details: standardterms.edqm.eu  code15022000 = 'Drop')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:{http://snomed.info/sct 372890007}">Naloxone</span></p><p><b>isActive</b>: true</p><p><b>strength</b>: 4 milligram<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/20 Drop<span style="background: LightGoldenRodYellow"> (Details: standardterms.edqm.eu  code15022000 = 'Drop')</span></p></blockquote></div>
+  </text>
+  <extension url="http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="N02AX51"/>
+        <display value="tilidine and naloxone"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-productname">
+    <valueString value="Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung"/>
+  </extension>
+  <extension url="http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-unitofpresentation">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://standardterms.edqm.eu"/>
+        <code value="15022000"/>
+        <display value="Drop"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <value value="12345"/>
+  </identifier>
+  <manufacturer>
+    <display value="Hexal AG"/>
+  </manufacturer>
+  <form>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="10101000"/>
+      <display value="Oral drops, solution"/>
+    </coding>
+  </form>
+  <amount>
+    <numerator>
+      <value value="10"/>
+      <unit value="milliliter"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mL"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+    </denominator>
+  </amount>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="373562008"/>
+        <display value="Tilidine"/>
+      </coding>
+    </itemCodeableConcept>
+    <isActive value="true"/>
+    <strength>
+      <extension url="http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthsubstance">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="96186004"/>
+            <display value="Tilidine hydrochloride"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <numerator>
+        <value value="50"/>
+        <unit value="milligram"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="20"/>
+        <unit value="Drop"/>
+        <system value="http://standardterms.edqm.eu"/>
+        <code value="15022000"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="372890007"/>
+        <display value="Naloxone"/>
+      </coding>
+    </itemCodeableConcept>
+    <isActive value="true"/>
+    <strength>
+      <extension url="http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthsubstance">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="21518006"/>
+            <display value="Naloxone hydrochloride"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <numerator>
+        <value value="4"/>
+        <unit value="milligram"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="20"/>
+        <unit value="Drop"/>
+        <system value="http://standardterms.edqm.eu"/>
+        <code value="15022000"/>
+      </denominator>
+    </strength>
+  </ingredient>
+</Medication>

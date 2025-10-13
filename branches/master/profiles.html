@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Mapping to Profiles - HL7 Europe Medication Prescription and Dispense v0.1.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Medication Prescription and Dispense</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-ballot - ballot
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scope.html">Scope and Content</a>
+      </li>
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="references.html">References</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use cases</a>
+      </li>
+      <li>
+        <a href="logicalmodels.html">Logical Models</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology Considerations</a>
+      </li>
+      <li>
+        <a href="medicationconcepts.html">Medication Concepts</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Mapping to Profiles</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+      <li>
+        <a href="implementationnotes.html">Implementation Notes</a>
+      </li>
+      <li>
+        <a href="https://profiles.ihe.net/PHARM/MPD/">IHE MPD IG</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="authors.html">Authors and Contributors</a>
+      </li>
+      <li>
+        <a href="knownissues.html">Known Issues</a>
+      </li>
+      <li>
+        <a href="downloads.html">Download</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="copyright.html">Copyright</a>
+      </li>
+      <li>
+        <a href="crossversionanalysis.html">Cross-version Analysis</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="https://hl7.eu/fhir/mpd-r5">R5 IG</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Mapping to Profiles</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Medication Prescription and Dispense, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.1.0-ballot  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/hl7-eu/mpd/tree/49/merge'>https://github.com/hl7-eu/mpd/tree/49/merge</a> and changes regularly. See the <a href='http://hl7.eu/fhir/mpd/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Mapping to Profiles</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="mappings-from-ehds-models-to-fhir-profiles">Mappings from EHDS models to FHIR profiles</h3>
+
+<p>EHDS logical information models are provided by Xt-EHR project. Please read more about the models on <a href="logicalmodels.html">Logical Models page</a>.<br />
+Mappings from eHealth Network Guidelines are not provided by this guide.</p>
+
+<h4 id="prescription">Prescription</h4>
+
+<p>EHDS Medication Prescription model allows multiple items prescribed on one prescription. In such case, EHDS.MedicationPrescription.identifier maps to MedicationRequest.groupIdentifier, and RequestOrchestration/RequestGroup may be the target of some of the prescription elements. Please read <a href="implementationnotes.html">implementation notes</a> for more information.</p>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Logical model element</strong></td>
+      <td><strong>FHIR Path R5</strong></td>
+      <td><strong>FHIR Path R4</strong></td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.identifier</td>
+      <td>MedicationRequest.identifier or .groupIdentifier</td>
+      <td>MedicationRequest.identifier or .groupIdentifier</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.authorship.author</td>
+      <td>MedicationRequest.requester</td>
+      <td>MedicationRequest.requester</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.authorship.datetime</td>
+      <td>MedicationRequest.authoredOn</td>
+      <td>MedicationRequest.authoredOn</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.subject</td>
+      <td>MedicationRequest.subject</td>
+      <td>MedicationRequest.subject</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.validFrom</td>
+      <td>MedicationRequest.dispenseRequest.validityPeriod.start</td>
+      <td>MedicationRequest.dispenseRequest.validityPeriod.start</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.validUntil</td>
+      <td>MedicationRequest.dispenseRequest.validityPeriod.end</td>
+      <td>MedicationRequest.dispenseRequest.validityPeriod.end</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.recorder</td>
+      <td>MedicationRequest.recorder</td>
+      <td>MedicationRequest.recorder</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.recordingDate</td>
+      <td>MedicationRequest.eventhistory.recorded</td>
+      <td>MedicationRequest.eventhistory.recorded</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.status</td>
+      <td>MedicationRequest.status or RequestOrchestration.status (for multi-item)</td>
+      <td>MedicationRequest.status or RequestGroup.status (for multi-item)</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.header.statusReason[x]</td>
+      <td>MedicationRequest.statusReason</td>
+      <td>MedicationRequest.statusReason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.comment</td>
+      <td>MedicationRequest.note.text, RequestOrchestration.note.text</td>
+      <td>MedicationRequest.note.text, RequestGroup.note.text</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem</td>
+      <td>MedicationRequest</td>
+      <td>MedicationRequest</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.identifier</td>
+      <td>MedicationRequest.identifier</td>
+      <td>MedicationRequest.identifier</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.category</td>
+      <td>MedicationRequest.category</td>
+      <td>MedicationRequest.category</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.status</td>
+      <td>MedicationRequest.status</td>
+      <td>MedicationRequest.status</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.statusReason[x]</td>
+      <td>MedicationRequest.statusReason</td>
+      <td>MedicationRequest.statusReason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.medication</td>
+      <td>MedicationRequest.medication</td>
+      <td>MedicationRequest.medication[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.indication[x]</td>
+      <td>MedicationRequest.reason</td>
+      <td>MedicationRequest.reasonCode or .reasonReference</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.indicationText</td>
+      <td>MedicationRequest.reason.concept.text</td>
+      <td>MedicationRequest.reasonCode.text</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.prescriptionIntent</td>
+      <td>MedicationRequest.reason</td>
+      <td>MedicationRequest.reason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.treatmentPeriod</td>
+      <td>MedicationRequest.effectiveDosePeriod</td>
+      <td>MedicationRequest.extension:effectiveDosePeriod</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.quantityPrescribed</td>
+      <td>MedicationRequest.dispenseRequest.extension: prescribedQuantity</td>
+      <td>MedicationRequest.dispenseRequest.extension: prescribedQuantity</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.dosageInstructions</td>
+      <td>MedicationRequest.dosageInstruction</td>
+      <td>MedicationRequest.dosageInstruction</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.preparationInstructions</td>
+      <td>MedicationRequest.dispenseRequest.dispenserInstruction</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.substitution</td>
+      <td>MedicationRequest.substitution</td>
+      <td>MedicationRequest.substitution</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]</td>
+      <td>MedicationRequest.substitution.allowed[x]</td>
+      <td>MedicationRequest.substitution.allowed[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]</td>
+      <td>MedicationRequest.substitution.reason</td>
+      <td>MedicationRequest.substitution.reason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.repeatsAllowed</td>
+      <td>MedicationRequest.dispenseRequest.numberOfRepeatsAllowed</td>
+      <td>MedicationRequest.dispenseRequest.numberOfRepeatsAllowed</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval</td>
+      <td>MedicationRequest.dispenseRequest.dispenseInterval</td>
+      <td>MedicationRequest.dispenseRequest.dispenseInterval</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.offLabel</td>
+      <td>MedicationRequest.extension:offLabelUse</td>
+      <td>MedicationRequest.extension:offLabelUse</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationPrescription.prescriptionItem.comment</td>
+      <td>MedicationRequest.note.text</td>
+      <td>MedicationRequest.note.text</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="medication">Medication</h4>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Logical model element</strong></td>
+      <td><strong>FHIR Path R5</strong></td>
+      <td><strong>FHIR Path R4</strong></td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.identifyingCode[x]</td>
+      <td>Medication.code OR Medication.identifier</td>
+      <td>Medication.code OR Medication.identifier</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.classification</td>
+      <td>Medication.extension:classification</td>
+      <td>Medication.extension:classification</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.productName</td>
+      <td>Medication.extension:productName</td>
+      <td>Medication.extension:productName</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.marketingAuthorisationHolder</td>
+      <td>Medication.marketingAuthorizationHolder</td>
+      <td>Medication.manufacturer</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.doseForm</td>
+      <td>Medication.doseForm</td>
+      <td>Medication.form</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.packSize</td>
+      <td>Medication.totalVolume</td>
+      <td>Medication.amount</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item</td>
+      <td>Medication.ingredient.item.reference(Medication)</td>
+      <td>Medication.ingredient.itemReference(Medication)</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.doseForm</td>
+      <td>Medication.doseForm</td>
+      <td>Medication.form</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient.isActive</td>
+      <td>Medication.ingredient.isActive</td>
+      <td>Medication.ingredient.isActive</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient.substance</td>
+      <td>Medication.ingredient.item</td>
+      <td>Medication.ingredient.itemCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient.strengthInfo</td>
+      <td>Medication.ingredient.strength[x]</td>
+      <td>Medication.ingredient.strength</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient.strengthInfo.strength</td>
+      <td>Medication.ingredient.strengthRatio</td>
+      <td>Medication.ingredient.strengthRatio</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance</td>
+      <td>Medication.ingredient.strength[x].extension:basisOfStrengthSubstance</td>
+      <td>Medication.ingredient.strength[x].extension:basisOfStrengthSubstance</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.unitOfPresentation</td>
+      <td>Medication.extension:unitOfPresentation</td>
+      <td>Medication.extension:unitOfPresentation</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.containedQuantity</td>
+      <td>Medication.extension:sizeOfItem</td>
+      <td>Medication.extension:sizeOfItem</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.amount</td>
+      <td>Medication.totalVolume</td>
+      <td>Medication.amount</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.item.packageType</td>
+      <td>Medication.extension:packageType</td>
+      <td>Medication.extension:packageType</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.device</td>
+      <td>Medication.extension:device</td>
+      <td>Medication.extension:device</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.characteristic</td>
+      <td>Medication.extension:characteristic</td>
+      <td>Medication.extension:characteristic</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.batch</td>
+      <td>Medication.batch</td>
+      <td>Medication.batch</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.batch.lotNumber</td>
+      <td>Medication.batch.lotNumber</td>
+      <td>Medication.batch.lotNumber</td>
+    </tr>
+    <tr>
+      <td>EHDSMedication.batch.expirationDate</td>
+      <td>Medication.batch.expirationDate</td>
+      <td>Medication.batch.expirationDate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="dosaging">Dosaging</h4>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Logical model element</strong></td>
+      <td><strong>FHIR Path R5</strong></td>
+      <td><strong>FHIR Path R4</strong></td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.sequence</td>
+      <td>Dosage.sequence</td>
+      <td>Dosage.sequence</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.text</td>
+      <td>Dosage.text</td>
+      <td>Dosage.text</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.additionalInstruction</td>
+      <td>Dosage.additionalInstruction</td>
+      <td>Dosage.additionalInstruction</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.patientInstruction</td>
+      <td>patientInstruction</td>
+      <td>patientInstruction</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.doseAndRate</td>
+      <td>Dosage.doseAndRate</td>
+      <td>Dosage.doseAndRate</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.doseAndRate.type</td>
+      <td>Dosage.doseAndRate.type</td>
+      <td>Dosage.doseAndRate.type</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.doseAndRate.dose[x]</td>
+      <td>Dosage.doseAndRate.dose[x]</td>
+      <td>Dosage.doseAndRate.dose[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.doseAndRate.rate[x]</td>
+      <td>Dosage.doseAndRate.rate[x]</td>
+      <td>Dosage.doseAndRate.rate[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing</td>
+      <td>Dosage.timing</td>
+      <td>Dosage.timing</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.event</td>
+      <td>Dosage.timing.event</td>
+      <td>Dosage.timing.event</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.code</td>
+      <td>Dosage.timing.code</td>
+      <td>Dosage.timing.code</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat</td>
+      <td>Dosage.timing.repeat</td>
+      <td>Dosage.timing.repeat</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.bounds</td>
+      <td>Dosage.timing.repeat.bounds[x]</td>
+      <td>Dosage.timing.repeat.bounds[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.bounds.duration</td>
+      <td>Dosage.timing.repeat.boundsQuantity</td>
+      <td>Dosage.timing.repeat.boundsDuration</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.bounds.range</td>
+      <td>Dosage.timing.repeat.boundsRange</td>
+      <td>Dosage.timing.repeat.boundsRange</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.bounds.period</td>
+      <td>Dosage.timing.repeat.boundsPeriod</td>
+      <td>Dosage.timing.repeat.boundsPeriod</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.count</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.count.count</td>
+      <td>Dosage.timing.repeat.count</td>
+      <td>Dosage.timing.repeat.count</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.count.countMax</td>
+      <td>Dosage.timing.repeat.countMax</td>
+      <td>Dosage.timing.repeat.countMax</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.duration</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.duration.duration</td>
+      <td>Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit</td>
+      <td>Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.duration.durationMax</td>
+      <td>Dosage.timing.repeat.durationMax</td>
+      <td>Dosage.timing.repeat.durationMax  + Dosage.timing.repeat.durationUnit</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.frequency</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.frequency.numberOfTimes</td>
+      <td>Dosage.timing.repeat.frequency</td>
+      <td>Dosage.timing.repeat.frequency</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes</td>
+      <td>Dosage.timing.repeat.frequencyMax</td>
+      <td>Dosage.timing.repeat.frequencyMax</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.frequency.period</td>
+      <td>Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit</td>
+      <td>Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.frequency.periodMax</td>
+      <td>Dosage.timing.repeat.periodMax + Dosage.timing.repeat.periodUnit</td>
+      <td>Dosage.timing.repeat.periodMax + Dosage.timing.repeat.periodUnit</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.dayOfWeek</td>
+      <td>Dosage.timing.repeat.dayOfWeek</td>
+      <td>Dosage.timing.repeat.dayOfWeek</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.timeOfDay</td>
+      <td>Dosage.timing.repeat.timeOfDay</td>
+      <td>Dosage.timing.repeat.timeOfDay</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.eventTime</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.eventTime.when</td>
+      <td>Dosage.timing.repeat.when</td>
+      <td>Dosage.timing.repeat.when</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.timing.repeat.eventTime.offset</td>
+      <td>Dosage.timing.repeat.offset</td>
+      <td>Dosage.timing.repeat.offset</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.asNeeded</td>
+      <td>Dosage.asNeeded</td>
+      <td>Dosage.asNeededBoolean</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.asNeededFor</td>
+      <td>Dosage.asNeededFor</td>
+      <td>Dosage.asNeededCodeableConcept</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.bodySite</td>
+      <td>Dosage.site</td>
+      <td>Dosage.site</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.routeOfAdministration</td>
+      <td>Dosage.route</td>
+      <td>Dosage.route</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.methodOfAdministration</td>
+      <td>Dosage.method</td>
+      <td>Dosage.method</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.maxDose</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.maxDose.maxDosePerPeriod</td>
+      <td>Dosage.maxDosePerPeriod</td>
+      <td>Dosage.maxDosePerPeriod</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.maxDose.maxDosePerAdministration</td>
+      <td>Dosage.maxDosePerAdministration</td>
+      <td>Dosage.maxDosePerAdministration</td>
+    </tr>
+    <tr>
+      <td>EHDSDosaging.maxDose.maxDosePerLifetime</td>
+      <td>Dosage.maxDosePerLifetime</td>
+      <td>Dosage.maxDosePerLifetime</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="medication-dispense">Medication Dispense</h4>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Logical model element</strong></td>
+      <td><strong>FHIR Path R5</strong></td>
+      <td><strong>FHIR Path R4</strong></td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.identifier</td>
+      <td>MedicationDispense.identifier</td>
+      <td>MedicationDispense.identifier</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.status</td>
+      <td>MedicationDispense.status</td>
+      <td>MedicationDispense.status</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.statusReason[x]</td>
+      <td>MedicationDispense.notPerformedReason</td>
+      <td>MedicationDispense.statusReason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.subject</td>
+      <td>MedicationDispense.subject</td>
+      <td>MedicationDispense.subject</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.authorship.author</td>
+      <td>MedicationDispense.performer.actor</td>
+      <td>MedicationDispense.performer.actor</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.header.authorship.datetime</td>
+      <td>MedicationDispense.whenHandedOver or .recorded</td>
+      <td>MedicationDispense.whenHandedOver</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.receiver[x]</td>
+      <td>MedicationDispense.receiver</td>
+      <td>MedicationDispense.receiver</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.dispenseLocation</td>
+      <td>MedicationDispense.location</td>
+      <td>MedicationDispense.location</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.relatedRequest</td>
+      <td>MedicationDispense.authorizingPrescription</td>
+      <td>MedicationDispense.authorizingPrescription</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.medication</td>
+      <td>MedicationDispense.medication</td>
+      <td>MedicationDispense.medication[x]</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.dispensedQuantity</td>
+      <td>MedicationDispense.quantity</td>
+      <td>MedicationDispense.quantity</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.timeOfDispensation</td>
+      <td>MedicationDispense.whenHandedOver</td>
+      <td>MedicationDispense.whenHandedOver</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.substitution</td>
+      <td>MedicationDispense.substitution</td>
+      <td>MedicationDispense.substitution</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.substitution.substitutionOccurred</td>
+      <td>MedicationDispense.substitution.wasSubstituted</td>
+      <td>MedicationDispense.substitution.wasSubstituted</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.substitution.substitutionType</td>
+      <td>MedicationDispense.substitution.type</td>
+      <td>MedicationDispense.substitution.type</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.substitution.substitutionReason</td>
+      <td>MedicationDispense.substitution.reason</td>
+      <td>MedicationDispense.substitution.reason</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.dosageInstructions</td>
+      <td>MedicationDispense.dosageInstruction</td>
+      <td>MedicationDispense.dosageInstruction</td>
+    </tr>
+    <tr>
+      <td>EHDSMedicationDispense.comment</td>
+      <td>MedicationDispense.note</td>
+      <td>MedicationDispense.note</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="dispense-decline">Dispense Decline</h4>
+
+<table class="table-bordered table-striped thead-light">
+  <tbody>
+    <tr>
+      <td><strong>Logical model element</strong></td>
+      <td><strong>FHIR Path R5</strong></td>
+      <td><strong>FHIR Path R4</strong></td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.identifier</td>
+      <td>MedicationDispense.identifier</td>
+      <td>MedicationDispense.identifier</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.subject</td>
+      <td>MedicationDispense.subject</td>
+      <td>MedicationDispense.subject</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.status</td>
+      <td>MedicationDispense.status</td>
+      <td>MedicationDispense.status</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.statusReason[x]</td>
+      <td>MedicationDispense.notPerformedReason</td>
+      <td>MedicationDispense.statusReason</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.authorship.author</td>
+      <td>MedicationDispense.performer.actor</td>
+      <td>MedicationDispense.performer.actor</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.header.authorship.datetime</td>
+      <td>MedicationDispense.whenHandedOver or .recorded</td>
+      <td>MedicationDispense.whenHandedOver</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.relatedRequest</td>
+      <td>MedicationDispense.authorizingPrescription</td>
+      <td>MedicationDispense.authorizingPrescription</td>
+    </tr>
+    <tr>
+      <td>EHDSDispenseDecline.comment</td>
+      <td>MedicationDispense.note</td>
+      <td>MedicationDispense.note</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.mpd#0.1.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, May 30, 2025 09:38+0000">2025-05-30</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/mpd/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,22 @@
+Hl7EuMedPrescriptionDispenseIg
+=========================================
+
+Generic: line 0, col 0, Error - There is no jira specification file defined with the expected name of FHIR-eu-mpd in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication. (INFORMATIONAL)
+Generic: line 0, col 0, Warning - The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ConceptMap-eD2FHIR-eu-mpd.json: line 1, col 9853, Warning - Constraint failed: cmd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (INVARIANT)
+/github/workspace/fsh-generated/resources/ConceptMap-eD2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/ConceptMap-eD2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/ConceptMap-eP2FHIR-eu-mpd.json: line 1, col 15364, Warning - Constraint failed: cmd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (INVARIANT)
+/github/workspace/fsh-generated/resources/ConceptMap-eP2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/ConceptMap-eP2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/ConceptMap-medProd2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/ConceptMap-medProd2FHIR-eu-mpd.json: line 0, col 0, Error - Reference must be to a ValueSet, but found a StructureDefinition instead (INVALID)
+/github/workspace/fsh-generated/resources/MedicationRequest-10-prescription-cefuroxime-singleline.json: line 6, col 8, Warning - A code with no system has no defined meaning, and it cannot be validated. A system should be provided (CODEINVALID)
+/github/workspace/fsh-generated/resources/MedicationRequest-10-prescription-cefuroxime-singleline.json: line 99, col 12, Info - This element does not match any known slice defined in the profile http://hl7.eu/fhir/mpd/StructureDefinition/MedicationRequest-eu-mpd|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationDispense-eu-mpd.json: line 1, col 58241, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicationRequest-eu-mpd.json: line 0, col 0, Error - Hyperlink 'http%3A%2F%2Fterminology.ehdsi.eu%2FValueSet%2FeHDSIIllnessandDisorder' at 'div/table/tr/td/table/tr/td/a' for 'http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder' does not resolve (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicinalProduct.json: line 1, col 36836, Warning - Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' (INVARIANT)
+/github/workspace/fsh-generated/resources/StructureDefinition-MedicinalProduct.json: line 1, col 42282, Warning - Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken' (INVARIANT)
+
+err = 8, warn = 6, info = 2
+IG Publisher Version: 1.8.9

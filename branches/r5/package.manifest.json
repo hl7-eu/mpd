@@ -1,0 +1,7 @@
+{
+  "version" : "0.1.0-ballot",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20250530104904",
+  "name" : "hl7.fhir.eu.mpd-r5",
+  "jurisdiction" : "http://unstats.un.org/unsd/methods/m49/m49.htm#150"
+}

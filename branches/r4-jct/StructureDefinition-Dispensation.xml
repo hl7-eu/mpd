@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Dispensation"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition Dispensation</b></p><a name="Dispensation"> </a><a name="hcDispensation"> </a><a name="Dispensation-en-US"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation" title="Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines">Dispensation</a><a name="Dispensation"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1 Dispensation information (provided by the dispensing pharmacy)</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserIdentifier" title="A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country.">dispenserIdentifier</a><a name="Dispensation.dispenserIdentifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.1 Identifier of the dispenser<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserFamilyName" title="The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.">dispenserFamilyName</a><a name="Dispensation.dispenserFamilyName"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.2 Family name of the dispenser<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.dispenserGivenName" title="The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies.">dispenserGivenName</a><a name="Dispensation.dispenserGivenName"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.3 Given name of the dispenser<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.pharmacyIdentifier" title="A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy.">pharmacyIdentifier</a><a name="Dispensation.pharmacyIdentifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.4 Identifier of the pharmacy<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.pharmacyAddress" title="Minimally, the country should be specified.">pharmacyAddress</a><a name="Dispensation.pharmacyAddress"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.5 Address of the pharmacy</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.contactDetails" title="Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy.">contactDetails</a><a name="Dispensation.contactDetails"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.6 Details of direct contact<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.prescriptionIdentifier" title="As described in A.1.2.">prescriptionIdentifier</a><a name="Dispensation.prescriptionIdentifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.7 Identifier of the prescription<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: white; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.medicinalProduct" title="Information about the dispensed product as described in A.1.4.
+The cardinality of the data elements in the product description may differ between ePrescription and eDispensation.">medicinalProduct</a><a name="Dispensation.medicinalProduct"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Base</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.8 Medicinal product<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.dispensedQuantity" title="The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.
+ - Preferred system(s): UCUM, EDQM">dispensedQuantity</a><a name="Dispensation.dispensedQuantity"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.9 Dispensed quantity<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.dispensationDate" title="The date and optionally the time of dispensation.
+ - Preferred system(s): ISO 8601">dispensationDate</a><a name="Dispensation.dispensationDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.10 Dispensation date<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_datatype.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Data Type" class="hierarchy"/> <a href="StructureDefinition-Dispensation-definitions.html#Dispensation.substitution" title="Information whether and why the substitution took place">substitution</a><a name="Dispensation.substitution"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">B.1.11 Substitution<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/mpd/StructureDefinition/Dispensation"/>
+  <version value="0.1.0"/>
+  <name value="EdispensationEhn"/>
+  <title value="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+  <status value="draft"/>
+  <date value="2025-03-26T17:00:15+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://hl7.eu/fhir/mpd/StructureDefinition/Dispensation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="Dispensation">
+      <path value="Dispensation"/>
+      <short value="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+      <definition value="Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="Dispensation.dispenserIdentifier">
+      <path value="Dispensation.dispenserIdentifier"/>
+      <short value="B.1.1 Identifier of the dispenser"/>
+      <definition value="A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.dispenserIdentifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispenserFamilyName">
+      <path value="Dispensation.dispenserFamilyName"/>
+      <short value="B.1.2 Family name of the dispenser"/>
+      <definition value="The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.dispenserFamilyName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispenserGivenName">
+      <path value="Dispensation.dispenserGivenName"/>
+      <short value="B.1.3 Given name of the dispenser"/>
+      <definition value="The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.dispenserGivenName"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Dispensation.pharmacyIdentifier">
+      <path value="Dispensation.pharmacyIdentifier"/>
+      <short value="B.1.4 Identifier of the pharmacy"/>
+      <definition value="A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.pharmacyIdentifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Dispensation.pharmacyAddress">
+      <path value="Dispensation.pharmacyAddress"/>
+      <short value="B.1.5 Address of the pharmacy"/>
+      <definition value="Minimally, the country should be specified."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Dispensation.pharmacyAddress"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Address"/>
+      </type>
+    </element>
+    <element id="Dispensation.contactDetails">
+      <path value="Dispensation.contactDetails"/>
+      <short value="B.1.6 Details of direct contact"/>
+      <definition value="Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.contactDetails"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+    </element>
+    <element id="Dispensation.prescriptionIdentifier">
+      <path value="Dispensation.prescriptionIdentifier"/>
+      <short value="B.1.7 Identifier of the prescription"/>
+      <definition value="As described in A.1.2."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.prescriptionIdentifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Dispensation.medicinalProduct">
+      <path value="Dispensation.medicinalProduct"/>
+      <short value="B.1.8 Medicinal product"/>
+      <definition value="Information about the dispensed product as described in A.1.4.&#xA;The cardinality of the data elements in the product description may differ between ePrescription and eDispensation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.medicinalProduct"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispensedQuantity">
+      <path value="Dispensation.dispensedQuantity"/>
+      <short value="B.1.9 Dispensed quantity"/>
+      <definition value="The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.&#xA; - Preferred system(s): UCUM, EDQM"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.dispensedQuantity"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispensationDate">
+      <path value="Dispensation.dispensationDate"/>
+      <short value="B.1.10 Dispensation date"/>
+      <definition value="The date and optionally the time of dispensation.&#xA; - Preferred system(s): ISO 8601"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.dispensationDate"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Dispensation.substitution">
+      <path value="Dispensation.substitution"/>
+      <short value="B.1.11 Substitution"/>
+      <definition value="Information whether and why the substitution took place"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Dispensation.substitution"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Dispensation">
+      <path value="Dispensation"/>
+      <short value="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+      <definition value="Dispensation information (provided by the dispensing pharmacy). Section B1 of the guidelines"/>
+    </element>
+    <element id="Dispensation.dispenserIdentifier">
+      <path value="Dispensation.dispenserIdentifier"/>
+      <short value="B.1.1 Identifier of the dispenser"/>
+      <definition value="A unique number or code issued for the purpose of identifying a dispenser [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispenser and to check whether a medicinal product was dispensed by the right person according to the law of the dispensing country."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispenserFamilyName">
+      <path value="Dispensation.dispenserFamilyName"/>
+      <short value="B.1.2 Family name of the dispenser"/>
+      <definition value="The family name/surname/last name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispenserGivenName">
+      <path value="Dispensation.dispenserGivenName"/>
+      <short value="B.1.3 Given name of the dispenser"/>
+      <definition value="The given name/first name of the dispenser. This enables the dispenser to be traced in the event of questions or emergencies."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Dispensation.pharmacyIdentifier">
+      <path value="Dispensation.pharmacyIdentifier"/>
+      <short value="B.1.4 Identifier of the pharmacy"/>
+      <definition value="A unique number or code issued for the purpose of identifying a pharmacy [ISO/TS 27527:2010]; this may be a licence or registration number which can be used to trace the dispensing pharmacy."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Dispensation.pharmacyAddress">
+      <path value="Dispensation.pharmacyAddress"/>
+      <short value="B.1.5 Address of the pharmacy"/>
+      <definition value="Minimally, the country should be specified."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Address"/>
+      </type>
+    </element>
+    <element id="Dispensation.contactDetails">
+      <path value="Dispensation.contactDetails"/>
+      <short value="B.1.6 Details of direct contact"/>
+      <definition value="Details of direct contact could be an email address and/or phone/fax number of the dispensing pharmacy."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+    </element>
+    <element id="Dispensation.prescriptionIdentifier">
+      <path value="Dispensation.prescriptionIdentifier"/>
+      <short value="B.1.7 Identifier of the prescription"/>
+      <definition value="As described in A.1.2."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="Dispensation.medicinalProduct">
+      <path value="Dispensation.medicinalProduct"/>
+      <short value="B.1.8 Medicinal product"/>
+      <definition value="Information about the dispensed product as described in A.1.4.&#xA;The cardinality of the data elements in the product description may differ between ePrescription and eDispensation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Base"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispensedQuantity">
+      <path value="Dispensation.dispensedQuantity"/>
+      <short value="B.1.9 Dispensed quantity"/>
+      <definition value="The package size should be clear from the medicinal product data and the overall amount should be automatically calculable. The dispensed quantity may differ from the prescribed quantity.&#xA; - Preferred system(s): UCUM, EDQM"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Dispensation.dispensationDate">
+      <path value="Dispensation.dispensationDate"/>
+      <short value="B.1.10 Dispensation date"/>
+      <definition value="The date and optionally the time of dispensation.&#xA; - Preferred system(s): ISO 8601"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="Dispensation.substitution">
+      <path value="Dispensation.substitution"/>
+      <short value="B.1.11 Substitution"/>
+      <definition value="Information whether and why the substitution took place"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

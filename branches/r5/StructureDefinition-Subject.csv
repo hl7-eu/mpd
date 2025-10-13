@@ -1,0 +1,19 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"Subject","Subject","","","",0,*,"","","","null {[]} {[]}
+","A.1.1 Patient administrative data","Patient. Sections A1.1 of the eHN guideline.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","","n/a"
+"Subject.familyName","Subject.familyName","","","",0,*,"","","","string {[]} {[]}
+","A.1.1.1 Familyname/surname","The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present.","","","","","","","","","",,,,,"",,,,"Subject.familyName",0,*,"",""
+"Subject.givenName","Subject.givenName","","","",0,*,"","","","string {[]} {[]}
+","A.1.1.2 Given name","The given name/first name of the patient (also known as forename or first 
+name) [ISO TS 22220:2011]. This field can contain more than one element.","","","","","","","","","",,,,,"",,,,"Subject.givenName",0,*,"",""
+"Subject.dateOfBirth","Subject.dateOfBirth","","","",0,1,"","","","dateTime {[]} {[]}
+","A.1.1.3 Date of birth","The date of birth of the patient [ISO TS 22220:2011].
+This field may contain only the year if the day and month are not available, 
+e.g.: 2009 - Preferred system(s): ISO 8601","","","","","","","","","",,,,,"",,,,"Subject.dateOfBirth",0,1,"",""
+"Subject.identifier","Subject.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","A.1.1.4 Personal identifier","Country ID, unique to the patient in that country. Example: ID for a Portuguese patient, national healthcare patient ID. Multiple identifiers could be provided.","","","","","","","","","",,,,,"",,,,"Subject.identifier",0,1,"",""
+"Subject.gender","Subject.gender","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","A.1.1.5 Gender","This field must contain a recognised valid value for 'administrative gender'. 
+If different, 'physiological sex' should be communicated elsewhere.","","","","","","","","","",,"preferred","HL7 Administrative Gender","","",,,,"Subject.gender",0,1,"",""
+"Subject.nativeLanguage","Subject.nativeLanguage","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.1.1.6 Native language","The native language of the patient. This may be important for the information that is given to the patient regarding use of the prescribed product [N1228 ISO NP TS 17251]","","","","","","","","","",,"preferred","ISO 639","","",,,,"Subject.nativeLanguage",0,*,"",""

@@ -1,0 +1,81 @@
+# hl7.fhir.eu.mpd#0.1.0-ci-build: HL7 Europe Medication Prescription and Dispense
+
+## Pages
+
+* [Home](index.md)
+* [Design Choices](designchoices.md)
+* [Authors and Contributors](authors.md)
+* [Medication Concepts](medicationconcepts.md)
+* [Background](background.md)
+* [Use Cases](usecases.md)
+* [Copyright](copyright.md)
+* [Mapping to Profiles](profiles.md)
+* [Dependencies](dependencies.md)
+* [Logical Models](logicalmodels.md)
+* [Artifacts Summary](artifacts.md)
+* [Known Issues](knownissues.md)
+* [Terminology Considerations](terminology.md)
+* [Challenges](challenges.md)
+* [Cross-version Analysis](crossversionanalysis.md)
+* [Scope and Content](scope.md)
+* [Source and Additional Information](references.md)
+* [Examples](examples.md)
+* [Implementation Considerations](implementationnotes.md)
+* [Downloads](downloads.md)
+
+## Resources
+
+### Logicals
+
+* [B.1 Dispensation information (provided by the dispensing pharmacy)](StructureDefinition-Dispensation.md)
+* [A1.4 Identification of the prescribed product](StructureDefinition-MedicinalProduct.md)
+* [A - Prescription](StructureDefinition-Prescription.md)
+* [A.1.1 Patient administrative data](StructureDefinition-Subject.md)
+
+### Resource Profiles
+
+* [Medication: MPD](StructureDefinition-Medication-eu-mpd.md)
+* [MedicationDispense: MPD](StructureDefinition-MedicationDispense-eu-mpd.md)
+* [MedicationRequest: MPD](StructureDefinition-MedicationRequest-eu-mpd.md)
+
+### ImplementationGuides
+
+* [HL7 Europe Medication Prescription and Dispense](index.md)
+
+### Examples
+
+* [100A-multiitem-prescription-with-orchestration (Bundle)](Bundle-100A-multiitem-prescription-with-orchestration.md)
+* [200A-multiitem-prescription-without-orchestration (Bundle)](Bundle-200A-multiitem-prescription-without-orchestration.md)
+* [300A-multiitem-prescription-with-orchestration (Bundle)](Bundle-300A-multiitem-prescription-with-orchestration.md)
+* [01A-Cefuroxime1500GenericExplicit (Medication)](Medication-01A-Cefuroxime1500GenericExplicit.md)
+* [01B-Cefuroxime1500GenericConcept (Medication)](Medication-01B-Cefuroxime1500GenericConcept.md)
+* [01C-Cefuroxime1500Branded (Medication)](Medication-01C-Cefuroxime1500Branded.md)
+* [01D-Cefuroxime750Branded (Medication)](Medication-01D-Cefuroxime750Branded.md)
+* [02A-ClotrimazoleCanifugCremolum (Medication)](Medication-02A-ClotrimazoleCanifugCremolum.md)
+* [02A1-CanifugCremolumCreamItem (Medication)](Medication-02A1-CanifugCremolumCreamItem.md)
+* [02A2-CanifugCremolumPessaryItem (Medication)](Medication-02A2-CanifugCremolumPessaryItem.md)
+* [03B-VitaminBComplexBranded (Medication)](Medication-03B-VitaminBComplexBranded.md)
+* [04A-FirmagonBranded (Medication)](Medication-04A-FirmagonBranded.md)
+* [05A-Tilidin-Branded (Medication)](Medication-05A-Tilidin-Branded.md)
+* [300D-dispense-for-2-requests (MedicationDispense)](MedicationDispense-300D-dispense-for-2-requests.md)
+* [400D-dispense-1 (MedicationDispense)](MedicationDispense-400D-dispense-1.md)
+* [400D-dispense-2 (MedicationDispense)](MedicationDispense-400D-dispense-2.md)
+* [400E-refused-dispense (MedicationDispense)](MedicationDispense-400E-refused-dispense.md)
+* [100C-3-medication-prescription-request1 (MedicationRequest)](MedicationRequest-100C-3-medication-prescription-request1.md)
+* [100C-3-medication-prescription-request2 (MedicationRequest)](MedicationRequest-100C-3-medication-prescription-request2.md)
+* [100C-3-medication-prescription-request3 (MedicationRequest)](MedicationRequest-100C-3-medication-prescription-request3.md)
+* [200C-2-medication-prescription-request1 (MedicationRequest)](MedicationRequest-200C-2-medication-prescription-request1.md)
+* [200C-2-medication-prescription-request2 (MedicationRequest)](MedicationRequest-200C-2-medication-prescription-request2.md)
+* [300C-2-medication-prescription-request1 (MedicationRequest)](MedicationRequest-300C-2-medication-prescription-request1.md)
+* [300C-2-medication-prescription-request2 (MedicationRequest)](MedicationRequest-300C-2-medication-prescription-request2.md)
+* [400C-prescription-cefuroxime-singleline (MedicationRequest)](MedicationRequest-400C-prescription-cefuroxime-singleline.md)
+* [Dr Ärztin Private Practice (Organization)](Organization-organization1.md)
+* [Su-Bin Pharmacy B (Organization)](Organization-organization2.md)
+* [patient1 (Patient)](Patient-patient1.md)
+* [patient2 (Patient)](Patient-patient2.md)
+* [practitioner1 (Practitioner)](Practitioner-practitioner1.md)
+* [practitioner2 (Practitioner)](Practitioner-practitioner2.md)
+* [doctor1 (PractitionerRole)](PractitionerRole-doctor1.md)
+* [pharmacist1 (PractitionerRole)](PractitionerRole-pharmacist1.md)
+* [100B-RequestOrchestration (RequestGroup)](RequestGroup-100B-RequestOrchestration.md)
+* [300B-RequestOrchestration (RequestGroup)](RequestGroup-300B-RequestOrchestration.md)

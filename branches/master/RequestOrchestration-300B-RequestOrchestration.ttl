@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/r5/mpd/RequestOrchestration/300B-RequestOrchestration> a fhir:RequestOrchestration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "300B-RequestOrchestration"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RequestOrchestration 300B-RequestOrchestration</b></p><a name=\"300B-RequestOrchestration\"> </a><a name=\"hc300B-RequestOrchestration\"> </a><a name=\"300B-RequestOrchestration-en-US\"> </a><p><b>groupIdentifier</b>: 300</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>subject</b>: <a href=\"Patient-patient1.html\">Thomas Engine  Male, DoB: 1950-09-15 ( 12345)</a></p><blockquote><p><b>action</b></p><p><b>resource</b>: <a href=\"MedicationRequest-300C-2-medication-prescription-request1.html\">MedicationRequest: identifier = 300-1/2; groupIdentifier = 300; status = active; intent = option; authoredOn = 2024-10-06</a></p></blockquote><blockquote><p><b>action</b></p><p><b>resource</b>: <a href=\"MedicationRequest-300C-2-medication-prescription-request2.html\">MedicationRequest: identifier = 300-2/2; groupIdentifier = 300; status = active; intent = option; authoredOn = 2024-10-06</a></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:groupIdentifier [
+     fhir:value [ fhir:v "300" ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/r5/mpd/Patient/patient1> ;
+     fhir:reference [ fhir:v "Patient/patient1" ]
+  ] ; # 
+  fhir:action ( [
+     fhir:resource [
+       fhir:link <http://hl7.eu/fhir/r5/mpd/MedicationRequest/300C-2-medication-prescription-request1> ;
+       fhir:reference [ fhir:v "MedicationRequest/300C-2-medication-prescription-request1" ]
+     ]
+  ] [
+     fhir:resource [
+       fhir:link <http://hl7.eu/fhir/r5/mpd/MedicationRequest/300C-2-medication-prescription-request2> ;
+       fhir:reference [ fhir:v "MedicationRequest/300C-2-medication-prescription-request2" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
