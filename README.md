@@ -15,8 +15,8 @@ This repository implements a multi-version FHIR IG that supports both R4 and R5 
 │   ├── sushi-config.liquid.yaml
 │   └── ig.liquid.ini
 ├── igs/
-│   ├── imaging-r4/             # Generated R4 build (not committed)
-│   └── imaging-r5/             # Generated R5 build (not committed)
+│   ├── mpd-r4/             # Generated R4 build (not committed)
+│   └── mpd-r5/             # Generated R5 build (not committed)
 ├── context-R4.json             # R4 Liquid variables
 ├── context-R5.json             # R5 Liquid variables
 ├── _preprocessMultiVersion.sh  # Generate version-specific files
@@ -83,5 +83,5 @@ Version Code: {{ r-code }}
 
 ## CI/CD
 
-See `.github/workflows/` for automated validation and deployment workflows.
+See `.github/workflows/README.md` for automated validation and deployment workflows.
 
