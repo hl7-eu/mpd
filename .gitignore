@@ -1,33 +1,54 @@
-# Temporary folders #
-#####################
-temp
-template
-output
-fsh-generated
+# IG Publisher (root level)
+input-cache/
+output/
+temp/
+template/
+fsh-generated/
+*.zip
+package-list.json
 
-# Don't commit this because it's so large #
-###########################################
-/input-cache
+# IG Publisher (ig-src level)
+ig-src/input-cache/
+ig-src/output/
+ig-src/temp/
+ig-src/template/
+ig-src/fsh-generated/
 
-# Windows generated files #
-###########################
-Thumbs.db
+# Build artifacts
+igs/imaging-r4/input/
+igs/imaging-r4/ig-template/
+igs/imaging-r4/fsh-generated/
+igs/imaging-r4/output/
+igs/imaging-r4/temp/
+igs/imaging-r4/template/
+igs/imaging-r4/*.ini
+igs/imaging-r4/*.yaml
+igs/imaging-r4/*.md
+igs/imaging-r4/*.json
+igs/imaging-r4/*.xml
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
+igs/imaging-r5/input/
+igs/imaging-r5/ig-template/
+igs/imaging-r5/fsh-generated/
+igs/imaging-r5/output/
+igs/imaging-r5/temp/
+igs/imaging-r5/template/
+igs/imaging-r5/*.ini
+igs/imaging-r5/*.yaml
+igs/imaging-r5/*.md
+igs/imaging-r5/*.json
+igs/imaging-r5/*.xml
 
-# backup files #
-################
-*.bak
-*.fsh-bak
-*.xlk
+# Keep certain files
+!igs/imaging-r4/.gitignore
+!igs/imaging-r5/.gitignore
+!igs/imaging-r4/FHIR-*.xml
+!igs/imaging-r5/FHIR-*.xml
 
-# java settings 
-################
-
-
+# IDE
 .vscode/
 .idea/
-.idea/*
+
+# OS
+.DS_Store
+Thumbs.db

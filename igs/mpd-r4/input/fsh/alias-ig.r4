@@ -1,0 +1,5 @@
+
+//============== ALIAS ===============
+Alias: $Subject-model = http://hl7.eu/fhir/mpd/StructureDefinition/Subject
+Alias: $MedicinalProduct-model = http://hl7.eu/fhir/mpd/StructureDefinition/MedicinalProduct
+Alias: $Prescription-model = http://hl7.eu/fhir/mpd/StructureDefinition/Prescription
