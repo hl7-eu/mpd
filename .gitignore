@@ -14,6 +14,9 @@ ig-src/temp/
 ig-src/template/
 ig-src/fsh-generated/
 
+# Copilot instructions
+.github/copilot-instructions.md
+
 # Build artifacts
 igs/imaging-r4/input/
 igs/imaging-r4/ig-template/
