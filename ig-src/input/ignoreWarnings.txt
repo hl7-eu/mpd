@@ -43,6 +43,8 @@ The definition for the element 'Medication.ingredient.strength[x]' binds to the 
 
 # known non-matching slice
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/mpd/StructureDefinition/MedicationRequest-eu-mpd%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/mpd-r5/StructureDefinition/MedicationRequest-eu-mpd%
+%This element does not match any known slice defined in the profile https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder%
 
 # Confirmed SNOMED CT edition 
 The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
