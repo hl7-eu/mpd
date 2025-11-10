@@ -1,9 +1,9 @@
 {%- if isR4 -%}
 {
-  "package-id" : "hl7.fhir.eu.mpd-r4",
+  "package-id" : "hl7.fhir.eu.mpd",
   "version" : "0.1.0-ballot",
   "path" : "http://hl7.eu/fhir/mpd/0.1.0-ballot",
-  "ci-build": "https://build.fhir.org/ig/hl7-eu/mpd-r4",
+  "ci-build": "https://build.fhir.org/ig/hl7-eu/mpd",
   "first": true,
   "desc" : "This is the first ballot of the Medication Prescription and Dispense FHIR IG STU 1", 
   "category" : "Medication Management",

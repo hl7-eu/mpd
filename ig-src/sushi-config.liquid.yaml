@@ -1,5 +1,11 @@
+{% if isR5 %}
 id: hl7.fhir.eu.mpd-{{ r-code }}
 canonical: http://hl7.eu/fhir/mpd-{{r-code}} # check if this may create issues
+{% endif %}
+{% if isR4 %}
+id: hl7.fhir.eu.mpd
+canonical: http://hl7.eu/fhir/mpd # check if this may create issues
+{% endif %}
 name:  Hl7EuMedPrescriptionDispenseIg
 title: HL7 Europe Medication Prescription and Dispense
 description: This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context
