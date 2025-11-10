@@ -9,6 +9,13 @@ fsh-generated
 ################################################################
 ig-template/
 input/
+sushi-config.yaml
+README.md
+publication-request.json
+LICENSE
+ig.ini
+_genonce.sh
+_updatePublisher.sh
 
 # Don't commit this because it's so large #
 ###########################################
