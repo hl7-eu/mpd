@@ -78,7 +78,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for proper branch handling
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOY_TOKEN || github.token }}
 
       - name: Setup Git configuration
         run: |
@@ -92,10 +92,17 @@ jobs:
 
       - name: Clone R5 target repository
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           R5_REPO_URL: ${{ vars.R5_REPO_URL || 'oijauregui/mpd-r5' }}
         run: |
-          git clone https://$GITHUB_TOKEN@github.com/$R5_REPO_URL.git r5-repo
+          if [ -z "$DEPLOY_TOKEN" ]; then
+            echo "Error: DEPLOY_TOKEN secret not configured. Please add a Personal Access Token with repo permissions."
+            echo "Go to: Settings > Secrets and variables > Actions > New repository secret"
+            echo "Name: DEPLOY_TOKEN"
+            echo "Value: Your GitHub Personal Access Token"
+            exit 1
+          fi
+          git clone https://$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
 
       - name: Prepare R5 repository branch
         working-directory: ./r5-repo
