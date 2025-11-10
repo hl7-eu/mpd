@@ -48,14 +48,12 @@ jobs:
           ./_preprocessMultiVersion.sh
 
       - name: update IG publisher
-        working-directory: ./igs/mpd-r4
         run: |
           pwd
           chmod +x ./_updatePublisher.sh
           ./_updatePublisher.sh -y
       
       - name: Validate R4 IG
-        working-directory: ./igs/mpd-r4
         run: |
           pwd
           ./_genonce.sh
