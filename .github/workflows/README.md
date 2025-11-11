@@ -47,21 +47,22 @@ The deployment workflow needs a Personal Access Token to push to this repository
 
 ### Step 3: Configure Repository Variables (Optional)
 
-By default, the R5 build deploys to `{owner}/mpd-r5` (where `{owner}` is your GitHub username/org).
+By default, the R5 build deploys to `{owner}/mpd-r5` where `{owner}` is automatically detected from the repository (e.g., `hl7-eu/mpd-r5` for the main repo, `oijauregui/mpd-r5` for your fork).
 
 **To use a different R5 repository:**
 
 1. Go to **Settings** → **Secrets and variables** → **Actions** → **Variables** tab
 2. Click **"New repository variable"**
 3. Name: `R5_REPO_URL`
-4. Value: `owner/repo-name` (e.g., `oijauregui/my-custom-r5-repo`)
+4. Value: `owner/repo-name` (e.g., `my-org/custom-r5-repo`)
 5. Click **"Add variable"**
 
 ### Step 4: Create the R5 Target Repository
 
-1. Create a new repository on GitHub (e.g., `mpd-r5`)
+1. Create a new repository on GitHub (e.g., `mpd-r5` in the same organization)
 2. Make sure your `DEPLOY_TOKEN` has write access to it
 3. The workflow will automatically:
+   - Detect the correct repository owner
    - Create matching branches
    - Push R5 content to the repository root
    - Trigger the HL7 auto-ig-builder
