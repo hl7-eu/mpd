@@ -31,17 +31,45 @@ This repository implements a multi-version FHIR IG that supports both R4 and R5 
 
 ## Quick Start
 
-1. **Initialize** (if starting fresh):
+1. **Clone the repository**
    ```bash
-   ./_initMultiVersionRepo.sh
+   git clone https://github.com/hl7-eu/mpd.git
+   cd mpd
    ```
 
-2. **Edit source files** in `ig-src/` (use `.liquid.*` extensions for templated files)
+2. **Edit source files** in `ig-src/` directory
+   - Use `.liquid.*` extensions for files needing version-specific content (see liquid syntax below)
 
-3. **Preprocess and build**:
+3. **Build and validate both versions**
    ```bash
    ./_preProcessAndCheckAll.sh
    ```
+   This will:
+   - Run preprocessing (generates R4 files in root, R5 in `igs/mpd-r5/`)
+   - Run SUSHI on both versions
+   - Build and validate both R4 and R5 IGs
+
+4. **View generated IGs locally**
+   - R4: Open `output/index.html` in your browser
+   - R5: Open `igs/mpd-r5/output/index.html` in your browser
+
+5. **Commit and publish changes**
+   
+   **For source changes:**
+   - Commit files in `ig-src/` and `input` directories
+   - Push to the `mpd` repository
+   
+   **What happens automatically:**
+   - GitHub Actions validates both R4 and R5
+   - R5 build is automatically deployed to the `mpd-r5` repository
+   - HL7 auto-ig-builder publishes both versions:
+     - R4 from the `mpd` repository (files in root)
+     - R5 from the `mpd-r5` repository
+   
+   **For R4 updates:**
+   - When you want to update the published R4 IG, run preprocessing locally
+   - Commit the generated R4 files (in root: `input/`, `sushi-config.yaml`, etc.)
+   - Push to `mpd` repository → auto-ig-builder will publish the new R4 version
 
 ## Liquid Template Syntax
 
