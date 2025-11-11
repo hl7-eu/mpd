@@ -1,8 +1,8 @@
-name: Validate and Deploy R5
+name: Validate and Deploy R4 & R5
 
 on:
   push:
-    branches: ['**']  # Deploy from any branch to matching branch in R5 repo
+    branches: ['**']  # Deploy from any branch to matching branch
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
@@ -67,8 +67,8 @@ jobs:
           pwd
           ./_genonce.sh
 
-  # Deployment job only runs if validation passes - R5 ONLY
-  deploy-r5:
+  # Deployment job only runs if validation passes - R4 to root, R5 to separate repo
+  deploy-r4-and-r5:
     runs-on: ubuntu-latest
     needs: [validate-r4, validate-r5]  # Wait for both validations to pass
     if: github.event_name == 'push'
@@ -90,6 +90,25 @@ jobs:
           chmod u+x *.sh
           ./_preprocessMultiVersion.sh
 
+      # === Deploy R4 to root of this repository ===
+      - name: Commit and push R4 to root
+        run: |
+          BRANCH_NAME="${{ github.ref_name }}"
+          echo "Deploying R4 build to root of current repo on branch: $BRANCH_NAME"
+          
+          # R4 files are already in root from preprocessing
+          # Just commit the generated files
+          git add -A
+          
+          if git diff --staged --quiet; then
+            echo "No R4 content changes to commit"
+          else
+            git commit -m "Deploy R4 build to root - source: ${{ github.sha }}"
+            git push origin $BRANCH_NAME
+            echo "R4 build deployed to root of $BRANCH_NAME branch"
+          fi
+
+      # === Deploy R5 to separate repository ===
       - name: Clone R5 target repository
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
