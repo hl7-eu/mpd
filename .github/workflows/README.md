@@ -1,17 +1,17 @@
 # Multi-Version FHIR IG Validation and Deployment
 
-This repository uses GitHub Actions to automatically validate and deploy both R4 and R5 versions of the FHIR Implementation Guide:
+This repository uses GitHub Actions to automatically validate both R4 and R5 versions of the FHIR Implementation Guide and deploy R5 to a separate repository:
 
-- **R4 build** → deployed to the **root** of this repository
-- **R5 build** → deployed to a **separate repository** (`mpd-r5`)
+- **R4 build** → validated in CI, built locally for publishing
+- **R5 build** → validated in CI and deployed to a **separate repository** (`mpd-r5`)
 
 ## Workflows
 
-### 1. `deploy.yml` - Validate and Deploy (runs on push to any branch)
+### 1. `deploy.yml` - Validate and Deploy R5 (runs on push to any branch)
 - Validates both R4 and R5 IGs
-- Deploys R4 to root of this repo
 - Deploys R5 to separate `mpd-r5` repository
 - Maintains matching branch names across repos
+- R4 is only validated, not deployed (build locally when needed)
 
 ### 2. `validate.yml` - Validation Only (runs on Pull Requests)
 - Validates both R4 and R5 IGs
@@ -75,16 +75,12 @@ By default, the R5 build deploys to `{owner}/mpd-r5` (where `{owner}` is your Gi
 - Validates R5 IG (preprocessing → IG Publisher → validation)
 
 **Step 2: Deployment (only if both validations pass)**
-- **R4 Deployment**:
-  - Generated R4 files are committed to the **root** of this repository
-  - Includes: `sushi-config.yaml`, `ig.ini`, `input/`, `ig-template/`, etc.
-  - Branch name stays the same
 - **R5 Deployment**:
   - R5 files from `igs/mpd-r5/` are pushed to the **mpd-r5** repository root
   - Creates matching branch name in R5 repo if it doesn't exist
   - Triggers HL7 auto-ig-builder for publishing
 
-**Important**: The workflow skips deployment if the commit is from "GitHub Actions Bot" to prevent infinite loops.
+**Note**: R4 is only validated, not deployed. Build R4 locally when needed using `./_genonce.sh`
 
 ### On Pull Requests:
 
@@ -94,19 +90,23 @@ By default, the R5 build deploys to `{owner}/mpd-r5` (where `{owner}` is your Gi
 ## Repository Structure
 
 ```
-mpd/                          # This repository
+mpd/                          # This repository (source + validation)
 ├── .github/workflows/        # Workflow definitions
-│   ├── deploy.yml           # Validates & deploys both versions
+│   ├── deploy.yml           # Validates R4 & R5, deploys R5 only
 │   └── validate.yml         # Validates only (PRs)
 ├── ig-src/                  # Source files (edit here!)
 │   ├── input/fsh/           # FSH definitions
 │   ├── input/pagecontent/   # Markdown pages
 │   └── sushi-config.liquid.yaml
-├── igs/                     # Generated (not committed)
-│   └── mpd-r5/             # R5 build artifacts
-├── input/                   # R4 build (committed to root)
-├── sushi-config.yaml        # R4 config (committed to root)
-└── ig.ini                   # R4 config (committed to root)
+└── igs/                     # Generated (not committed)
+    └── mpd-r5/             # R5 build artifacts (deployed to mpd-r5 repo)
+```
+
+**To build R4 locally:**
+```bash
+./_preprocessMultiVersion.sh  # Generate R4 files in root
+./_updatePublisher.sh -y       # Update IG Publisher
+./_genonce.sh                  # Build R4 IG
 ```
 
 ## Manual Workflow Trigger
