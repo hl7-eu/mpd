@@ -5,19 +5,6 @@ template
 output
 fsh-generated
 
-# Generated IG builds (not committed) #
-########################################
-/igs/mpd-r4/
-/igs/mpd-r5/
-
-# Generated root-level files from ig-src templates #
-#####################################################
-/sushi-config.yaml
-/ig.ini
-/LICENSE
-/README.md
-/publication-request.json
-
 # Don't commit this because it's so large #
 ###########################################
 /input-cache
