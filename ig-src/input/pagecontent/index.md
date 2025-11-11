@@ -1,6 +1,6 @@
 {% include fsh-link-references.md %}
 
-<!-- Horizontal banner -->
+<!-- Horizontal banner - test workflow -->
 
 <div style="
   /* reserve space for the ToC on the right */
