@@ -1,8 +1,6 @@
-name: validate-clean
+name: validate
 
 on:
-  push:
-    branches: [ master, liquid-multiversion ]
   pull_request:
     types: [opened, synchronize]
   workflow_dispatch:

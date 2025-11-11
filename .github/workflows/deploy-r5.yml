@@ -2,7 +2,7 @@ name: Validate and Deploy R5
 
 on:
   push:
-    branches: ['**']  # Trigger on any branch push
+    branches: ['**']  # Deploy from any branch to matching branch in R5 repo
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
