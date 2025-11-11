@@ -1,5 +1,8 @@
+
+
 id: hl7.fhir.eu.mpd
 canonical: http://hl7.eu/fhir/mpd # check if this may create issues
+
 name:  Hl7EuMedPrescriptionDispenseIg
 title: HL7 Europe Medication Prescription and Dispense
 description: This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context
@@ -16,12 +19,15 @@ publisher:
   # email: test@example.org
 copyright: >-
   Used by permission of HL7 Europe, all rights reserved Creative Commons License
+
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-#   hl7.fhir.uv.ips: current
+  
+   
+   #   hl7.fhir.uv.ips: current
    hl7.fhir.extensions.r5: 4.0.1
    hl7.fhir.eu.extensions.r4: 0.1.1-ballot
    hl7.fhir.eu.base: 0.1.0-ballot
@@ -32,6 +38,7 @@ dependencies:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
+   
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -45,7 +52,6 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-
 pages:
   index.md:
     title: Home
@@ -94,10 +100,13 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
+
+
 # parameters:
 #  produce-jekyll-data: true
 #  special-url:
 #    - https://spor.ema.europa.eu/v1/lists/100000000004
+
 
 
 #   excludettl: true
@@ -129,7 +138,7 @@ menu:
     Mapping to Profiles: profiles.html
     Examples: examples.html
     Implementation Notes: implementationnotes.html
-    IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/   
+    IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/ 
   About:
     Authors and Contributors: authors.html
     Known Issues: knownissues.html
@@ -138,8 +147,8 @@ menu:
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
+  
   R5 IG: https://hl7.eu/fhir/mpd-r5
-
   
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -212,7 +221,6 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-
 groups:
  eHNGuidelines:
   name: Data Sets from eHN Guidelines
@@ -222,7 +230,6 @@ groups:
    - EdispensationEhn
    - MedProductEhn
    - SubjectEpEhn
-
  FHIRProfiles:
   name: FHIR Profiles
   description: Profiles for ePrescription and eDispensation use case. Note that there is no single profile for ePrescription, but only for MedicationRequest, which translates to a single line on a prescription (read more in [Implementation Notes](implementationnotes.html)). Profiles for Patient, PractitionerRole, and Organization are published in HL7 Europe Base IG. All profiles are based on [EHDS logical information models](logicalmodels.html) that are being developed by Xt-EHR project.
@@ -230,7 +237,6 @@ groups:
    - MedicationRequestEuMpd
    - MedicationDispenseEuMpd
    - MedicationEuMpd
-
 # ModelMaps:
 #  name: Mappings from eHN Data Sets
 #  description: These concept maps represent a high-level mapping from eHN guidelines data sets and FHIR profiles in this IG. Please note that mappings from EHDS logical models are provided on [Logical models page](logicalmodels.html).

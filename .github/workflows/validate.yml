@@ -1,0 +1,71 @@
+name: validate
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  validate-r4:
+    runs-on: ubuntu-latest
+    name: "Validate R4 IG"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Jekyll
+        run: sudo gem install jekyll
+
+      - name: Install Sushi
+        run: sudo npm install -g fsh-sushi
+
+      - name: Preprocess
+        run: |
+          chmod u+x *.sh
+          ./_preprocessMultiVersion.sh
+
+      - name: Update IG Publisher
+        run: |
+          pwd
+          ls -la
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+      
+      - name: Validate R4 IG
+        run: |
+          pwd
+          ./_genonce.sh
+
+  validate-r5:
+    runs-on: ubuntu-latest
+    name: "Validate R5 IG"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Jekyll
+        run: sudo gem install jekyll
+
+      - name: Install Sushi
+        run: sudo npm install -g fsh-sushi
+
+      - name: Preprocess
+        run: |
+          chmod u+x *.sh
+          ./_preprocessMultiVersion.sh
+
+      - name: Update IG Publisher
+        working-directory: ./igs/mpd-r5
+        run: |
+          pwd
+          ls -la
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+      
+      - name: Validate R5 IG
+        working-directory: ./igs/mpd-r5
+        run: |
+          pwd
+          ./_genonce.sh
