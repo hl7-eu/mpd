@@ -93,7 +93,7 @@ jobs:
       - name: Clone R5 target repository
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          R5_REPO_URL: ${{ vars.R5_REPO_URL || 'oijauregui/mpd-r5' }}
+          R5_REPO_URL: ${{ vars.R5_REPO_URL || format('{0}/mpd-r5', github.repository_owner) }}
         run: |
           if [ -z "$DEPLOY_TOKEN" ]; then
             echo "Error: DEPLOY_TOKEN secret not configured. Please add a Personal Access Token with repo permissions."
@@ -102,6 +102,7 @@ jobs:
             echo "Value: Your GitHub Personal Access Token"
             exit 1
           fi
+          echo "Deploying R5 to: $R5_REPO_URL"
           git clone https://$DEPLOY_TOKEN@github.com/$R5_REPO_URL.git r5-repo
 
       - name: Prepare R5 repository branch
