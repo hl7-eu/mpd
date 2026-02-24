@@ -1,14 +1,11 @@
-
-Profile: MedicationEuMpd
+Profile: MedicationEuCore
 Parent: Medication
-Id: Medication-eu-mpd
-Title: "Medication: MPD"
-Description: "This profile defines how to represent Medication data on ePrescription and eDispensation"
+Id: medication-eu-core
+Title: "Medication (EU core)"
+Description: "This profile introduces essential constraints and extensions for the Medication resource that apply across multiple use cases."
 
 * extension contains $ihe-ext-medication-productname named productName 0..1
 * extension[productName] ^short = "Current trade name (authorised name) of the medicinal product." 
-  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * extension contains $ihe-ext-medication-classification named classification 0..*
 * extension[classification] ^short = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, etc"
@@ -25,30 +22,25 @@ Description: "This profile defines how to represent Medication data on ePrescrip
 * extension contains MedicationPackageType named packageType 0..1
 * extension[packageType] ^short = "Type of container. This information is more relevant in cases when the packaging has an impact on administration of the product (e.g. pre-filled syringe)"
 
-* identifier
-  * ^short = "Identifier for the medicinal product, its generic representation, or packaged product (e.g. EMA PMS ID on product or package level)" //identifier
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-* code 
-  * ^short = "A terminology-based code for the product (e.g. SNOMED CT code)"
-  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-* ingredient
-  * ^short = "Ingredient or a part product. For combination packs, each ingredient can be a separate manufactured item with its own ingredients, dose form, and strength" // item
-  * isActive
-
-
-
-
-
 * extension contains $ihe-ext-medication-device named device 0..*
 * extension[device] ^short = "Device, typically an administration device, included in the product."
 * extension[device].extension[device].valueCodeableConcept from $eHDSIPackage (example)
 
+* identifier
+  * ^short = "Identifier for the medicinal product, its generic representation, or packaged product (e.g. EMA PMS ID on product or package level)" //identifier
+
+* code 
+  * ^short = "A terminology-based code for the product (e.g. SNOMED CT code)"
+
 * ingredient
-  * item[x]
-    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^short = "Ingredient or a part product. For combination packs, each ingredient can be a separate manufactured item with its own ingredients, dose form, and strength" // item
+  * isActive ^short = "Active ingredient indicator. By default, only active ingredients are expected - therefore, the default value is true."
+
+
+
+
+
+* ingredient
   * itemReference only Reference (MedicationEuMpd)
   * itemCodeableConcept from $substanceIPS (example)
     * ^binding.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -58,16 +50,51 @@ Description: "This profile defines how to represent Medication data on ePrescrip
     * ^binding.extension[=].extension[=].valueCanonical = $eHDSISubstance
     * ^binding.extension[=].extension[+].url = "documentation"
     * ^binding.extension[=].extension[=].valueMarkdown = "MyHealth@EU crossborder value set for substances. Based on EMA SPOR SMS."
-    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
-    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
-  * strength // item.ingredient.strengthInfo (does not map exactly)
+  * strength
     * extension contains $ihe-ext-medication-strengthsubstance named basisOfStrengthSubstance 0..1 
     * extension[basisOfStrengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
+
+* form from $eHDSIDoseForm (example) 
+* manufacturer ^short = "Marketing authorisation holder of the medicinal product. If the product does not have a marketing authorisation, the manufactured information may be used. It is sufficient to populate only name and optionally an identifier of the organisation."
+
+
+
+Profile: MedicationEuMpd
+Parent: MedicationEuCore
+Id: Medication-eu-mpd
+Title: "Medication: MPD"
+Description: "This profile defines how to represent Medication data on ePrescription and eDispensation. The profile is equal to Medication EU Core and only adds obligations."
+
+* extension[productName]
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+* identifier
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+* code 
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
+
+
+
+
+
+* ingredient
+  * item[x]
+    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * itemCodeableConcept
+    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * strength
     * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
     * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
 * form from $eHDSIDoseForm (example) 
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+

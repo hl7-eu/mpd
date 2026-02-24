@@ -86,3 +86,7 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 * extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
 * extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
+
+
+
+

@@ -49,3 +49,8 @@ Description: "MedicationDispense profile for capturing dispensation information 
 * extension[recorded] ^short = "Date and time when the dispense was recorded/issued. This is not necessarily the same as when the medication was handed over to the patient."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
+
+
+
+
+
