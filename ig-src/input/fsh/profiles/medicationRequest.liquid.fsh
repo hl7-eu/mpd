@@ -9,13 +9,30 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 * identifier 
   * ^short = "Prescription/prescribed item ID"
   * ^comment = "It is the prescription ID if the presciption includes only one prescribed item"
-* status ^short = "Current state of the order"
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
+* status
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * subject only Reference( PatientEuCore )
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * authoredOn 1..
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * requester 1..
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * groupIdentifier 
   * ^short = "Prescription this is part of. Not needed if a presciption includes only one prescribed item."
 * dosageInstruction ^short = "How the medication should be taken."
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * timing ^short = "Administration schedule"
     * repeat
       * duration ^short = "Duration of the treatment"
@@ -30,12 +47,28 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * extension contains $ihe-ext-medicationrequest-prescribedquantity named prescribedQuantity 0..1
   * extension[prescribedQuantity] ^short = "Overall amount of product prescribed, independent from the number of repeats."
   * extension[prescribedQuantity] ^definition = "When Medication resource implies a pack size, prescribedQuantity should convey number of packages. When the Medication does not imply an amount, overall amount could be in tablets or millilitres."
+    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * validityPeriod
+    * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+    * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * substitution ^short = "Any restrictions on medication substitution. Substitution rules (including the definition of substitution) vary across different countries, and the semantics of this element should be interpreted accordingly."
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
+* note.text
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 
 
 {% if isR4 %}
 
 * medication[x] only CodeableConcept or Reference(MedicationEuMpd)
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * reasonCode ^short = "Reason or indication for this prescription"
   * ^binding.extension[0].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
   * ^binding.extension[0].extension[0].url = "purpose"
@@ -59,6 +92,9 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 * insert ImposeProfile ( $MedicationRequest-ihe , 0)
 * medication 1..
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * medication only CodeableReference(MedicationEuMpd)
 * reason ^short = "Reason or indication for this prescription"
   * ^binding.additional.purpose = #candidate

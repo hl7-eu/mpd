@@ -39,6 +39,7 @@
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: MPD"/>
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
+<artifact id="ActorDefinition/actor-producer" key="ActorDefinition-actor-producer" name="Producer"/>
 <artifact id="PractitionerRole/doctor1" key="PractitionerRole-doctor1" name="doctor1"/>
 <artifact id="Organization/organization1" key="Organization-organization1" name="organization1"/>
 <artifact id="Organization/organization2" key="Organization-organization2" name="organization2"/>
