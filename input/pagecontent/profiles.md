@@ -38,7 +38,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 
 #### Medication  
   
-The map is available in HL7 Europe Base and Core FHIR IG
+The map is available in HL7 Europe Base and Core FHIR IG.
 
 #### Dosage  
   
