@@ -1,8 +1,8 @@
 {%- if isR4 -%}
 {
   "package-id" : "hl7.fhir.eu.mpd",
-  "version" : "0.1.0-ballot",
-  "path" : "http://hl7.eu/fhir/mpd/0.1.0-ballot",
+  "version" : "1.0.0-alpha",
+  "path" : "http://hl7.eu/fhir/mpd/1.0.0-alpha",
   "ci-build": "https://build.fhir.org/ig/hl7-eu/mpd",
   "first": true,
   "desc" : "This is the first ballot of the Medication Prescription and Dispense FHIR IG STU 1", 
@@ -17,8 +17,8 @@
 {%- if isR5 -%}
 {
   "package-id" : "hl7.fhir.eu.mpd-r5",
-  "version" : "0.1.0-ballot",
-  "path" : "http://hl7.eu/fhir/mpd-r5/0.1.0-ballot",
+  "version" : "1.0.0-alpha",
+  "path" : "http://hl7.eu/fhir/mpd-r5/1.0.0-alpha",
   "ci-build": "https://build.fhir.org/ig/hl7-eu/mpd-r5",
   "first": true,
   "desc" : "This is the first ballot of the Medication Prescription and Dispense FHIR IG STU 1", 
