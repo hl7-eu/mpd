@@ -62,6 +62,7 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 #### Medication  
   
 |**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|**Comment**|  
+|--|--|--|--|
 |identifyingCode[x]|-|-|See mapping by data types|  
 |identifyingCodeCodeableConcept|Medication.code|Medication.code||  
 |identifyingCodeIdentifier|Medication.identifier|Medication.identifier||  
