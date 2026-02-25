@@ -30,7 +30,8 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 * groupIdentifier 
   * ^short = "Prescription this is part of. Not needed if a presciption includes only one prescribed item."
-* dosageInstruction ^short = "How the medication should be taken."
+* dosageInstruction only DosageEuMpd
+  * ^short = "How the medication should be taken."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * timing ^short = "Administration schedule"
@@ -57,6 +58,11 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
 
+//TODO Check if the correction is the same in the Xt-EHR
+* substitution.allowedBoolean
+  * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+
 * note.text
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
@@ -67,7 +73,10 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 
 
-* insert ImposeProfile ( $MedicationRequest-ihe , 0)
+
+
+
+//* insert ImposeProfile ( $MedicationRequest-ihe , 0)
 * medication 1..
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
@@ -77,5 +86,10 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
   * ^binding.additional.purpose = #candidate
   * ^binding.additional.valueSet = $eHDSIIllnessandDisorder
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for diagnoses. Based on WHO ICD 10.""" 
+
+* renderedDosageInstruction
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^requirements = "EHDSDosage"
 
 

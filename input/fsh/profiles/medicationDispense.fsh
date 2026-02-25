@@ -1,4 +1,5 @@
 // TODO: whenHandedOver is 1..1 in IHE profile, which is imposed on R5. Causes QA error.
+// TODO: ignoreWarnings to supress all QA warnings about obligations.
 
 Profile: MedicationDispenseEuMpd
 Parent: MedicationDispense 
@@ -6,7 +7,6 @@ Id: MedicationDispense-eu-mpd
 Title: "MedicationDispense: MPD"
 Description: "MedicationDispense profile for capturing dispensation information based on a medication prescription."
 
-//R5* insert ImposeProfile ( $MedicationDispense-ihe , 0)
 
 * identifier // MS // identifier
 * subject // MS // patient 1
@@ -28,7 +28,7 @@ Description: "MedicationDispense profile for capturing dispensation information 
 * status // MS // status 1
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
-* dosageInstruction
+* dosageInstruction only DosageEuMpd
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
 
@@ -37,7 +37,7 @@ Description: "MedicationDispense profile for capturing dispensation information 
 
 * extension contains $medicationdispense-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
 * extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
-//R5* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)
+//R5* notPerformedReason
 
 
 
@@ -49,6 +49,11 @@ Description: "MedicationDispense profile for capturing dispensation information 
 * extension[recorded] ^short = "Date and time when the dispense was recorded/issued. This is not necessarily the same as when the medication was handed over to the patient."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
+
+* extension[renderedDosageInstruction] 
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^requirements = "EHDSDosage"
 
 
 

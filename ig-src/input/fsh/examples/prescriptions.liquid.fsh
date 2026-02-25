@@ -14,6 +14,7 @@ Description: "400C. A prescription/request with one medication and changing dosa
 * medicationReference = Reference(01A-Cefuroxime1500GenericExplicit)
 * subject = Reference(patient1)
 * reasonCode = $snomed#10625071000119104 "Bronchopneumonia caused by bacteria (disorder)"
+* extension[renderedDosageInstruction].valueMarkdown = "1500 mg intramuscularly every 8 hours for 3 days, then 750-1500 mg intramuscularly every 8 hours for 4 days"
 * dosageInstruction[0]
   * sequence = 1
   * doseAndRate.doseQuantity = 1500 $ucum#mg "milligram(s)"
@@ -331,7 +332,11 @@ Description: "300C-2. A prescription item (MedicationRequest) that is a part of 
 * dispenseRequest.numberOfRepeatsAllowed = 1
 * dispenseRequest.quantity = 20 $ucum#g "gram(s)"
 * dispenseRequest.validityPeriod.start = "2024-10-06"
-* dispenseRequest.validityPeriod.end = "2024-12-06"{% endif %}
+* dispenseRequest.validityPeriod.end = "2024-12-06"
+
+{% endif %}
+
+
 {% if isR5 %}
 // SINGLE LINE PRESCRIPTIONS - only one medication per prescription.
 Instance: 400C-prescription-cefuroxime-singleline
@@ -348,6 +353,7 @@ Description: "400C. A prescription/request with one medication and changing dosa
 * medication.reference = Reference(01A-Cefuroxime1500GenericExplicit)
 * subject = Reference(patient1)
 * reason.concept = $snomed#10625071000119104 "Bronchopneumonia caused by bacteria (disorder)"
+* renderedDosageInstruction = "1500 mg intramuscularly every 8 hours for 3 days, then 750-1500 mg intramuscularly every 8 hours for 4 days"
 * dosageInstruction[0]
   * sequence = 1
   * doseAndRate.doseQuantity = 1500 $ucum#mg "milligram(s)"
