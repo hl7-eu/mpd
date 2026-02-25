@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/mpd/1.0.0-alpha" ciUrl="https://build.fhir.org/ig/hl7-eu/mpd" defaultVersion="1.0.0-alpha" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/mpd" url="http://hl7.eu/fhir/mpd">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/mpd/0.1.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/mpd" defaultVersion="0.1.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/mpd" url="http://hl7.eu/fhir/mpd">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/mpd"/>
-<version code="1.0.0-alpha" url="http://hl7.eu/fhir/mpd/1.0.0-alpha"/>
+<version code="1.0.0-alpha" url="http://hl7.eu/fhir/mpd/xtehr"/>
+<version code="0.1.0-ballot" deprecated="true" url="http://hl7.eu/fhir/mpd/0.1.0-ballot"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>

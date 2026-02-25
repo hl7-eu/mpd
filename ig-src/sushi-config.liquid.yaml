@@ -10,7 +10,7 @@ name:  Hl7EuMedPrescriptionDispenseIg
 title: HL7 Europe Medication Prescription and Dispense
 description: This guide describes how to represent in HL7 FHIR Prescription and Dispense in the European context
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ci-build
+version: 1.0.0-alpha
 fhirVersion: {{ fhirVersion }} # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
