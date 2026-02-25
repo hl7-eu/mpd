@@ -36,9 +36,65 @@ EHDS Medication Prescription model allows multiple items prescribed on one presc
 |prescriptionItem.note|MedicationRequest.note.text|MedicationRequest.note.text|  
 {:.table-bordered .table-striped .thead-light}
 
+
+#### Medication Dispense  
+  
+|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
+|EHDSMedicationDispense||| 
+|header||| 
+|header.subject|MedicationDispense.subject|MedicationDispense.subject| 
+|header.identifier|MedicationDispense.identifier|MedicationDispense.identifier| 
+|header.author[x]|MedicationDispense.performer.actor|MedicationDispense.performer.actor| 
+|header.date|MedicationDispense.recorded|MedicationDispense.extension:recorded| 
+|header.status|MedicationDispense.status|MedicationDispense.status| 
+|header.language|MedicationDispense.language|MedicationDispense.language| 
+|dispenseLocation|MedicationDispense.location|MedicationDispense.location| 
+|receiver[x]|MedicationDispense.receiver|MedicationDispense.receiver| 
+|relatedRequest|MedicationDispense.authorizingPrescription|MedicationDispense.authorizingPrescription| 
+|medication|MedicationDispense.medication|MedicationDispense.medication[x]| 
+|dispensedQuantity|MedicationDispense.quantity|MedicationDispense.quantity| 
+|timeOfDispensation|MedicationDispense.whenHandedOver|MedicationDispense.whenHandedOver| 
+|substitutionOccurred|MedicationDispense.substitution.wasSubstituted|MedicationDispense.substitution.wasSubstituted| 
+|dosageInstructions|MedicationDispense.dosageInstruction|MedicationDispense.dosageInstruction| 
+|note|MedicationDispense.note|MedicationDispense.note| 
+{:.table-bordered .table-striped .thead-light}
+
 #### Medication  
   
-The map is available in HL7 Europe Base and Core FHIR IG.
+|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|**Comment**|  
+|--|--|--|--|
+|identifyingCode[x]|-|-|See mapping by data types|  
+|identifyingCodeCodeableConcept|Medication.code|Medication.code||  
+|identifyingCodeIdentifier|Medication.identifier|Medication.identifier||  
+|classification|Medication.extension:classification|Medication.extension:classification||  
+|productName|Medication.extension:productName|Medication.extension:productName||  
+|marketingAuthorisationHolder|Medication.marketingAuthorizationHolder|Medication.manufacturer||  
+|marketingAuthorisationHolder.organisationName|Organization.name|Organization.name||  
+|marketingAuthorisationHolder.organisationIdentifier|Organization.identifier|Organization.identifier||  
+|doseForm|Medication.doseForm|Medication.form|Dose form for the whole product (authorised dose form) - in case of combination packs, the authorised dose form may differ from individual item dose forms.|  
+|description|Medication.extension:characteristic|Medication.extension:characteristic|Value of string data type|  
+|item|Medication.ingredient.item.reference(Medication) or N/A|Medication.ingredient.itemReference(Medication) or N/A|EHDSMedication.item is the content of the package. If the medication  consists of one type of manufactured items, it is data about its ingredients and strength (no mapping for this element exactly). If a package contains multiple different manufactured items, each type of item is described by another Medication resource.|  
+|item.doseForm|Medication.doseForm|Medication.form|Only relevant for combination packs where this element maps to the nested Medication's dose form.|  
+|item.ingredient|Medication.ingredient|Medication.ingredient||  
+|item.ingredient.isActive|Medication.ingredient.isActive|Medication.ingredient.isActive||  
+|item.ingredient.substance|Medication.ingredient.item.concept|Medication.ingredient.itemCodeableConcept||  
+|item.ingredient.strengthInfo|-|-|Backbone element|  
+|item.ingredient.strengthInfo.strength|Medication.ingredient.strengthRatio|Medication.ingredient.strength||  
+|item.ingredient.strengthInfo.basisOfStrengthSubstance|Medication.ingredient.strength[x].extension: basisOfStrengthSubstance|Medication.ingredient.strength.extension: basisOfStrengthSubstance||  
+|item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation||  
+|item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem||  
+|item.amount|Medication.totalVolume|Medication.amount||  
+|item.packageType|Medication.extension:packageType|Medication.extension:packageType||  
+|device|Medication.extension:device|Medication.extension:device||  
+|device.deviceQuantity|Medication.extension:device.extension:quantity|Medication.extension:device.extension:quantity||  
+|device.device[x]|Medication.extension:device.extension:device|Medication.extension:device.extension:device|Only type of device (CodeableConcept) is expected. Reference not supported.|  
+|characteristic|Medication.extension:characteristic|Medication.extension:characteristic||  
+|characteristic.type|Medication.extension:characteristic.extension:type|Medication.extension:characteristic.extension:type||  
+|characteristic.value[x]|Medication.extension:characteristic.extension:value|Medication.extension:characteristic.extension:value||  
+|batch|Medication.batch|Medication.batch||  
+|batch.lotNumber|Medication.batch.lotNumber|Medication.batch.lotNumber||  
+|batch.expirationDate|Medication.batch.expirationDate|Medication.batch.expirationDate||  
+{:.table-bordered .table-striped .thead-light}
 
 #### Dosage  
   
@@ -67,24 +123,3 @@ The map is available in HL7 Europe Base and Core FHIR IG.
 |dosageDetails.routeOfAdministration|Dosage.route|Dosage.route| 
 {:.table-bordered .table-striped .thead-light}
 
-#### Medication Dispense  
-  
-|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedicationDispense||| 
-|header||| 
-|header.subject|MedicationDispense.subject|MedicationDispense.subject| 
-|header.identifier|MedicationDispense.identifier|MedicationDispense.identifier| 
-|header.author[x]|MedicationDispense.performer.actor|MedicationDispense.performer.actor| 
-|header.date|MedicationDispense.recorded|MedicationDispense.extension:recorded| 
-|header.status|MedicationDispense.status|MedicationDispense.status| 
-|header.language|MedicationDispense.language|MedicationDispense.language| 
-|dispenseLocation|MedicationDispense.location|MedicationDispense.location| 
-|receiver[x]|MedicationDispense.receiver|MedicationDispense.receiver| 
-|relatedRequest|MedicationDispense.authorizingPrescription|MedicationDispense.authorizingPrescription| 
-|medication|MedicationDispense.medication|MedicationDispense.medication[x]| 
-|dispensedQuantity|MedicationDispense.quantity|MedicationDispense.quantity| 
-|timeOfDispensation|MedicationDispense.whenHandedOver|MedicationDispense.whenHandedOver| 
-|substitutionOccurred|MedicationDispense.substitution.wasSubstituted|MedicationDispense.substitution.wasSubstituted| 
-|dosageInstructions|MedicationDispense.dosageInstruction|MedicationDispense.dosageInstruction| 
-|note|MedicationDispense.note|MedicationDispense.note| 
-{:.table-bordered .table-striped .thead-light}
