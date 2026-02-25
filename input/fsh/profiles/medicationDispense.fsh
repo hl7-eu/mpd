@@ -1,4 +1,5 @@
 // TODO: whenHandedOver is 1..1 in IHE profile, which is imposed on R5. Causes QA error.
+// TODO: ignoreWarnings to supress all QA warnings about obligations.
 
 Profile: MedicationDispenseEuMpd
 Parent: MedicationDispense 

@@ -1,4 +1,5 @@
-Profile: MedicationEuCore
+// TODO Remove MedicationEuCore and renew dependency to Core
+/*Profile: MedicationEuCore
 Parent: Medication
 Id: medication-eu-core
 Title: "Medication (EU core)"
@@ -67,6 +68,7 @@ Description: "This profile introduces essential constraints and extensions for t
 
 
 
+*/
 
 Profile: MedicationEuMpd
 Parent: MedicationEuCore

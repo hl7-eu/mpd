@@ -1,4 +1,5 @@
-Profile: MedicationEuCore
+// TODO Remove MedicationEuCore and renew dependency to Core
+/*Profile: MedicationEuCore
 Parent: Medication
 Id: medication-eu-core
 Title: "Medication (EU core)"
@@ -61,6 +62,7 @@ Description: "This profile introduces essential constraints and extensions for t
 * manufacturer ^short = "Marketing authorisation holder of the medicinal product. If the product does not have a marketing authorisation, the manufactured information may be used. It is sufficient to populate only name and optionally an identifier of the organisation."
 
 
+*/
 
 Profile: MedicationEuMpd
 Parent: MedicationEuCore
