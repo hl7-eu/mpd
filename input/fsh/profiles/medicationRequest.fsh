@@ -30,7 +30,8 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 * groupIdentifier 
   * ^short = "Prescription this is part of. Not needed if a presciption includes only one prescribed item."
-* dosageInstruction ^short = "How the medication should be taken."
+* dosageInstruction only DosageEuMpd
+  * ^short = "How the medication should be taken."
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
   * timing ^short = "Administration schedule"
@@ -86,6 +87,12 @@ Description: "This profile defines how to represent MedicationRequest in HL7 FHI
 
 * extension contains $medicationrequest-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
 * extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^requirements = "EHDSDosage"
+
+
+
 
 
 

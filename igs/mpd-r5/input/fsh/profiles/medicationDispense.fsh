@@ -7,7 +7,6 @@ Id: MedicationDispense-eu-mpd
 Title: "MedicationDispense: MPD"
 Description: "MedicationDispense profile for capturing dispensation information based on a medication prescription."
 
-* insert ImposeProfile ( $MedicationDispense-ihe , 0)
 
 * identifier // MS // identifier
 * subject // MS // patient 1
@@ -29,7 +28,7 @@ Description: "MedicationDispense profile for capturing dispensation information 
 * status // MS // status 1
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
-* dosageInstruction
+* dosageInstruction only DosageEuMpd
   * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
 
@@ -38,7 +37,7 @@ Description: "MedicationDispense profile for capturing dispensation information 
 
 //R4* extension contains $medicationdispense-rendereddosageinstruction-r5 named renderedDosageInstruction 0..1
 //R4* extension[renderedDosageInstruction] ^short = "Full representation of the dosage instructions"
-* notPerformedReason // MS // statusReason, statusText (partial mapping to logical model!)
+* notPerformedReason
 
 
 
@@ -54,4 +53,8 @@ Description: "MedicationDispense profile for capturing dispensation information 
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer 
 
+* renderedDosageInstruction
+  * ^extension[$obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
+  * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
+  * ^requirements = "EHDSDosage"
 

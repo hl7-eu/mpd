@@ -36,6 +36,7 @@
 <artifact deprecated="true" id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 Patient administrative data"/>
 <artifact deprecated="true" id="StructureDefinition/MedicinalProduct" key="StructureDefinition-MedicinalProduct" name="A1.4 Identification of the prescribed product"/>
 <artifact deprecated="true" id="StructureDefinition/Dispensation" key="StructureDefinition-Dispensation" name="B.1 Dispensation information (provided by the dispensing pharmacy)"/>
+<artifact id="StructureDefinition/Dosage-eu-mpd" key="StructureDefinition-Dosage-eu-mpd" name="Dosage: MPD"/>
 <artifact id="StructureDefinition/Medication-eu-mpd" key="StructureDefinition-Medication-eu-mpd" name="Medication: MPD"/>
 <artifact id="StructureDefinition/MedicationDispense-eu-mpd" key="StructureDefinition-MedicationDispense-eu-mpd" name="MedicationDispense: MPD"/>
 <artifact id="StructureDefinition/MedicationRequest-eu-mpd" key="StructureDefinition-MedicationRequest-eu-mpd" name="MedicationRequest: MPD"/>
