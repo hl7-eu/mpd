@@ -1,0 +1,24 @@
+{%- if isR4 -%}
+{
+  "package-id" : "hl7.fhir.eu.mpd",
+  "version" : "1.0.0-alpha",
+  "path" : "http://hl7.eu/fhir/mpd/xtehr",
+  "desc" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
+  "descmd" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
+  "status" : "preview",
+  "mode": "working",
+  "sequence" : "STU 1"
+}
+{%- endif -%}
+{%- if isR5 -%}
+{
+  "package-id" : "hl7.fhir.eu.mpd-r5",
+  "version" : "1.0.0-alpha",
+  "path" : "http://hl7.eu/fhir/mpd-r5/xtehr",
+  "desc" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
+  "descmd" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
+  "status" : "preview",
+  "mode": "working",
+  "sequence" : "STU 1"
+}
+{%- endif -%}
