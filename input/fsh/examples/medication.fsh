@@ -182,7 +182,7 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 * form = $edqm-standardterms#10101000 "Oral drops, solution"
 //* extension[classification].valueCodeableConcept = $who-atc#N02AX51 "tilidine and naloxone"
 //* extension[classification].valueCodeableConcept.coding.version = "2025"
-* extension[classification].valueCodeableConcept = $who-atc#N02AX "Other opioids"
+* extension[classification].valueCodeableConcept = $who-atc#N02AX51 "tilidine and naloxone"
 * extension[productName].valueString = "Tilidin HEXAL® comp Lösung, 50/4 mg je 0,72 ml Tropfen zum Einnehmen, Lösung"
 * extension[unitOfPresentation].valueCodeableConcept = $edqm-standardterms#15022000 "Drop"
 * amount.numerator = 10 $ucum#mL "milliliter"
@@ -202,3 +202,4 @@ Description: "5A. Tilidin (50mg), Naloxon (4mg) oral drops. Branded packaged pro
 * manufacturer.display = "Hexal AG" //We have not profiled MAH data
 
 //Lösung (20 Tropfen = 4 Hübe) enthalten 51,45 mg Tilidinhydrochlorid-Hemihydrat (entsprechend 50 mg Tilidinhydrochlorid) und 4,40 mg Naloxonhydrochlorid-Dihydrat (entsprechend 4 mg Naloxonhydrochlorid).
+

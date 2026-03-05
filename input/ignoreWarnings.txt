@@ -56,7 +56,7 @@ The canonical URL https://profiles.ihe.net/PHARM/MPD doesn't point to an actual 
 The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 
 # not used key for Additioanl Bindings
-Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+Constraint failed: ext-ab-1:%
 
 # Deprecated extension
 
@@ -64,3 +64,6 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # not embedded HTML tag
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# obligations extension slicing warning
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0

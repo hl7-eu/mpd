@@ -23,12 +23,14 @@ These two approaches are not mutually exclusive - it is perfectly acceptable to 
 
 ### Prescription examples
 
-This implementation guide does not consider a prescription or dispense a HL7 FHIR document, but a transactional set of resources. There is no resource called "Prescription" in HL7 FHIR: a prescription may be implemented as a MedicationRequest, multiple MedicationRequests, or a combination of MedicationRequests and RequestOrchestration/RequestGroup. These resources may be exchanged in a Bundle. It is also allowed to use Composition for following the document-oriented approach, but it is not normative.
+This implementation guide does not consider a prescription or dispense a HL7 FHIR document, but a transactional set of resources. There is no resource called "Prescription" in HL7 FHIR: a prescription may be implemented as a MedicationRequest, multiple MedicationRequests, or a combination of MedicationRequests and RequestOrchestration/RequestGroup. These resources may be exchanged in a Bundle. It is also allowed to use Composition for following the document-oriented approach, but it is not normative.  
 
-Be aware, that MedicationRequest may sometimes be used as a request NOT to give/prescribe a certain medication to a patient, and MedicationDispense can be used for declining a dispense. Do-not-perform-requests are out of scope for this implementation guide, declining a dispense is presented in the examples.  
+Be aware, that MedicationRequest may sometimes be used as a request NOT to give/prescribe a certain medication to a patient, and MedicationDispense can be used for declining a dispense. Do-not-perform-requests are out of scope for this implementation guide, declining a dispense is only presented in the examples.  
+
+Implementations do not have to support multi-item prescriptions or dispense decline reports to be compliant with this implementation guide.    
 
 #### Single-line prescriptions
-- [**400C**](MedicationRequest-400C-prescription-cefuroxime-singleline.html) - single-line prescription, allowing multiple dispenses, uses 'actionable' tag.  
+- [**400C**](MedicationRequest-400C-prescription-cefuroxime-singleline.html) - single-line prescription, allowing multiple dispenses, uses 'actionable' tag, allows substitution. See corresponding dispense examples 400D-1 and 400D-2 to see the actual substitution.
 
 #### Multi-line prescriptions
 
@@ -42,6 +44,6 @@ Please find more information about multi-item prescription in the [implementatio
 
 ### Dispense examples
 
-- [**400D-1**](MedicationDispense-400D-dispense-1.html) and [**400D-2**](MedicationDispense-400D-dispense-2.html) - two dispenses for the same prescription (400C)  
+- [**400D-1**](MedicationDispense-400D-dispense-1.html) and [**400D-2**](MedicationDispense-400D-dispense-2.html) - two dispenses for the same prescription (400C). In this example, 400D-1 is not considered a substitution (default value), and 400D-2 is considered a substitution (explicit 'wasSubstituted=true') - actual definition and rules of substitution vary across implementations.    
 - [**300D**](MedicationDispense-300D-dispense-for-2-requests.html) - one dispense fulfilling two requests. Please note that this may not be supported by all implementations.  
 - [**400E**](MedicationDispense-400E-refused-dispense.html) - declining a dispense  

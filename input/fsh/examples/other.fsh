@@ -78,3 +78,4 @@ Description: "Mr Moon Farmatseut - pharmacist. PractitionerRole resource (practi
 * organization = Reference(organization2)
 * organization.display = "Su-Bin Pharmacy B"
 * code = $snomed#46255001 "Pharmacist"
+

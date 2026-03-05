@@ -12,6 +12,7 @@ Description: "400D-1. Medication dispense fulfilling the first part of the order
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 1 $ucum#1 // 1 pack containing 10 vials
 * daysSupply = 3 $ucum#d "day(s)"
+* extension[recorded].valueDateTime = "2024-12-06T19:54:00Z"
 * whenHandedOver = "2024-12-06T19:54:00Z"
 
 Instance: 400D-dispense-2
@@ -27,8 +28,9 @@ Description: "400D-2. Medication dispense fulfilling the second part of the orde
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 3 $ucum#1 // 3 packs containing 5 vials each
 * daysSupply = 4 $ucum#d "day(s)"
+* extension[recorded].valueDateTime = "2024-12-09T10:55:00Z"
 * whenHandedOver = "2024-12-09T10:55:00Z"
-
+* substitution.wasSubstituted = true
 
 Instance: 300D-dispense-for-2-requests
 InstanceOf: MedicationDispenseEuMpd
@@ -43,7 +45,7 @@ Description: "300D. Medication dispense dispensing one combination product for t
 * authorizingPrescription[0].identifier.value = "300-1/2"
 * authorizingPrescription[+].identifier.value = "300-2/2"
 * quantity = 1 $ucum#1
-* whenHandedOver = "2024-10-06T19:54:00Z"
+* extension[recorded].valueDateTime = "2024-10-06T19:54:00Z"
 
 Instance: 400E-refused-dispense
 InstanceOf: MedicationDispenseEuMpd
@@ -57,7 +59,7 @@ Description: "400E. Refusal of medication dispense"
 * performer[0].actor = Reference(pharmacist1)
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 0 $ucum#1 // 1 pack containing 10 vials
-* whenHandedOver = "2024-12-06T19:54:00Z" // also data-absent-reason?
+* extension[recorded].valueDateTime = "2024-12-06T19:54:00Z" 
 {% endif %}
 {% if isR5 %}
 Instance: 400D-dispense-1
@@ -73,6 +75,7 @@ Description: "400D-1. Medication dispense fulfilling the first part of the order
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 1 $ucum#1 // 1 pack containing 10 vials
 * daysSupply = 3 $ucum#d "day(s)"
+* recorded = "2024-12-06T19:54:00Z"
 * whenHandedOver = "2024-12-06T19:54:00Z"
 
 Instance: 400D-dispense-2
@@ -88,7 +91,9 @@ Description: "400D-2. Medication dispense fulfilling the second part of the orde
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 3 $ucum#1 // 3 packs containing 5 vials each
 * daysSupply = 4 $ucum#d "day(s)"
+* recorded = "2024-12-09T10:55:00Z"
 * whenHandedOver = "2024-12-09T10:55:00Z"
+* substitution.wasSubstituted = true
 
 Instance: 300D-dispense-for-2-requests
 InstanceOf: MedicationDispenseEuMpd
@@ -103,7 +108,7 @@ Description: "300D. Medication dispense dispensing one combination product for t
 * authorizingPrescription[0].identifier.value = "300-1/2"
 * authorizingPrescription[+].identifier.value = "300-2/2"
 * quantity = 1 $ucum#1
-* whenHandedOver = "2024-10-06T19:54:00Z"
+* recorded = "2024-10-06T19:54:00Z"
 
 Instance: 400E-refused-dispense
 InstanceOf: MedicationDispenseEuMpd
@@ -117,5 +122,5 @@ Description: "400E. Refusal of medication dispense"
 * performer[0].actor = Reference(pharmacist1)
 * authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
 * quantity = 0 $ucum#1 // 1 pack containing 10 vials
-* whenHandedOver = "2024-12-06T19:54:00Z" // also data-absent-reason?
+* recorded = "2024-12-06T19:54:00Z"
 {% endif %}

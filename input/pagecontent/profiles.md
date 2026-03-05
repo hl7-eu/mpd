@@ -8,132 +8,118 @@ Mappings from eHealth Network Guidelines are not provided by this guide.
 EHDS Medication Prescription model allows multiple items prescribed on one prescription. In such case, EHDS.MedicationPrescription.identifier maps to MedicationRequest.groupIdentifier, and RequestOrchestration/RequestGroup may be the target of some of the prescription elements. Please read [implementation notes](implementationnotes.html) for more information.  
   
 |**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedicationPrescription.header.identifier|MedicationRequest.identifier or .groupIdentifier|MedicationRequest.identifier or .groupIdentifier|  
-|EHDSMedicationPrescription.header.authorship.author|MedicationRequest.requester|MedicationRequest.requester|  
-|EHDSMedicationPrescription.header.authorship.datetime|MedicationRequest.authoredOn|MedicationRequest.authoredOn|  
-|EHDSMedicationPrescription.header.subject|MedicationRequest.subject|MedicationRequest.subject|  
-|EHDSMedicationPrescription.header.validFrom|MedicationRequest.dispenseRequest.validityPeriod.start|MedicationRequest.dispenseRequest.validityPeriod.start|  
-|EHDSMedicationPrescription.header.validUntil|MedicationRequest.dispenseRequest.validityPeriod.end|MedicationRequest.dispenseRequest.validityPeriod.end|  
-|EHDSMedicationPrescription.header.recorder|MedicationRequest.recorder|MedicationRequest.recorder|  
-|EHDSMedicationPrescription.header.recordingDate|MedicationRequest.eventhistory.recorded|MedicationRequest.eventhistory.recorded|  
-|EHDSMedicationPrescription.header.status|MedicationRequest.status or RequestOrchestration.status (for multi-item)|MedicationRequest.status or RequestGroup.status (for multi-item)|  
-|EHDSMedicationPrescription.header.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|   
-|EHDSMedicationPrescription.comment|MedicationRequest.note.text, RequestOrchestration.note.text|MedicationRequest.note.text, RequestGroup.note.text|  
-|EHDSMedicationPrescription.prescriptionItem|MedicationRequest|MedicationRequest|  
-|EHDSMedicationPrescription.prescriptionItem.identifier|MedicationRequest.identifier|MedicationRequest.identifier|  
-|EHDSMedicationPrescription.prescriptionItem.category|MedicationRequest.category|MedicationRequest.category|  
-|EHDSMedicationPrescription.prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
-|EHDSMedicationPrescription.prescriptionItem.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|  
-|EHDSMedicationPrescription.prescriptionItem.medication|MedicationRequest.medication|MedicationRequest.medication[x]|  
-|EHDSMedicationPrescription.prescriptionItem.indication[x]|MedicationRequest.reason|MedicationRequest.reasonCode or .reasonReference|  
-|EHDSMedicationPrescription.prescriptionItem.indicationText|MedicationRequest.reason.concept.text|MedicationRequest.reasonCode.text|  
-|EHDSMedicationPrescription.prescriptionItem.prescriptionIntent|MedicationRequest.reason|MedicationRequest.reason|  
-|EHDSMedicationPrescription.prescriptionItem.treatmentPeriod|MedicationRequest.effectiveDosePeriod|MedicationRequest.extension:effectiveDosePeriod|  
-|EHDSMedicationPrescription.prescriptionItem.quantityPrescribed|MedicationRequest.dispenseRequest.extension: prescribedQuantity|MedicationRequest.dispenseRequest.extension: prescribedQuantity|  
-|EHDSMedicationPrescription.prescriptionItem.dosageInstructions|MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
-|EHDSMedicationPrescription.prescriptionItem.preparationInstructions|MedicationRequest.dispenseRequest.dispenserInstruction||  
-|EHDSMedicationPrescription.prescriptionItem.substitution|MedicationRequest.substitution|MedicationRequest.substitution|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
-|EHDSMedicationPrescription.prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
-|EHDSMedicationPrescription.prescriptionItem.repeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|  
-|EHDSMedicationPrescription.prescriptionItem.minimumDispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|  
-|EHDSMedicationPrescription.prescriptionItem.offLabel|MedicationRequest.extension:offLabelUse|MedicationRequest.extension:offLabelUse|  
-|EHDSMedicationPrescription.prescriptionItem.comment|MedicationRequest.note.text|MedicationRequest.note.text|  
+|header.subject|MedicationRequest.subject|MedicationRequest.subject|  
+|header.identifier|MedicationRequest.identifier or .groupIdentifier|MedicationRequest.identifier or .groupIdentifier|  
+|header.author[x]|MedicationRequest.requester|MedicationRequest.requester|  
+|header.date|MedicationRequest.authoredOn|MedicationRequest.authoredOn|  
+|header.status|MedicationRequest.status or RequestOrchestration.status (for multi-item)|MedicationRequest.status or RequestGroup.status (for multi-item)|  
+|header.language[x]|MedicationRequest.language|MedicationRequest.language|   
+|header.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|   
+|header.presentedForm|||   
+|prescriptionItem|MedicationRequest|MedicationRequest|  
+|prescriptionItem.identifier|MedicationRequest.identifier|MedicationRequest.identifier|  
+|prescriptionItem.status|MedicationRequest.status|MedicationRequest.status|  
+|prescriptionItem.statusReason[x]|MedicationRequest.statusReason|MedicationRequest.statusReason|  
+|prescriptionItem.medication|MedicationRequest.medication|MedicationRequest.medication[x]|  
+|prescriptionItem.indication[x]|MedicationRequest.reason|MedicationRequest.reasonCode or .reasonReference|  
+|prescriptionItem.intendedUseType|MedicationRequest.reason.concept|MedicationRequest.reasonCode|  
+|prescriptionItem.periodOfUse|MedicationRequest.effectiveDosePeriod|MedicationRequest.extension:effectiveDosePeriod|  
+|prescriptionItem.quantityPrescribed|MedicationRequest.dispenseRequest.extension: prescribedQuantity|MedicationRequest.dispenseRequest.extension: prescribedQuantity|  
+|prescriptionItem.dosageInstructions|MedicationRequest.dosageInstruction|MedicationRequest.dosageInstruction|  
+|prescriptionItem.validityPeriod|MedicationRequest.dispenseRequest.validityPeriod|MedicationRequest.dispenseRequest.validityPeriod|  
+|prescriptionItem.substitution|MedicationRequest.substitution|MedicationRequest.substitution|  
+|prescriptionItem.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|MedicationRequest.substitution.allowed[x]|  
+|prescriptionItem.substitution.reason[x]|MedicationRequest.substitution.reason|MedicationRequest.substitution.reason|  
+|prescriptionItem.numberOfRepeats|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|MedicationRequest.dispenseRequest.numberOfRepeatsAllowed|  
+|prescriptionItem.minimumDispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|MedicationRequest.dispenseRequest.dispenseInterval|  
+|prescriptionItem.offLabel|MedicationRequest.extension:offLabelUse|MedicationRequest.extension:offLabelUse|  
+|prescriptionItem.note|MedicationRequest.note.text|MedicationRequest.note.text|  
 {:.table-bordered .table-striped .thead-light}
 
-#### Medication  
-  
-|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedication.identifyingCode[x]|Medication.code OR Medication.identifier|Medication.code OR Medication.identifier|  
-|EHDSMedication.classification|Medication.extension:classification|Medication.extension:classification|  
-|EHDSMedication.productName|Medication.extension:productName|Medication.extension:productName|  
-|EHDSMedication.marketingAuthorisationHolder|Medication.marketingAuthorizationHolder|Medication.manufacturer|  
-|EHDSMedication.doseForm|Medication.doseForm|Medication.form|  
-|EHDSMedication.packSize|Medication.totalVolume|Medication.amount|  
-|EHDSMedication.item|Medication.ingredient.item.reference(Medication)|Medication.ingredient.itemReference(Medication)|  
-|EHDSMedication.item.doseForm|Medication.doseForm|Medication.form|  
-|EHDSMedication.item.ingredient|||  
-|EHDSMedication.item.ingredient.isActive|Medication.ingredient.isActive|Medication.ingredient.isActive|  
-|EHDSMedication.item.ingredient.substance|Medication.ingredient.item|Medication.ingredient.itemCodeableConcept|  
-|EHDSMedication.item.ingredient.strengthInfo|Medication.ingredient.strength[x]|Medication.ingredient.strength|  
-|EHDSMedication.item.ingredient.strengthInfo.strength|Medication.ingredient.strengthRatio|Medication.ingredient.strengthRatio|  
-|EHDSMedication.item.ingredient.strengthInfo.basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|Medication.ingredient.strength[x].extension:basisOfStrengthSubstance|  
-|EHDSMedication.item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation|  
-|EHDSMedication.item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem|  
-|EHDSMedication.item.amount|Medication.totalVolume|Medication.amount|  
-|EHDSMedication.item.packageType|Medication.extension:packageType|Medication.extension:packageType|  
-|EHDSMedication.device|Medication.extension:device|Medication.extension:device|  
-|EHDSMedication.characteristic|Medication.extension:characteristic|Medication.extension:characteristic|  
-|EHDSMedication.batch|Medication.batch|Medication.batch|  
-|EHDSMedication.batch.lotNumber|Medication.batch.lotNumber|Medication.batch.lotNumber|  
-|EHDSMedication.batch.expirationDate|Medication.batch.expirationDate|Medication.batch.expirationDate|  
-{:.table-bordered .table-striped .thead-light}
-
-#### Dosaging  
-  
-|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSDosaging.sequence|Dosage.sequence|Dosage.sequence|  
-|EHDSDosaging.text|Dosage.text|Dosage.text|  
-|EHDSDosaging.additionalInstruction|Dosage.additionalInstruction|Dosage.additionalInstruction|  
-|EHDSDosaging.patientInstruction|patientInstruction|patientInstruction|  
-|EHDSDosaging.doseAndRate|Dosage.doseAndRate|Dosage.doseAndRate|  
-|EHDSDosaging.doseAndRate.type|Dosage.doseAndRate.type|Dosage.doseAndRate.type|  
-|EHDSDosaging.doseAndRate.dose[x]|Dosage.doseAndRate.dose[x]|Dosage.doseAndRate.dose[x]|  
-|EHDSDosaging.doseAndRate.rate[x]|Dosage.doseAndRate.rate[x]|Dosage.doseAndRate.rate[x]|  
-|EHDSDosaging.timing|Dosage.timing|Dosage.timing|  
-|EHDSDosaging.timing.event|Dosage.timing.event|Dosage.timing.event|  
-|EHDSDosaging.timing.code|Dosage.timing.code|Dosage.timing.code|  
-|EHDSDosaging.timing.repeat|Dosage.timing.repeat|Dosage.timing.repeat|  
-|EHDSDosaging.timing.repeat.bounds|Dosage.timing.repeat.bounds[x]|Dosage.timing.repeat.bounds[x]|   
-|EHDSDosaging.timing.repeat.bounds.duration|Dosage.timing.repeat.boundsDuration|Dosage.timing.repeat.boundsDuration|  
-|EHDSDosaging.timing.repeat.bounds.range|Dosage.timing.repeat.boundsRange|Dosage.timing.repeat.boundsRange|  
-|EHDSDosaging.timing.repeat.bounds.period|Dosage.timing.repeat.boundsPeriod|Dosage.timing.repeat.boundsPeriod|  
-|EHDSDosaging.timing.repeat.count|||  
-|EHDSDosaging.timing.repeat.count.count|Dosage.timing.repeat.count|Dosage.timing.repeat.count|  
-|EHDSDosaging.timing.repeat.count.countMax|Dosage.timing.repeat.countMax|Dosage.timing.repeat.countMax|  
-|EHDSDosaging.timing.repeat.duration|||  
-|EHDSDosaging.timing.repeat.duration.duration|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit|  
-|EHDSDosaging.timing.repeat.duration.durationMax|Dosage.timing.repeat.durationMax + Dosage.timing.repeat.durationUnit|Dosage.timing.repeat.durationMax  + Dosage.timing.repeat.durationUnit|  
-|EHDSDosaging.timing.repeat.frequency|||  
-|EHDSDosaging.timing.repeat.frequency.numberOfTimes|Dosage.timing.repeat.frequency|Dosage.timing.repeat.frequency|  
-|EHDSDosaging.timing.repeat.frequency.maxNumberOfTimes|Dosage.timing.repeat.frequencyMax|Dosage.timing.repeat.frequencyMax|  
-|EHDSDosaging.timing.repeat.frequency.period|Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit|Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit|  
-|EHDSDosaging.timing.repeat.frequency.periodMax|Dosage.timing.repeat.periodMax + Dosage.timing.repeat.periodUnit|Dosage.timing.repeat.periodMax + Dosage.timing.repeat.periodUnit|  
-|EHDSDosaging.timing.repeat.dayOfWeek|Dosage.timing.repeat.dayOfWeek|Dosage.timing.repeat.dayOfWeek|  
-|EHDSDosaging.timing.repeat.timeOfDay|Dosage.timing.repeat.timeOfDay|Dosage.timing.repeat.timeOfDay|  
-|EHDSDosaging.timing.repeat.eventTime|||  
-|EHDSDosaging.timing.repeat.eventTime.when|Dosage.timing.repeat.when|Dosage.timing.repeat.when|  
-|EHDSDosaging.timing.repeat.eventTime.offset|Dosage.timing.repeat.offset|Dosage.timing.repeat.offset|  
-|EHDSDosaging.asNeeded|Dosage.asNeeded|Dosage.asNeededBoolean|  
-|EHDSDosaging.asNeededFor|Dosage.asNeededFor|Dosage.asNeededCodeableConcept|  
-|EHDSDosaging.bodySite|Dosage.site|Dosage.site|  
-|EHDSDosaging.routeOfAdministration|Dosage.route|Dosage.route|  
-|EHDSDosaging.methodOfAdministration|Dosage.method|Dosage.method|  
-|EHDSDosaging.maxDose|||  
-|EHDSDosaging.maxDose.maxDosePerPeriod|Dosage.maxDosePerPeriod|Dosage.maxDosePerPeriod|  
-|EHDSDosaging.maxDose.maxDosePerAdministration|Dosage.maxDosePerAdministration|Dosage.maxDosePerAdministration|  
-|EHDSDosaging.maxDose.maxDosePerLifetime|Dosage.maxDosePerLifetime|Dosage.maxDosePerLifetime|   
-{:.table-bordered .table-striped .thead-light}
 
 #### Medication Dispense  
   
 |**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
-|EHDSMedicationDispense.header.identifier|MedicationDispense.identifier|MedicationDispense.identifier|  
-|EHDSMedicationDispense.header.status|MedicationDispense.status|MedicationDispense.status|  
-|EHDSMedicationDispense.header.statusReason[x]|MedicationDispense.notPerformedReason|MedicationDispense.statusReason|  
-|EHDSMedicationDispense.header.subject|MedicationDispense.subject|MedicationDispense.subject|  
-|EHDSMedicationDispense.header.authorship.author|MedicationDispense.performer.actor|MedicationDispense.performer.actor|  
-|EHDSMedicationDispense.header.authorship.datetime|MedicationDispense.whenHandedOver or .recorded|MedicationDispense.whenHandedOver|
-|EHDSMedicationDispense.receiver[x]|MedicationDispense.receiver|MedicationDispense.receiver|  
-|EHDSMedicationDispense.dispenseLocation|MedicationDispense.location|MedicationDispense.location|  
-|EHDSMedicationDispense.relatedRequest|MedicationDispense.authorizingPrescription|MedicationDispense.authorizingPrescription|  
-|EHDSMedicationDispense.medication|MedicationDispense.medication|MedicationDispense.medication[x]|  
-|EHDSMedicationDispense.dispensedQuantity|MedicationDispense.quantity|MedicationDispense.quantity|  
-|EHDSMedicationDispense.timeOfDispensation|MedicationDispense.whenHandedOver|MedicationDispense.whenHandedOver|  
-|EHDSMedicationDispense.substitution|MedicationDispense.substitution|MedicationDispense.substitution|  
-|EHDSMedicationDispense.substitution.substitutionOccurred|MedicationDispense.substitution.wasSubstituted|MedicationDispense.substitution.wasSubstituted|  
-|EHDSMedicationDispense.substitution.substitutionType|MedicationDispense.substitution.type|MedicationDispense.substitution.type|  
-|EHDSMedicationDispense.substitution.substitutionReason|MedicationDispense.substitution.reason|MedicationDispense.substitution.reason|  
-|EHDSMedicationDispense.dosageInstructions|MedicationDispense.dosageInstruction|MedicationDispense.dosageInstruction|  
-|EHDSMedicationDispense.comment|MedicationDispense.note|MedicationDispense.note|   
+|EHDSMedicationDispense||| 
+|header||| 
+|header.subject|MedicationDispense.subject|MedicationDispense.subject| 
+|header.identifier|MedicationDispense.identifier|MedicationDispense.identifier| 
+|header.author[x]|MedicationDispense.performer.actor|MedicationDispense.performer.actor| 
+|header.date|MedicationDispense.recorded|MedicationDispense.extension:recorded| 
+|header.status|MedicationDispense.status|MedicationDispense.status| 
+|header.language|MedicationDispense.language|MedicationDispense.language| 
+|dispenseLocation|MedicationDispense.location|MedicationDispense.location| 
+|receiver[x]|MedicationDispense.receiver|MedicationDispense.receiver| 
+|relatedRequest|MedicationDispense.authorizingPrescription|MedicationDispense.authorizingPrescription| 
+|medication|MedicationDispense.medication|MedicationDispense.medication[x]| 
+|dispensedQuantity|MedicationDispense.quantity|MedicationDispense.quantity| 
+|timeOfDispensation|MedicationDispense.whenHandedOver|MedicationDispense.whenHandedOver| 
+|substitutionOccurred|MedicationDispense.substitution.wasSubstituted|MedicationDispense.substitution.wasSubstituted| 
+|dosageInstructions|MedicationDispense.dosageInstruction|MedicationDispense.dosageInstruction| 
+|note|MedicationDispense.note|MedicationDispense.note| 
 {:.table-bordered .table-striped .thead-light}
+
+#### Medication  
+  
+|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|**Comment**|  
+|--|--|--|--|
+|identifyingCode[x]|-|-|See mapping by data types|  
+|identifyingCodeCodeableConcept|Medication.code|Medication.code||  
+|identifyingCodeIdentifier|Medication.identifier|Medication.identifier||  
+|classification|Medication.extension:classification|Medication.extension:classification||  
+|productName|Medication.extension:productName|Medication.extension:productName||  
+|marketingAuthorisationHolder|Medication.marketingAuthorizationHolder|Medication.manufacturer||  
+|marketingAuthorisationHolder.organisationName|Organization.name|Organization.name||  
+|marketingAuthorisationHolder.organisationIdentifier|Organization.identifier|Organization.identifier||  
+|doseForm|Medication.doseForm|Medication.form|Dose form for the whole product (authorised dose form) - in case of combination packs, the authorised dose form may differ from individual item dose forms.|  
+|description|Medication.extension:characteristic|Medication.extension:characteristic|Value of string data type|  
+|item|Medication.ingredient.item.reference(Medication) or N/A|Medication.ingredient.itemReference(Medication) or N/A|EHDSMedication.item is the content of the package. If the medication  consists of one type of manufactured items, it is data about its ingredients and strength (no mapping for this element exactly). If a package contains multiple different manufactured items, each type of item is described by another Medication resource.|  
+|item.doseForm|Medication.doseForm|Medication.form|Only relevant for combination packs where this element maps to the nested Medication's dose form.|  
+|item.ingredient|Medication.ingredient|Medication.ingredient||  
+|item.ingredient.isActive|Medication.ingredient.isActive|Medication.ingredient.isActive||  
+|item.ingredient.substance|Medication.ingredient.item.concept|Medication.ingredient.itemCodeableConcept||  
+|item.ingredient.strengthInfo|-|-|Backbone element|  
+|item.ingredient.strengthInfo.strength|Medication.ingredient.strengthRatio|Medication.ingredient.strength||  
+|item.ingredient.strengthInfo.basisOfStrengthSubstance|Medication.ingredient.strength[x].extension: basisOfStrengthSubstance|Medication.ingredient.strength.extension: basisOfStrengthSubstance||  
+|item.unitOfPresentation|Medication.extension:unitOfPresentation|Medication.extension:unitOfPresentation||  
+|item.containedQuantity|Medication.extension:sizeOfItem|Medication.extension:sizeOfItem||  
+|item.amount|Medication.totalVolume|Medication.amount||  
+|item.packageType|Medication.extension:packageType|Medication.extension:packageType||  
+|device|Medication.extension:device|Medication.extension:device||  
+|device.deviceQuantity|Medication.extension:device.extension:quantity|Medication.extension:device.extension:quantity||  
+|device.device[x]|Medication.extension:device.extension:device|Medication.extension:device.extension:device|Only type of device (CodeableConcept) is expected. Reference not supported.|  
+|characteristic|Medication.extension:characteristic|Medication.extension:characteristic||  
+|characteristic.type|Medication.extension:characteristic.extension:type|Medication.extension:characteristic.extension:type||  
+|characteristic.value[x]|Medication.extension:characteristic.extension:value|Medication.extension:characteristic.extension:value||  
+|batch|Medication.batch|Medication.batch||  
+|batch.lotNumber|Medication.batch.lotNumber|Medication.batch.lotNumber||  
+|batch.expirationDate|Medication.batch.expirationDate|Medication.batch.expirationDate||  
+{:.table-bordered .table-striped .thead-light}
+
+#### Dosage  
+  
+|**Logical model element**|**FHIR Path R5**|**FHIR Path R4**|  
+|EHDSDosage|-|-| 
+|renderedDosageInstruction|MedicationDispense.renderedDosageInstruction; MedicationRequest.renderedDosageInstruction|MedicationDispense.extension:renderedDosageInstruction; MedicationRequest.extension:renderedDosageInstruction| 
+|dosageDetails|Dosage|Dosage| 
+|dosageDetails.sequence|Dosage.sequence|Dosage.sequence| 
+|dosageDetails.note|Dosage.patientInstruction|Dosage.patientInstruction| 
+|dosageDetails.doseAndRate|Dosage.doseAndRate|Dosage.doseAndRate| 
+|dosageDetails.doseAndRate.dose[x]|Dosage.doseAndRate.dose[x]|Dosage.doseAndRate.dose[x]| 
+|dosageDetails.doseAndRate.rate[x]|Dosage.doseAndRate.rate[x]|Dosage.doseAndRate.rate[x]| 
+|dosageDetails.repeat|Dosage.timing.repeat|Dosage.timing.repeat| 
+|dosageDetails.repeat.bounds|Dosage.timing.repeat.bounds[x]|Dosage.timing.repeat.bounds[x]| 
+|dosageDetails.repeat.bounds.duration||| 
+|dosageDetails.repeat.bounds.period||| 
+|dosageDetails.repeat.duration|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit|Dosage.timing.repeat.duration + Dosage.timing.repeat.durationUnit| 
+|dosageDetails.repeat.frequency|-|-| 
+|dosageDetails.repeat.frequency.numberOfTimes|Dosage.timing.repeat.frequency|Dosage.timing.repeat.frequency| 
+|dosageDetails.repeat.frequency.period|Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit|Dosage.timing.repeat.period + Dosage.timing.repeat.periodUnit| 
+|dosageDetails.repeat.dayOfWeek|Dosage.timing.repeat.dayOfWeek|Dosage.timing.repeat.dayOfWeek| 
+|dosageDetails.repeat.timeOfDay|Dosage.timing.repeat.timeOfDay|Dosage.timing.repeat.timeOfDay| 
+|dosageDetails.repeat.eventTime|Dosage.timing.repeat.when|Dosage.timing.repeat.when| 
+|dosageDetails.asNeeded|Dosage.asNeeded|Dosage.asNeededBoolean| 
+|dosageDetails.bodySite|Dosage.site|Dosage.site| 
+|dosageDetails.routeOfAdministration|Dosage.route|Dosage.route| 
+{:.table-bordered .table-striped .thead-light}
+

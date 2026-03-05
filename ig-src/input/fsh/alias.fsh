@@ -75,3 +75,8 @@ Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
 Alias: $Medication-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedication
 Alias: $MedicationRequest-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationOrder
 Alias: $MedicationDispense-ihe = https://profiles.ihe.net/PHARM/MPD/StructureDefinition/IHEMedicationDispense
+
+// Obligation aliases
+
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $actor-producer = https://www.xt-ehr.eu/specifications/fhir/actor-producer

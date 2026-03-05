@@ -1,10 +1,12 @@
 
 
+
+
 // SINGLE LINE PRESCRIPTIONS - only one medication per prescription.
 Instance: 400C-prescription-cefuroxime-singleline
 InstanceOf: MedicationRequestEuMpd
 Usage: #example
-Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."
+Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium (substitution allowed)."
 
 * meta.tag = $common-tags#actionable
 * identifier.value = "10-123EP"  // prescription line identifier if exists
@@ -15,6 +17,7 @@ Description: "400C. A prescription/request with one medication and changing dosa
 * medication.reference = Reference(01A-Cefuroxime1500GenericExplicit)
 * subject = Reference(patient1)
 * reason.concept = $snomed#10625071000119104 "Bronchopneumonia caused by bacteria (disorder)"
+* renderedDosageInstruction = "1500 mg intramuscularly every 8 hours for 3 days, then 750-1500 mg intramuscularly every 8 hours for 4 days"
 * dosageInstruction[0]
   * sequence = 1
   * doseAndRate.doseQuantity = 1500 $ucum#mg "milligram(s)"

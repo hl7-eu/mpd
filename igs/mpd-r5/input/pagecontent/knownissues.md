@@ -4,6 +4,10 @@ All value set bindings declared in this implementation guide are with a binding 
 
 Occasionally, a value set has been defined for R4 or R5 only, and the bindings in R4 and R5 profiles might therefore be slightly different. However, as they are only examples, this should not be a problem, as the content of example value sets should be relatively similar.  
 
+### Alignment with IHE MPD
+
+The current version of the implementation guide does not impose IHE MPD profiles since IHE MPD does not have an official publication yet.  
+
 
 ### Ambiguous mappings for some elements  
 #### Medicinal product name  
@@ -24,4 +28,4 @@ This implementation guide does not yet take a stance on which approach should be
 #### Medication identifier vs code
 
 In case of medications, the line between .identifier and .code is not always clear, and the habit of using the elements differs by countries.  
-This implementation guide allows using .identifier element for non-instance identifiers like IDMP identifiers or product codes from a national product registry or EMA PLMS.  
+This implementation guide allows using .identifier element for non-instance identifiers like IDMP identifiers or product codes from a national product registry or EMA PMS.  
