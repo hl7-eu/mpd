@@ -91,6 +91,8 @@ pages:
     title: Terminology Considerations
   usecases.md:
     title: Use Cases
+  transactions.md
+    title: Transactions
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -138,7 +140,7 @@ menu:
     Mapping to Profiles: profiles.html
     Examples: examples.html
     Implementation Notes: implementationnotes.html
-    Transactions: transaction.html
+    Transactions: transactions.html
     IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/ 
   About:
     Authors and Contributors: authors.html
