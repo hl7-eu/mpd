@@ -62,6 +62,7 @@
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples"/>
 <page key="index" name="Home"/>
+<page key="transactions" name="IHE Transactions"/>
 <page key="implementationnotes" name="Implementation Considerations"/>
 <page key="knownissues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>

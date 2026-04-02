@@ -88,6 +88,8 @@ pages:
     title: Scope and Content
   terminology.md:
     title: Terminology Considerations
+  transactions.md:
+    title: IHE Transactions
   usecases.md:
     title: Use Cases
 #
@@ -137,6 +139,7 @@ menu:
     Mapping to Profiles: profiles.html
     Examples: examples.html
     Implementation Notes: implementationnotes.html
+    Transactions: transactions.html
     IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/ 
   About:
     Authors and Contributors: authors.html
