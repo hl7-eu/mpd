@@ -70,6 +70,8 @@ pages:
     title: Dependencies
   designchoices.md:
     title: Design Choices
+  dosagepatterns.md:
+    title: Dosage Patterns
   examples.md:
     title: Examples
   implementationnotes.md:
@@ -133,6 +135,7 @@ menu:
     Use cases: usecases.html
     Logical Models: logicalmodels.html
 #   Workflow 
+    Dosage Patterns: dosagepatterns.html
     Terminology Considerations: terminology.html
     Medication Concepts: medicationconcepts.html
   Implementation:

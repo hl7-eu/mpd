@@ -59,6 +59,7 @@
 <page key="crossversionanalysis" name="Cross-version Analysis"/>
 <page key="dependencies" name="Dependencies"/>
 <page key="designchoices" name="Design Choices"/>
+<page key="dosagepatterns" name="Dosage Patterns"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples"/>
 <page key="index" name="Home"/>
