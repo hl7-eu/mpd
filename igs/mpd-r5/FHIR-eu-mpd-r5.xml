@@ -70,6 +70,7 @@
 <page key="profiles" name="Mapping to Profiles"/>
 <page key="medicationconcepts" name="Medication Concepts"/>
 <page key="scope" name="Scope and Content"/>
+<page key="searchparameters" name="Search Parameters"/>
 <page key="references" name="Source and Additional Information"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology Considerations"/>

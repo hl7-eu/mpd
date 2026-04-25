@@ -88,6 +88,8 @@ pages:
     title: Source and Additional Information
   scope.md:
     title: Scope and Content
+  searchparameters.md:
+    title: Search Parameters
   terminology.md:
     title: Terminology Considerations
   transactions.md:
@@ -143,6 +145,7 @@ menu:
     Examples: examples.html
     Implementation Notes: implementationnotes.html
     Transactions: transactions.html
+    Search Parameters: searchparameters.html
     IHE MPD IG: https://profiles.ihe.net/PHARM/MPD/ 
   About:
     Authors and Contributors: authors.html
