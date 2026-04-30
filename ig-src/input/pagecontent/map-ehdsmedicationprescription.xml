@@ -11,10 +11,9 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Context</strong> Xt-EHR currently has no dedicated common model for <code>
-          MedicationRequest</code>. For that reason, this mapping is based on the prescription model
-          realised by the HL7 Europe Medication Prescription and Dispense (MPD) FHIR Implementation
-          Guide (<a href="https://hl7.eu/fhir/mpd" target="_blank">https://hl7.eu/fhir/mpd</a>). </div>
+          <strong>Ongoing alignment:</strong>
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+        </div>
       </div>
     </div>
 
@@ -43,11 +42,6 @@
           <a href="StructureDefinition-MedicationRequest-eu-mpd.html">
             MedicationRequestEuMpd
           </a>
-        </li>
-        <li>
-          <strong>Referenced guide profiles:</strong>
-          <a href="StructureDefinition-Medication-eu-mpd.html">MedicationEuMpd</a>,
-          <a href="StructureDefinition-Dosage-eu-mpd.html">DosageEuMpd</a>
         </li>
       </ul>
     </div>

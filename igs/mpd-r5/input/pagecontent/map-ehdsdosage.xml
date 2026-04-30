@@ -5,15 +5,14 @@
     <title>EHDSDosage to DosageEuMpd</title>
   </head>
   <body>
-    <div class="model-map-block">
+        <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Context:</strong> This mapping uses the profile mapping table published on the
-          <a href="profiles.html">Profiles</a> page. EHDSDosage is represented by the DosageEuMpd
-          profile when used in MedicationRequestEuMpd and MedicationDispenseEuMpd.
+          <strong>Ongoing alignment:</strong>
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
         </div>
       </div>
-    </div>
+    </div>    
     <h3>EHDSDosage to DosageEuMpd</h3>
     <a> </a>
     <p></p>

@@ -8,9 +8,9 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong> The models are expected to continue evolving, with
-          updates incorporated into this Implementation Guide to maintain alignment with the EHDS
-          Implementing Acts. </div>
+          <strong>Ongoing alignment:</strong>
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+        </div>
       </div>
     </div>
     <h3>EHDSMedication → MedicationEuMpd</h3>

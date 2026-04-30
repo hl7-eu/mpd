@@ -8,9 +8,8 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Context:</strong> This mapping uses the profile mapping table published on the
-          <a href="profiles.html">Profiles</a> page and points to the MedicationDispense profile
-          defined by this Implementation Guide.
+          <strong>Ongoing alignment:</strong>
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
         </div>
       </div>
     </div>
@@ -34,12 +33,6 @@
         <li>
           <strong>Target FHIR profile:</strong>
           <a href="StructureDefinition-MedicationDispense-eu-mpd.html">MedicationDispenseEuMpd</a>
-        </li>
-        <li>
-          <strong>Referenced guide profiles:</strong>
-          <a href="StructureDefinition-MedicationRequest-eu-mpd.html">MedicationRequestEuMpd</a>,
-          <a href="StructureDefinition-Medication-eu-mpd.html">MedicationEuMpd</a>,
-          <a href="StructureDefinition-Dosage-eu-mpd.html">DosageEuMpd</a>
         </li>
       </ul>
     </div>
