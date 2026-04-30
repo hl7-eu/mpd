@@ -28,16 +28,9 @@ dependencies:
   
    # hl7.fhir.uv.ips: current
    ihe.pharm.mpd: 1.0.0-comment-2 
-   hl7.fhir.eu.base-r5: current
-#   hl7.fhir.eu.extensions.r5: current  
-
-   # hl7.fhir.extensions.r5: 4.0.1
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
-   
-   
+   hl7.fhir.eu.base-r5: 2.0.0
+  
+  
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -95,7 +88,23 @@ pages:
   transactions.md:
     title: IHE Transactions
   usecases.md:
-    title: Use Cases
+    title: Use Cases  
+  map-ehdsmedication.html:
+     title: EHDSMedication to FHIR MedicationEuMpd Mapping
+  map-ehdsmedicationdispense.html:
+     title: EHDSMedicationDispense to FHIR MedicationDispenseEuMpd Mapping
+  map-ehdsmedicationprescription.html:
+     title: EHDSMedicationPrescription to FHIR MedicationRequestEuMpd Mapping
+  map-ehdsdosage.html:
+     title: EHDSDosage to FHIR DosageEuMpd Mapping
+  map-ehdsattachment.html:
+     title: EHDSAttachment to FHIR Attachment Mapping
+  map-ehdsdevice.html:
+     title: EHDSDevice to FHIR DeviceEuEps Mapping
+  map-ehdsrelatedperson.html:
+     title: EHDSRelatedPerson to FHIR RelatedPerson Mapping
+  modelmap.html:
+    title: Model Map
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -141,7 +150,7 @@ menu:
     Terminology Considerations: terminology.html
     Medication Concepts: medicationconcepts.html
   Implementation:
-    Mapping to Profiles: profiles.html
+    Mapping to Profiles: modelmap.html
     Examples: examples.html
     Implementation Notes: implementationnotes.html
     Transactions: transactions.html
