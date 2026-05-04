@@ -1,41 +1,64 @@
 ### Medication concepts
 
-Medication as a concept (CodeableConcept from a terminology or FHIR resource) on a prescription can be anything from just substance to a certain pack size of a branded product. Similarly, the level of package details varies greatly. On a dispense, physical package identifier can be captured. Closely linked is the concept of dosage and how it is represented on a prescription - some details about a prescribed product may be captured in dosaging information or in the details of the prescribed product.
+Medication on a prescription may be represented either as a coded concept (`CodeableConcept`) or as a fully described FHIR resource (e.g. `Medication` or `MedicinalProductDefinition`). The level of detail may range from a simple substance to a fully specified branded product with a defined package size. On dispense, additional identifiers such as a physical package identifier may also be recorded.
+
+When prescribing, the medication may represent either a **virtual product** (e.g. a generic concept) or a **real product** (a specific authorised medicinal product). The implications of this choice vary by jurisdiction. In some countries, prescribing a real product implies that substitution is not allowed. In others, substitution is allowed or expected unless explicitly prohibited, and the prescribed product represents one of several acceptable alternatives.
+
+Virtual and real products can both be represented using coded concepts or structured FHIR resources. In many implementations, these concepts are interlinked, enabling navigation between different levels of granularity and supporting substitution workflows.
+
 
 ### Medication and dosage
 
-When only a substance is prescribed, the dosaging information also contains the dosage (strength) and route of administration. In the following example, the prescriptions are built differently, but the order is likely the same. The reason for preferring route in dosaging over dose form is to allow flexibility in choosing the exact product (the nurse has the freedom to decide between different oral dose forms according to the patient's needs or preferences).  
-  
-|**Medication**|**Dosage**|  
-|paracetamol|125mg, oral route, when needed|  
-|paracetamol 125mg/5ml oral suspension|5ml when needed|  
-{:.table-bordered .table-striped .thead-light}  
+Medication concepts overlap with dosage information, which may result in different representations of the same clinical order.
 
-Route/method of administration is one of the data elements that describes the medication as well as dosaging (administration instructions). When a medicinal product is authorised it is authorised for certain routes of administration. However, one product may have multiple authorised routes, or a product can be used with an offlabel route. A product with a dose form "drops for eye, nose or ear" can be used for all these body sites, but on a prescription, we typically want to express the administration route for this particular case. Therefore, route on a prescription is typically conveyed in dosaging information, even though product catalogues list routes in medication details.  
+For example, when only a substance is prescribed, the dosage instructions contain additional details such as strength and route of administration. In the following example, the prescriptions are represented differently, but the intended order is likely the same. Representing these elements in dosage rather than in the medication concept allows flexibility in selecting the exact product (e.g. enabling the dispenser or nurse to choose between different oral dose forms according to the patient's needs or preferences). National legislation may impose additional constraints.
 
-### Virtual vs real product
+| **Medication** | **Dosage** |
+|---------------|-----------|
+| paracetamol | 125 mg, oral route, when needed |
+| paracetamol 125 mg / 5 mL oral suspension | 5 mL when needed |
+{:.table-bordered .table-striped .thead-light}
 
-When a medication is prescribed it may be prescribed as a virtual product (for generic prescriptions) or as a real product. In some countries, prescribing a real product implies that the product cannot be substituted as the prescriber has chosen a real product over a virtual product for a reason. In other countries, substitution is allowed or even expected as the real product represents just one possible alternative and any other similar product can be chosen unless specifically stated otherwise on the prescription.  
+Route (method) of administration is an element that may describe both the medication and the dosage (administration instructions). Medicinal products are authorised for specific routes of administration; however, a single product may support multiple routes, and in some cases may be used off-label. For example, a product with a dose form "drops for eye, nose or ear" may be used for different body sites. In a prescription, the clinically relevant information is the intended route for that specific case. Therefore, route of administration is typically conveyed in dosage instructions, even though product catalogues may include route information as part of medication definitions.
 
-Virtual products, just like real products, may be represented as a concept from a code system or a FHIR resource with filled-in attributes. In many countries real products and virtual products are interlinked, allowing a simpler selection and substitution. Internationally known code systems like RxNorm and SNOMED CT contain medication concepts on different levels, allowing moving up and down on granularity levels of the product.  
+### Standards and medicinal product models
 
-ISO IDMP also represents medicinal product information on different levels. Medicinal Product, Packaged Product, Pharmaceutical Product, and Manufactured Item. Note, that ISO IDMP Pharmaceutical Product represents the administrable form of a specific real product (containing information about excipients), while PhPID (Pharmaceutical Product Identifier) is designed to represent a more abstract classification for products. HL7 FHIR resources for implementing ISO IDMP are provided in [MedicationDefinition module](https://www.hl7.org/fhir/R5/medication-definition-module.html).   
+Various standards and code systems support representation of medication concepts at different levels of granularity.
+
+The ISO IDMP standard defines several core concepts, including Medicinal Product, Packaged Product, Pharmaceutical Product, and Manufactured Item. Each represents a different level of detail and relationship structure. The Pharmaceutical Product represents the administrable form of a specific real product, while the Pharmaceutical Product Identifier (PhPID) supports more abstract grouping of products.
+
+PhPID is designed to support use cases such as prescribing and cross-border exchange. Initiatives such as those by the Uppsala Monitoring Centre (WHO collaborating centre for drug monitoring) aim to provide global PhPID mappings and link them to international medicinal product dictionaries. PhPID concepts can also be linked to locally defined product identifiers to improve interoperability.
+
+SNOMED CT includes concepts for substances, dose forms, and units, as well as precoordinated medication concepts at multiple levels of granularity. The international release includes only virtual products; its most granular concept, *clinical drug*, aligns approximately with Manufactured Item or PhPID level 4 in ISO IDMP.
+
+National extensions of SNOMED CT may include real medicinal products, including branded products and packages. Although identifiers differ between countries, these extensions are based on a shared concept model, enabling linkage across jurisdictions via common clinical drug concepts.
+
+FHIR representations of these concepts can be implemented using resources such as `MedicationDefinition` and related artifacts defined in the FHIR Medication Definition module.
+
+### Granularity and implementation considerations
+
+The granularity of medication representation depends on the use case and the chosen concept type. Prescriptions often use less granular (virtual) concepts to allow flexibility, while dispense records typically use more granular concepts representing specific real products and packages.
+
+It is important that implementations support:
+- selection of an appropriate level of granularity, and  
+- navigation between more and less granular representations.
+
+The following table illustrates how selected concept types compare:
+
+| **Concept type** | **Active substance** | **Strength** | **Manufactured dose form** | **Administrable dose form** | **Authorised name** | **Pack size** |
+|-----------------|---------------------|--------------|----------------------------|-----------------------------|---------------------|---------------|
+| ISO IDMP Medicinal Product | + | + | + | * | + | - |
+| PhPID Level 4 | + | + | - | + | - | - |
+| SNOMED CT Clinical Drug | + | + | + | - | - | - |
+| SNOMED CT Real Drug Package | * | * | * | - | + | + |
+{:.table-bordered .table-striped .thead-light}
+
+“+” indicates that the attribute is included in the concept, “-” that it is not included, and “*” that it may be inferred through relationships to other concepts.
 
 ### Medicinal product dictionaries
 
-Various code systems exist for medication concepts. 
-SNOMED CT contains concepts for describing a medication (dose forms, substances, units) as well as precoordinated medication concepts with different granularity. SNOMED CT international release contains only virtual products - the most granular of them is clinical drug, which maps to manufactured item in ISO IDMP.
+Most countries maintain national medicinal product dictionaries or registers, often published by regulatory authorities and sometimes remodelled into code systems by other organisations. These systems enable prescriptions and dispenses to reference products using identifiers, with systems resolving full details via lookup.
 
-SNOMED CT national extensions may include data of real medicinal products - branded medicinal products as well as packages. While codes for these national products would be different in each country, they all leverage the international content of SNOMED CT and follow the agreed concept model.  
-
-The granularity of prescribed medication depends on the type(s) of concept chosen for a particular implementation. For example, the following table illustrates how concepts on different levels or following different standards compare to eachother (* marks information that might be implied by relationships with related concepts).
-
-|**Concept type**|**Active substance**|**Strength**|**Manufactured dose form**|**Administrable dose form**|**Authorised name**|**Pack size**|  
-|ISO IDMP Medicinal Product|+|+|+|*|+|*|  
-|PhPID Level 4|+|+|-|+|-|-|  
-|SNOMED Clinical Drug|+|+|+|-|-|-|  
-|SNOMED Real Drug Package|+|+|+|-|+|+|  
-{:.table-bordered .table-striped .thead-light}
-
-
-Most countries operate their own national terminology or register for medicinal product - often both, as the medicines agency publishes the data as a register and another organisation remodels it as a code system. These sources allow the actual prescription and dispensation to include only product code/identifier and have each system look up the details of the products from the source system. However, there can be no expectation that a pharmacy system from another country should be able to do lookups into any other country's product dictionary. Therefore, crossborder service include the product code as well as an essential set of details about the product.
+However, cross-border scenarios cannot rely on access to national systems. Therefore, cross-border exchange must include both:
+- a product identifier, and  
+- a minimum set of descriptive attributes required for safe interpretation.

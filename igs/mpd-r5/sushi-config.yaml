@@ -27,8 +27,8 @@ copyright: >-
 dependencies:
   
    # hl7.fhir.uv.ips: current
-   ihe.pharm.mpd: 1.0.0-comment-2 
-   hl7.fhir.eu.base-r5: 2.0.0
+  ihe.pharm.mpd: 1.0.0-comment-2 
+  hl7.fhir.eu.base-r5: 2.0.0
   
   
 #
@@ -57,14 +57,14 @@ pages:
     title: Copyright
   crossversionanalysis.md:
     title: Cross-version Analysis
-  downloads.md:
-    title: Downloads
   dependencies.md:
     title: Dependencies
   designchoices.md:
     title: Design Choices
   dosagepatterns.md:
     title: Dosage Patterns
+  downloads.md:
+    title: Downloads
   examples.md:
     title: Examples
   implementationnotes.md:
@@ -73,10 +73,16 @@ pages:
     title: Known Issues
   logicalmodels.md:
     title: Logical Models
+  map-ehdsmedicationdispense.html:
+    title: EHDSMedicationDispense to FHIR MedicationDispenseEuMpd Mapping
+  map-ehdsmedicationprescription.html:
+    title: EHDSMedicationPrescription to FHIR MedicationRequestEuMpd Mapping
+  map-ehdsdosage.html:
+    title: EHDSDosage to FHIR DosageEuMpd Mapping
   medicationconcepts.md:
     title: Medication Concepts
-  profiles.md:
-    title: Mapping to Profiles
+  modelmap.html:
+    title: Model Map
   references.md:
     title: Source and Additional Information
   scope.md:
@@ -89,22 +95,7 @@ pages:
     title: IHE Transactions
   usecases.md:
     title: Use Cases  
-  map-ehdsmedication.html:
-     title: EHDSMedication to FHIR MedicationEuMpd Mapping
-  map-ehdsmedicationdispense.html:
-     title: EHDSMedicationDispense to FHIR MedicationDispenseEuMpd Mapping
-  map-ehdsmedicationprescription.html:
-     title: EHDSMedicationPrescription to FHIR MedicationRequestEuMpd Mapping
-  map-ehdsdosage.html:
-     title: EHDSDosage to FHIR DosageEuMpd Mapping
-  map-ehdsattachment.html:
-     title: EHDSAttachment to FHIR Attachment Mapping
-  map-ehdsdevice.html:
-     title: EHDSDevice to FHIR DeviceEuEps Mapping
-  map-ehdsrelatedperson.html:
-     title: EHDSRelatedPerson to FHIR RelatedPerson Mapping
-  modelmap.html:
-    title: Model Map
+
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -238,9 +229,11 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
+
+
 groups:
  FHIRProfiles:
-  name: FHIR Profiles
+  name: Resource Profiles
   description: Profiles for ePrescription and eDispensation use case. Note that there is no single profile for ePrescription, but only for MedicationRequest, which translates to a single line on a prescription (read more in [Implementation Notes](implementationnotes.html)). Profiles for Patient, PractitionerRole, and Organization are published in HL7 Europe Base IG. All profiles are based on [EHDS logical information models](logicalmodels.html) that are being developed by Xt-EHR project.
   resources: 
    - MedicationRequestEuMpd

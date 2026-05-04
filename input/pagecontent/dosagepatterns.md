@@ -36,6 +36,7 @@ In most cases, the full rendered dosage instructions should be made available in
 
 
 |Path R4|1 tablet 3 times a day for 7 days|15-20ml at 8AM and 8PM from 8.12.2025 to 15.12.2025|2 tablets every third day standing on your left foot|50mg per hour intravenously for 20 minutes every Monday|half a tablet as needed before breakfast|
+|---|-|-|-|-|-|
 |Dosage||||||
 |Dosage.sequence||||||
 |Dosage.patientInstruction|||"standing on left foot"|||

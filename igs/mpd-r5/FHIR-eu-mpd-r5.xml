@@ -61,20 +61,16 @@
 <page key="designchoices" name="Design Choices"/>
 <page key="dosagepatterns" name="Dosage Patterns"/>
 <page key="downloads" name="Downloads"/>
-<page key="map-ehdsattachment" name="EHDSAttachment to FHIR Attachment Mapping"/>
-<page key="map-ehdsdevice" name="EHDSDevice to FHIR DeviceEuEps Mapping"/>
 <page key="map-ehdsdosage" name="EHDSDosage to FHIR DosageEuMpd Mapping"/>
-<page key="map-ehdsmedication" name="EHDSMedication to FHIR MedicationEuMpd Mapping"/>
 <page key="map-ehdsmedicationdispense" name="EHDSMedicationDispense to FHIR MedicationDispenseEuMpd Mapping"/>
 <page key="map-ehdsmedicationprescription" name="EHDSMedicationPrescription to FHIR MedicationRequestEuMpd Mapping"/>
-<page key="map-ehdsrelatedperson" name="EHDSRelatedPerson to FHIR RelatedPerson Mapping"/>
 <page key="examples" name="Examples"/>
 <page key="index" name="Home"/>
 <page key="transactions" name="IHE Transactions"/>
 <page key="implementationnotes" name="Implementation Considerations"/>
 <page key="knownissues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>
-<page key="profiles" name="Mapping to Profiles"/>
+<page deprecated="true" key="profiles" name="Mapping to Profiles"/>
 <page key="medicationconcepts" name="Medication Concepts"/>
 <page key="modelmap" name="Model Map"/>
 <page key="scope" name="Scope and Content"/>
