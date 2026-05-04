@@ -47,3 +47,7 @@ Please find more information about multi-item prescription in the [implementatio
 - [**400D-1**](MedicationDispense-400D-dispense-1.html) and [**400D-2**](MedicationDispense-400D-dispense-2.html) - two dispenses for the same prescription (400C). In this example, 400D-1 is not considered a substitution (default value), and 400D-2 is considered a substitution (explicit 'wasSubstituted=true') - actual definition and rules of substitution vary across implementations.    
 - [**300D**](MedicationDispense-300D-dispense-for-2-requests.html) - one dispense fulfilling two requests. Please note that this may not be supported by all implementations.  
 - [**400E**](MedicationDispense-400E-refused-dispense.html) - declining a dispense  
+
+### Dosage examples
+
+See additional information about Dosage requirements and usage examples on [Dosage Patterns page](dosagepatterns.html).  
