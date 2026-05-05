@@ -27,7 +27,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationDispense.html"
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSMedicationDispense.html"
             target="_blank">EHDSMedicationDispense</a>
         </li>
         <li>
@@ -67,7 +67,7 @@
             <td>related-to</td>
             <td>MedicationDispense</td>
             <td>.</td>
-            <td>Dataset-level information mapped to MedicationDispense metadata elements.</td>
+            <td>Backbone element.</td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -81,7 +81,7 @@
             <td>equivalent</td>
             <td>MedicationDispense</td>
             <td>identifier</td>
-            <td>Business identifier for the dispense record.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.author[x]</td>
@@ -94,9 +94,10 @@
             <td>header.date</td>
             <td>equivalent</td>
             <td>MedicationDispense</td>
-            <td>recorded <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
-              extension:recorded <span style="color:#2e7d32;font-weight:600;">[R4]</span></td>
-            <td>Date and time when the dispense record was issued.</td>
+            <td>extension:recorded <span style="color:#2e7d32;font-weight:600;">[R4]</span>
+            recorded <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
+            </td>
+            <td></td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -117,7 +118,7 @@
             <td>equivalent</td>
             <td>MedicationDispense</td>
             <td>location</td>
-            <td>Reference to the location where the dispense occurred.</td>
+            <td></td>
           </tr>
           <tr>
             <td>receiver[x]</td>
@@ -131,15 +132,16 @@
             <td>equivalent</td>
             <td>MedicationDispense</td>
             <td>authorizingPrescription</td>
-            <td>Constrained by this guide to Reference(MedicationRequestEuMpd).</td>
+            <td></td>
           </tr>
           <tr>
             <td>medication</td>
             <td>equivalent</td>
             <td>MedicationDispense</td>
-            <td>medication <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
-              medication[x] <span style="color:#2e7d32;font-weight:600;">[R4]</span></td>
-            <td>Constrained by this guide to CodeableReference(MedicationEuMpd) in R5 and Reference(MedicationEuMpd) in R4.</td>
+            <td>medication[x] <span style="color:#2e7d32;font-weight:600;">[R4]</span>
+            medication <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
+              </td>
+            <td></td>
           </tr>
           <tr>
             <td>dispensedQuantity</td>
@@ -167,7 +169,7 @@
             <td>equivalent</td>
             <td>MedicationDispense</td>
             <td>dosageInstruction</td>
-            <td>Constrained by this guide to DosageEuMpd.</td>
+            <td></td>
           </tr>
           <tr>
             <td>note</td>

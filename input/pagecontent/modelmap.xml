@@ -54,7 +54,7 @@
                         </a>
                     </td>
                     <td>
-                        <a class="pill" href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedication.html" target="_blank">(In EU Base/Core as the profile in MPD does not alterate any elements)</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedication.html" target="_blank">EHDSMedication Mapping</a> (In EU Base/Core as the profile in MPD does not alterate any elements)
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@
                         </a>
                     </td>
                     <td>
-                        <a class="pill" href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationprescription.html" target="_blank">EHDSMedicationPrescription Mapping</a>
+                        <a class="pill" href="map-ehdsmedicationprescription.html" target="_blank">EHDSMedicationPrescription Mapping</a>
                     </td>
                 </tr>
                 <tr>

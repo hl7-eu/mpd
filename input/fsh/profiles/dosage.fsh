@@ -33,7 +33,7 @@ Description: "This profile defines how to represent Dosage data on ePrescription
 * timing.repeat.bounds[x]
   * ^extension[$obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[$obligation][=].extension[actor].valueCanonical = $actor-producer
-  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least Quantity data type for the element"
+  * ^extension[$obligation][=].extension[documentation].valueMarkdown = "System SHALL support at least Duration data type for the element"
   * ^requirements = "EHDSDosage"
 
 * timing.repeat.duration

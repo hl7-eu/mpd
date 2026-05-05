@@ -27,7 +27,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDosage.html"
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDosage.html"
             target="_blank">EHDSDosage</a>
         </li>
         <li>
@@ -108,7 +108,7 @@
             <td>equivalent</td>
             <td>Dosage</td>
             <td>doseAndRate.dose[x]</td>
-            <td>The guide requires support for at least Quantity.</td>
+            <td>The guide requires support for at least Quantity data type.</td>
           </tr>
           <tr>
             <td>dosageDetails.doseAndRate.rate[x]</td>
@@ -125,25 +125,11 @@
             <td></td>
           </tr>
           <tr>
-            <td>dosageDetails.repeat.bounds</td>
+            <td>dosageDetails.repeat.bounds[x]</td>
             <td>equivalent</td>
             <td>Dosage</td>
             <td>timing.repeat.bounds[x]</td>
-            <td>The guide requires support for at least Duration.</td>
-          </tr>
-          <tr>
-            <td>dosageDetails.repeat.bounds.duration</td>
-            <td>equivalent</td>
-            <td>Dosage</td>
-            <td>timing.repeat.boundsDuration</td>
-            <td>Mapped through the bounds[x] choice.</td>
-          </tr>
-          <tr>
-            <td>dosageDetails.repeat.bounds.period</td>
-            <td>equivalent</td>
-            <td>Dosage</td>
-            <td>timing.repeat.boundsPeriod</td>
-            <td>Mapped through the bounds[x] choice.</td>
+            <td>The guide requires support for at least Duration data type.</td>
           </tr>
           <tr>
             <td>dosageDetails.repeat.duration</td>
@@ -156,7 +142,7 @@
             <td>dosageDetails.repeat.frequency</td>
             <td>related-to</td>
             <td>Dosage</td>
-            <td>timing.repeat</td>
+            <td>.</td>
             <td>Backbone element; see the child frequency elements below.</td>
           </tr>
           <tr>

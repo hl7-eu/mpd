@@ -5,6 +5,7 @@
 - [IHE Medication Prescription and Dispense profile](https://profiles.ihe.net/PHARM/MPD/)
 - ISO/DIS 17523 "Health informatics - Requirements for electronic prescriptions"
 - MyHealth@EU [requirements catalogue, requires EU login](https://webgate.ec.europa.eu/fpfis/wikis/display/EHDSI/1.+MyHealth@EU+Requirements+Catalogue) and [CDA specification](https://art-decor.ehdsi.eu/publication/)
+- [EU Digital Identity Wallet - The ePrescription Manual](https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/930452930/ePrescription)
 
 ### Medication and terminology specifications
 

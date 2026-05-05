@@ -33,7 +33,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationPrescription.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSMedicationPrescription.html" target="_blank">
             EHDSMedicationPrescription
           </a>
         </li>
@@ -76,8 +76,7 @@
             <td>MedicationRequest</td>
             <td>.</td>
             
-            <td>Dataset-level information; not directly represented on the MedicationRequest
-              instance.</td>
+            <td>Backbone element</td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -95,15 +94,13 @@
             <td>MedicationRequest</td>
             <td>identifier</td>
             
-            <td>Use for the prescription identifier when the prescription contains a single item; otherwise use the item identifier here.</td>
+            <td>Prescription identifier and prescription item identifier are usually the same in environments using single-item prescriptions.</td>
           </tr>
           <tr>
             <td>header.identifier</td>
-            
-            <td>equivalent</td>
+            <td>source-is-narrower-than-target</td>
             <td>MedicationRequest</td>
             <td>groupIdentifier</td>
-            
             <td>Use as the shared prescription identifier for MedicationRequest instances that belong to the same multi-item prescription.</td>
           </tr>
 
@@ -114,8 +111,7 @@
             <td>MedicationRequest</td>
             <td>requester</td>
             
-            <td>Reference to Practitioner / PractitionerRole / Organization depending on profile
-              rules.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.date</td>
@@ -134,7 +130,7 @@
             <td>MedicationRequest</td>
             <td>status</td>
             
-            <td>Use statusReason when additional context is required.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.statusReason[x]</td>
@@ -143,7 +139,7 @@
             <td>MedicationRequest</td>
             <td>statusReason</td>
             
-            <td>The model allows for CodeableConcept and string. The target only CodeableConcept.</td>
+            <td>The model also allows string data type which maps to <code>CodeableConcept.text</code>, but <code>note</code> element may also be used for additional clarifications.</td>
           </tr>
 
           <tr class="highlight-yellow">
@@ -178,21 +174,31 @@
           </tr>
 
           <tr>
+            <td>prescriptionItem.status</td>
+            
+            <td>equivalent</td>
+            <td>MedicationRequest</td>
+            <td>status</td>
+            
+            <td>For single-item prescriptions, same meaning as header.status.</td>
+          </tr>
+          <tr>
+            <td>prescriptionItem.statusReason[x]</td>
+            
+            <td>equivalent</td>
+            <td>MedicationRequest</td>
+            <td>statusReason</td>
+            
+            <td>The model also allows string data type which maps to <code>CodeableConcept.text</code>, but <code>note</code> element may also be used for additional clarifications.</td>
+          </tr>
+
+
+          <tr>
             <td>prescriptionItem.medication</td>
             
             <td>equivalent</td>
             <td>MedicationRequest</td>
             <td>medication[x]<span style="color:#2e7d32;font-weight:600;">〔R4〕</span><br></br>medication<span style="color:#2e7d32;font-weight:600;">〔R5〕</span></td>
-            
-            <td>Constrained by this guide to CodeableConcept or Reference(MedicationEuMpd) in R4, and CodeableReference(MedicationEuMpd) in R5.</td>
-          </tr>
-          
-          <tr>
-            <td>prescriptionItem.indication[x]</td>
-            
-            <td>equivalent</td>
-            <td>MedicationRequest</td>
-            <td>reasonCode<span style="color:#2e7d32;font-weight:600;">〔R4〕</span><br></br>reason.concept<span style="color:#2e7d32;font-weight:600;">〔R5〕</span></td>
             
             <td></td>
           </tr>
@@ -202,20 +208,11 @@
             
             <td>equivalent</td>
             <td>MedicationRequest</td>
-            <td>reasonReference<span style="color:#2e7d32;font-weight:600;">〔R4〕</span><br></br>reason.reference<span style="color:#2e7d32;font-weight:600;">〔R5〕</span></td>
+            <td>reasonCode<span style="color:#2e7d32;font-weight:600;">〔R4〕</span><br></br>reason<span style="color:#2e7d32;font-weight:600;">〔R5〕</span></td>
             
-            <td>Reference to Condition or other resource.</td>
+            <td>The model also allows string data type which maps to <code>CodeableConcept.text</code>, but <code>note</code> element may also be used for additional clarifications.</td>
           </tr>
           
-          <tr>
-            <td>prescriptionItem.indication[x]</td>
-            
-            <td>related-to</td>
-            <td>MedicationRequest</td>
-            <td>reasonCode.text</td>
-            
-            <td>Alternatively capture as <code>note</code> if preferred.</td>
-          </tr>
           <tr>
             <td>prescriptionItem.intendedUseType</td>
             
@@ -223,8 +220,7 @@
             <td>MedicationRequest</td>
             <td>category</td>
             
-            <td>Use dedicated category code or custom extension if additional granularity is
-              required.</td>
+            <td>Use dedicated category code or custom extension if additional granularity is required.</td>
           </tr>
           <tr>
             <td>prescriptionItem.periodOfUse</td>
@@ -245,6 +241,17 @@
             
             <td></td>
           </tr>
+
+          <tr>
+            <td>prescriptionItem.dosageInstructions</td>
+            
+            <td>equivalent</td>
+            <td>MedicationRequest</td>
+            <td>dosageInstruction</td>
+            
+            <td>Map each EHDSDosage entry to <code>dosageInstruction</code>.</td>
+          </tr>
+
           <tr>
             <td>prescriptionItem.validityPeriod</td>
             
@@ -253,15 +260,6 @@
             <td>dispenseRequest.validityPeriod</td>
             
             <td></td>
-          </tr>
-          <tr>
-            <td>prescriptionItem.dosageInstructions</td>
-            
-            <td>equivalent</td>
-            <td>MedicationRequest</td>
-            <td>dosageInstruction</td>
-            
-            <td>Map each EHDSDosage entry to <code>dosageInstruction</code>, constrained by this guide to <code>DosageEuMpd</code>.</td>
           </tr>
 
           <tr>
@@ -281,7 +279,7 @@
             <td>MedicationRequest</td>
             <td>substitution.allowed[x]</td>
             
-            <td></td>
+            <td>The guide requires support for at least Boolean data type.</td>
           </tr>
           <tr>
             <td>prescriptionItem.substitution.reason[x]</td>
@@ -290,26 +288,9 @@
             <td>MedicationRequest</td>
             <td>substitution.reason</td>
             
-            <td>FHIR accepts CodeableConcept; textual reasons may need an additional note.</td>
+            <td>The model also allows string data type which maps to <code>CodeableConcept.text</code>, but <code>note</code> element may also be used for additional clarifications.</td>
           </tr>
-          <tr>
-            <td>prescriptionItem.status</td>
-            
-            <td>equivalent</td>
-            <td>MedicationRequest</td>
-            <td>status</td>
-            
-            <td>For single-item prescriptions, same meaning as header.status.</td>
-          </tr>
-          <tr>
-            <td>prescriptionItem.statusReason[x]</td>
-            
-            <td>equivalent</td>
-            <td>MedicationRequest</td>
-            <td>statusReason</td>
-            
-            <td>As above, textual-only reasons may require notes.</td>
-          </tr>
+
           <tr>
             <td>prescriptionItem.numberOfRepeats</td>
             
@@ -344,7 +325,7 @@
             <td>MedicationRequest</td>
             <td>extension:offLabelUse</td>
             
-            <td>Implementer-specific extension required.</td>
+            <td></td>
           </tr>
           <tr>
             <td>prescriptionItem.offLabel.reason[x]</td>
@@ -353,7 +334,7 @@
             <td>MedicationRequest</td>
             <td>extension:offLabelUse.reason</td>
             
-            <td>Same extension as above; allow CodeableConcept or string.</td>
+            <td>The model also allows string data type which maps to <code>CodeableConcept.text</code>, but <code>note</code> element may also be used for additional clarifications.</td>
           </tr>
           <tr>
             <td>prescriptionItem.note</td>
