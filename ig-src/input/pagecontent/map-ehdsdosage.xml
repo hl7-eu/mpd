@@ -129,7 +129,7 @@
             <td>equivalent</td>
             <td>Dosage</td>
             <td>timing.repeat.bounds[x]</td>
-            <td>The guide requires support for at least Quantity.</td>
+            <td>The guide requires support for at least Duration.</td>
           </tr>
           <tr>
             <td>dosageDetails.repeat.bounds.duration</td>
@@ -198,8 +198,9 @@
             <td>dosageDetails.asNeeded</td>
             <td>equivalent</td>
             <td>Dosage</td>
-            <td>asNeeded <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
+            <td>
               asNeededBoolean <span style="color:#2e7d32;font-weight:600;">[R4]</span></td>
+              asNeeded <span style="color:#2e7d32;font-weight:600;">[R5]</span><br></br>
             <td></td>
           </tr>
           <tr>

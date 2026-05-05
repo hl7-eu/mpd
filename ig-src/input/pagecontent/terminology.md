@@ -57,7 +57,7 @@ EMA SPOR Substance Management Services (SMS) provides a list of coded substances
 
 At national level, local code systems or SNOMED CT are also often used. There is no official mapping between SNOMED CT and EMA SMS. However, as both use official International Nonproprietary Names (INN) assigned by WHO, name-based mapping may be useful.
 
-In MyHealth@EU services, substances are allowed to be coded with ATC. However, ATC is a classification of products, not a code system for ingredients. ATC does not include excipients or modifications such as salts. Therefore, ATC is not recommended for coding active or inactive ingredients.
+In MyHealth@EU services, substances are allowed to be coded with ATC. However, ATC is a classification of products, not a code system for ingredients. ATC does not include excipients or modifications such as salts, and many active ingredients would fall into the residue categories (e.g. "Other" or "Combinations with ..."). Therefore, ATC is not recommended for coding active or inactive ingredients.
 
 ### Dose form, unit of presentation, package type, and route of administration
 
@@ -77,7 +77,7 @@ Basic dose forms and pharmaceutical dose forms have been harmonised between EDQM
 
 In EMA RMS, concepts from EDQM Standard Terms are coded with RMS codes. Mappings from RMS codes to EDQM codes are provided where they exist. RMS declares EDQM to be its main source code system. However, RMS may also provide codes for EU products that are approved without an equivalent EDQM code.
 
-EDQM Standard Terms, EMA RMS, and SNOMED CT all provide useful additions to simple lists of terms by adding attributes to dose forms. These attributes may include:
+EDQM Standard Terms, EMA RMS, and SNOMED CT all provide useful additions to simple lists of terms by adding attributes to dose forms. These attributes include:
 
 - basic dose form (e.g. cream, tablet);
 - state of matter (e.g. solid, gas);
@@ -148,7 +148,7 @@ In EMA RMS, WHO ATC has been recoded with RMS codes. The list owner is considere
 
 Cross-border ePrescription services have shown that countries may adopt new ATC versions at different times. Many countries also publish ATC using a national code system identifier, such as a national canonical URL in HL7 FHIR, even when the content is unchanged. In some countries, additional codes have been added to ATC for various national reasons. As a result, automatic one-to-one mapping between ATC concepts from different countries may not always be possible.
 
-This specification encourages using ATC as a classification in the `classification` data element. ATC is not recommended for medication or substance codes, as it is limited in scope and granularity.
+This specification encourages using ATC as a classification in the `classification` extension. ATC is not recommended for medication or substance codes, as it is limited in scope and granularity.
 
 PhPID, as defined in ISO IDMP, may also serve as a classification or, depending on the implementation and use case, as a medication-identifying code. Level 4 PhPID provides significantly more granularity than ATC.
 
