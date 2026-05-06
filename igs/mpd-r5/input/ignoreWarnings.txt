@@ -67,3 +67,23 @@ The string value contains text that looks like embedded HTML tags. If this conte
 
 # obligations extension slicing warning
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0
+
+# Codings provided not in the 'additional' value set
+Terminology_TX_NoValid_3_CC
+
+# Deprecated value set
+Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+
+
+# Non-matching slice
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/mpd/StructureDefinition/MedicationDispense-eu-mpd%
+
+# Missing OID for ActorDefinition
+The resource ActorDefinition/actor-producer could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# Reference to experimental CodeSystem and value sets
+Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
+The definition for the element 'Medication.ingredient.strength[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/medication-ingredientstrength|5.0.0' which is experimental, but this structure is not labeled as experimental	
+
+# multiple different potential matches
+There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/dose-rate-type'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '2.0.0', found versions: 1.0.0 (from hl7.terminology.r5#6.3.0), 2.0.0 (from hl7.terminology.r5#7.1.0). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/dose-rate-type' to 'http://terminology.hl7.org/ValueSet/dose-rate-type|2.0.0'
