@@ -10,6 +10,4 @@ EHDS draft logical models for eP and eD use case can be seen in [**Xt-EHR Implem
 - [Medication Model](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedication.html)  
 - [Dosage Model](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDosage.html)
 
-### eHN Guideline Data Sets
 
-[The Artifacts page](artifacts.html) also provides eHN data sets as logical models. However, those data sets have not been originally published as machine-readable models and the derived logical models often lack of precision and concreteness. EHDS logical information models (see above) use eHN data sets as a conceptual base, and provide non-ambiguous machine-readable models.
