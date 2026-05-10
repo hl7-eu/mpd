@@ -50,44 +50,36 @@ This option differs from the previous one by one important aspect: the data elem
 - No way to show interdependencies between individual items/requests
 - The status of the prescription has to be the same or calculable from individual prescription items
 
-#### Option 3: Using {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %}  
+#### Option 3: Using RequestOrchestration/RequestGroup  
 
-This option is technically more complex to handle on the FHIR side, but it allows communication of the interdependencies of different items on a prescription. Every prescription item uses the MedicationRequest resource just like in the first two options. However, an additional resource is populated to provide extra information about the semantics of grouping the items on the same prescription. {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} shares the same .groupIdentifier as the MedicationRequests that are linked to it. However, note that {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} is not semantically the prescription, but only a part of it. Even with this approach, there is no single resource for the prescription object as such. When exchanging this kind of prescription with another system, simplification may be needed: removing the RequestOrchestration resource and exchanging individual MedicationRequests.
+This option is technically more complex to handle on the FHIR side, but it allows communication of the interdependencies of different items on a prescription. Every prescription item uses the MedicationRequest resource just like in the first two options. However, an additional resource is populated to provide extra information about the semantics of grouping the items on the same prescription. RequestOrchestration (R5) or RequestGroup (R4) resource shares the same .groupIdentifier as the MedicationRequests that are linked to it. However, note that RequestOrchestration/RequestGroup is not semantically the prescription, but only a part of it. Even with this approach, there is no single resource for the prescription object as such. When exchanging this kind of prescription with another system, simplification may be needed: removing the RequestOrchestration/RequestGroup resource and exchanging individual MedicationRequests.
   
 **Pros:**  
 - Possible to define interdependencies between prescription items.
 - Multi-item prescription is clearly defined and distinguishable from single-item prescriptions.  
 
 **Cons:**  
-- Multiitem prescription and single-item prescription are handled differently. In a prescription system where multi-item prescriptions use RequestOrchestration, it is important to consider whether single-item prescriptions should be using the same mechanism, even though it does not add anything to the semantics.
-- Receiving systems outside the ecosystem are likely to drop the {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} resource when it's not explicitly supported in their implementation.  
+- Multiitem prescription and single-item prescription are handled differently. In a prescription system where multi-item prescriptions use RequestOrchestration/RequestGroup, it is important to consider whether single-item prescriptions should be using the same mechanism, even though it does not add anything to the semantics.
+- Receiving systems outside the ecosystem are likely to drop the RequestOrchestration/RequestGroup resource when it's not explicitly supported in their implementation.  
 
-When grouping MedicationRequests with a {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %}:
+When grouping MedicationRequests with a RequestOrchestration/RequestGroup:
 - MedicationRequest.intent value must be ‘option’. This is a signal to the receiver, that the request must be handled as part of a bigger request group.  
-- The element that binds MedicationRequest and {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} together is .groupIdentifier. By sharing the same .groupIdentifier value, they indicate that they are a part of the same prescription document.  
+- The element that binds MedicationRequest and RequestOrchestration/RequestGroup together is .groupIdentifier. By sharing the same .groupIdentifier value, they indicate that they are a part of the same prescription document.  
 - The prescription identifier should be the value of .groupIdentifier.  
 - MedicationRequests, if they originate from the same prescription, should have the same patient and authoring metadata.  
 
 The following diagram explains the process of splitting a custom multi-item prescription (yellow) into HL7 FHIR resources (green).  
 
-{% if isR5 %}
 <figure>
-  {% include multiitem-prescription-r5.svg %}
+  {% include multiitem-prescription.svg %}
   <!-- <figcaption>Multiitem prescription example</figcaption> -->
 </figure>
-{% endif %}
 
-{% if isR4 %}
-<figure>
-  {% include multiitem-prescription-r4.svg %}
-  <!-- <figcaption>Multiitem prescription example</figcaption> -->
-</figure>
-{% endif %}
 <br clear="all"/>
 
-Please see examples [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) and [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) in the [Artifacts page](artifacts.html) for more information about how to create a multi-item prescription using {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %}, and example [**200A**](Bundle-200A-multiitem-prescription-without-orchestration.html) for information about how to create a multi-item prescription without an additional grouping/organising resource. All examples in this IG use Bundle as a wrapper for multi-item prescription, however this is just for the convenience, and not a normative part of this IG. Implementers can choose whether to use Bundle or which type of Bundle to use.
+Please see examples [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) and [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) in the [Artifacts page](artifacts.html) for more information about how to create a multi-item prescription using RequestOrchestration/RequestGroup, and example [**200A**](Bundle-200A-multiitem-prescription-without-orchestration.html) for information about how to create a multi-item prescription without an additional grouping/organising resource. All examples in this IG use Bundle as a wrapper for multi-item prescription, however this is just for the convenience, and not a normative part of this IG. Implementers can choose whether to use Bundle or which type of Bundle to use.
 
-Read more about using {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} in FHIR workflow pages.
+Read more about using RequestOrchestration/RequestGroup in FHIR workflow pages.
 
 
 ### Prescription statuses and workflow
@@ -97,7 +89,7 @@ MedicationRequest has a very limited set of statuses available for use. This is 
 Prescription and dispensation systems often use additional or different statuses, and those statuses are not directly mappable to MedicationRequest.status. Some of these prescription statuses may actually be related to the dispense rather than the request, so the semantically correct place for some statuses would actually be MedicationDispense.status. 
 
 Some simple workflows may choose to make use of the .meta.tag 'actionable' to indicate whether the request is dispensable or simply for information. 
-For more sophisticated workflows, especially when FHIR messaging is the basis of the workflow, Task resource should be used in addition to MedicationRequest and MedicationDispense. For group request, an additional {% if isR5 %}RequestOrchestration{% endif %}{% if isR4 %}RequestGroup{% endif %} resource should be used.
+For more sophisticated workflows, especially when FHIR messaging is the basis of the workflow, Task resource should be used in addition to MedicationRequest and MedicationDispense. For group request, an additional RequestOrchestration/RequestGroup resource should be used.
 
 Workflows are typically implementation-specific and the aim of this implementation guide is not to provide one solution for everyone. Practice of using prescription and dispensation statuses varies a lot across countries and use cases (e.g. hospital use vs community pharmacy). While it is important for each implementation to map their business statuses to FHIR MedicationRequest.status values, the usage of Task and building a workflow will not be restricted by this implementation guide.
 
