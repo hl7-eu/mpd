@@ -23,7 +23,7 @@ These two approaches are not mutually exclusive - it is perfectly acceptable to 
 
 ### Prescription examples
 
-This implementation guide does not consider a prescription or dispense a HL7 FHIR document, but a transactional set of resources. There is no resource called "Prescription" in HL7 FHIR: a prescription may be implemented as a MedicationRequest, multiple MedicationRequests, or a combination of MedicationRequests and RequestOrchestration/RequestGroup. These resources may be exchanged in a Bundle. It is also allowed to use Composition for following the document-oriented approach, but it is not normative.  
+This implementation guide does not consider a prescription or dispense a HL7 FHIR document, but a transactional set of resources. There is no resource called "Prescription" in HL7 FHIR: a prescription may be implemented as a MedicationRequest, multiple MedicationRequests, or a combination of MedicationRequests and RequestGroup. These resources may be exchanged in a Bundle. It is also allowed to use Composition for following the document-oriented approach, but it is not normative.  
 
 Be aware, that MedicationRequest may sometimes be used as a request NOT to give/prescribe a certain medication to a patient, and MedicationDispense can be used for declining a dispense. Do-not-perform-requests are out of scope for this implementation guide, declining a dispense is only presented in the examples.  
 
@@ -36,8 +36,8 @@ Implementations do not have to support multi-item prescriptions or dispense decl
 
 Following examples are all formulated using a Bundle of type 'collection'. This is just for the sake of representing the example in this IG - using Bundle is not normative in this guide.
 
-- [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup/RequestOrchestration representing a 42-day-cycle where three treatments must start at the same time  
-- [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup/RequestOrchestration for two products that may be dispensed as one combination product or two separate products  
+- [**100A**](Bundle-100A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup representing a 42-day-cycle where three treatments must start at the same time  
+- [**300A**](Bundle-300A-multiitem-prescription-with-orchestration.html) - prescription with RequestGroup for two products that may be dispensed as one combination product or two separate products  
 - [**200A**](Bundle-200A-multiitem-prescription-without-orchestration.html) - prescription where prescription items are only connected by the .groupIdentifier value  
 
 Please find more information about multi-item prescription in the [implementation notes](implementationnotes.html) page.  

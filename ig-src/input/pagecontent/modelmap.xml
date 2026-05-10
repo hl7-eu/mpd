@@ -22,17 +22,13 @@
         administrative concepts. This Implementation Guide provides HL7 FHIR profiles
         that realise those models.
     </p>
-    <p>
-        The sections below group the EHDS logical models into categories.
-    </p>
-    <p>Each table shows:</p>
+    <p>The table shows:</p>
     <ul>
         <li>the logical model</li>
         <li>the FHIR datatype or profile(s) used in this IG</li>
         <li>a link to the detailed element-by-element mapping</li>
     </ul>
-   <h4>
-        <span class="group-emoji">💊</span> Medication Models </h4>
+   <h4>Medication Models </h4>
     <a> </a>
     <div class="table-wrapper">
         <table class="model-index">
@@ -107,11 +103,10 @@
             </tbody>
         </table>
     </div>
-   <h4>
-        <span class="group-emoji">🧩</span> Other Models used by this guide</h4>
+   <h4>Other Models used by this guide</h4>
     <a> </a>
     <p>
         The implementation guide references profiles and models that are not specific for prescription and dispense.
-        Mapping details for such models are published in the<a href="https://hl7.eu/fhir/base/2.0.0/modelmap.html" target="_blank">HL7 Europe Base and Core FHIR IG</a>.
+        Mapping details for such models are published in the <a href="https://hl7.eu/fhir/base/2.0.0/modelmap.html" target="_blank">HL7 Europe Base and Core FHIR IG</a>.
     </p>
 </div>
