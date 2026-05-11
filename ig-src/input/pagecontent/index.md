@@ -28,7 +28,7 @@
 
 ### Scope
 
-The scope of this implementation guide is **Medication Prescription and Dispense** in the **European** Context.
+The scope of this implementation guide is **Medication Prescription and Dispense** in the **European** context.
 It is coherent with the [European eHN Guidelines](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) and preparatory EHDS work.
 
 This implementation guide is designed to be a flexible basis for national specifications as well as crossborder services. 

@@ -1,6 +1,6 @@
 ### Medication concepts
 
-Medication on a prescription may be represented either as a coded concept (`CodeableConcept`) or as a fully described FHIR resource (e.g. `Medication` or `MedicinalProductDefinition`). The level of detail may range from a simple substance to a fully specified branded product with a defined package size. On dispense, additional identifiers such as a physical package identifier may also be recorded.
+Medication on a prescription may be represented either as a coded concept (`CodeableConcept`) or as a fully described FHIR resource (`Medication`). The level of detail may range from a simple substance to a fully specified branded product with a defined package size. On dispense, additional identifiers such as a physical package identifier may also be recorded.
 
 When prescribing, the medication may represent either a **virtual product** (e.g. a generic concept) or a **real product** (a specific authorised medicinal product). The implications of this choice vary by jurisdiction. In some countries, prescribing a real product implies that substitution is not allowed. In others, substitution is allowed or expected unless explicitly prohibited, and the prescribed product represents one of several acceptable alternatives.
 
@@ -33,7 +33,7 @@ SNOMED CT includes concepts for substances, dose forms, and units, as well as pr
 
 National extensions of SNOMED CT may include real medicinal products, including branded products and packages. Although identifiers differ between countries, these extensions are based on a shared concept model, enabling linkage across jurisdictions via common clinical drug concepts.
 
-FHIR representations of these concepts can be implemented using resources such as `MedicationDefinition` and related artifacts defined in the FHIR Medication Definition module.
+FHIR representations of these concepts can be implemented using resources such as `MedicinalProductDefinition` and related artifacts defined in the FHIR Medication Definition module.
 
 ### Granularity and implementation considerations
 
@@ -55,10 +55,3 @@ The following table illustrates how selected concept types compare:
 
 “+” indicates that the attribute is included in the concept, “-” that it is not included, and “*” that it may be inferred through relationships to other concepts.
 
-### Medicinal product dictionaries
-
-Most countries maintain national medicinal product dictionaries or registers, often published by regulatory authorities and sometimes remodelled into code systems by other organisations. These systems enable prescriptions and dispenses to reference products using identifiers, with systems resolving full details via lookup.
-
-However, cross-border scenarios cannot rely on access to national systems. Therefore, cross-border exchange must include both:
-- a product identifier, and  
-- a minimum set of descriptive attributes required for safe interpretation.

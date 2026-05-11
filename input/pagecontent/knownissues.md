@@ -12,7 +12,7 @@ The current version of the implementation guide does not impose IHE MPD profiles
 ### Ambiguous mappings for some elements  
 #### Medicinal product name  
 
-Medication resource does not have an explicit element for medicinal product's name. In countries where medication information is distributed as a code system, *de facto* element for holding the medication name has been Medication.code.text or Medication.code.coding.display. This is also the recommendations by HL7 Pharmacy.  
+Medication resource does not have an explicit element for medicinal product's name. In countries where medication information is distributed as a code system, *de facto* element for holding the medication name has been Medication.code.text or Medication.code.coding.display. This is also the recommendation from HL7 Pharmacy.  
 
 However, analysis of extensions in national implementation guides showed that many countries prefer to extend Medication resource in order to include an explicit element for the name. It is also evident, that countries often add multiple codings to the .code element, which makes it difficult to understand which of the codings display the official name of the product. Therefore, this IG includes a simple extension for the authorised medicinal product name. National implementations are not required to use the extension when their functional requirements are covered by .code element.  
 
@@ -22,7 +22,7 @@ In national implementations, two different approaches are used for capturing the
 - MedicationDispense.location - pharmacy is indicated using Location resource.  
 - MedicationDispense.performer.actor - PractitionerRole as performer is expected to indicate the pharmacy as an Organization.  
 
-This implementation guide does not yet take a stance on which approach should be preferred. Additional input from countries is welcome during the ballots.  
+This implementation guide does not yet take a stance on which approach should be preferred. Additional input from countries is welcome.  
 
 
 #### Medication identifier vs code

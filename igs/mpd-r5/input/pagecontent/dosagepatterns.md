@@ -39,31 +39,31 @@ In most cases, the full rendered dosage instructions should be made available in
 |Path R5|1 tablet 3 times a day for 7 days|15-20ml at 8AM and 8PM from 8.12.2025 to 15.12.2025|2 tablets every third day standing on your left foot|50mg per hour intravenously for 20 minutes every Monday|half a tablet as needed before breakfast|
 |---|-|-|-|-|-|
 |Dosage||||||
-|Dosage.sequence||||||
-|Dosage.patientInstruction|||"standing on left foot"|||
-|Dosage.timing||||||
-|Dosage.timing.repeat||||||
-|Dosage.timing.repeat.bounds[x]||||||
-|Dosage.timing.repeat.boundsDuration|7 d|||||
-|Dosage.timing.repeat.boundsPeriod||8.12.2025 - 15.12.2025||||
-|Dosage.timing.repeat.duration||||20||
-|Dosage.timing.repeat.durationUnit||||min||
-|Dosage.timing.repeat.frequency|3||1|||
-|Dosage.timing.repeat.period|1||3|||
-|Dosage.timing.repeat.periodUnit|d||d|||
-|Dosage.timing.repeat.dayOfWeek||||Monday||
-|Dosage.timing.repeat.timeOfDay||8:00, 20:00||||
-|Dosage.timing.repeat.when|||||before breakfast|
-|Dosage.asNeeded|||||TRUE|
-|Dosage.site||||||
-|Dosage.route||||intravenous||
-|Dosage.doseAndRate||||||
-|Dosage.doseAndRate.dose[x]||||||
-|Dosage.doseAndRate.doseRange||15 ml - 20 ml||||
-|Dosage.doseAndRate.doseQuantity|1 tablet(s)||2 tablet(s)||0.5 tablet(s)|
-|Dosage.doseAndRate.rate[x]||||||
-|Dosage.doseAndRate.rateRatio||||||
-|Dosage.doseAndRate.rateRange||||||
-|Dosage.doseAndRate.rateQuantity||||50 mg/h||  
+|.sequence||||||
+|.patientInstruction|||"standing on left foot"|||
+|.timing||||||
+|.timing.repeat||||||
+|.timing.repeat.bounds[x]||||||
+|.timing.repeat.boundsDuration|7 d|||||
+|.timing.repeat.boundsPeriod||8.12.2025 - 15.12.2025||||
+|.timing.repeat.duration||||20||
+|.timing.repeat.durationUnit||||min||
+|.timing.repeat.frequency|3||1|||
+|.timing.repeat.period|1||3|||
+|.timing.repeat.periodUnit|d||d|||
+|.timing.repeat.dayOfWeek||||Monday||
+|.timing.repeat.timeOfDay||8:00, 20:00||||
+|.timing.repeat.when|||||before breakfast|
+|.asNeeded|||||TRUE|
+|.site||||||
+|.route||||intravenous||
+|.doseAndRate||||||
+|.doseAndRate.dose[x]||||||
+|.doseAndRate.doseRange||15 ml - 20 ml||||
+|.doseAndRate.doseQuantity|1 tablet(s)||2 tablet(s)||0.5 tablet(s)|
+|.doseAndRate.rate[x]||||||
+|.doseAndRate.rateRatio||||||
+|.doseAndRate.rateRange||||||
+|.doseAndRate.rateQuantity||||50 mg/h||  
 {:.table-bordered .table-striped .thead-light}  
 

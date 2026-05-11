@@ -239,6 +239,20 @@ groups:
    - MedicationRequestEuMpd
    - MedicationDispenseEuMpd
    - MedicationEuMpd
+ 
+ DataTypes:
+  name: Data Type Profiles
+  description: Profiles for the data types used in the Implementation Guide.
+  resources:
+   - DosageEuMpd
+
+ ActorDefinitions:
+  name: Actor Definitions
+  description: Instances defining the actors to whom the data level obligations apply.
+  resources:
+   - ActorDefinition/actor-producer
+   
+
 # ModelMaps:
 #  name: Mappings from eHN Data Sets
 #  description: These concept maps represent a high-level mapping from eHN guidelines data sets and FHIR profiles in this IG. Please note that mappings from EHDS logical models are provided on [Logical models page](logicalmodels.html).

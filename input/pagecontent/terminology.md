@@ -45,15 +45,15 @@ Table 2: Comparison of code systems used in MyHealth@EU and EMA services
 | Unit of presentation | EDQM: 15054000 | 200000002152 | Tablet |
 | Unit of measurement | UCUM: ug | 100000110656 | microgram(s) |
 | ATC | WHO ATC: G03AA12 | 100000095785 | drospirenone and ethinylestradiol |
-| Country codes | ISO: SE | 100000000535 | Kingdom of Sweden |
-| Language codes | BCP-47: sv-SE | 100000072288 | Swedish |
+| Country | ISO: SE | 100000000535 | Kingdom of Sweden |
+| Language | BCP-47: sv-SE | 100000072288 | Swedish |
 {:.table-bordered .table-striped .thead-light}
 
 The tables above are examples of different terminology needs. The code systems used in MyHealth@EU services are recommended by the eHealth Network for ePrescription and Patient Summary. At national level, additional terminology systems and implementation choices may be required.
 
 ### Substances
 
-EMA SPOR Substance Management Services (SMS) provides a list of coded substances, including active ingredients (salts as well as moieties) and excipients. It is used in EMA SPOR services, recommended in eHealth Network guidelines, and implemented in MyHealth@EU cross-border services. However, EMA SMS does not inherently support grouping of substances, which may be relevant for substitution decision-making.
+EMA SPOR Substance Management Services (SMS) provides a list of coded substances, including active ingredients (salts as well as moieties) and excipients. It is used in EMA SPOR services, recommended in eHealth Network guidelines, and implemented in MyHealth@EU cross-border services.  
 
 At national level, local code systems or SNOMED CT are also often used. There is no official mapping between SNOMED CT and EMA SMS. However, as both use official International Nonproprietary Names (INN) assigned by WHO, name-based mapping may be useful.
 
@@ -90,17 +90,13 @@ Dose form attributes can support decision logic in electronic prescription syste
 
 The preferred code system for dose form, unit of presentation, package type, and route of administration in this guide is currently EDQM Standard Terms, as used in MyHealth@EU services. Other code systems are not discouraged, provided that mapping to cross-border value sets is supported where cross-border exchange is required.
 
-### EMA SPOR RMS and EDQM Standard Terms
+### EMA SPOR RMS
 
-EMA SPOR Referentials Management Services (RMS) is the terminology service supporting central data management for the European regulatory domain. It includes terminology originating from external sources such as EDQM Standard Terms and WHO ATC, as well as EMA-managed terminology. RMS uses EMA identifiers for terminology and product lifecycle management purposes. This means that concepts from source code systems may be recoded with RMS codes, and additional concepts may be added where needed.
+EMA SPOR Referentials Management Services (RMS) is the terminology service supporting central data management for the European regulatory domain. It includes terminology originating from external sources such as EDQM Standard Terms and WHO ATC, as well as EMA-managed terminology. RMS uses EMA identifiers for terminology and product lifecycle management purposes. This means that concepts from source code systems are re-coded with RMS codes, and additional concepts may be added where needed.
 
 Mappings to source code systems are provided where they exist. For EDQM-derived RMS lists, this means that EDQM codes may be available as mappings from RMS concepts.
 
-EDQM Standard Terms are used in European marketing authorisation applications, labelling, reporting, and related regulatory processes. They have also been adopted by the eHealth community in Europe. The eHealth Network guidelines for ePrescription and Patient Summary recommend EDQM terms for medicinal product data elements such as dose form, route of administration, unit of presentation, and package type.
-
-Some RMS lists originate from EDQM Standard Terms. When represented with EDQM codes, these terms may be treated as part of the EDQM code system. When represented with RMS codes, they are represented as EMA RMS terminology. This distinction may be relevant for validation and mapping.
-
-EMA may add concepts to RMS lists when concepts are pre-accepted by the source system but not yet active. As with ATC, using concepts before they are active in the source system may lead to mapping or validation issues in downstream systems. Where EDQM codes are required in national infrastructure or cross-border services, implementations may include additional codings to ensure that mappings are available and validated.
+Some RMS lists originate from EDQM Standard Terms. When represented with EDQM codes, these terms may be treated as part of the EDQM code system. When represented with RMS codes, they are represented as EMA RMS terminology. This distinction may be relevant for validation and mapping. Note, that EDQM Standard Terms is one code system containing multiple lists, while every list in RMS is technically a separate code system.  
 
 ### SNOMED CT
 
